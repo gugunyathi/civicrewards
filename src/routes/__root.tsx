@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "CivicRewards Johannesburg" },
+      { name: "description", content: "Public Service Delivery Rewards Loyalty Program — turn active citizenship into local economic growth." },
+      { name: "author", content: "CivicRewards Johannesburg" },
+      { property: "og:title", content: "CivicRewards Johannesburg" },
+      { property: "og:description", content: "Fix Joburg. Reward Citizens. Grow Your Business." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
