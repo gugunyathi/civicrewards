@@ -22,12 +22,14 @@ import {
   Lock,
   Sliders,
   FileCheck2,
+  Globe2,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
 import joburgSkyline from "@/assets/joburg-skyline.jpg";
 import saProvincesMap from "@/assets/images/sa_3d_clay_map_isolated_1789141534835.jpg";
 import repairCrew from "@/assets/repair-crew.jpg";
+import multilingualCivicUnity from "@/assets/images/multilingual_civic_unity_1789144566953.jpg";
 
 const steps = [
   {
@@ -49,6 +51,44 @@ const steps = [
     n: "04",
     title: "Local business wins",
     text: "Points are redeemed at partner retailers in the same ward, so every fix pushes money back into the suburb.",
+  },
+];
+
+const culturalConcepts = [
+  {
+    languages: "Sesotho / Setswana / Sepedi",
+    word: "Letsema",
+    translation: "Let's volunteer together for the common good.",
+    badgeBg: "bg-mint text-brand-deep",
+    borderColor: "border-brand/20",
+  },
+  {
+    languages: "isiZulu / isiXhosa",
+    word: "iLima",
+    translation: "Let's form a community work party to fix our area.",
+    badgeBg: "bg-sky text-brand-deep",
+    borderColor: "border-sky/40",
+  },
+  {
+    languages: "Xitsonga",
+    word: "Ndzima",
+    translation: "Let's clear and work this piece of land together.",
+    badgeBg: "bg-gold/40 text-ink",
+    borderColor: "border-gold/50",
+  },
+  {
+    languages: "Tshivenda",
+    word: "Davha",
+    translation: "Let's gather as a village to get the job done.",
+    badgeBg: "bg-accent-warm/20 text-accent-deep",
+    borderColor: "border-accent-warm/30",
+  },
+  {
+    languages: "Afrikaans",
+    word: "Saamtrek",
+    translation: "Let's pull together as a neighborhood.",
+    badgeBg: "bg-cream text-ink",
+    borderColor: "border-ink/15",
   },
 ];
 
@@ -525,9 +565,12 @@ function Index() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-5 lg:gap-7 text-sm font-bold text-ink/70 md:flex">
+          <nav className="hidden items-center gap-4 lg:gap-6 text-sm font-bold text-ink/70 md:flex">
             <a href="#how" className="transition hover:text-brand-deep">
               How it works
+            </a>
+            <a href="#unity" className="transition hover:text-brand-deep">
+              Civic Unity
             </a>
             <a href="#tracks" className="transition hover:text-brand-deep">
               Partners
@@ -580,6 +623,13 @@ function Index() {
                 className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
               >
                 How it works
+              </a>
+              <a
+                href="#unity"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
+              >
+                Civic Unity
               </a>
               <a
                 href="#tracks"
@@ -695,10 +745,11 @@ function Index() {
           <div className="relative mt-2 md:mt-0">
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] bg-sky p-4 sm:p-6 shadow-[0_25px_50px_-20px_rgba(42,50,56,0.35)]">
               <img
-                src={heroClay}
-                alt="Clay illustration of South African city blocks with a water tower and checkmark pin"
+                src={saProvincesMap}
+                alt="3D clay map model of South Africa with provinces and metro pins"
                 width={1024}
                 height={820}
+                referrerPolicy="no-referrer"
                 className="aspect-[5/4] w-full rounded-[1.5rem] sm:rounded-[1.8rem] bg-mint object-cover"
               />
 
@@ -783,6 +834,65 @@ function Index() {
               loading="lazy"
               className="w-full rounded-[2rem] sm:rounded-[2.5rem] object-cover shadow-clay-lg"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Multilingual Civic Unity Section */}
+      <section
+        id="unity"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 py-10 sm:py-14"
+      >
+        <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white via-cream to-mint/20 p-6 sm:p-10 lg:p-12 shadow-clay-lg border border-brand/10">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-ink shadow-sm">
+              <Globe2 className="size-4 text-accent-warm" />
+              United Across South African Languages
+            </span>
+            <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink">
+              One Shared Spirit of Active Citizenship
+            </h2>
+            <p className="mt-2 text-xs sm:text-sm text-ink/75 leading-relaxed">
+              Every major language block in South Africa carries a rich traditional concept for
+              community work parties, volunteer cleanups, and collective civic responsibility.
+            </p>
+          </div>
+
+          {/* 3D Claymation Multilingual Image */}
+          <div className="mt-8 relative overflow-hidden rounded-[2rem] border border-ink/10 shadow-clay bg-cream">
+            <img
+              src={multilingualCivicUnity}
+              alt="3D claymation illustration of diverse South Africans in traditional attire uniting with speech blurbs: Letsema, iLima, Ndzima, Davha, Saamtrek"
+              width={1600}
+              height={900}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className="w-full object-cover"
+            />
+          </div>
+
+          {/* Cultural Words Grid */}
+          <div className="mt-8 grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+            {culturalConcepts.map((item) => (
+              <div
+                key={item.word}
+                className={`flex flex-col justify-between rounded-2xl bg-white p-4 shadow-clay border ${item.borderColor} transition hover:shadow-md hover:-translate-y-0.5`}
+              >
+                <div>
+                  <span
+                    className={`inline-block rounded-lg px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-wider ${item.badgeBg}`}
+                  >
+                    {item.languages}
+                  </span>
+                  <h3 className="mt-2 font-display text-lg font-extrabold text-ink">
+                    "{item.word}"
+                  </h3>
+                </div>
+                <p className="mt-2 text-xs text-ink/75 leading-relaxed border-t border-ink/5 pt-2">
+                  {item.translation}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
