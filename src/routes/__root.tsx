@@ -78,7 +78,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "CivicRewards Johannesburg" },
-      { name: "description", content: "Public Service Delivery Rewards Loyalty Program — turn active citizenship into local economic growth." },
+      {
+        name: "description",
+        content:
+          "Public Service Delivery Rewards Loyalty Program — turn active citizenship into local economic growth.",
+      },
       { name: "author", content: "CivicRewards Johannesburg" },
       { property: "og:title", content: "CivicRewards Johannesburg" },
       { property: "og:description", content: "Fix Joburg. Reward Citizens. Grow Your Business." },

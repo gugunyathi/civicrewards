@@ -1,6 +1,6 @@
 {
-  "name": "CivicRewards Johannesburg",
-  "description": "Partner with CivicRewards Johannesburg — the public service delivery rewards program turning active citizenship into local economic growth across the City of Johannesburg.",
+  "name": "CivicRewards South Africa",
+  "description": "Partner with CivicRewards South Africa — the national public service delivery rewards program turning active citizenship, municipal contractor excellence, and ward councillor leadership into local economic growth across South Africa.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
