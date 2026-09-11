@@ -1,5 +1,91 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroClay from "@/assets/hero-clay.jpg";
+import joburgSkyline from "@/assets/joburg-skyline.jpg";
+import wardMap from "@/assets/ward-map.jpg";
+import repairCrew from "@/assets/repair-crew.jpg";
+
+const steps = [
+  {
+    n: "01",
+    title: "Citizens report",
+    text: "Residents log potholes, leaks, outages and illegal dumping straight from their phone, geo-tagged to their ward.",
+  },
+  {
+    n: "02",
+    title: "Suppliers respond",
+    text: "Verified municipal contractors pick up the fault, resolve it and upload proof of repair within SLA.",
+  },
+  {
+    n: "03",
+    title: "Points are issued",
+    text: "Reporters, verifiers and mobilisers earn CivicPoints the moment a repair is confirmed closed.",
+  },
+  {
+    n: "04",
+    title: "Local business wins",
+    text: "Points are redeemed at partner retailers in the same ward, so every fix pushes money back into the suburb.",
+  },
+];
+
+const regions = [
+  { name: "Region A", area: "Midrand · Diepsloot", wards: 22, live: true },
+  { name: "Region B", area: "Randburg · Rosebank", wards: 20, live: true },
+  { name: "Region C", area: "Roodepoort · Florida", wards: 21, live: true },
+  { name: "Region D", area: "Soweto", wards: 41, live: true },
+  { name: "Region E", area: "Sandton · Alexandra", wards: 24, live: true },
+  { name: "Region F", area: "Inner City · Yeoville", wards: 33, live: false },
+  { name: "Region G", area: "Orange Farm · Ennerdale", wards: 26, live: false },
+];
+
+const impact = [
+  { value: "12,400+", label: "Faults resolved", note: "Since programme launch" },
+  { value: "R4.8m", label: "Spent at partner stores", note: "CivicPoints redeemed locally" },
+  { value: "6.2 days", label: "Average repair time", note: "Down from 34 days" },
+  { value: "87%", label: "Repeat reporters", note: "Citizens who log a second fault" },
+];
+
+const voices = [
+  {
+    quote:
+      "Our SED spend finally has a paper trail. We sponsored Ward 12's reward pool and watched pothole turnaround drop from six weeks to nine days.",
+    name: "Thandi Mokoena",
+    role: "Transformation Lead, Gauteng infrastructure supplier",
+    bg: "bg-mint",
+  },
+  {
+    quote:
+      "We're a hardware store on a corner in Orlando East. Listing was free and we now get twenty new faces a week redeeming points.",
+    name: "Rashid Patel",
+    role: "Owner, ward retailer in Soweto",
+    bg: "bg-sky",
+  },
+  {
+    quote:
+      "The ward-level fault data is the cleanest view of Joburg service delivery we've had. It shapes where we place solar offers.",
+    name: "Lerato Dube",
+    role: "Brand Manager, national energy advertiser",
+    bg: "bg-gold/30",
+  },
+];
+
+const faqs = [
+  {
+    q: "Do partner payments go to the municipality?",
+    a: "No. Partner and sponsor contributions fund the citizen reward pool, verification and platform operations. CivicRewards is an independent programme that works alongside municipal channels.",
+  },
+  {
+    q: "How is a repair verified before points are paid?",
+    a: "Every closed fault needs a before-and-after photo, a GPS match and a second citizen confirmation in the same ward before CivicPoints are released.",
+  },
+  {
+    q: "Can I sponsor only the wards I trade in?",
+    a: "Yes. Sponsorship, banners and award categories are all ward-locked, so your spend and your visibility stay in the suburbs where your customers actually are.",
+  },
+  {
+    q: "What do I get for B-BBEE and ESG reporting?",
+    a: "Regional Supplier tier and above receive a quarterly SED certificate plus a ward impact report with verified fault, spend and turnaround data.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -178,8 +264,14 @@ function Index() {
             </div>
           </a>
           <nav className="hidden items-center gap-7 text-sm font-semibold text-ink/70 md:flex">
+            <a href="#how" className="transition hover:text-brand-deep">
+              How it works
+            </a>
             <a href="#tracks" className="transition hover:text-brand-deep">
               Partners
+            </a>
+            <a href="#coverage" className="transition hover:text-brand-deep">
+              Coverage
             </a>
             <a href="#awards" className="transition hover:text-brand-deep">
               Awards
@@ -292,6 +384,43 @@ function Index() {
             infrastructure, safety and commercial vitality of your local
             municipal wards.
           </p>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section id="how" className="mx-auto max-w-6xl scroll-mt-24 px-5 py-14">
+        <div className="grid items-center gap-10 md:grid-cols-2">
+          <div className="order-2 md:order-1">
+            <span className="inline-block rounded-full bg-sky px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-ink/70">
+              The loop
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-ink md:text-4xl">
+              One reported fault, four wins for the ward
+            </h2>
+            <div className="mt-7 space-y-5">
+              {steps.map((s) => (
+                <div key={s.n} className="flex gap-4">
+                  <div className="grid size-11 shrink-0 place-items-center rounded-2xl bg-white font-display text-sm font-extrabold text-brand-deep shadow-clay">
+                    {s.n}
+                  </div>
+                  <div>
+                    <p className="font-display text-lg font-bold text-ink">{s.title}</p>
+                    <p className="text-sm leading-relaxed text-ink/65">{s.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="order-1 md:order-2">
+            <img
+              src={repairCrew}
+              alt="Clay illustration of a municipal repair crew fixing a burst water pipe and a pothole in a Johannesburg street"
+              width={1200}
+              height={912}
+              loading="lazy"
+              className="w-full rounded-[2.5rem] object-cover shadow-clay-lg"
+            />
+          </div>
         </div>
       </section>
 
@@ -437,6 +566,161 @@ function Index() {
               </a>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Coverage map */}
+      <section id="coverage" className="mx-auto max-w-6xl scroll-mt-24 px-5 pb-16">
+        <div className="grid items-center gap-10 rounded-[2.5rem] bg-white p-7 shadow-clay-lg md:grid-cols-2 md:p-12">
+          <div>
+            <span className="inline-block rounded-full bg-mint px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-deep">
+              Ward coverage
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold text-ink md:text-4xl">
+              Live across Regions A–G
+            </h2>
+            <p className="mt-3 text-ink/65">
+              Sponsorship, banners and rewards are locked to real municipal ward
+              boundaries — pick the suburbs your business actually trades in.
+            </p>
+            <div className="mt-6 grid gap-2.5 sm:grid-cols-2">
+              {regions.map((r) => (
+                <div
+                  key={r.name}
+                  className="flex items-center justify-between gap-3 rounded-2xl bg-cream px-4 py-3"
+                >
+                  <div className="min-w-0">
+                    <p className="font-display text-sm font-bold text-ink">{r.name}</p>
+                    <p className="truncate text-xs text-ink/55">{r.area}</p>
+                  </div>
+                  <span
+                    className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ${
+                      r.live ? "bg-brand text-white" : "bg-gold text-ink"
+                    }`}
+                  >
+                    {r.live ? `${r.wards} wards live` : "Q4 rollout"}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="relative">
+            <img
+              src={wardMap}
+              alt="Clay-style illustrated map of Johannesburg wards with orange location pins"
+              width={1200}
+              height={1008}
+              loading="lazy"
+              className="w-full rounded-[2rem] bg-cream object-cover shadow-clay"
+            />
+            <div className="absolute bottom-4 left-4 rounded-2xl bg-white px-4 py-3 shadow-[0_10px_25px_-12px_rgba(42,50,56,0.5)]">
+              <p className="font-display text-lg font-extrabold text-brand-deep">187</p>
+              <p className="text-[11px] font-semibold text-ink/60">Wards mapped city-wide</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Impact numbers over skyline */}
+      <section className="mx-auto max-w-6xl px-5 pb-16">
+        <div className="relative overflow-hidden rounded-[2.5rem] shadow-clay-lg">
+          <img
+            src={joburgSkyline}
+            alt="Clay illustration of the Johannesburg skyline with the Hillbrow tower and Sandton towers"
+            width={1536}
+            height={864}
+            loading="lazy"
+            className="absolute inset-0 size-full object-cover"
+          />
+          <div className="relative bg-brand-deep/85 px-7 py-12 text-white md:px-12">
+            <h2 className="max-w-xl font-display text-3xl font-extrabold md:text-4xl">
+              The numbers your board will ask about
+            </h2>
+            <p className="mt-3 max-w-xl text-white/75">
+              Every rand of sponsorship is traceable to a closed fault and a
+              till slip in the same ward.
+            </p>
+            <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {impact.map((i) => (
+                <div key={i.label} className="rounded-2xl bg-white/10 px-5 py-5 backdrop-blur-sm">
+                  <p className="font-display text-3xl font-extrabold text-gold">{i.value}</p>
+                  <p className="mt-1 text-sm font-bold">{i.label}</p>
+                  <p className="mt-0.5 text-xs text-white/60">{i.note}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Voices */}
+      <section className="mx-auto max-w-6xl px-5 pb-16">
+        <h2 className="text-center font-display text-3xl font-extrabold text-ink md:text-4xl">
+          Partners already in the programme
+        </h2>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {voices.map((v) => (
+            <figure key={v.name} className={`flex flex-col rounded-[2rem] p-7 shadow-clay ${v.bg}`}>
+              <span className="font-display text-4xl leading-none text-brand-deep/40">&ldquo;</span>
+              <blockquote className="mt-2 flex-1 text-sm leading-relaxed text-ink/75">
+                {v.quote}
+              </blockquote>
+              <figcaption className="mt-5">
+                <p className="font-display font-bold text-ink">{v.name}</p>
+                <p className="text-xs text-ink/55">{v.role}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-4xl px-5 pb-16">
+        <h2 className="text-center font-display text-3xl font-extrabold text-ink md:text-4xl">
+          Questions partners ask first
+        </h2>
+        <div className="mt-8 space-y-3">
+          {faqs.map((f) => (
+            <details
+              key={f.q}
+              className="group rounded-2xl bg-white px-6 py-4 shadow-clay [&_summary::-webkit-details-marker]:hidden"
+            >
+              <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-base font-bold text-ink">
+                {f.q}
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-mint font-body text-lg font-bold text-brand-deep transition group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-ink/65">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="mx-auto max-w-6xl px-5 pb-16">
+        <div className="rounded-[2.5rem] bg-gold/40 px-7 py-12 text-center shadow-clay md:px-12">
+          <h2 className="font-display text-3xl font-extrabold text-ink md:text-4xl">
+            Put your brand where Joburg gets fixed
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-ink/65">
+            Tell us which wards matter to you and we'll come back with a
+            sponsorship pack, expected reach and reporting format.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <a
+              href="#tiers"
+              className="rounded-2xl bg-brand px-7 py-4 font-display text-base font-bold text-white shadow-[0_6px_0_oklch(0.475_0.094_162.9)] transition active:translate-y-1 active:shadow-none"
+            >
+              Become a Partner Today
+            </a>
+            <a
+              href="mailto:partners@civicrewards.co.za"
+              className="rounded-2xl bg-white px-6 py-4 text-base font-bold text-ink/80 shadow-[0_6px_0_rgba(42,50,56,0.12)] transition active:translate-y-1 active:shadow-none"
+            >
+              Talk to the team
+            </a>
+          </div>
         </div>
       </section>
 
