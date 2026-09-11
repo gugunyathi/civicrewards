@@ -23,6 +23,8 @@ import {
   Sliders,
   FileCheck2,
   Globe2,
+  CreditCard,
+  Receipt,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
@@ -30,6 +32,8 @@ import joburgSkyline from "@/assets/joburg-skyline.jpg";
 import saProvincesMap from "@/assets/images/sa_3d_clay_map_isolated_1789141534835.jpg";
 import repairCrew from "@/assets/repair-crew.jpg";
 import multilingualCivicUnity from "@/assets/images/multilingual_civic_unity_1789144566953.jpg";
+import { CardPaymentModal, TierInfo, ReceiptData } from "@/components/CardPaymentModal";
+import { ReceiptHistoryModal } from "@/components/ReceiptHistoryModal";
 
 const steps = [
   {
@@ -510,6 +514,21 @@ function Index() {
     notes: "",
   });
 
+  // Card Payment Modal State
+  const [paymentModalOpen, setPaymentModalOpen] = useState(false);
+  const [selectedPaymentTier, setSelectedPaymentTier] = useState<TierInfo | null>(null);
+  const [receipts, setReceipts] = useState<ReceiptData[]>([]);
+  const [receiptHistoryOpen, setReceiptHistoryOpen] = useState(false);
+
+  const handleOpenPayment = (tier: TierInfo) => {
+    setSelectedPaymentTier(tier);
+    setPaymentModalOpen(true);
+  };
+
+  const handlePaymentSuccess = (newReceipt: ReceiptData) => {
+    setReceipts((prev) => [newReceipt, ...prev]);
+  };
+
   const handleOpenModal = (
     title = "Become a CivicRewards Partner",
     track = "Regional Supplier",
@@ -593,7 +612,21 @@ function Index() {
             </a>
           </nav>
 
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <button
+              onClick={() => setReceiptHistoryOpen(true)}
+              className="relative inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-mint/70 px-3 py-2 sm:py-2.5 text-xs font-bold text-brand-deep border border-brand/20 hover:bg-mint transition"
+              title="View Card Receipts & Tax Invoices"
+            >
+              <Receipt className="size-4 text-brand-deep" />
+              <span className="hidden md:inline font-extrabold">Tax Invoices</span>
+              {receipts.length > 0 && (
+                <span className="grid size-4 place-items-center rounded-full bg-brand text-[9px] font-extrabold text-white">
+                  {receipts.length}
+                </span>
+              )}
+            </button>
+
             <button
               onClick={() => handleOpenModal("Partner Inquiry", "General Partnership")}
               className="hidden sm:inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-accent-warm px-4 py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)] transition hover:bg-accent-deep active:translate-y-0.5 active:shadow-none"
@@ -1407,39 +1440,49 @@ function Index() {
         </p>
 
         {/* Dynamic Billing Cycle Switcher */}
-        <div className="mt-6 sm:mt-8 flex items-center justify-center gap-3">
-          <span
-            className={`text-xs sm:text-sm font-bold cursor-pointer ${
-              billingCycle === "monthly" ? "text-ink" : "text-ink/50"
-            }`}
-            onClick={() => setBillingCycle("monthly")}
-          >
-            Monthly Billing
-          </span>
-          <button
-            onClick={() => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}
-            className="relative h-7 w-12 rounded-full bg-brand/30 p-1 transition"
-            aria-label="Toggle Billing Cycle"
-          >
-            <div
-              className={`size-5 rounded-full bg-brand shadow-md transition-transform ${
-                billingCycle === "annual" ? "translate-x-5 bg-brand-deep" : "translate-x-0"
-              }`}
-            />
-          </button>
-          <div className="flex items-center gap-1.5">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex items-center gap-3">
             <span
               className={`text-xs sm:text-sm font-bold cursor-pointer ${
-                billingCycle === "annual" ? "text-ink" : "text-ink/50"
+                billingCycle === "monthly" ? "text-ink" : "text-ink/50"
               }`}
-              onClick={() => setBillingCycle("annual")}
+              onClick={() => setBillingCycle("monthly")}
             >
-              Annual Billing
+              Monthly Billing
             </span>
-            <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-extrabold text-ink uppercase tracking-wider">
-              Save 15%
-            </span>
+            <button
+              onClick={() => setBillingCycle(billingCycle === "monthly" ? "annual" : "monthly")}
+              className="relative h-7 w-12 rounded-full bg-brand/30 p-1 transition"
+              aria-label="Toggle Billing Cycle"
+            >
+              <div
+                className={`size-5 rounded-full bg-brand shadow-md transition-transform ${
+                  billingCycle === "annual" ? "translate-x-5 bg-brand-deep" : "translate-x-0"
+                }`}
+              />
+            </button>
+            <div className="flex items-center gap-1.5">
+              <span
+                className={`text-xs sm:text-sm font-bold cursor-pointer ${
+                  billingCycle === "annual" ? "text-ink" : "text-ink/50"
+                }`}
+                onClick={() => setBillingCycle("annual")}
+              >
+                Annual Billing
+              </span>
+              <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-extrabold text-ink uppercase tracking-wider">
+                Save 15%
+              </span>
+            </div>
           </div>
+
+          <button
+            onClick={() => setReceiptHistoryOpen(true)}
+            className="flex items-center gap-1.5 rounded-full bg-mint px-3.5 py-1 text-xs font-extrabold text-brand-deep border border-brand/20 hover:bg-mint/80 transition"
+          >
+            <Receipt className="size-3.5" />
+            View My Invoices & Receipts ({receipts.length})
+          </button>
         </div>
 
         <div className="mt-8 sm:mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -1484,12 +1527,21 @@ function Index() {
                     ))}
                   </ul>
                 </div>
-                <button
-                  onClick={() => handleOpenModal(`Tier: ${t.name}`, t.name)}
-                  className={`mt-6 w-full rounded-2xl px-4 py-3 text-center text-xs sm:text-sm font-bold transition active:translate-y-0.5 active:shadow-none ${t.ctaClass}`}
-                >
-                  {t.cta}
-                </button>
+                <div className="mt-6 space-y-2">
+                  <button
+                    onClick={() => handleOpenPayment(t)}
+                    className={`w-full flex items-center justify-center gap-1.5 rounded-2xl px-4 py-3 text-center text-xs sm:text-sm font-bold transition active:translate-y-0.5 active:shadow-none ${t.ctaClass}`}
+                  >
+                    <CreditCard className="size-4" />
+                    {t.monthlyPrice === null ? "Request Quote" : "Pay by Card & Activate"}
+                  </button>
+                  <button
+                    onClick={() => handleOpenModal(`Tier: ${t.name}`, t.name)}
+                    className="w-full text-center text-[11px] font-bold text-ink/50 hover:text-ink hover:underline py-0.5"
+                  >
+                    Or submit inquiry
+                  </button>
+                </div>
               </div>
             );
           })}
@@ -1895,6 +1947,30 @@ function Index() {
           </div>
         </div>
       )}
+
+      {/* Card Payment Modal */}
+      <CardPaymentModal
+        isOpen={paymentModalOpen}
+        onClose={() => setPaymentModalOpen(false)}
+        selectedTier={selectedPaymentTier}
+        initialBillingCycle={billingCycle}
+        onPaymentSuccess={handlePaymentSuccess}
+      />
+
+      {/* Payment Receipt History Modal */}
+      <ReceiptHistoryModal
+        isOpen={receiptHistoryOpen}
+        onClose={() => setReceiptHistoryOpen(false)}
+        receipts={receipts}
+        onSelectReceipt={(receiptData) => {
+          setSelectedPaymentTier({
+            name: receiptData.tierName,
+            monthlyPrice: receiptData.subtotal,
+            features: ["Ward Partner Listing", "Tax Invoice Delivered"],
+          });
+          setPaymentModalOpen(true);
+        }}
+      />
     </div>
   );
 }
