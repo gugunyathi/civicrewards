@@ -77,15 +77,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CivicRewards Johannesburg" },
+      { title: "CivicRewards — Public Service Delivery Loyalty Platform" },
       {
         name: "description",
         content:
-          "Public Service Delivery Rewards Loyalty Program — turn active citizenship into local economic growth.",
+          "CivicRewards is a public service delivery loyalty platform for smarter cities and municipalities — leveraging verified civic action into efficient public service delivery, better infrastructure intelligence, local economic value and a pathway to inclusive benefit.",
       },
-      { name: "author", content: "CivicRewards Johannesburg" },
-      { property: "og:title", content: "CivicRewards Johannesburg" },
-      { property: "og:description", content: "Fix Joburg. Reward Citizens. Grow Your Business." },
+      { name: "author", content: "CivicRewards South Africa" },
+      { property: "og:title", content: "CivicRewards — Public Service Delivery Loyalty Platform" },
+      {
+        property: "og:description",
+        content:
+          "Leveraging verified civic action into efficient public service delivery, infrastructure intelligence, and local economic value.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

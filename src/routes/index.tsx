@@ -25,6 +25,12 @@ import {
   Globe2,
   CreditCard,
   Receipt,
+  Handshake,
+  Coins,
+  Droplets,
+  Sun,
+  TrendingUp,
+  Wallet,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
@@ -153,6 +159,114 @@ const impact = [
   { value: "R18.5m", label: "Spent at partner stores", note: "CivicPoints redeemed locally" },
   { value: "5.4 days", label: "Average repair time", note: "Down from 28 days" },
   { value: "91%", label: "Repeat active citizens", note: "Residents logging & verifying" },
+];
+
+const stakeholderValues = [
+  {
+    stakeholder: "Residents",
+    valueReceived: "Faster visibility, useful rewards, property-value protection",
+    proofMetric: "Resolution time · Rewards issued",
+    icon: Users,
+    bg: "bg-mint",
+    badgeBg: "bg-brand text-white",
+  },
+  {
+    stakeholder: "Municipalities",
+    valueReceived: "Prioritised demand, closure evidence, ward analytics",
+    proofMetric: "Backlog reduction · SLA compliance",
+    icon: Building2,
+    bg: "bg-sky",
+    badgeBg: "bg-brand-deep text-white",
+  },
+  {
+    stakeholder: "Insurers",
+    valueReceived: "Earlier risk signals and mitigation targeting",
+    proofMetric: "Alerts acted on · Claims avoided",
+    icon: ShieldCheck,
+    bg: "bg-gold/30",
+    badgeBg: "bg-gold-deep text-white",
+  },
+  {
+    stakeholder: "Contractors",
+    valueReceived: "Clearer work queues and independent job verification",
+    proofMetric: "Verified closures · Rework rate",
+    icon: HardHat,
+    bg: "bg-cream",
+    badgeBg: "bg-accent-warm text-white",
+  },
+  {
+    stakeholder: "Merchants",
+    valueReceived: "Attributed, hyper-local acquisition",
+    proofMetric: "Basket value · Redemption rate",
+    icon: Sparkles,
+    bg: "bg-mint/40",
+    badgeBg: "bg-accent-deep text-white",
+  },
+  {
+    stakeholder: "Financial Partners",
+    valueReceived: "Compliant retail origination and micro-investment flows",
+    proofMetric: "KYC wallets · Funded accounts",
+    icon: CreditCard,
+    bg: "bg-sky/40",
+    badgeBg: "bg-brand text-white",
+  },
+];
+
+const redemptionCards = [
+  {
+    id: "utility-bonds",
+    iconSymbol: "⚡",
+    LucideIcon: Zap,
+    title: "Tokenised Utility & Sovereign Bonds",
+    assetType: "Fractional State-Owned Debt (e.g., Eskom)",
+    personalWealthBenefit:
+      "Earn regular yield (interest payments) directly into your digital wallet.",
+    communityImpact:
+      "Directly funds national power grid maintenance, network upgrades, and energy stability.",
+    estYield: "7.8% - 9.2% p.a.",
+    minPoints: "250 Points",
+    badgeBg: "bg-amber-500 text-white",
+    cardBg: "bg-gradient-to-br from-amber-50/90 via-white to-amber-100/40",
+    borderColor: "border-amber-200/80",
+    shadowColor: "shadow-amber-900/5",
+    accentColor: "text-amber-700",
+  },
+  {
+    id: "water-infra",
+    iconSymbol: "💧",
+    LucideIcon: Droplets,
+    title: "Fractional Municipal Water Infrastructure",
+    assetType: "Micro-Tokens / Regional Water Board Debt (e.g., Rand Water)",
+    personalWealthBenefit:
+      "Low-volatility asset holding stable value backed by essential resource delivery.",
+    communityImpact:
+      "Financing capital expenditures to repair leaks, upgrade reservoirs, and secure clean water.",
+    estYield: "6.5% - 8.1% p.a.",
+    minPoints: "150 Points",
+    badgeBg: "bg-sky-500 text-white",
+    cardBg: "bg-gradient-to-br from-sky-50/90 via-white to-sky-100/40",
+    borderColor: "border-sky-200/80",
+    shadowColor: "shadow-sky-900/5",
+    accentColor: "text-sky-700",
+  },
+  {
+    id: "clean-energy",
+    iconSymbol: "☀️",
+    LucideIcon: Sun,
+    title: "Clean Energy Micro-Assets",
+    assetType: "Independent Power Producer (IPP) Micro-Equity",
+    personalWealthBenefit:
+      "Earn a monthly share of revenue generated from solar/wind electricity generation.",
+    communityImpact:
+      "Accelerates local green energy transitions, powers schools, and reduces grid strain.",
+    estYield: "9.5% - 11.4% p.a.",
+    minPoints: "500 Points",
+    badgeBg: "bg-emerald-500 text-white",
+    cardBg: "bg-gradient-to-br from-emerald-50/90 via-white to-emerald-100/40",
+    borderColor: "border-emerald-200/80",
+    shadowColor: "shadow-emerald-900/5",
+    accentColor: "text-emerald-700",
+  },
 ];
 
 const voices = [
@@ -520,6 +634,13 @@ function Index() {
   const [receipts, setReceipts] = useState<ReceiptData[]>([]);
   const [receiptHistoryOpen, setReceiptHistoryOpen] = useState(false);
 
+  // Points Redemption Modal State
+  const [redemptionModalOpen, setRedemptionModalOpen] = useState(false);
+  const [selectedRedemptionCard, setSelectedRedemptionCard] = useState<
+    (typeof redemptionCards)[0] | null
+  >(null);
+  const [simulatedPoints, setSimulatedPoints] = useState(1500);
+
   const handleOpenPayment = (tier: TierInfo) => {
     setSelectedPaymentTier(tier);
     setPaymentModalOpen(true);
@@ -566,9 +687,10 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-cream font-body text-ink overflow-x-hidden selection:bg-brand selection:text-white">
-      {/* Sticky Responsive Nav */}
-      <header className="sticky top-3 z-50 mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex items-center justify-between rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md px-4 sm:px-6 py-3 shadow-[0_10px_30px_-15px_rgba(42,50,56,0.3)] border border-white/40">
+      {/* Sticky Responsive Nav Header */}
+      <header className="sticky top-3 z-50 mx-auto max-w-6xl px-4 sm:px-6 space-y-2">
+        {/* Top Banner: Logo & Primary Action */}
+        <div className="flex items-center justify-between rounded-2xl sm:rounded-3xl bg-white/90 backdrop-blur-md px-4 sm:px-6 py-2.5 sm:py-3 shadow-[0_10px_25px_-10px_rgba(42,50,56,0.25)] border border-white/60">
           <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
             <div className="grid size-10 sm:size-11 place-items-center rounded-xl sm:rounded-2xl bg-brand font-display text-xl sm:text-2xl font-extrabold text-white shadow-[0_5px_0_oklch(0.475_0.094_162.9)] transition group-hover:scale-105">
               C
@@ -583,10 +705,44 @@ function Index() {
             </div>
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden items-center gap-4 lg:gap-6 text-sm font-bold text-ink/70 md:flex">
+          <div className="flex items-center gap-2 sm:gap-2.5">
+            <button
+              onClick={() => handleOpenModal("Partner Inquiry", "General Partnership")}
+              className="inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-accent-warm px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)] transition hover:bg-accent-deep active:translate-y-0.5 active:shadow-none"
+            >
+              <Sparkles className="size-4" />
+              <span>Become a Partner</span>
+            </button>
+
+            {/* Mobile Hamburger Toggle */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="grid size-10 place-items-center rounded-xl bg-cream text-ink md:hidden transition hover:bg-mint"
+              aria-label="Toggle Navigation Menu"
+            >
+              {isMobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Lower Banner: Menu Navigation Items */}
+        <div className="hidden md:flex items-center rounded-2xl sm:rounded-3xl bg-white/85 backdrop-blur-md px-4 sm:px-6 py-2.5 shadow-sm border border-white/50">
+          <nav className="w-full flex items-center justify-between text-xs sm:text-sm font-bold text-ink/75">
             <a href="#how" className="transition hover:text-brand-deep">
               How it works
+            </a>
+            <a href="#stakeholders" className="transition hover:text-brand-deep">
+              Stakeholders
+            </a>
+            <a
+              href="#redemption"
+              className="inline-flex items-center gap-1.5 rounded-full bg-gold/30 px-2.5 py-1 text-brand-deep font-extrabold hover:bg-gold/50 transition border border-gold/40 shadow-2xs"
+            >
+              <Coins className="size-3.5 text-accent-warm" />
+              Redeem Points
+            </a>
+            <a href="#intelligence" className="transition hover:text-brand-deep">
+              Network
             </a>
             <a href="#unity" className="transition hover:text-brand-deep">
               Civic Unity
@@ -605,45 +761,12 @@ function Index() {
               className="flex items-center gap-1 text-brand-deep transition hover:text-brand font-extrabold"
             >
               <Cpu className="size-3.5 text-accent-warm" />
-              Adjudication
+              AI
             </a>
             <a href="#tiers" className="transition hover:text-brand-deep">
               Tiers
             </a>
           </nav>
-
-          <div className="flex items-center gap-2 sm:gap-2.5">
-            <button
-              onClick={() => setReceiptHistoryOpen(true)}
-              className="relative inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-mint/70 px-3 py-2 sm:py-2.5 text-xs font-bold text-brand-deep border border-brand/20 hover:bg-mint transition"
-              title="View Card Receipts & Tax Invoices"
-            >
-              <Receipt className="size-4 text-brand-deep" />
-              <span className="hidden md:inline font-extrabold">Tax Invoices</span>
-              {receipts.length > 0 && (
-                <span className="grid size-4 place-items-center rounded-full bg-brand text-[9px] font-extrabold text-white">
-                  {receipts.length}
-                </span>
-              )}
-            </button>
-
-            <button
-              onClick={() => handleOpenModal("Partner Inquiry", "General Partnership")}
-              className="hidden sm:inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-accent-warm px-4 py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)] transition hover:bg-accent-deep active:translate-y-0.5 active:shadow-none"
-            >
-              <Sparkles className="size-4" />
-              Become a Partner
-            </button>
-
-            {/* Mobile Hamburger Toggle */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="grid size-10 place-items-center rounded-xl bg-cream text-ink md:hidden transition hover:bg-mint"
-              aria-label="Toggle Navigation Menu"
-            >
-              {isMobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
-            </button>
-          </div>
         </div>
 
         {/* Mobile Dropdown Drawer */}
@@ -656,6 +779,33 @@ function Index() {
                 className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
               >
                 How it works
+              </a>
+              <a
+                href="#stakeholders"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
+              >
+                Stakeholder Value
+              </a>
+              <a
+                href="#redemption"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-between rounded-xl px-4 py-2.5 bg-mint/40 font-extrabold text-brand-deep hover:bg-mint transition border border-brand/20"
+              >
+                <span className="flex items-center gap-2">
+                  <Coins className="size-4 text-accent-warm" />
+                  Redeem Points
+                </span>
+                <span className="text-[10px] bg-brand text-white px-2 py-0.5 rounded-full font-bold">
+                  Wealth
+                </span>
+              </a>
+              <a
+                href="#intelligence"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
+              >
+                Civic Intelligence Network
               </a>
               <a
                 href="#unity"
@@ -723,7 +873,7 @@ function Index() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3.5 sm:px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-deep shadow-sm">
               <ShieldCheck className="size-4" />
-              Rewarding active citizenship &amp; public service
+              Public Service Delivery Loyalty Platform
             </span>
             <h1 className="mt-4 sm:mt-5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-ink">
               Fix South Africa.
@@ -732,10 +882,11 @@ function Index() {
               <br />
               <span className="text-accent-warm">Grow Your Business.</span>
             </h1>
-            <p className="mt-4 sm:mt-6 max-w-md text-base sm:text-lg leading-relaxed text-ink/75">
-              Partner with CivicRewards South Africa — the national platform turning active
-              citizenship and municipal service excellence into local economic growth, one ward at a
-              time.
+            <p className="mt-4 sm:mt-6 max-w-md text-base sm:text-lg leading-relaxed text-ink/80 font-medium">
+              CivicRewards is a public service delivery loyalty platform for smarter cities and
+              municipalities — leveraging verified civic action into efficient public service
+              delivery, better infrastructure intelligence, local economic value and a pathway to
+              inclusive benefit.
             </p>
 
             <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
@@ -868,6 +1019,290 @@ function Index() {
               className="w-full rounded-[2rem] sm:rounded-[2.5rem] object-cover shadow-clay-lg"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Stakeholder Value Matrix Section */}
+      <section
+        id="stakeholders"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 py-10 sm:py-16"
+      >
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="inline-flex items-center gap-2 rounded-full bg-sky px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-deep shadow-sm">
+            <Users className="size-4" />
+            Multi-Stakeholder Ecosystem
+          </span>
+          <h2 className="mt-3 font-display text-2xl sm:text-4xl font-extrabold text-ink">
+            Value by Stakeholder
+          </h2>
+          <p className="mt-2 text-sm sm:text-base text-ink/75 leading-relaxed">
+            CivicRewards turns everyday civic action into verifiable operational, economic, and
+            infrastructure value for every participant.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {stakeholderValues.map((item) => {
+            const IconComponent = item.icon;
+            return (
+              <div
+                key={item.stakeholder}
+                className={`relative overflow-hidden rounded-[2rem] p-6 shadow-clay border border-white/60 transition-all hover:-translate-y-1 hover:shadow-clay-lg flex flex-col justify-between ${item.bg}`}
+              >
+                <div>
+                  <div className="flex items-center justify-between">
+                    <div
+                      className={`grid size-12 place-items-center rounded-2xl ${item.badgeBg} shadow-sm`}
+                    >
+                      <IconComponent className="size-6" />
+                    </div>
+                    <span className="rounded-full bg-white/80 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10">
+                      Stakeholder
+                    </span>
+                  </div>
+
+                  <h3 className="mt-4 font-display text-xl font-extrabold text-ink">
+                    {item.stakeholder}
+                  </h3>
+
+                  <div className="mt-3 space-y-1.5">
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-ink/50">
+                      Value Received
+                    </p>
+                    <p className="text-sm font-semibold text-ink leading-snug">
+                      {item.valueReceived}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-ink/10">
+                  <p className="text-[11px] font-bold uppercase tracking-wide text-brand-deep flex items-center gap-1.5 mb-1.5">
+                    <CheckCircle2 className="size-3.5 text-brand" />
+                    Proof Metric
+                  </p>
+                  <p className="font-mono text-xs font-extrabold text-ink/80 bg-white/80 rounded-xl px-3 py-2 border border-ink/5">
+                    {item.proofMetric}
+                  </p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* National Civic Intelligence Network Section */}
+      <section
+        id="intelligence"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 py-10 sm:py-16"
+      >
+        <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-brand-deep via-brand to-accent-deep p-6 sm:p-10 lg:p-14 text-white shadow-2xl relative">
+          <div className="relative z-10 grid gap-8 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-7 space-y-5">
+              <span className="inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-gold border border-gold/30">
+                <Globe2 className="size-4" />
+                Interoperable Data &amp; Reward Rails
+              </span>
+
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
+                National Civic Intelligence Network
+              </h2>
+
+              <p className="text-base sm:text-lg text-white/95 leading-relaxed font-semibold">
+                When residents{" "}
+                <strong className="text-gold">Report. Verify. Resolve. Earn Rewards</strong>, this
+                civic action creates a National civic intelligence network.
+              </p>
+
+              <p className="text-xs sm:text-sm text-white/85 leading-relaxed">
+                The aggregated operational intelligence helps delivery partners prioritise timely
+                work which keeps businesses in these communities operating at full capacity without
+                downtime, thereby improving economic output, and business investment or relocation
+                to the most efficient areas with more public services uptime.
+              </p>
+
+              {/* Step Process Pipeline */}
+              <div className="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-2">
+                <div className="rounded-xl bg-white/10 p-3 text-center border border-white/15">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-gold">
+                    Step 1
+                  </span>
+                  <span className="font-display font-extrabold text-sm text-white">Report</span>
+                </div>
+                <div className="rounded-xl bg-white/10 p-3 text-center border border-white/15">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-gold">
+                    Step 2
+                  </span>
+                  <span className="font-display font-extrabold text-sm text-white">Verify</span>
+                </div>
+                <div className="rounded-xl bg-white/10 p-3 text-center border border-white/15">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-gold">
+                    Step 3
+                  </span>
+                  <span className="font-display font-extrabold text-sm text-white">Resolve</span>
+                </div>
+                <div className="rounded-xl bg-white/10 p-3 text-center border border-white/15">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-gold">
+                    Step 4
+                  </span>
+                  <span className="font-display font-extrabold text-sm text-white">
+                    Earn Rewards
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 space-y-3.5">
+              <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 sm:p-5 border border-white/20">
+                <div className="flex items-center gap-3">
+                  <div className="grid size-10 place-items-center rounded-xl bg-gold text-ink font-bold shrink-0">
+                    <Zap className="size-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-sm text-white">
+                      Zero Infrastructure Downtime
+                    </h4>
+                    <p className="text-xs text-white/80">
+                      Keeps local suburb businesses operating at 100% capacity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 sm:p-5 border border-white/20">
+                <div className="flex items-center gap-3">
+                  <div className="grid size-10 place-items-center rounded-xl bg-mint text-brand-deep font-bold shrink-0">
+                    <Building2 className="size-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-sm text-white">
+                      Economic Output &amp; Relocation
+                    </h4>
+                    <p className="text-xs text-white/80">
+                      Attracts business investments to high public service uptime areas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-white/10 backdrop-blur-md p-4 sm:p-5 border border-white/20">
+                <div className="flex items-center gap-3">
+                  <div className="grid size-10 place-items-center rounded-xl bg-sky text-brand-deep font-bold shrink-0">
+                    <CreditCard className="size-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-sm text-white">
+                      Interoperable Data &amp; Reward Rails
+                    </h4>
+                    <p className="text-xs text-white/80">
+                      Unified API connecting municipal SLA data with merchant points.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Component: REWARD_REDEMPTION_CARDS */}
+      <section
+        id="redemption"
+        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 py-10 sm:py-16"
+      >
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <span className="inline-flex items-center gap-2 rounded-full bg-gold/30 px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-deep shadow-sm border border-gold/40">
+            <Coins className="size-4 text-accent-warm" />
+            Civic Wealth Engine
+          </span>
+          <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">
+            Transform Active Citizenship into Wealth Portfolios
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-ink/75 leading-relaxed font-medium">
+            Redeem your civic points for fractional stakes in South Africa's critical
+            infrastructure.
+          </p>
+        </div>
+
+        {/* Cards Grid */}
+        <div className="mt-10 sm:mt-12 grid gap-6 md:grid-cols-3">
+          {redemptionCards.map((card) => {
+            const IconComp = card.LucideIcon;
+            return (
+              <div
+                key={card.id}
+                className={`group relative overflow-hidden rounded-[2.2rem] p-6 sm:p-7 border ${card.borderColor} ${card.cardBg} ${card.shadowColor} shadow-clay transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl flex flex-col justify-between`}
+              >
+                <div>
+                  {/* Top Bar with Icon & Asset Badge */}
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="grid size-12 sm:size-14 place-items-center rounded-2xl bg-white shadow-sm border border-ink/5 text-2xl sm:text-3xl shrink-0 group-hover:scale-110 transition-transform">
+                      {card.iconSymbol}
+                    </div>
+                    <span className="rounded-full bg-white/90 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10 shadow-xs">
+                      Min {card.minPoints}
+                    </span>
+                  </div>
+
+                  <h3 className="mt-5 font-display text-xl sm:text-2xl font-extrabold text-ink leading-snug">
+                    {card.title}
+                  </h3>
+
+                  {/* Asset Type pill */}
+                  <div className="mt-2.5 inline-block">
+                    <span className="font-mono text-[11px] font-bold text-brand-deep bg-white/80 rounded-lg px-2.5 py-1 border border-ink/10">
+                      {card.assetType}
+                    </span>
+                  </div>
+
+                  <div className="mt-6 space-y-4">
+                    {/* Personal Wealth Benefit */}
+                    <div className="rounded-2xl bg-white/85 p-4 border border-ink/5 shadow-xs space-y-1">
+                      <div className="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-brand-deep">
+                        <TrendingUp className="size-3.5 text-brand" />
+                        Personal Wealth Benefit
+                      </div>
+                      <p className="text-xs sm:text-sm font-semibold text-ink/90 leading-relaxed">
+                        {card.personalWealthBenefit}
+                      </p>
+                    </div>
+
+                    {/* Community Impact */}
+                    <div className="rounded-2xl bg-white/85 p-4 border border-ink/5 shadow-xs space-y-1">
+                      <div className="flex items-center gap-1.5 text-[11px] font-extrabold uppercase tracking-wider text-accent-deep">
+                        <ShieldCheck className="size-3.5 text-accent-warm" />
+                        Community Impact
+                      </div>
+                      <p className="text-xs sm:text-sm text-ink/80 leading-relaxed">
+                        {card.communityImpact}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Action Footer */}
+                <div className="mt-6 pt-4 border-t border-ink/10 flex items-center justify-between gap-2">
+                  <div>
+                    <span className="block text-[10px] font-bold uppercase tracking-wider text-ink/50">
+                      Est. Annual Yield
+                    </span>
+                    <span className={`font-display text-base font-extrabold ${card.accentColor}`}>
+                      {card.estYield}
+                    </span>
+                  </div>
+                  <button
+                    onClick={() => {
+                      setSelectedRedemptionCard(card);
+                      setRedemptionModalOpen(true);
+                    }}
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-brand px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-brand-deep"
+                  >
+                    Simulate Yield
+                    <ArrowRight className="size-3.5" />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -1546,6 +1981,33 @@ function Index() {
             );
           })}
         </div>
+
+        {/* Household Value & Point Economics Banner */}
+        <div className="mt-12 rounded-[2rem] bg-gradient-to-r from-cream via-mint/40 to-sky/40 p-6 sm:p-8 border border-brand/20 shadow-clay flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div className="space-y-2 max-w-2xl">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-brand-deep px-3 py-1 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white shadow-sm">
+              <Sparkles className="size-3.5 text-gold" />
+              Inclusive Benefit &amp; Household Economics
+            </span>
+            <h3 className="font-display text-xl sm:text-2xl font-extrabold text-ink">
+              Everyday civic effort producing direct household value.
+            </h3>
+            <p className="text-xs sm:text-sm text-ink/80 leading-relaxed">
+              Points begin as non-financial loyalty units. With explicit user choice and regulated
+              partners, future redemption will tie into public service delivery investment, subject
+              to legal clearance and partner capability.
+            </p>
+          </div>
+          <div className="shrink-0 w-full lg:w-auto">
+            <button
+              onClick={() => handleOpenModal("Household Loyalty Inquiry", "Household Value Call")}
+              className="w-full lg:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-3.5 font-display text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep"
+            >
+              Explore Redemption Roadmap
+              <ArrowRight className="size-4" />
+            </button>
+          </div>
+        </div>
       </section>
 
       {/* Ward Coverage & Interactive Metro Search */}
@@ -1760,13 +2222,20 @@ function Index() {
 
       {/* Final Call to Action */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16">
-        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gold/40 px-6 sm:px-10 lg:px-12 py-10 sm:py-12 text-center shadow-clay border border-gold/30">
+        <div className="rounded-[2rem] sm:rounded-[2.5rem] bg-gradient-to-br from-gold/30 via-cream to-mint/30 px-6 sm:px-10 lg:px-12 py-10 sm:py-14 text-center shadow-clay border border-gold/40">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-brand px-3.5 py-1 text-xs font-extrabold uppercase tracking-wider text-white shadow-sm mb-3">
+            <Handshake className="size-4 text-gold" />
+            Build The Trust Layer
+          </span>
           <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink">
-            Put your brand where South Africa gets fixed
+            Partner with CivicRewards
           </h2>
-          <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-xs sm:text-sm text-ink/70 leading-relaxed">
-            Tell us which wards matter to you and we'll come back with a sponsorship pack, expected
-            reach and reporting format.
+          <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base font-semibold text-brand-deep leading-relaxed">
+            Help build the trust layer between active citizens and responsive cities.
+          </p>
+          <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm text-ink/70 leading-relaxed">
+            Tell us which municipal wards matter to your business and we'll deliver a tailored
+            partnership pack, ward analytics, and verifiable SLA reporting.
           </p>
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <button
@@ -1971,6 +2440,113 @@ function Index() {
           setPaymentModalOpen(true);
         }}
       />
+
+      {/* Points Redemption Simulation Modal */}
+      {redemptionModalOpen && selectedRedemptionCard && (
+        <div className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-ink/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+          <div className="relative w-full max-w-lg rounded-[2.5rem] bg-white p-6 sm:p-8 shadow-2xl border border-white/60">
+            <button
+              onClick={() => setRedemptionModalOpen(false)}
+              className="absolute top-5 right-5 grid size-9 place-items-center rounded-full bg-cream text-ink hover:bg-mint transition"
+            >
+              <X className="size-5" />
+            </button>
+
+            <div className="flex items-center gap-3">
+              <div className="grid size-12 place-items-center rounded-2xl bg-cream border border-ink/10 text-2xl shadow-xs">
+                {selectedRedemptionCard.iconSymbol}
+              </div>
+              <div>
+                <span className="text-[10px] font-extrabold uppercase tracking-wider text-brand-deep">
+                  Infrastructure Portfolio Redemption
+                </span>
+                <h3 className="font-display text-xl font-extrabold text-ink leading-tight">
+                  {selectedRedemptionCard.title}
+                </h3>
+              </div>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              <div className="rounded-2xl bg-cream/70 p-4 border border-ink/5 space-y-3">
+                <div className="flex justify-between items-center text-xs font-bold text-ink">
+                  <span>Simulated Civic Points Balance:</span>
+                  <span className="font-mono text-sm font-extrabold text-brand-deep">
+                    {simulatedPoints.toLocaleString()} Points
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min="250"
+                  max="10000"
+                  step="250"
+                  value={simulatedPoints}
+                  onChange={(e) => setSimulatedPoints(Number(e.target.value))}
+                  className="w-full accent-brand cursor-pointer"
+                />
+                <div className="flex justify-between text-[10px] font-extrabold text-ink/50 uppercase">
+                  <span>250 Points</span>
+                  <span>5,000 Points</span>
+                  <span>10,000 Points</span>
+                </div>
+              </div>
+
+              {/* Yield & Equity Calculation */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-2xl bg-mint/30 p-4 border border-mint/50">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-brand-deep">
+                    Estimated Asset Value
+                  </span>
+                  <span className="font-display text-xl font-extrabold text-brand-deep">
+                    R{(simulatedPoints * 1.8).toFixed(0)}
+                  </span>
+                  <span className="block text-[10px] text-ink/60 mt-0.5">
+                    Micro-token allocation
+                  </span>
+                </div>
+
+                <div className="rounded-2xl bg-gold/30 p-4 border border-gold/50">
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-brand-deep">
+                    Est. Monthly Yield
+                  </span>
+                  <span className="font-display text-xl font-extrabold text-accent-deep">
+                    R{(simulatedPoints * 0.014).toFixed(1)}/mo
+                  </span>
+                  <span className="block text-[10px] text-ink/60 mt-0.5">
+                    {selectedRedemptionCard.estYield} return
+                  </span>
+                </div>
+              </div>
+
+              <div className="rounded-2xl bg-cream p-4 text-xs space-y-1.5 text-ink/80 border border-ink/5">
+                <p className="font-bold text-ink flex items-center gap-1.5">
+                  <ShieldCheck className="size-4 text-brand" />
+                  {selectedRedemptionCard.assetType}
+                </p>
+                <p>
+                  • <strong>Personal Benefit:</strong>{" "}
+                  {selectedRedemptionCard.personalWealthBenefit}
+                </p>
+                <p>
+                  • <strong>Community Impact:</strong> {selectedRedemptionCard.communityImpact}
+                </p>
+              </div>
+
+              <button
+                onClick={() => {
+                  alert(
+                    `Redemption interest registered for ${simulatedPoints.toLocaleString()} Civic Points in ${selectedRedemptionCard.title}! Wallet integration launching in Phase 2 with regulated partners.`,
+                  );
+                  setRedemptionModalOpen(false);
+                }}
+                className="w-full py-3.5 rounded-2xl bg-brand text-white font-display text-sm font-bold shadow-md hover:bg-brand-deep transition flex items-center justify-center gap-2"
+              >
+                <Wallet className="size-4" />
+                Reserve Micro-Infrastructure Tokens
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

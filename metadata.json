@@ -1,6 +1,6 @@
 {
   "name": "CivicRewards South Africa",
-  "description": "Partner with CivicRewards South Africa — the national public service delivery rewards program turning active citizenship, municipal contractor excellence, and ward councillor leadership into local economic growth across South Africa.",
+  "description": "CivicRewards is a public service delivery loyalty platform for smarter cities and municipalities — leveraging verified civic action into efficient public service delivery, better infrastructure intelligence, local economic value and a pathway to inclusive benefit.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
