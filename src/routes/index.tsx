@@ -32,6 +32,12 @@ import {
   TrendingUp,
   Wallet,
   Store,
+  Gift,
+  Tag,
+  ShoppingBag,
+  Ticket,
+  Copy,
+  Check,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
@@ -226,11 +232,11 @@ const redemptionCards = [
       "Keeps spending local, accelerates high-street SME sales, and boosts retail economy in wards.",
     estYield: "Instant 5% - 25% Off",
     minPoints: "50 Points",
-    badgeBg: "bg-rose-500 text-white",
-    cardBg: "bg-gradient-to-br from-rose-50/90 via-white to-rose-100/40",
-    borderColor: "border-rose-200/80",
-    shadowColor: "shadow-rose-900/5",
-    accentColor: "text-rose-700",
+    badgeBg: "bg-purple-600 text-white",
+    cardBg: "bg-gradient-to-br from-purple-100/80 via-purple-50/60 to-emerald-100/80",
+    borderColor: "border-purple-300/80 hover:border-emerald-400",
+    shadowColor: "shadow-purple-900/5",
+    accentColor: "text-purple-800",
   },
   {
     id: "utility-bonds",
@@ -244,11 +250,12 @@ const redemptionCards = [
       "Directly funds national power grid maintenance, network upgrades, and energy stability.",
     estYield: "7.8% - 9.2% p.a.",
     minPoints: "250 Points",
-    badgeBg: "bg-amber-500 text-white",
-    cardBg: "bg-gradient-to-br from-amber-50/90 via-white to-amber-100/40",
-    borderColor: "border-amber-200/80",
-    shadowColor: "shadow-amber-900/5",
-    accentColor: "text-amber-700",
+    comingSoon: true,
+    badgeBg: "bg-slate-500 text-white",
+    cardBg: "bg-gradient-to-br from-slate-100/95 via-gray-100/70 to-slate-200/60",
+    borderColor: "border-slate-300/80",
+    shadowColor: "shadow-slate-900/5",
+    accentColor: "text-slate-600",
   },
   {
     id: "muni-bonds",
@@ -262,11 +269,12 @@ const redemptionCards = [
       "Directly finances municipal infrastructure projects (e.g., Jozibonds for City of Johannesburg), upgrading local ward service delivery and municipal assets.",
     estYield: "8.2% - 10.5% p.a.",
     minPoints: "150 Points",
-    badgeBg: "bg-sky-500 text-white",
-    cardBg: "bg-gradient-to-br from-sky-50/90 via-white to-sky-100/40",
-    borderColor: "border-sky-200/80",
-    shadowColor: "shadow-sky-900/5",
-    accentColor: "text-sky-700",
+    comingSoon: true,
+    badgeBg: "bg-slate-500 text-white",
+    cardBg: "bg-gradient-to-br from-slate-100/95 via-gray-100/70 to-slate-200/60",
+    borderColor: "border-slate-300/80",
+    shadowColor: "shadow-slate-900/5",
+    accentColor: "text-slate-600",
   },
   {
     id: "clean-energy",
@@ -280,11 +288,135 @@ const redemptionCards = [
       "Accelerates local green energy transitions, powers schools, and reduces grid strain.",
     estYield: "9.5% - 11.4% p.a.",
     minPoints: "500 Points",
-    badgeBg: "bg-emerald-500 text-white",
-    cardBg: "bg-gradient-to-br from-emerald-50/90 via-white to-emerald-100/40",
-    borderColor: "border-emerald-200/80",
-    shadowColor: "shadow-emerald-900/5",
-    accentColor: "text-emerald-700",
+    comingSoon: true,
+    badgeBg: "bg-slate-500 text-white",
+    cardBg: "bg-gradient-to-br from-slate-100/95 via-gray-100/70 to-slate-200/60",
+    borderColor: "border-slate-300/80",
+    shadowColor: "shadow-slate-900/5",
+    accentColor: "text-slate-600",
+  },
+];
+
+const merchantDeals = [
+  {
+    id: "m1",
+    category: "discounts",
+    merchant: "SPAR Braamfontein",
+    badge: "15% OFF",
+    title: "15% Off Whole Grocery Basket",
+    pointsCost: 75,
+    location: "Ward 67, JHB Central",
+    desc: "Valid on fresh produce, bakery, and essential groceries at checkout.",
+    imageIcon: "🛒",
+    code: "SPAR-CIVIC-15",
+  },
+  {
+    id: "m2",
+    category: "discounts",
+    merchant: "BuildIt Soweto",
+    badge: "10% OFF",
+    title: "10% Off Hardware, Paint & DIY Tools",
+    pointsCost: 100,
+    location: "Ward 34, Soweto",
+    desc: "Upgrade home or community garden repairs with discounted building materials.",
+    imageIcon: "🔨",
+    code: "BUILD-SOW-10",
+  },
+  {
+    id: "m3",
+    category: "discounts",
+    merchant: "Maboneng Craft Roastery",
+    badge: "20% OFF",
+    title: "20% Off Coffee & Artisanal Breakfasts",
+    pointsCost: 50,
+    location: "Ward 123, Maboneng",
+    desc: "Handcrafted espresso drinks and fresh breakfast plates in Johannesburg art district.",
+    imageIcon: "☕",
+    code: "MABO-ROAST-20",
+  },
+  {
+    id: "m4",
+    category: "discounts",
+    merchant: "Cape Union Mart Rosebank",
+    badge: "12% OFF",
+    title: "12% Off Outdoor & Safety Gear",
+    pointsCost: 90,
+    location: "Ward 117, Rosebank",
+    desc: "Redeemable on high-vis jackets, work boots, and outdoor work equipment.",
+    imageIcon: "🥾",
+    code: "CUM-OUTDOOR-12",
+  },
+  {
+    id: "m5",
+    category: "giveaways",
+    merchant: "Mama K's Bakery",
+    badge: "FREE ITEM",
+    title: "Free Freshly Baked Artisan Loaf",
+    pointsCost: 60,
+    location: "Ward 45, Alexandra",
+    desc: "Claim a warm, freshly baked sourdough or white farmhouse loaf daily.",
+    imageIcon: "🍞",
+    code: "MAMA-BREAD-FREE",
+  },
+  {
+    id: "m6",
+    category: "giveaways",
+    merchant: "EcoAqua Water Station",
+    badge: "FREE REFILL",
+    title: "Free 10L Pure Mineral Water Refill",
+    pointsCost: 40,
+    location: "Ward 88, Randburg",
+    desc: "Refill home dispensers with purified, UV-filtered mineral spring water.",
+    imageIcon: "💧",
+    code: "ECO-AQUA-10L",
+  },
+  {
+    id: "m7",
+    category: "giveaways",
+    merchant: "Metro Express Wash",
+    badge: "FREE SERVICE",
+    title: "Free Executive Car Wash & Tyre Shine",
+    pointsCost: 120,
+    location: "Ward 102, Sandton",
+    desc: "Full exterior eco-wash, interior vacuum, and tyre glaze by local youth team.",
+    imageIcon: "🚗",
+    code: "WASH-EXPRESS-100",
+  },
+  {
+    id: "m8",
+    category: "promotional",
+    merchant: "CivicRewards Store",
+    badge: "OFFICIAL GEAR",
+    title: "Civic Champion 100% Organic Cotton Tote Bag",
+    pointsCost: 150,
+    location: "Ward Pickup / Delivery",
+    desc: "Heavy-duty canvas tote featuring your ward number and civic pride emblem.",
+    imageIcon: "👜",
+    code: "CIVIC-TOTE-SA",
+  },
+  {
+    id: "m9",
+    category: "promotional",
+    merchant: "CivicRewards Store",
+    badge: "OFFICIAL GEAR",
+    title: "Official Ward Hero Embroidered Cap",
+    pointsCost: 200,
+    location: "Ward Pickup / Delivery",
+    desc: "Breathable cotton cap with embroidered South African flag accent and ward badge.",
+    imageIcon: "🧢",
+    code: "HERO-CAP-2026",
+  },
+  {
+    id: "m10",
+    category: "promotional",
+    merchant: "CivicRewards Store",
+    badge: "OFFICIAL GEAR",
+    title: "Insulated Stainless Steel Water Bottle (750ml)",
+    pointsCost: 250,
+    location: "Ward Pickup / Delivery",
+    desc: "Keeps drinks ice-cold for 24 hours while supporting plastic-free ward cleanups.",
+    imageIcon: "🧴",
+    code: "BOTTLE-STAINLESS-750",
   },
 ];
 
@@ -681,6 +813,14 @@ function Index() {
     (typeof redemptionCards)[0] | null
   >(null);
   const [simulatedPoints, setSimulatedPoints] = useState(1500);
+
+  // Local Merchant Claims Modal State
+  const [merchantModalOpen, setMerchantModalOpen] = useState(false);
+  const [merchantCategory, setMerchantCategory] = useState<
+    "all" | "discounts" | "giveaways" | "promotional"
+  >("all");
+  const [claimedCodes, setClaimedCodes] = useState<Record<string, string>>({});
+  const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
   const handleOpenPayment = (tier: TierInfo) => {
     setSelectedPaymentTier(tier);
@@ -1283,9 +1423,16 @@ function Index() {
                     <div className="grid size-12 sm:size-14 place-items-center rounded-2xl bg-white shadow-sm border border-ink/5 text-2xl sm:text-3xl shrink-0 group-hover:scale-110 transition-transform">
                       {card.iconSymbol}
                     </div>
-                    <span className="rounded-full bg-white/90 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10 shadow-xs">
-                      Min {card.minPoints}
-                    </span>
+                    <div className="flex flex-col items-end gap-1.5">
+                      {card.comingSoon && (
+                        <span className="rounded-full bg-red-600 px-3 py-1 text-[10px] font-black uppercase tracking-wider text-white shadow-sm border border-red-700 animate-pulse">
+                          Coming Soon
+                        </span>
+                      )}
+                      <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10 shadow-xs">
+                        Min {card.minPoints}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="mt-5 font-display text-xl sm:text-2xl font-extrabold text-ink leading-snug">
@@ -1325,25 +1472,40 @@ function Index() {
                 </div>
 
                 {/* Card Action Footer */}
-                <div className="mt-6 pt-4 border-t border-ink/10 flex items-center justify-between gap-2">
-                  <div>
-                    <span className="block text-[10px] font-bold uppercase tracking-wider text-ink/50">
-                      Est. Annual Yield
-                    </span>
-                    <span className={`font-display text-base font-extrabold ${card.accentColor}`}>
-                      {card.estYield}
-                    </span>
-                  </div>
-                  <button
-                    onClick={() => {
-                      setSelectedRedemptionCard(card);
-                      setRedemptionModalOpen(true);
-                    }}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-brand px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-brand-deep"
-                  >
-                    Simulate Yield
-                    <ArrowRight className="size-3.5" />
-                  </button>
+                <div className="mt-6 pt-4 border-t border-ink/10">
+                  {card.id === "local-merchants" ? (
+                    <button
+                      onClick={() => setMerchantModalOpen(true)}
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-purple-700 to-emerald-700 px-4 py-3 text-xs sm:text-sm font-extrabold text-white shadow-md transition hover:from-purple-800 hover:to-emerald-800 active:scale-[0.99]"
+                    >
+                      <Store className="size-4" />
+                      CLAIM Discounts &amp; Giveaways
+                      <ArrowRight className="size-4" />
+                    </button>
+                  ) : (
+                    <div className="flex items-center justify-between gap-2">
+                      <div>
+                        <span className="block text-[10px] font-bold uppercase tracking-wider text-ink/50">
+                          Est. Annual Yield
+                        </span>
+                        <span
+                          className={`font-display text-base font-extrabold ${card.accentColor}`}
+                        >
+                          {card.estYield}
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => {
+                          setSelectedRedemptionCard(card);
+                          setRedemptionModalOpen(true);
+                        }}
+                        className="inline-flex items-center gap-1.5 rounded-xl bg-brand px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-brand-deep"
+                      >
+                        Simulate Yield
+                        <ArrowRight className="size-3.5" />
+                      </button>
+                    </div>
+                  )}
                 </div>
               </div>
             );
@@ -2502,9 +2664,16 @@ function Index() {
                 {selectedRedemptionCard.iconSymbol}
               </div>
               <div>
-                <span className="text-[10px] font-extrabold uppercase tracking-wider text-brand-deep">
-                  Infrastructure Portfolio Redemption
-                </span>
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-brand-deep">
+                    Infrastructure Portfolio Redemption
+                  </span>
+                  {selectedRedemptionCard.comingSoon && (
+                    <span className="rounded-full bg-red-600 px-2 py-0.5 text-[9px] font-black uppercase text-white shadow-xs">
+                      Coming Soon
+                    </span>
+                  )}
+                </div>
                 <h3 className="font-display text-xl font-extrabold text-ink leading-tight">
                   {selectedRedemptionCard.title}
                 </h3>
@@ -2587,6 +2756,230 @@ function Index() {
               >
                 <Wallet className="size-4" />
                 Reserve Micro-Infrastructure Tokens
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Local Merchant Partners & Claim Modal */}
+      {merchantModalOpen && (
+        <div className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-ink/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
+          <div className="relative w-full max-w-4xl rounded-[2.5rem] bg-white p-6 sm:p-8 shadow-2xl border border-white/60 my-8">
+            <button
+              onClick={() => setMerchantModalOpen(false)}
+              className="absolute top-5 right-5 grid size-9 place-items-center rounded-full bg-cream text-ink hover:bg-rose-100 hover:text-rose-700 transition"
+            >
+              <X className="size-5" />
+            </button>
+
+            {/* Header */}
+            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-ink/10 pb-5 pr-10">
+              <div className="flex items-center gap-3">
+                <div className="grid size-12 place-items-center rounded-2xl bg-rose-50 border border-rose-200 text-2xl shadow-xs text-rose-600">
+                  🏪
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-rose-700 bg-rose-100 px-2.5 py-0.5 rounded-full border border-rose-200">
+                    High-Street Ward Partner Network
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl font-extrabold text-ink leading-tight">
+                    Local Merchants, Discounts &amp; Giveaways
+                  </h3>
+                </div>
+              </div>
+
+              {/* Points Balance Badge */}
+              <div className="rounded-2xl bg-cream px-4 py-2 border border-ink/10 flex items-center gap-2">
+                <Coins className="size-4 text-accent-warm" />
+                <div>
+                  <span className="block text-[9px] font-extrabold uppercase text-ink/50">
+                    Your Civic Balance
+                  </span>
+                  <span className="font-mono text-sm font-extrabold text-brand-deep">
+                    {simulatedPoints.toLocaleString()} Points
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Subtitle */}
+            <p className="mt-4 text-xs sm:text-sm text-ink/75 leading-relaxed font-medium">
+              Every civic effort directly empowers local ward SMEs. Redeem your civic points for
+              local merchant discounts, free daily items, or official promotional paraphernalia.
+            </p>
+
+            {/* Category Filter Tabs */}
+            <div className="mt-6 flex flex-wrap gap-2 border-b border-ink/10 pb-3">
+              {[
+                { id: "all", label: "All Offers", icon: Store, count: merchantDeals.length },
+                {
+                  id: "discounts",
+                  label: "Discounts",
+                  icon: Tag,
+                  count: merchantDeals.filter((d) => d.category === "discounts").length,
+                },
+                {
+                  id: "giveaways",
+                  label: "Giveaways",
+                  icon: Gift,
+                  count: merchantDeals.filter((d) => d.category === "giveaways").length,
+                },
+                {
+                  id: "promotional",
+                  label: "Promotional Items",
+                  icon: ShoppingBag,
+                  count: merchantDeals.filter((d) => d.category === "promotional").length,
+                },
+              ].map((tab) => {
+                const IconC = tab.icon;
+                const isActive = merchantCategory === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() =>
+                      setMerchantCategory(
+                        tab.id as "all" | "discounts" | "giveaways" | "promotional",
+                      )
+                    }
+                    className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition ${
+                      isActive
+                        ? "bg-rose-600 text-white shadow-sm"
+                        : "bg-cream text-ink/70 hover:bg-rose-50 hover:text-rose-700 border border-ink/5"
+                    }`}
+                  >
+                    <IconC className="size-3.5" />
+                    <span>{tab.label}</span>
+                    <span
+                      className={`rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
+                        isActive
+                          ? "bg-white/20 text-white"
+                          : "bg-white text-ink/60 border border-ink/10"
+                      }`}
+                    >
+                      {tab.count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Deals Grid */}
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 max-h-[55vh] overflow-y-auto pr-1">
+              {merchantDeals
+                .filter((deal) => merchantCategory === "all" || deal.category === merchantCategory)
+                .map((deal) => {
+                  const isClaimed = Boolean(claimedCodes[deal.id]);
+                  const canAfford = simulatedPoints >= deal.pointsCost;
+
+                  return (
+                    <div
+                      key={deal.id}
+                      className={`relative flex flex-col justify-between rounded-2xl p-5 border transition-all ${
+                        isClaimed
+                          ? "bg-emerald-50/70 border-emerald-300 shadow-xs"
+                          : "bg-white border-ink/10 hover:border-rose-300 shadow-xs hover:shadow-md"
+                      }`}
+                    >
+                      <div>
+                        <div className="flex items-start justify-between gap-2">
+                          <div className="flex items-center gap-2.5">
+                            <span className="text-2xl">{deal.imageIcon}</span>
+                            <div>
+                              <span className="text-[10px] font-bold text-ink/50 block">
+                                {deal.merchant}
+                              </span>
+                              <span className="text-[10px] text-brand-deep font-semibold flex items-center gap-1">
+                                <MapPin className="size-3 text-brand" />
+                                {deal.location}
+                              </span>
+                            </div>
+                          </div>
+                          <span
+                            className={`rounded-full px-2.5 py-1 text-[10px] font-extrabold uppercase ${
+                              deal.category === "discounts"
+                                ? "bg-rose-100 text-rose-700 border border-rose-200"
+                                : deal.category === "giveaways"
+                                  ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
+                                  : "bg-amber-100 text-amber-800 border border-amber-200"
+                            }`}
+                          >
+                            {deal.badge}
+                          </span>
+                        </div>
+
+                        <h4 className="mt-3 font-display text-base font-extrabold text-ink leading-snug">
+                          {deal.title}
+                        </h4>
+                        <p className="mt-1.5 text-xs text-ink/75 leading-relaxed">{deal.desc}</p>
+                      </div>
+
+                      {/* Footer Actions */}
+                      <div className="mt-4 pt-3 border-t border-ink/10 flex items-center justify-between gap-2">
+                        <span className="font-mono text-xs font-extrabold text-brand-deep flex items-center gap-1">
+                          <Coins className="size-3.5 text-accent-warm" />
+                          {deal.pointsCost} Points
+                        </span>
+
+                        {isClaimed ? (
+                          <div className="flex items-center gap-1.5">
+                            <span className="font-mono text-[11px] font-extrabold bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-lg border border-emerald-300">
+                              {claimedCodes[deal.id]}
+                            </span>
+                            <button
+                              onClick={() => {
+                                navigator.clipboard.writeText(claimedCodes[deal.id]);
+                                setCopiedCode(deal.id);
+                                setTimeout(() => setCopiedCode(null), 2000);
+                              }}
+                              className="inline-flex items-center gap-1 rounded-lg bg-emerald-700 px-2.5 py-1 text-[11px] font-bold text-white hover:bg-emerald-800 transition"
+                            >
+                              {copiedCode === deal.id ? (
+                                <>
+                                  <Check className="size-3" /> Copied
+                                </>
+                              ) : (
+                                <>
+                                  <Copy className="size-3" /> Copy
+                                </>
+                              )}
+                            </button>
+                          </div>
+                        ) : (
+                          <button
+                            disabled={!canAfford}
+                            onClick={() => {
+                              if (!canAfford) return;
+                              setSimulatedPoints((prev) => prev - deal.pointsCost);
+                              setClaimedCodes((prev) => ({ ...prev, [deal.id]: deal.code }));
+                            }}
+                            className={`inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-extrabold shadow-xs transition ${
+                              canAfford
+                                ? "bg-rose-600 text-white hover:bg-rose-700 active:scale-95"
+                                : "bg-ink/10 text-ink/40 cursor-not-allowed"
+                            }`}
+                          >
+                            <Ticket className="size-3.5" />
+                            {canAfford ? "CLAIM Offer" : "Need Points"}
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+
+            {/* Modal Footer */}
+            <div className="mt-6 pt-4 border-t border-ink/10 flex flex-wrap items-center justify-between gap-3 text-xs text-ink/60">
+              <span className="flex items-center gap-1.5 font-medium">
+                <ShieldCheck className="size-4 text-brand" />
+                Vouchers verified instantly at point-of-sale or local ward distribution centers.
+              </span>
+              <button
+                onClick={() => setMerchantModalOpen(false)}
+                className="rounded-xl bg-cream px-5 py-2 font-bold text-ink hover:bg-ink/10 transition"
+              >
+                Close
               </button>
             </div>
           </div>
