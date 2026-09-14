@@ -117,3 +117,24 @@
     font-family: var(--font-body);
   }
 }
+
+@keyframes flagWave {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-3deg) scale(1.05);
+  }
+  50% {
+    transform: translateY(1px) rotate(2deg) scale(0.97);
+  }
+  75% {
+    transform: translateY(-1px) rotate(-2deg) scale(1.03);
+  }
+}
+
+.animate-flag-wave {
+  animation: flagWave 3.5s ease-in-out infinite;
+  transform-origin: left center;
+}

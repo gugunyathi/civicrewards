@@ -31,6 +31,7 @@ import {
   Sun,
   TrendingUp,
   Wallet,
+  Store,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
@@ -214,6 +215,24 @@ const stakeholderValues = [
 
 const redemptionCards = [
   {
+    id: "local-merchants",
+    iconSymbol: "🏪",
+    LucideIcon: Store,
+    title: "Local Merchants, Discounts & Giveaways",
+    assetType: "Retail Discounts, Giveaways & Promotional Items",
+    personalWealthBenefit:
+      "Redeem points for discounts, giveaways, and promotional paraphernalia at neighborhood merchants.",
+    communityImpact:
+      "Keeps spending local, accelerates high-street SME sales, and boosts retail economy in wards.",
+    estYield: "Instant 5% - 25% Off",
+    minPoints: "50 Points",
+    badgeBg: "bg-rose-500 text-white",
+    cardBg: "bg-gradient-to-br from-rose-50/90 via-white to-rose-100/40",
+    borderColor: "border-rose-200/80",
+    shadowColor: "shadow-rose-900/5",
+    accentColor: "text-rose-700",
+  },
+  {
     id: "utility-bonds",
     iconSymbol: "⚡",
     LucideIcon: Zap,
@@ -232,16 +251,16 @@ const redemptionCards = [
     accentColor: "text-amber-700",
   },
   {
-    id: "water-infra",
-    iconSymbol: "💧",
-    LucideIcon: Droplets,
-    title: "Fractional Municipal Water Infrastructure",
-    assetType: "Micro-Tokens / Regional Water Board Debt (e.g., Rand Water)",
+    id: "muni-bonds",
+    iconSymbol: "🏛️",
+    LucideIcon: Building2,
+    title: "Tokenized Fractional Municipality Bonds",
+    assetType: "Micro-Bonds & Municipal Debt (e.g., Jozibonds)",
     personalWealthBenefit:
-      "Low-volatility asset holding stable value backed by essential resource delivery.",
+      "Earn predictable interest coupon payouts backed by city revenues directly into your digital wallet.",
     communityImpact:
-      "Financing capital expenditures to repair leaks, upgrade reservoirs, and secure clean water.",
-    estYield: "6.5% - 8.1% p.a.",
+      "Directly finances municipal infrastructure projects (e.g., Jozibonds for City of Johannesburg), upgrading local ward service delivery and municipal assets.",
+    estYield: "8.2% - 10.5% p.a.",
     minPoints: "150 Points",
     badgeBg: "bg-sky-500 text-white",
     cardBg: "bg-gradient-to-br from-sky-50/90 via-white to-sky-100/40",
@@ -595,6 +614,28 @@ const tiers = [
   },
 ];
 
+function AnimatedSAFlag({ className = "h-5 sm:h-6 w-8 sm:w-10" }: { className?: string }) {
+  return (
+    <div
+      className={`relative overflow-hidden rounded-md shadow-xs border border-ink/15 animate-flag-wave shrink-0 transition-transform ${className}`}
+      title="South Africa"
+    >
+      <svg
+        viewBox="0 0 900 600"
+        className="h-full w-full object-cover"
+        aria-label="Flag of South Africa"
+      >
+        <path d="M0 0h900v300H0z" fill="#E03C31" />
+        <path d="M0 300h900v300H0z" fill="#002395" />
+        <path d="M0 0l450 300L0 600h120l330-220H900V220H450L120 0H0z" fill="#FFFFFF" />
+        <path d="M0 30l405 270L0 570h90l315-210H900V240H395L90 30H0z" fill="#007A4D" />
+        <path d="M0 60l360 240L0 540z" fill="#FFB612" />
+        <path d="M0 90l315 210L0 510z" fill="#000000" />
+      </svg>
+    </div>
+  );
+}
+
 function Index() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("monthly");
@@ -696,9 +737,12 @@ function Index() {
               C
             </div>
             <div className="leading-tight">
-              <p className="font-display text-base sm:text-lg font-extrabold text-brand-deep">
-                CivicRewards
-              </p>
+              <div className="flex items-center gap-2">
+                <p className="font-display text-base sm:text-lg font-extrabold text-brand-deep">
+                  CivicRewards
+                </p>
+                <AnimatedSAFlag />
+              </div>
               <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
                 South Africa
               </p>
@@ -1217,14 +1261,15 @@ function Index() {
           <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-extrabold text-ink leading-tight">
             Transform Active Citizenship into Wealth Portfolios
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-ink/75 leading-relaxed font-medium">
-            Redeem your civic points for fractional stakes in South Africa's critical
-            infrastructure.
+          <p className="text-sm sm:text-base md:text-lg text-ink/80 leading-relaxed font-medium">
+            Redeem your civic points via Local Merchants, Municipality Bonds, Public Utilities &amp;
+            Infrastructure ETFs so that every civic effort has compound returns in efficient quality
+            public service delivery and shared benefit in the wealth of our cities.
           </p>
         </div>
 
         {/* Cards Grid */}
-        <div className="mt-10 sm:mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 sm:mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {redemptionCards.map((card) => {
             const IconComp = card.LucideIcon;
             return (
