@@ -1053,93 +1053,99 @@ function Index() {
 
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-10 pt-8 sm:pt-12 md:pt-16">
-        <div className="grid items-center gap-8 sm:gap-10 md:grid-cols-2">
-          <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3.5 sm:px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-deep shadow-sm">
-              <ShieldCheck className="size-4" />
-              Public Service Delivery Loyalty Platform
-            </span>
-            <h1 className="mt-4 sm:mt-5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-ink">
-              Fix South Africa.
-              <br />
-              <span className="text-brand-deep">Reward Citizens.</span>
-              <br />
-              <span className="text-accent-warm">Grow Your Business.</span>
-            </h1>
-            <p className="mt-4 sm:mt-6 max-w-md text-base sm:text-lg leading-relaxed text-ink/80 font-medium">
-              CivicRewards is a public service delivery loyalty platform for smarter cities and
-              municipalities — leveraging verified civic action into efficient public service
-              delivery, better infrastructure intelligence, local economic value and a pathway to
-              inclusive benefit.
-            </p>
+        <div className="text-center max-w-5xl mx-auto">
+          <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3.5 sm:px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-deep shadow-sm">
+            <ShieldCheck className="size-4" />
+            Public Service Delivery Loyalty Platform
+          </span>
+          <h1 className="mt-4 sm:mt-5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] text-ink tracking-tight">
+            <span>Fix South Africa.</span>{" "}
+            <span className="text-brand-deep">Reward Citizens.</span>{" "}
+            <span className="text-accent-warm">Grow Your Business.</span>
+          </h1>
+          <p className="mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-ink/80 font-medium">
+            CivicRewards is an institutional-grade public service delivery loyalty platform and
+            Smart City Intelligence platform that transforms verified public service outage
+            reporting and civic action into a catalyst for resilient infrastructure, efficient
+            public service delivery, and thriving local economies and municipalities.
+          </p>
 
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <button
-                onClick={() => handleOpenModal("Partner Application", "Hero Call to Action")}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 sm:px-7 py-3.5 sm:py-4 font-display text-base font-bold text-white shadow-[0_6px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep active:translate-y-1 active:shadow-none"
-              >
-                Become a Partner Today
-                <ArrowRight className="size-5" />
-              </button>
-              <a
-                href="#tracks"
-                className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 sm:py-4 text-base font-bold text-ink/80 shadow-[0_6px_0_rgba(42,50,56,0.12)] transition hover:bg-cream active:translate-y-1 active:shadow-none"
-              >
-                Choose Your Track
-              </a>
-            </div>
-
-            <div className="mt-8 grid grid-cols-2 gap-4 sm:flex sm:gap-8 border-t border-ink/10 pt-6">
-              <div>
-                <p className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
-                  48,200+
-                </p>
-                <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
-                  Faults resolved
-                </p>
-              </div>
-              <div>
-                <p className="font-display text-2xl sm:text-3xl font-extrabold text-accent-warm">
-                  584 Wards
-                </p>
-                <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
-                  Across 7 Metros
-                </p>
-              </div>
-            </div>
+          <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <button
+              onClick={() => handleOpenModal("Partner Application", "Hero Call to Action")}
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 sm:px-7 py-3.5 sm:py-4 font-display text-base font-bold text-white shadow-[0_6px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep active:translate-y-1 active:shadow-none"
+            >
+              Become a Partner Today
+              <ArrowRight className="size-5" />
+            </button>
+            <a
+              href="#tracks"
+              className="inline-flex items-center justify-center rounded-2xl bg-white px-6 py-3.5 sm:py-4 text-base font-bold text-ink/80 shadow-[0_6px_0_rgba(42,50,56,0.12)] transition hover:bg-cream active:translate-y-1 active:shadow-none"
+            >
+              Choose Your Track
+            </a>
           </div>
 
-          {/* Clay Hero Visual Object */}
-          <div className="relative mt-2 md:mt-0">
-            <div className="relative rounded-[2rem] sm:rounded-[2.5rem] bg-sky p-4 sm:p-6 shadow-[0_25px_50px_-20px_rgba(42,50,56,0.35)]">
-              <img
-                src={saProvincesMap}
-                alt="3D clay map model of South Africa with provinces and metro pins"
-                width={1024}
-                height={820}
-                referrerPolicy="no-referrer"
-                className="aspect-[5/4] w-full rounded-[1.5rem] sm:rounded-[1.8rem] bg-mint object-cover"
-              />
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-12 border-t border-ink/10 pt-6">
+            <div>
+              <p className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
+                48,200+
+              </p>
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+                Faults resolved
+              </p>
+            </div>
+            <div className="h-8 w-px bg-ink/10 hidden sm:block" />
+            <div>
+              <p className="font-display text-2xl sm:text-3xl font-extrabold text-accent-warm">
+                584 Wards
+              </p>
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+                Across 7 Metros
+              </p>
+            </div>
+            <div className="h-8 w-px bg-ink/10 hidden sm:block" />
+            <div>
+              <p className="font-display text-2xl sm:text-3xl font-extrabold text-brand">
+                9 Provinces
+              </p>
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+                Nationwide Impact
+              </p>
+            </div>
+          </div>
+        </div>
 
-              {/* Floating Points Badge */}
-              <div className="absolute left-2 sm:-left-5 top-4 sm:top-10 rounded-xl sm:rounded-2xl bg-white px-3 sm:px-4 py-2 sm:py-3 shadow-[0_10px_25px_-12px_rgba(42,50,56,0.5)] border border-sky">
-                <p className="font-display text-base sm:text-xl font-extrabold text-accent-warm">
-                  +120 pts
-                </p>
-                <p className="text-[10px] sm:text-[11px] font-semibold text-ink/60">
-                  Pothole fixed · Ward 12
-                </p>
-              </div>
+        {/* Clay Hero Visual Object */}
+        <div className="relative mt-10 sm:mt-12 max-w-4xl mx-auto">
+          <div className="relative rounded-[2rem] sm:rounded-[2.5rem] bg-sky p-4 sm:p-6 shadow-[0_25px_50px_-20px_rgba(42,50,56,0.35)]">
+            <img
+              src={saProvincesMap}
+              alt="3D clay map model of South Africa with provinces and metro pins"
+              width={1024}
+              height={820}
+              referrerPolicy="no-referrer"
+              className="aspect-[16/10] sm:aspect-[2/1] w-full rounded-[1.5rem] sm:rounded-[1.8rem] bg-mint object-cover"
+            />
 
-              {/* Floating Champion Badge */}
-              <div className="absolute bottom-2 right-2 sm:-bottom-5 sm:-right-3 rounded-xl sm:rounded-2xl bg-gold px-3 sm:px-4 py-2 sm:py-3 shadow-[0_10px_25px_-12px_rgba(42,50,56,0.5)] border border-white">
-                <p className="font-display text-xs sm:text-sm font-extrabold text-ink">
-                  Community Champion
-                </p>
-                <p className="text-[10px] sm:text-[11px] font-semibold text-ink/70">
-                  Soweto · Bronze Tier
-                </p>
-              </div>
+            {/* Floating Points Badge */}
+            <div className="absolute left-2 sm:left-6 top-4 sm:top-8 rounded-xl sm:rounded-2xl bg-white px-3 sm:px-4 py-2 sm:py-3 shadow-[0_10px_25px_-12px_rgba(42,50,56,0.5)] border border-sky">
+              <p className="font-display text-base sm:text-xl font-extrabold text-accent-warm">
+                +120 pts
+              </p>
+              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/60">
+                Pothole fixed · Ward 12
+              </p>
+            </div>
+
+            {/* Floating Champion Badge */}
+            <div className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 rounded-xl sm:rounded-2xl bg-gold px-3 sm:px-4 py-2 sm:py-3 shadow-[0_10px_25px_-12px_rgba(42,50,56,0.5)] border border-white">
+              <p className="font-display text-xs sm:text-sm font-extrabold text-ink">
+                Community Champion
+              </p>
+              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/70">
+                Soweto · Bronze Tier
+              </p>
             </div>
           </div>
         </div>
