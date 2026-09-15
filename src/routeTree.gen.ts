@@ -10,33 +10,53 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ReportAppRouteImport } from './routes/ReportApp'
+import { Route as CouncillorRouteImport } from './routes/councillor'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReportAppRoute = ReportAppRouteImport.update({
+  id: '/ReportApp',
+  path: '/ReportApp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CouncillorRoute = CouncillorRouteImport.update({
+  id: '/councillor',
+  path: '/councillor',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/ReportApp': typeof ReportAppRoute
+  '/councillor': typeof CouncillorRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/ReportApp': typeof ReportAppRoute
+  '/councillor': typeof CouncillorRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/ReportApp': typeof ReportAppRoute
+  '/councillor': typeof CouncillorRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/ReportApp' | '/councillor'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/ReportApp' | '/councillor'
+  id: '__root__' | '/' | '/ReportApp' | '/councillor'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ReportAppRoute: typeof ReportAppRoute
+  CouncillorRoute: typeof CouncillorRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +68,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ReportApp': {
+      id: '/ReportApp'
+      path: '/ReportApp'
+      fullPath: '/ReportApp'
+      preLoaderRoute: typeof ReportAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/councillor': {
+      id: '/councillor'
+      path: '/councillor'
+      fullPath: '/councillor'
+      preLoaderRoute: typeof CouncillorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ReportAppRoute: ReportAppRoute,
+  CouncillorRoute: CouncillorRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -7,15 +7,12 @@ import {
   Lock,
   Download,
   Printer,
-  Sparkles,
   Building2,
-  FileText,
   Calendar,
-  Check,
-  ArrowRight,
-  ArrowLeft,
-  RefreshCw,
+  AlertTriangle,
 } from "lucide-react";
+import { generatePaystackReference, openPaystackCheckout } from "@/lib/paystackClient";
+import { verifyPaystackTransaction } from "@/lib/paystackVerify";
 
 export interface TierInfo {
   name: string;
@@ -55,7 +52,9 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
   initialBillingCycle = "monthly",
   onPaymentSuccess,
 }) => {
-  const [step, setStep] = useState<"checkout" | "processing" | "receipt">("checkout");
+  const [step, setStep] = useState<"checkout" | "processing" | "receipt" | "quoteSubmitted">(
+    "checkout",
+  );
   const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">(initialBillingCycle);
 
   // Form Fields
@@ -63,12 +62,10 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
   const [email, setEmail] = useState("");
   const [companyName, setCompanyName] = useState("");
   const [vatNumber, setVatNumber] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [expiry, setExpiry] = useState("");
-  const [cvv, setCvv] = useState("");
 
   // Receipt data after payment
   const [receipt, setReceipt] = useState<ReceiptData | null>(null);
+  const [paymentError, setPaymentError] = useState<string | null>(null);
 
   // Sync billing cycle when modal opens
   useEffect(() => {
@@ -78,6 +75,7 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
   // Reset state on close
   const handleCloseModal = () => {
     setStep("checkout");
+    setPaymentError(null);
     onClose();
   };
 
@@ -94,73 +92,81 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
   const vatAmount = Math.round(subtotal * vatRate);
   const totalAmount = subtotal + vatAmount;
 
-  // Format Card Number
-  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/\D/g, "").slice(0, 16);
-    const formatted = value.replace(/(.{4})/g, "$1 ").trim();
-    setCardNumber(formatted);
+  const buildInvoiceNumber = () => {
+    const now = new Date();
+    return `INV-ZA-${now.getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
   };
 
-  // Format Expiry MM/YY
-  const handleExpiryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    let value = e.target.value.replace(/\D/g, "").slice(0, 4);
-    if (value.length >= 3) {
-      value = `${value.slice(0, 2)}/${value.slice(2)}`;
-    }
-    setExpiry(value);
-  };
-
-  // Determine Card Brand
-  const getCardBrand = (num: string) => {
-    const clean = num.replace(/\s/g, "");
-    if (clean.startsWith("4")) return "Visa";
-    if (/^5[1-5]/.test(clean) || /^2[2-7]/.test(clean)) return "Mastercard";
-    if (/^3[47]/.test(clean)) return "Amex";
-    return "Visa";
-  };
-
-  const cardBrand = getCardBrand(cardNumber);
+  const formatDate = () =>
+    new Date().toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" });
 
   // Submit Payment Handler
-  const handleSubmitPayment = (e: React.FormEvent) => {
+  const handleSubmitPayment = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!cardName || !email || (!isCustomQuote && (!cardNumber || !expiry || !cvv))) return;
+    if (!cardName || !email) return;
+    setPaymentError(null);
+
+    if (isCustomQuote) {
+      setStep("processing");
+      setTimeout(() => setStep("quoteSubmitted"), 900);
+      return;
+    }
 
     setStep("processing");
 
-    // Simulate 3D Secure / Payment Gateway Authorization delay
-    setTimeout(() => {
-      const cleanNum = cardNumber.replace(/\s/g, "");
-      const last4 = cleanNum.length >= 4 ? cleanNum.slice(-4) : "4242";
-      const now = new Date();
-      const dateStr = now.toLocaleDateString("en-ZA", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      });
-
-      const newReceipt: ReceiptData = {
-        invoiceNumber: `INV-ZA-${now.getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`,
-        transactionId: `TXN-CIVIC-${Math.floor(100000 + Math.random() * 900000)}`,
-        date: dateStr,
-        companyName: companyName || cardName,
+    try {
+      const reference = generatePaystackReference();
+      await openPaystackCheckout({
         email,
-        vatNumber: vatNumber || undefined,
-        tierName: selectedTier.name,
-        billingCycle,
-        subtotal,
-        vatAmount,
-        totalAmount,
-        cardLast4: last4,
-        cardBrand,
-      };
+        amountZar: totalAmount,
+        reference,
+        metadata: {
+          tierName: selectedTier.name,
+          billingCycle,
+          companyName: companyName || cardName,
+        },
+        onSuccess: async (confirmedReference) => {
+          try {
+            const verified = await verifyPaystackTransaction({
+              data: { reference: confirmedReference },
+            });
 
-      setReceipt(newReceipt);
-      setStep("receipt");
-      if (onPaymentSuccess) {
-        onPaymentSuccess(newReceipt);
-      }
-    }, 2200);
+            const newReceipt: ReceiptData = {
+              invoiceNumber: buildInvoiceNumber(),
+              transactionId: verified.reference,
+              date: formatDate(),
+              companyName: companyName || cardName,
+              email: verified.customerEmail || email,
+              ...(vatNumber ? { vatNumber } : {}),
+              tierName: selectedTier.name,
+              billingCycle,
+              subtotal,
+              vatAmount,
+              totalAmount: verified.amountZar,
+              cardLast4: verified.cardLast4,
+              cardBrand: verified.cardBrand,
+            };
+
+            setReceipt(newReceipt);
+            setStep("receipt");
+            onPaymentSuccess?.(newReceipt);
+          } catch (err) {
+            setPaymentError(
+              err instanceof Error
+                ? err.message
+                : "We couldn't confirm your payment. If you were charged, contact support with your reference before retrying.",
+            );
+            setStep("checkout");
+          }
+        },
+        onCancel: () => {
+          setStep("checkout");
+        },
+      });
+    } catch (err) {
+      setPaymentError(err instanceof Error ? err.message : "Could not start checkout");
+      setStep("checkout");
+    }
   };
 
   // Printable Invoice function
@@ -272,12 +278,16 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
               <h3 className="font-display text-lg font-extrabold text-ink leading-tight">
                 {step === "receipt"
                   ? "Payment Receipt & Tax Invoice"
-                  : `Subscribe to ${selectedTier.name}`}
+                  : step === "quoteSubmitted"
+                    ? "Quote Request Submitted"
+                    : `Subscribe to ${selectedTier.name}`}
               </h3>
               <p className="text-xs text-ink/60 font-semibold">
                 {step === "receipt"
                   ? "Instant Activation & Confirmation"
-                  : "Secure Credit / Debit Card Gateway (ZAR)"}
+                  : step === "quoteSubmitted"
+                    ? "Our team will follow up with pricing"
+                    : "Secure Card Checkout via Paystack (ZAR)"}
               </p>
             </div>
           </div>
@@ -329,49 +339,40 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
                 </div>
               )}
 
-              {/* 3D Visual Card Preview */}
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-deep via-brand to-accent-deep p-5 text-white shadow-lg border border-white/20">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <CreditCard className="size-6 text-gold" />
-                    <span className="font-display font-extrabold tracking-widest text-xs uppercase text-gold">
-                      CivicRewards Pay
+              {/* Paystack checkout banner */}
+              {!isCustomQuote && (
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-brand-deep via-brand to-accent-deep p-5 text-white shadow-lg border border-white/20">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <CreditCard className="size-6 text-gold" />
+                      <span className="font-display font-extrabold tracking-widest text-xs uppercase text-gold">
+                        CivicRewards Pay
+                      </span>
+                    </div>
+                    <span className="font-display font-extrabold italic text-sm text-white/90">
+                      Paystack
                     </span>
                   </div>
-                  <span className="font-display font-extrabold italic text-sm text-white/90">
-                    {cardBrand}
-                  </span>
-                </div>
-
-                <div className="my-6">
-                  <p className="font-mono text-lg sm:text-xl font-bold tracking-widest text-white/90">
-                    {cardNumber || "•••• •••• •••• 4242"}
+                  <p className="mt-4 text-sm font-semibold text-white/90">
+                    You'll enter your card details on Paystack's secure payment page. We never
+                    see or store your card number.
                   </p>
                 </div>
+              )}
 
-                <div className="flex items-end justify-between text-xs">
-                  <div>
-                    <p className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">
-                      Cardholder
-                    </p>
-                    <p className="font-display font-bold truncate max-w-[180px]">
-                      {cardName ? cardName.toUpperCase() : "YOUR NAME / COMPANY"}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-[10px] font-semibold text-white/60 uppercase tracking-wider">
-                      Expires
-                    </p>
-                    <p className="font-mono font-bold">{expiry || "MM/YY"}</p>
-                  </div>
+              {/* Payment error */}
+              {paymentError && (
+                <div className="flex items-start gap-2 rounded-2xl bg-red-50 p-3.5 border border-red-200 text-red-700">
+                  <AlertTriangle className="size-4 shrink-0 mt-0.5" />
+                  <p className="text-xs font-semibold">{paymentError}</p>
                 </div>
-              </div>
+              )}
 
               {/* Personal & Business Details */}
               <div className="space-y-4">
                 <h4 className="font-display text-sm font-extrabold text-ink flex items-center gap-2">
                   <Building2 className="size-4 text-brand" />
-                  1. Business & Contact Information
+                  Business & Contact Information
                 </h4>
                 <div className="grid gap-3 sm:grid-cols-2">
                   <div>
@@ -430,86 +431,31 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
                 </div>
               </div>
 
-              {/* Card Details */}
+              {/* Price Calculation Summary Box */}
               {!isCustomQuote && (
-                <div className="space-y-4 border-t border-ink/10 pt-4">
-                  <h4 className="font-display text-sm font-extrabold text-ink flex items-center gap-2">
-                    <Lock className="size-4 text-brand" />
-                    2. Payment Card Details
-                  </h4>
-
-                  <div>
-                    <label className="block text-xs font-bold text-ink/70 mb-1">
-                      Card Number *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        required
-                        placeholder="4532 1234 5678 9012"
-                        value={cardNumber}
-                        onChange={handleCardNumberChange}
-                        className="w-full rounded-xl border border-ink/20 px-3.5 py-2.5 pl-10 text-sm font-mono font-semibold focus:border-brand focus:outline-none"
-                      />
-                      <CreditCard className="absolute left-3 top-3 size-4 text-ink/40" />
-                    </div>
+                <div className="rounded-2xl bg-mint/30 p-4 border border-brand/20 space-y-2">
+                  <div className="flex justify-between text-xs font-semibold text-ink/75">
+                    <span>
+                      {selectedTier.name} Subscription ({billingCycle})
+                    </span>
+                    <span>R {subtotal.toLocaleString()}</span>
                   </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-bold text-ink/70 mb-1">
-                        Expiry Date *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="MM/YY"
-                        value={expiry}
-                        onChange={handleExpiryChange}
-                        className="w-full rounded-xl border border-ink/20 px-3.5 py-2.5 text-sm font-mono font-semibold focus:border-brand focus:outline-none"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-bold text-ink/70 mb-1">
-                        CVV / CVC *
-                      </label>
-                      <input
-                        type="password"
-                        required
-                        maxLength={4}
-                        placeholder="123"
-                        value={cvv}
-                        onChange={(e) => setCvv(e.target.value.replace(/\D/g, ""))}
-                        className="w-full rounded-xl border border-ink/20 px-3.5 py-2.5 text-sm font-mono font-semibold focus:border-brand focus:outline-none"
-                      />
-                    </div>
+                  <div className="flex justify-between text-xs font-semibold text-ink/75">
+                    <span>15% South African VAT</span>
+                    <span>R {vatAmount.toLocaleString()}</span>
+                  </div>
+                  <div className="flex justify-between text-sm font-extrabold text-brand-deep pt-2 border-t border-brand/20">
+                    <span>Total Due Now (ZAR):</span>
+                    <span className="font-display text-base">R {totalAmount.toLocaleString()}</span>
                   </div>
                 </div>
               )}
-
-              {/* Price Calculation Summary Box */}
-              <div className="rounded-2xl bg-mint/30 p-4 border border-brand/20 space-y-2">
-                <div className="flex justify-between text-xs font-semibold text-ink/75">
-                  <span>
-                    {selectedTier.name} Subscription ({billingCycle})
-                  </span>
-                  <span>R {subtotal.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-xs font-semibold text-ink/75">
-                  <span>15% South African VAT</span>
-                  <span>R {vatAmount.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-sm font-extrabold text-brand-deep pt-2 border-t border-brand/20">
-                  <span>Total Due Now (ZAR):</span>
-                  <span className="font-display text-base">R {totalAmount.toLocaleString()}</span>
-                </div>
-              </div>
 
               {/* Security guarantee */}
               <div className="flex items-center gap-2 text-[11px] font-semibold text-ink/60">
                 <ShieldCheck className="size-4 text-brand shrink-0" />
                 <span>
-                  Protected by 256-bit SSL encryption. Tax Invoices automatically emailed in
+                  Card payments are processed by Paystack. Tax Invoices automatically emailed in
                   compliance with SARS guidelines.
                 </span>
               </div>
@@ -522,7 +468,7 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
                 <Lock className="size-4" />
                 {isCustomQuote
                   ? "Submit Custom Quote Request"
-                  : `Pay R ${totalAmount.toLocaleString()} via Card`}
+                  : `Pay R ${totalAmount.toLocaleString()} via Paystack`}
               </button>
             </form>
           )}
@@ -536,13 +482,38 @@ export const CardPaymentModal: React.FC<CardPaymentModalProps> = ({
               </div>
               <div>
                 <h4 className="font-display text-lg font-extrabold text-ink">
-                  Authorizing Payment...
+                  {isCustomQuote ? "Submitting Request..." : "Opening Secure Checkout..."}
                 </h4>
                 <p className="mt-1 text-xs text-ink/65 font-semibold max-w-xs mx-auto">
-                  Connecting to South African 3D Secure 2.0 gateway and generating your official Tax
-                  Invoice.
+                  {isCustomQuote
+                    ? "Sending your custom quote request to our partnerships team."
+                    : "Connecting to Paystack's payment gateway to complete your subscription."}
                 </p>
               </div>
+            </div>
+          )}
+
+          {/* STEP 2b: CUSTOM QUOTE SUBMITTED (no charge made) */}
+          {step === "quoteSubmitted" && (
+            <div className="py-10 text-center space-y-4">
+              <div className="mx-auto grid size-14 place-items-center rounded-full bg-mint text-brand-deep">
+                <CheckCircle2 className="size-8" />
+              </div>
+              <div>
+                <h4 className="font-display text-lg font-extrabold text-ink">
+                  Request Received
+                </h4>
+                <p className="mt-1 text-xs text-ink/65 font-semibold max-w-sm mx-auto">
+                  No payment was taken. Our partnerships team will email {email} with a custom
+                  quote for the {selectedTier.name} tier shortly.
+                </p>
+              </div>
+              <button
+                onClick={handleCloseModal}
+                className="mx-auto flex items-center justify-center gap-2 rounded-2xl bg-gold px-6 py-3 font-display text-xs font-bold text-ink shadow-[0_4px_0_oklch(0.72_0.12_80)] hover:bg-gold-deep transition"
+              >
+                Done
+              </button>
             </div>
           )}
 
