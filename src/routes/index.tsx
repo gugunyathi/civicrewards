@@ -8,17 +8,12 @@ import {
   ChevronDown,
   Sparkles,
   Building2,
-  Trophy,
   Users,
   MapPin,
   ArrowRight,
   ShieldCheck,
   Zap,
-  Scale,
-  UserCheck,
   HardHat,
-  SearchCheck,
-  Cpu,
   Lock,
   Sliders,
   FileCheck2,
@@ -432,17 +427,10 @@ const voices = [
   },
   {
     quote:
-      "Winning the Municipal Service Provider Excellence Award validated our engineering team's commitment to quality and timely municipal repairs.",
+      "The ward reporting dashboard gave our engineering team real visibility into repair turnaround for the first time.",
     name: "Sipho Khumalo",
     role: "Managing Director, Civics Engineering Group",
     bg: "bg-sky",
-  },
-  {
-    quote:
-      "Recognizing dedicated Ward Councillors for outstanding community representation bridges the trust gap between residents and local government.",
-    name: "Cllr. Nomusa Dlamini",
-    role: "Ward Councillor, eThekwini Municipality",
-    bg: "bg-gold/30",
   },
 ];
 
@@ -454,14 +442,6 @@ const faqs = [
   {
     q: "How is a repair verified before points are paid?",
     a: "Every closed fault requires a before-and-after photo, GPS match, and a second resident confirmation in the same ward before CivicPoints are released.",
-  },
-  {
-    q: "How are Municipal Service Providers evaluated for awards?",
-    a: "Contractors are scored on repair speed within SLA, quality compliance, and resident satisfaction ratings logged directly through the platform.",
-  },
-  {
-    q: "What do Ward Councillors receive recognition for?",
-    a: "Ward councillors are nominated by residents and evaluated on community responsiveness, active fault mobilization, transparency, and collaborative problem-solving.",
   },
 ];
 
@@ -551,136 +531,6 @@ const tracks = [
   },
 ];
 
-const awards = [
-  {
-    id: "citizen",
-    n: "1",
-    bg: "bg-mint",
-    badgeBg: "bg-brand text-white",
-    badgeShadow: "shadow-[0_4px_0_oklch(0.475_0.094_162.9)]",
-    title: "The Active Citizen Award",
-    text: "Honouring residents who log, track & mobilise neighbours to protect local infrastructure and hold leaders accountable.",
-  },
-  {
-    id: "contractor",
-    n: "2",
-    bg: "bg-sky",
-    badgeBg: "bg-accent-warm text-white",
-    badgeShadow: "shadow-[0_4px_0_oklch(0.616_0.144_47.6)]",
-    title: "Municipal Service Provider Excellence Award",
-    text: "Recognising top municipal contractors and engineering companies delivering quality, timely infrastructure repairs within SLA.",
-  },
-  {
-    id: "councillor",
-    n: "3",
-    bg: "bg-gold/30",
-    badgeBg: "bg-gold text-ink",
-    badgeShadow: "shadow-[0_4px_0_oklch(0.72_0.12_80)]",
-    title: "Outstanding Ward Councillor Award",
-    text: "Celebrating exceptional ward councillors for outstanding community leadership, responsive representation, and citizen engagement.",
-  },
-  {
-    id: "municipality",
-    n: "4",
-    bg: "bg-mint",
-    badgeBg: "bg-brand-deep text-white",
-    badgeShadow: "shadow-[0_4px_0_oklch(0.475_0.094_162.9)]",
-    title: "Premier Municipality & Ward Awards",
-    text: "Honouring the most transparent, responsive municipalities and wards across South Africa.",
-  },
-];
-
-const adjudicationInputs = [
-  {
-    title: "Citizen Reports",
-    desc: "Ground-level service delivery reviews, feedback, and issue-resolution data submitted by the public.",
-    icon: Users,
-    color: "bg-brand text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)]",
-  },
-  {
-    title: "Ward Councillors",
-    desc: "Local leadership verification regarding completed infrastructure, community projects, and localized impact.",
-    icon: UserCheck,
-    color: "bg-gold text-ink shadow-[0_4px_0_oklch(0.72_0.12_80)]",
-  },
-  {
-    title: "Municipalities & Departments",
-    desc: "Official service level agreements (SLAs), turnaround times, and statutory performance data.",
-    icon: Building2,
-    color: "bg-brand-deep text-white shadow-[0_4px_0_oklch(0.32_0.08_160)]",
-  },
-  {
-    title: "Independent Service Providers",
-    desc: "Audited project completions, technical metrics, and utility performance statistics.",
-    icon: HardHat,
-    color: "bg-accent-warm text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)]",
-  },
-];
-
-const adjudicationPipeline = [
-  {
-    step: "01",
-    subtitle: "Data Gathering",
-    title: "Submission & Tracking",
-    text: "Performance logs, public ratings, and delivery metrics are constantly uploaded to the central ledger.",
-    badge: "Community & Institutional Metrics",
-  },
-  {
-    step: "02",
-    subtitle: "Civic Fact-Checking",
-    title: "Fact-Check Verification",
-    text: "The platform cross-references the data across all stakeholder groups (e.g., if a municipality reports an upgrade, local citizens and councillors must verify its completion).",
-    badge: "Cross-Referenced Consensus",
-  },
-  {
-    step: "03",
-    subtitle: "AI Adjudication",
-    title: "Algorithmic Scoring",
-    text: "The AI Judging System processes only the 100% verified, fact-checked datasets. It ranks and evaluates nominees using strict, unbiased impact algorithms—completely free from human bias or political favoritism.",
-    badge: "Bias-Free Impact Scoring",
-  },
-];
-
-const trustBadges = [
-  {
-    icon: ShieldCheck,
-    title: "100% Human-Verified Data",
-    desc: "AI processing only applies to community-verified datasets.",
-    bg: "bg-mint",
-  },
-  {
-    icon: Scale,
-    title: "Bias-Free Evaluation",
-    desc: "Algorithmic scoring eliminates political and personal bias in public recognition.",
-    bg: "bg-sky",
-  },
-  {
-    icon: SearchCheck,
-    title: "Auditable Decisions",
-    desc: "Every AI-calculated award score can be traced back to its factual, public data sources.",
-    bg: "bg-gold/30",
-  },
-];
-
-const adjudicationFaqs = [
-  {
-    q: "Can an AI award score be manipulated by fake reports or automated bots?",
-    a: "No. The AI system processes only datasets that pass multi-party human verification. Every reported fault or project repair requires GPS location validation, before/after photos, and consensus from local ward residents and councillors before entering the score ledger.",
-  },
-  {
-    q: "How does the AI prevent political or regional favoritism?",
-    a: "The scoring algorithm relies strictly on objective mathematical metrics—such as average repair speed against statutory SLAs, verified resident satisfaction, and audited project quality. Political affiliations and subjective opinions carry zero weight in the evaluation model.",
-  },
-  {
-    q: "Is the AI adjudication process transparent and auditable?",
-    a: "Yes! Every single award score generated by the AI is attached to an open audit log. Any citizen, journalist, or municipal official can inspect the exact verified data points and SLA metrics that produced the final score.",
-  },
-  {
-    q: "What happens if a municipal contractor or councillor disputes an AI score?",
-    a: "Nominees can request a formal data audit. An independent review committee will inspect the raw verification logs, but score adjustments only occur if additional verified data is validated on the public ledger.",
-  },
-];
-
 const tiers = [
   {
     name: "Local Retailer",
@@ -703,11 +553,7 @@ const tiers = [
     monthlyPrice: 2500,
     suffix: "/mo",
     cardBg: "bg-sky",
-    features: [
-      "Premium banner in 1 ward",
-      "1× local award sponsorship",
-      "Dedicated ward reporting",
-    ],
+    features: ["Premium banner in 1 ward", "Dedicated ward reporting"],
     cta: "Choose Tier",
     ctaClass:
       "bg-accent-warm text-white shadow-[0_5px_0_oklch(0.616_0.144_47.6)] hover:bg-accent-deep",
@@ -722,7 +568,6 @@ const tiers = [
     features: [
       "Live fault-data for 1 region",
       "SED / ESD certificate",
-      "Award category naming rights",
       "Priority SLA verification",
     ],
     cta: "Choose Tier",
@@ -736,12 +581,7 @@ const tiers = [
     priceLabel: "Custom Quote",
     smallPrice: true,
     cardBg: "bg-gold/30",
-    features: [
-      "City-wide ad inventory",
-      "Annual Awards headline sponsor",
-      "Custom ESG reporting",
-      "API & ERP integration",
-    ],
+    features: ["City-wide ad inventory", "Custom ESG reporting", "API & ERP integration"],
     cta: "Contact Us",
     ctaClass: "bg-ink text-white shadow-[0_5px_0_oklch(0.24_0.02_220.5)] hover:bg-black",
     popular: false,
@@ -775,20 +615,8 @@ function Index() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("monthly");
   const [selectedMetro, setSelectedMetro] = useState<string>("All");
   const [searchWard, setSearchWard] = useState<string>("");
-  const [activeAwardFilter, setActiveAwardFilter] = useState<string>("all");
   const [activeTrackTab, setActiveTrackTab] = useState<string>("all");
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
-  const [openAdjFaqIndex, setOpenAdjFaqIndex] = useState<number | null>(0);
-
-  // AI Score Simulator State
-  const [simType, setSimType] = useState<"contractor" | "councillor" | "citizen">("contractor");
-  const [simSatisfaction, setSimSatisfaction] = useState<number>(94);
-  const [simSlaSpeed, setSimSlaSpeed] = useState<number>(88);
-  const [simVerification, setSimVerification] = useState<number>(98);
-
-  const calculatedAiScore = Math.round(
-    simSatisfaction * 0.4 + simSlaSpeed * 0.35 + simVerification * 0.25,
-  );
 
   // Modal State
   const [partnerModalOpen, setPartnerModalOpen] = useState(false);
@@ -856,11 +684,6 @@ function Index() {
       r.area.toLowerCase().includes(searchWard.toLowerCase()) ||
       r.province.toLowerCase().includes(searchWard.toLowerCase());
     return matchesMetro && matchesSearch;
-  });
-
-  const filteredAwards = awards.filter((a) => {
-    if (activeAwardFilter === "all") return true;
-    return a.id === activeAwardFilter;
   });
 
   const filteredTracks = tracks.filter((t) => {
@@ -958,16 +781,6 @@ function Index() {
             <a href="#coverage" className="transition hover:text-brand-deep">
               Coverage
             </a>
-            <a href="#awards" className="transition hover:text-brand-deep">
-              Awards
-            </a>
-            <a
-              href="#adjudication"
-              className="flex items-center gap-1 text-brand-deep transition hover:text-brand font-extrabold"
-            >
-              <Cpu className="size-3.5 text-accent-warm" />
-              AI
-            </a>
             <a href="#tiers" className="transition hover:text-brand-deep">
               Tiers
             </a>
@@ -1032,21 +845,6 @@ function Index() {
                 className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
               >
                 Municipal Coverage
-              </a>
-              <a
-                href="#awards"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="rounded-xl px-4 py-2.5 hover:bg-cream transition"
-              >
-                Awards Night
-              </a>
-              <a
-                href="#adjudication"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center gap-2 rounded-xl px-4 py-2.5 bg-mint text-brand-deep font-extrabold transition"
-              >
-                <Cpu className="size-4 text-accent-warm" />
-                AI Adjudication
               </a>
               <a
                 href="#tiers"
@@ -1739,410 +1537,6 @@ function Index() {
               </button>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Awards Section */}
-      <section
-        id="awards"
-        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14"
-      >
-        <div className="overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-white p-6 sm:p-8 lg:p-12 shadow-clay-lg border border-ink/5">
-          <div className="flex flex-col gap-6 sm:gap-8 lg:flex-row lg:items-start">
-            <div className="lg:w-5/12">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-gold/40 px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide text-gold-deep">
-                <Trophy className="size-4" />
-                Awards Night
-              </span>
-              <h2 className="mt-4 font-display text-2xl sm:text-3xl font-extrabold text-ink">
-                Celebrating the champions keeping South Africa running
-              </h2>
-              <p className="mt-3 text-xs sm:text-sm leading-relaxed text-ink/75">
-                Annual &amp; quarterly prizes honour active citizens, municipal service providers,
-                exceptional ward councillors and municipalities making the biggest difference.
-              </p>
-
-              {/* Award Filter Chips */}
-              <div className="mt-5 flex flex-wrap gap-2">
-                <button
-                  onClick={() => setActiveAwardFilter("all")}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-bold transition ${
-                    activeAwardFilter === "all"
-                      ? "bg-brand text-white"
-                      : "bg-cream text-ink/70 hover:bg-mint"
-                  }`}
-                >
-                  All Categories
-                </button>
-                <button
-                  onClick={() => setActiveAwardFilter("citizen")}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-bold transition ${
-                    activeAwardFilter === "citizen"
-                      ? "bg-brand text-white"
-                      : "bg-cream text-ink/70 hover:bg-mint"
-                  }`}
-                >
-                  Citizens
-                </button>
-                <button
-                  onClick={() => setActiveAwardFilter("contractor")}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-bold transition ${
-                    activeAwardFilter === "contractor"
-                      ? "bg-accent-warm text-white"
-                      : "bg-cream text-ink/70 hover:bg-sky"
-                  }`}
-                >
-                  Suppliers
-                </button>
-                <button
-                  onClick={() => setActiveAwardFilter("councillor")}
-                  className={`rounded-xl px-3 py-1.5 text-xs font-bold transition ${
-                    activeAwardFilter === "councillor"
-                      ? "bg-gold text-ink"
-                      : "bg-cream text-ink/70 hover:bg-gold/40"
-                  }`}
-                >
-                  Councillors
-                </button>
-              </div>
-
-              <button
-                onClick={() =>
-                  handleOpenModal("Award Category Sponsorship", "Annual Awards Sponsor")
-                }
-                className="mt-6 w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl bg-brand px-6 py-3.5 font-display text-xs sm:text-sm font-bold text-white shadow-[0_5px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep active:translate-y-0.5 active:shadow-none"
-              >
-                <Trophy className="size-4" />
-                Sponsor an Award Category
-              </button>
-            </div>
-
-            <div className="space-y-3.5 sm:space-y-4 lg:w-7/12">
-              {filteredAwards.map((a) => (
-                <div
-                  key={a.title}
-                  className={`flex flex-col sm:flex-row items-start sm:items-center gap-3.5 sm:gap-4 rounded-2xl p-4 sm:p-5 border border-white/80 transition hover:shadow-md ${a.bg}`}
-                >
-                  <div
-                    className={`grid size-10 sm:size-11 shrink-0 place-items-center rounded-xl font-display text-base sm:text-lg font-bold ${a.badgeBg} ${a.badgeShadow}`}
-                  >
-                    {a.n}
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-display font-bold text-sm sm:text-base text-ink">
-                      {a.title}
-                    </p>
-                    <p className="mt-1 text-xs sm:text-sm text-ink/70 leading-relaxed">{a.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* AI CIVIC ADJUDICATION SYSTEM SECTION */}
-      <section
-        id="adjudication"
-        className="mx-auto max-w-6xl scroll-mt-24 px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16"
-      >
-        <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white via-cream to-mint/30 p-6 sm:p-10 lg:p-14 shadow-clay-lg border border-brand/10">
-          {/* Header & High-Level Summary */}
-          <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-brand-deep px-4 py-1.5 text-xs font-extrabold uppercase tracking-wider text-white shadow-sm">
-              <Cpu className="size-4 text-gold" />
-              Transparent AI Civic Adjudication System
-            </span>
-            <h2 className="mt-4 font-display text-2xl sm:text-4xl font-extrabold leading-tight text-ink">
-              Objective, AI-Driven Recognition Built on Verified Citizen Input
-            </h2>
-            <p className="mt-4 text-sm sm:text-base leading-relaxed text-ink/80">
-              To ensure absolute fairness and transparency, our public service awards are decided by
-              an advanced AI Judging System. Instead of subjective opinions, the AI evaluates
-              factual data points, public service metrics, and direct community feedback. Every
-              piece of data is cross-verified and fact-checked by a network of citizens, local
-              councillors, municipal offices, and service providers before entering the system.
-            </p>
-          </div>
-
-          {/* Section 2: The Verification Ecosystem (The "Inputs" List) */}
-          <div className="mt-10 pt-8 border-t border-ink/10">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-2 mb-6">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-widest text-brand-deep">
-                  Ecosystem Feeds
-                </span>
-                <h3 className="font-display text-xl sm:text-2xl font-extrabold text-ink">
-                  The Multi-Stakeholder Verification Input Ledger
-                </h3>
-              </div>
-              <p className="text-xs text-ink/60">
-                Zero hallucinated data — 100% anchored in cross-checked community evidence.
-              </p>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {adjudicationInputs.map((input) => {
-                const IconComp = input.icon;
-                return (
-                  <div
-                    key={input.title}
-                    className="flex flex-col justify-between rounded-2xl bg-white p-5 shadow-clay border border-white/80 transition hover:-translate-y-1"
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-3">
-                        <div
-                          className={`grid size-11 place-items-center rounded-xl font-bold ${input.color}`}
-                        >
-                          <IconComp className="size-5" />
-                        </div>
-                        <span className="rounded-full bg-cream px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-ink/60">
-                          Verified Input
-                        </span>
-                      </div>
-                      <h4 className="font-display text-base font-extrabold text-ink mb-1.5">
-                        {input.title}
-                      </h4>
-                      <p className="text-xs leading-relaxed text-ink/70">{input.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Section 3: Step-by-Step Visual Flow (How the AI Decides) */}
-          <div className="mt-12 rounded-[2rem] bg-brand-deep p-6 sm:p-8 lg:p-10 text-white shadow-clay">
-            <div className="text-center max-w-xl mx-auto mb-8 sm:mb-10">
-              <span className="inline-block rounded-full bg-white/10 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-gold">
-                Data Pipeline
-              </span>
-              <h3 className="mt-2 font-display text-xl sm:text-3xl font-extrabold">
-                How the AI Judging Pipeline Operates
-              </h3>
-              <p className="mt-1.5 text-xs sm:text-sm text-white/75">
-                From raw fault logging to unbiased algorithmic scoring in 3 transparent steps.
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-3 relative">
-              {adjudicationPipeline.map((pipe, idx) => (
-                <div
-                  key={pipe.step}
-                  className="relative flex flex-col justify-between rounded-2xl bg-white/10 p-5 sm:p-6 backdrop-blur-md border border-white/15"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="font-display text-2xl font-extrabold text-gold">
-                        Step {pipe.step}
-                      </span>
-                      <span className="rounded-full bg-white/15 px-2.5 py-0.5 text-[10px] font-bold text-white uppercase tracking-wide">
-                        {pipe.subtitle}
-                      </span>
-                    </div>
-                    <h4 className="font-display text-lg font-bold text-white mb-2">{pipe.title}</h4>
-                    <p className="text-xs leading-relaxed text-white/80">{pipe.text}</p>
-                  </div>
-                  <div className="mt-4 pt-3 border-t border-white/10">
-                    <p className="text-[11px] font-semibold text-mint flex items-center gap-1.5">
-                      <CheckCircle2 className="size-3.5" />
-                      {pipe.badge}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Section 4: UI Trust Anchors & Badges */}
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {trustBadges.map((badge) => {
-              const BadgeIcon = badge.icon;
-              return (
-                <div
-                  key={badge.title}
-                  className={`flex items-start gap-3.5 rounded-2xl p-4 sm:p-5 shadow-clay border border-white/80 ${badge.bg}`}
-                >
-                  <div className="grid size-11 shrink-0 place-items-center rounded-xl bg-white text-brand-deep shadow-sm">
-                    <BadgeIcon className="size-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-display text-sm sm:text-base font-extrabold text-ink">
-                      {badge.title}
-                    </h4>
-                    <p className="mt-0.5 text-xs text-ink/75 leading-relaxed">{badge.desc}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Section 5: Interactive AI Score Simulator & FAQ */}
-          <div className="mt-12 grid gap-8 lg:grid-cols-12 items-start pt-8 border-t border-ink/10">
-            {/* Interactive Simulator */}
-            <div className="lg:col-span-6 rounded-2xl bg-white p-6 shadow-clay border border-white/80">
-              <div className="flex items-center justify-between mb-4">
-                <span className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-brand-deep">
-                  <Sliders className="size-4" />
-                  AI Score Simulator
-                </span>
-                <span className="rounded-full bg-mint px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand-deep">
-                  Interactive Preview
-                </span>
-              </div>
-              <h4 className="font-display text-lg font-extrabold text-ink">
-                Test the Algorithmic Rating Engine
-              </h4>
-              <p className="text-xs text-ink/60 mt-1 mb-5">
-                Adjust input parameters to observe how verified citizen feedback and SLA speed
-                calculate the AI award ranking.
-              </p>
-
-              {/* Nominee Type Selection */}
-              <div className="mb-4">
-                <label className="block text-xs font-bold text-ink mb-1.5">Nominee Type</label>
-                <div className="grid grid-cols-3 gap-2">
-                  <button
-                    onClick={() => setSimType("contractor")}
-                    className={`rounded-xl py-2 text-xs font-bold transition ${
-                      simType === "contractor"
-                        ? "bg-brand text-white shadow-sm"
-                        : "bg-cream text-ink/70 hover:bg-mint"
-                    }`}
-                  >
-                    Contractor
-                  </button>
-                  <button
-                    onClick={() => setSimType("councillor")}
-                    className={`rounded-xl py-2 text-xs font-bold transition ${
-                      simType === "councillor"
-                        ? "bg-accent-warm text-white shadow-sm"
-                        : "bg-cream text-ink/70 hover:bg-sky"
-                    }`}
-                  >
-                    Councillor
-                  </button>
-                  <button
-                    onClick={() => setSimType("citizen")}
-                    className={`rounded-xl py-2 text-xs font-bold transition ${
-                      simType === "citizen"
-                        ? "bg-gold text-ink shadow-sm"
-                        : "bg-cream text-ink/70 hover:bg-gold/30"
-                    }`}
-                  >
-                    Citizen
-                  </button>
-                </div>
-              </div>
-
-              {/* Sliders */}
-              <div className="space-y-4 text-xs">
-                <div>
-                  <div className="flex justify-between font-bold text-ink mb-1">
-                    <span>Verified Resident Satisfaction</span>
-                    <span className="text-brand-deep">{simSatisfaction}%</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="50"
-                    max="100"
-                    value={simSatisfaction}
-                    onChange={(e) => setSimSatisfaction(Number(e.target.value))}
-                    className="w-full accent-brand cursor-pointer"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex justify-between font-bold text-ink mb-1">
-                    <span>SLA Turnaround Speed</span>
-                    <span className="text-accent-warm">{simSlaSpeed}%</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="50"
-                    max="100"
-                    value={simSlaSpeed}
-                    onChange={(e) => setSimSlaSpeed(Number(e.target.value))}
-                    className="w-full accent-accent-warm cursor-pointer"
-                  />
-                </div>
-
-                <div>
-                  <div className="flex justify-between font-bold text-ink mb-1">
-                    <span>Multi-Party Verification Rate</span>
-                    <span className="text-gold-deep">{simVerification}%</span>
-                  </div>
-                  <input
-                    type="range"
-                    min="50"
-                    max="100"
-                    value={simVerification}
-                    onChange={(e) => setSimVerification(Number(e.target.value))}
-                    className="w-full accent-gold cursor-pointer"
-                  />
-                </div>
-              </div>
-
-              {/* Live Score Display */}
-              <div className="mt-6 rounded-2xl bg-mint/50 p-4 border border-brand/20 flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-ink/60">
-                    Calculated AI Index Score
-                  </p>
-                  <p className="font-display text-3xl font-extrabold text-brand-deep">
-                    {calculatedAiScore}{" "}
-                    <span className="text-xs text-ink/50 font-normal">/ 100</span>
-                  </p>
-                </div>
-                <div className="text-right">
-                  <span className="inline-flex items-center gap-1 rounded-full bg-brand text-white px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider">
-                    <FileCheck2 className="size-3" />
-                    100% Auditable
-                  </span>
-                  <p className="text-[10px] font-semibold text-ink/60 mt-1">
-                    Status: Award Contender
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Adjudication Specific FAQs */}
-            <div className="lg:col-span-6 space-y-3">
-              <h4 className="font-display text-lg font-extrabold text-ink mb-3 flex items-center gap-2">
-                <Lock className="size-5 text-brand" />
-                Frequently Asked Questions on AI Adjudication
-              </h4>
-
-              {adjudicationFaqs.map((faq, index) => {
-                const isOpen = openAdjFaqIndex === index;
-                return (
-                  <div
-                    key={faq.q}
-                    className="rounded-2xl bg-white p-4 shadow-clay border border-ink/5 transition"
-                  >
-                    <button
-                      onClick={() => setOpenAdjFaqIndex(isOpen ? null : index)}
-                      className="flex w-full cursor-pointer items-center justify-between gap-3 text-left font-display text-xs sm:text-sm font-bold text-ink"
-                    >
-                      <span>{faq.q}</span>
-                      <div
-                        className={`grid size-6 shrink-0 place-items-center rounded-full bg-mint text-brand-deep transition-transform duration-200 ${
-                          isOpen ? "rotate-180 bg-brand text-white" : ""
-                        }`}
-                      >
-                        <ChevronDown className="size-3.5" />
-                      </div>
-                    </button>
-                    {isOpen && (
-                      <p className="mt-2.5 text-xs leading-relaxed text-ink/75 border-t border-ink/5 pt-2.5 animate-in fade-in duration-150">
-                        {faq.a}
-                      </p>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </section>
 
