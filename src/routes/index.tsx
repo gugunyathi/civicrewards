@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Menu,
   X,
@@ -38,6 +38,8 @@ import {
   Ticket,
   Copy,
   Check,
+  Smartphone,
+  LayoutDashboard,
 } from "lucide-react";
 
 import heroClay from "@/assets/hero-clay.jpg";
@@ -499,12 +501,12 @@ const tracks = [
     label: "01 · Municipal Suppliers",
     labelColor: "text-brand-deep",
     cardBg: "bg-white",
-    title: "Secure tenders & win service excellence awards",
+    title: "Gain a competitive edge",
     bulletColor: "text-brand",
     bullets: [
-      "Earn B-BBEE points under SED / ESD pillars",
-      "Qualify for the annual Service Provider Excellence Awards",
-      "Fix infrastructure before contract terms are breached",
+      "Real-time outage tracking, advanced analytics, and quality of work ratings to optimize your operations.",
+      "Drive Service Excellence: Win municipal tenders and qualify for the annual Service Provider Excellence Awards.",
+      "Boost Compliance: Earn vital B-BBEE points under the SED (Socio-Economic Development) and ESD (Enterprise and Supplier Development) pillars.",
     ],
     cta: "Sponsor the Reward Pool",
     ctaClass: "bg-brand text-white shadow-[0_5px_0_oklch(0.475_0.094_162.9)] hover:bg-brand-deep",
@@ -890,11 +892,30 @@ function Index() {
           </a>
 
           <div className="flex items-center gap-2 sm:gap-2.5">
+            {/* Reporting App Button requested by user */}
+            <Link
+              to="/ReportApp"
+              className="inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-brand px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep active:translate-y-0.5 active:shadow-none"
+            >
+              <Smartphone className="size-3.5 sm:size-4" />
+              <span>Reporting App</span>
+            </Link>
+
+            {/* Councillor Button requested by user with identical button style */}
+            <Link
+              to="/councillor"
+              className="inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-brand px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)] transition hover:bg-brand-deep active:translate-y-0.5 active:shadow-none"
+            >
+              <Building2 className="size-3.5 sm:size-4" />
+              <span>Councillor Page</span>
+            </Link>
+
+            {/* Become a Partner */}
             <button
               onClick={() => handleOpenModal("Partner Inquiry", "General Partnership")}
-              className="inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-accent-warm px-3.5 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)] transition hover:bg-accent-deep active:translate-y-0.5 active:shadow-none"
+              className="inline-flex items-center gap-1.5 rounded-xl sm:rounded-2xl bg-accent-warm px-3 sm:px-4.5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)] transition hover:bg-accent-deep active:translate-y-0.5 active:shadow-none"
             >
-              <Sparkles className="size-4" />
+              <Sparkles className="size-3.5 sm:size-4" />
               <span>Become a Partner</span>
             </button>
 
@@ -1035,13 +1056,31 @@ function Index() {
                 Sponsorship Tiers
               </a>
             </nav>
-            <div className="mt-4 pt-3 border-t border-ink/10">
+            <div className="mt-4 pt-3 border-t border-ink/10 flex flex-col gap-2.5">
+              <Link
+                to="/ReportApp"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand py-3 font-display text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)]"
+              >
+                <Smartphone className="size-4" />
+                Open Resident Reporting App
+              </Link>
+
+              <Link
+                to="/councillor"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand py-3 font-display text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)]"
+              >
+                <Building2 className="size-4" />
+                Councillor Page
+              </Link>
+
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(false);
                   handleOpenModal("Partner Inquiry", "Mobile Partner Call");
                 }}
-                className="w-full flex items-center justify-center gap-2 rounded-xl bg-brand py-3 font-display text-sm font-bold text-white shadow-[0_4px_0_oklch(0.475_0.094_162.9)]"
+                className="w-full flex items-center justify-center gap-2 rounded-xl bg-accent-warm py-3 font-display text-sm font-bold text-white shadow-[0_4px_0_oklch(0.616_0.144_47.6)]"
               >
                 <Sparkles className="size-4" />
                 Become a Partner Today
@@ -1054,13 +1093,12 @@ function Index() {
       {/* Hero */}
       <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pb-10 pt-8 sm:pt-12 md:pt-16">
         <div className="text-center max-w-5xl mx-auto">
-          <span className="inline-flex items-center gap-2 rounded-full bg-mint px-3.5 sm:px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-brand-deep shadow-sm">
-            <ShieldCheck className="size-4" />
-            Public Service Delivery Loyalty Platform
+          <span className="inline-flex items-center gap-2.5 rounded-full bg-mint px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm md:text-base font-bold uppercase tracking-wide text-brand-deep shadow-sm">
+            <ShieldCheck className="size-4.5 sm:size-5 text-brand-deep" />A Public Service Delivery
+            Loyalty Platform
           </span>
           <h1 className="mt-4 sm:mt-5 font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] text-ink tracking-tight">
-            <span>Fix South Africa.</span>{" "}
-            <span className="text-brand-deep">Reward Citizens.</span>{" "}
+            <span>Fix South Africa.</span> <span className="text-brand-deep">Reward Citizens.</span>{" "}
             <span className="text-accent-warm">Grow Your Business.</span>
           </h1>
           <p className="mt-4 sm:mt-6 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed text-ink/80 font-medium">
@@ -1084,6 +1122,24 @@ function Index() {
             >
               Choose Your Track
             </a>
+          </div>
+
+          <div className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs">
+            <span className="text-ink/60 font-semibold">Live Applications:</span>
+            <Link
+              to="/ReportApp"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-white px-3.5 py-1.5 font-bold text-brand-deep hover:bg-mint transition border border-brand/20 shadow-2xs"
+            >
+              <Smartphone className="size-3.5 text-brand" />
+              <span>Resident Reporting App (Ward 115)</span>
+            </Link>
+            <Link
+              to="/councillor"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-white px-3.5 py-1.5 font-bold text-ink hover:bg-cream transition border border-ink/15 shadow-2xs"
+            >
+              <Building2 className="size-3.5 text-accent-warm" />
+              <span>Councillor Signal Desk</span>
+            </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-12 border-t border-ink/10 pt-6">
@@ -1651,12 +1707,28 @@ function Index() {
                   {t.title}
                 </h3>
                 <ul className="mt-4 space-y-2.5 text-xs sm:text-sm text-ink/75">
-                  {t.bullets.map((b) => (
-                    <li key={b} className="flex gap-2">
-                      <span className={t.bulletColor}>•</span>
-                      {b}
-                    </li>
-                  ))}
+                  {t.bullets.map((b) => {
+                    const colonIndex = b.indexOf(":");
+                    if (colonIndex !== -1 && colonIndex < 35) {
+                      const prefix = b.slice(0, colonIndex + 1);
+                      const rest = b.slice(colonIndex + 1);
+                      return (
+                        <li key={b} className="flex items-start gap-2">
+                          <span className={`${t.bulletColor} font-bold mt-0.5`}>•</span>
+                          <span>
+                            <strong className="font-bold text-ink">{prefix}</strong>
+                            {rest}
+                          </span>
+                        </li>
+                      );
+                    }
+                    return (
+                      <li key={b} className="flex items-start gap-2">
+                        <span className={`${t.bulletColor} font-bold mt-0.5`}>•</span>
+                        <span>{b}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
               <button

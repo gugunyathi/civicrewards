@@ -77,14 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CivicRewards — Public Service Delivery Loyalty Platform" },
+      { title: "CivicRewards — A Public Service Delivery Loyalty Platform" },
       {
         name: "description",
         content:
           "CivicRewards is an institutional-grade public service delivery loyalty platform and Smart City Intelligence platform that transforms verified public service outage reporting and civic action into a catalyst for resilient infrastructure, efficient public service delivery, and thriving local economies and municipalities.",
       },
       { name: "author", content: "CivicRewards South Africa" },
-      { property: "og:title", content: "CivicRewards — Public Service Delivery Loyalty Platform" },
+      {
+        property: "og:title",
+        content: "CivicRewards — A Public Service Delivery Loyalty Platform",
+      },
       {
         property: "og:description",
         content:
