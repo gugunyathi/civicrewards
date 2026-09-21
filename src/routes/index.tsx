@@ -1957,6 +1957,14 @@ function Index() {
             Become a Partner Today
           </button>
         </div>
+        <div className="mt-4 flex items-center justify-center md:justify-start gap-4 text-xs text-ink/50">
+          <Link to="/privacy" className="hover:text-brand-deep hover:underline">
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="hover:text-brand-deep hover:underline">
+            Terms and Conditions
+          </Link>
+        </div>
       </footer>
 
       {/* Interactive Partner Inquiry Modal */}
