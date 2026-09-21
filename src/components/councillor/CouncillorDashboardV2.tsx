@@ -18,11 +18,15 @@ import {
   saveWardGroupLink,
   deactivateWardGroupLink,
 } from "@/lib/councillorAuth";
+import type { WardCommunityChannel } from "@/lib/wardDirectory";
+import { getMyWardCommunityChannels, saveWardCommunityChannel, deactivateWardCommunityChannel } from "@/lib/wardDirectory";
+import type { TelegramLinkStatus, TelegramMessage } from "@/lib/telegramIngestion";
+import { requestTelegramLinkCode, getTelegramLinkStatus, getWardTelegramMessages } from "@/lib/telegramIngestion";
 import { wardStatusToBucket, CATEGORY_COLORS } from "@/lib/wardReportUtils";
 import MetricTile from "./MetricTile";
 import CategoryIcon from "./CategoryIcon";
 import WardMap from "./WardMap";
-import { Ban, Info, Pencil, X, CheckCircle, AlertCircle } from "lucide-react";
+import { Ban, Info, Pencil, X, CheckCircle, AlertCircle, Facebook, MessageCircle, Send, Twitter, RefreshCw } from "lucide-react";
 
 const ACCENT = "#C6FF3D";
 const CARD = "#0e0e0f";
@@ -30,13 +34,14 @@ const TEXT = "#f5f5f4";
 const DIM = "rgba(245,245,244,0.45)";
 const BORDER = "rgba(255,255,255,0.08)";
 
-type Tab = "overview" | "reports" | "analytics" | "escalation" | "broadcast";
+type Tab = "overview" | "reports" | "analytics" | "escalation" | "channels" | "broadcast";
 
 const NAV: Array<{ key: Tab; label: string; emoji: string }> = [
   { key: "overview", label: "Overview", emoji: "📊" },
   { key: "reports", label: "Reports", emoji: "📋" },
   { key: "analytics", label: "Analytics", emoji: "📈" },
   { key: "escalation", label: "Escalation Contacts", emoji: "📞" },
+  { key: "channels", label: "Community Channels", emoji: "📡" },
   { key: "broadcast", label: "Broadcast", emoji: "📢" },
 ];
 
@@ -155,6 +160,7 @@ export default function CouncillorDashboardV2({
         {tab === "reports" && <ReportsTab reports={reports} />}
         {tab === "analytics" && <AnalyticsTab reports={reports} />}
         {tab === "escalation" && <EscalationTab accessToken={accessToken} />}
+        {tab === "channels" && <ChannelsTab accessToken={accessToken} />}
         {tab === "broadcast" && <BroadcastTab />}
       </div>
     </div>
@@ -637,6 +643,424 @@ function EscalationTab({ accessToken }: { accessToken: string }) {
                         value={editing.linkValue}
                         onChange={(e) => setEditing({ ...editing, linkValue: e.target.value })}
                         placeholder="27821234567"
+                        className="w-full px-3 py-2.5 rounded-xl text-sm outline-none font-mono"
+                        style={{ background: "#050505", border: `1px solid ${BORDER}`, color: TEXT }}
+                      />
+                    </div>
+
+                    {editing.error && (
+                      <p className="text-xs" style={{ color: "#FF453A" }}>
+                        {editing.error}
+                      </p>
+                    )}
+
+                    <div className="flex gap-2 pt-1">
+                      <button
+                        onClick={() => setEditing(null)}
+                        className="px-4 py-2 rounded-xl text-xs font-medium"
+                        style={{ color: "rgba(245,245,244,0.45)", border: `1px solid ${BORDER}` }}
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={handleSave}
+                        disabled={editing.saving}
+                        className="px-4 py-2 rounded-xl text-xs font-semibold disabled:opacity-60"
+                        style={{ background: ACCENT, color: "#0a0a0a" }}
+                      >
+                        {editing.saving ? "Saving…" : "Save"}
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Telegram isn't in this list — it gets real verified-link handling via
+// TelegramLinkSection below instead of plain URL storage, since it's the
+// one platform with a free, official, ToS-compliant Bot API for reading
+// group messages. WhatsApp/X/Facebook stay link-storage only: WhatsApp
+// groups aren't reachable via any compliant official API, X's API is paid,
+// and Facebook's Groups API is Meta-gated — see this migration's sibling,
+// sql/2026-09-21-ward-telegram-ingestion.sql, for the full reasoning.
+const CHANNEL_PLATFORMS: Array<{ key: WardCommunityChannel["platform"]; label: string; icon: typeof Send; defaultLabel: string }> = [
+  { key: "whatsapp", label: "WhatsApp", icon: MessageCircle, defaultLabel: "Ward 115 WhatsApp Group" },
+  { key: "x", label: "X (Twitter)", icon: Twitter, defaultLabel: "@YourWardAccount" },
+  { key: "facebook", label: "Facebook", icon: Facebook, defaultLabel: "Ward 115 Community Page" },
+];
+
+type ChannelEditState = { platform: WardCommunityChannel["platform"]; label: string; url: string; saving: boolean; error: string | null };
+
+function TelegramLinkSection({ accessToken }: { accessToken: string }) {
+  const [status, setStatus] = useState<TelegramLinkStatus | null>(null);
+  const [messages, setMessages] = useState<TelegramMessage[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  const loadStatus = () => {
+    setLoading(true);
+    getTelegramLinkStatus({ data: { accessToken } })
+      .then((s) => {
+        setStatus(s);
+        setError(null);
+        if (s.verified) {
+          getWardTelegramMessages({ data: { accessToken } })
+            .then(setMessages)
+            .catch(() => {
+              /* feed is a bonus, not worth surfacing a second error for */
+            });
+        }
+      })
+      .catch((err) => setError(err instanceof Error ? err.message : "Could not load Telegram status"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    loadStatus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  async function handleGetCode() {
+    setBusy(true);
+    try {
+      const s = await requestTelegramLinkCode({ data: { accessToken } });
+      setStatus(s);
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not create a link code");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
+      <div className="px-5 py-4" style={{ background: CARD }}>
+        <div className="flex items-center gap-2.5 mb-1">
+          <Send size={15} style={{ color: DIM }} />
+          <span className="text-sm font-medium" style={{ color: TEXT }}>
+            Telegram
+          </span>
+        </div>
+
+        {loading ? (
+          <p className="text-xs" style={{ color: DIM }}>
+            Loading…
+          </p>
+        ) : error ? (
+          <div>
+            <p className="text-xs" style={{ color: "#FF453A" }}>
+              {error}
+            </p>
+            {error.includes("Could not find the table") && (
+              <p className="mt-1 text-xs" style={{ color: "rgba(245,245,244,0.5)" }}>
+                Run sql/2026-09-21-ward-telegram-ingestion.sql in the Supabase SQL editor first.
+              </p>
+            )}
+          </div>
+        ) : !status?.requested ? (
+          <div className="flex flex-col gap-2">
+            <p className="text-xs" style={{ color: "rgba(245,245,244,0.5)" }}>
+              Not set — link your ward's Telegram group to see its messages here.
+            </p>
+            <button
+              onClick={handleGetCode}
+              disabled={busy}
+              className="self-start px-4 py-2 rounded-xl text-xs font-semibold disabled:opacity-60"
+              style={{ background: ACCENT, color: "#0a0a0a" }}
+            >
+              {busy ? "Getting code…" : "Get Telegram Link Code"}
+            </button>
+          </div>
+        ) : status.verified ? (
+          <div className="flex flex-col gap-3">
+            <span
+              className="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full text-xs font-medium"
+              style={{ background: "rgba(198,255,61,0.1)", color: ACCENT }}
+            >
+              <CheckCircle size={12} />
+              Linked to: {status.chatTitle ?? "your group"}
+            </span>
+
+            <div>
+              <p className="text-xs font-semibold mb-1" style={{ color: "rgba(245,245,244,0.55)" }}>
+                Community Feed
+              </p>
+              <p className="text-xs mb-2" style={{ color: "rgba(245,245,244,0.4)" }}>
+                Raw messages from your linked Telegram group. These are not official municipal reports.
+              </p>
+              {messages.length === 0 ? (
+                <p className="text-xs" style={{ color: "rgba(245,245,244,0.3)" }}>
+                  No messages yet.
+                </p>
+              ) : (
+                <div className="flex flex-col gap-2 max-h-72 overflow-y-auto">
+                  {messages.map((m) => (
+                    <div key={m.id} className="rounded-lg p-2.5" style={{ background: "#050505", border: `1px solid ${BORDER}` }}>
+                      <div className="flex items-center justify-between gap-2 mb-0.5">
+                        <span className="text-xs font-medium" style={{ color: TEXT }}>
+                          {m.senderName ?? "Unknown"}
+                        </span>
+                        <span className="text-[10px]" style={{ color: "rgba(245,245,244,0.3)" }}>
+                          {timeAgo(m.receivedAt)}
+                        </span>
+                      </div>
+                      <p className="text-xs" style={{ color: "rgba(245,245,244,0.6)" }}>
+                        {m.messageText ?? "(no text)"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col gap-2">
+            <p className="text-xs" style={{ color: "rgba(245,245,244,0.5)" }}>
+              Add the CivicRewards bot to your ward's Telegram group, then send this in the group:
+            </p>
+            <p className="rounded-lg px-3 py-2 text-sm font-mono self-start" style={{ background: "#050505", border: `1px solid ${ACCENT}40`, color: ACCENT }}>
+              /link {status.linkCode}
+            </p>
+            <button
+              onClick={loadStatus}
+              className="self-start inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium"
+              style={{ color: "rgba(245,245,244,0.5)", border: `1px solid ${BORDER}` }}
+            >
+              <RefreshCw size={12} />
+              Check status
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function ChannelsTab({ accessToken }: { accessToken: string }) {
+  const [channels, setChannels] = useState<WardCommunityChannel[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [editing, setEditing] = useState<ChannelEditState | null>(null);
+  const [toast, setToast] = useState<Toast | null>(null);
+
+  const reload = () => {
+    setLoading(true);
+    getMyWardCommunityChannels({ data: { accessToken } })
+      .then((data) => {
+        setChannels(data);
+        setLoadError(null);
+      })
+      .catch((err) => setLoadError(err instanceof Error ? err.message : "Could not load channels"))
+      .finally(() => setLoading(false));
+  };
+
+  useEffect(() => {
+    reload();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(() => setToast(null), 3500);
+    return () => clearTimeout(t);
+  }, [toast]);
+
+  const channelByPlatform = (key: string) => channels.find((c) => c.platform === key);
+
+  function startEdit(platform: WardCommunityChannel["platform"], existing?: WardCommunityChannel) {
+    setEditing({ platform, label: existing?.label ?? "", url: existing?.url ?? "", saving: false, error: null });
+  }
+
+  async function handleSave() {
+    if (!editing) return;
+    setEditing({ ...editing, saving: true, error: null });
+    try {
+      await saveWardCommunityChannel({
+        data: { accessToken, platform: editing.platform, label: editing.label, url: editing.url },
+      });
+      setEditing(null);
+      setToast({ type: "success", message: "Channel saved" });
+      reload();
+    } catch (err) {
+      setEditing({ ...editing, saving: false, error: err instanceof Error ? err.message : "Could not save channel" });
+    }
+  }
+
+  async function handleDelete(id: string) {
+    try {
+      await deactivateWardCommunityChannel({ data: { accessToken, id } });
+      setToast({ type: "success", message: "Channel removed" });
+      reload();
+    } catch (err) {
+      setToast({ type: "error", message: err instanceof Error ? err.message : "Could not remove channel" });
+    }
+  }
+
+  return (
+    <div className="flex flex-col gap-5">
+      <div>
+        <h1 className="text-xl font-bold" style={{ color: TEXT, letterSpacing: "-0.02em" }}>
+          Community Channels
+        </h1>
+        <p className="text-sm mt-1" style={{ color: DIM }}>
+          Link your ward's Telegram, WhatsApp, X, and Facebook groups so residents find them in one place.
+        </p>
+      </div>
+
+      <div className="rounded-xl p-4 flex gap-3" style={{ background: "rgba(198,255,61,0.05)", border: `1px solid ${ACCENT}30` }}>
+        <Info size={16} style={{ color: ACCENT, flexShrink: 0, marginTop: 1 }} />
+        <p className="text-xs" style={{ color: "rgba(245,245,244,0.55)" }}>
+          Telegram below is a real, verified connection: once linked, messages from your group show up
+          in your Community Feed here. WhatsApp, X, and Facebook are link storage only for now,
+          CivicRewards doesn't read, post to, or pull messages out of those groups automatically.
+        </p>
+      </div>
+
+      {toast && (
+        <div
+          className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium"
+          style={{
+            background: toast.type === "success" ? "rgba(198,255,61,0.12)" : "rgba(255,67,58,0.12)",
+            border: `1px solid ${toast.type === "success" ? "rgba(198,255,61,0.25)" : "rgba(255,67,58,0.25)"}`,
+            color: toast.type === "success" ? ACCENT : "#FF453A",
+          }}
+        >
+          {toast.type === "success" ? <CheckCircle size={15} /> : <AlertCircle size={15} />}
+          {toast.message}
+        </div>
+      )}
+
+      {loadError && (
+        <div className="rounded-xl p-4 text-xs" style={{ background: "rgba(255,67,58,0.08)", border: "1px solid rgba(255,67,58,0.25)", color: "#FF453A" }}>
+          {loadError}
+          {loadError.includes("Could not find the table") && (
+            <p className="mt-1" style={{ color: "rgba(245,245,244,0.5)" }}>
+              Run sql/2026-09-21-ward-community-channels.sql in the Supabase SQL editor first.
+            </p>
+          )}
+        </div>
+      )}
+
+      <TelegramLinkSection accessToken={accessToken} />
+
+      <div className="rounded-xl overflow-hidden" style={{ border: `1px solid ${BORDER}` }}>
+        {loading ? (
+          <div className="p-8 text-center text-sm" style={{ color: DIM, background: CARD }}>
+            Loading…
+          </div>
+        ) : (
+          CHANNEL_PLATFORMS.map((platform, idx) => {
+            const existing = channelByPlatform(platform.key);
+            const isEditing = editing?.platform === platform.key;
+            const isLast = idx === CHANNEL_PLATFORMS.length - 1;
+            const Icon = platform.icon;
+            return (
+              <div key={platform.key}>
+                <div
+                  className="px-5 py-4 flex items-center gap-4"
+                  style={{ background: CARD, borderBottom: isEditing || isLast ? "none" : `1px solid ${BORDER}` }}
+                >
+                  <div className="flex items-center gap-2.5 w-32 shrink-0">
+                    <Icon size={15} style={{ color: DIM }} />
+                    <span className="text-sm font-medium" style={{ color: TEXT }}>
+                      {platform.label}
+                    </span>
+                  </div>
+
+                  <div className="flex-1 min-w-0">
+                    {existing ? (
+                      <>
+                        <p className="text-sm font-medium truncate" style={{ color: TEXT }}>
+                          {existing.label ?? platform.label}
+                        </p>
+                        <p className="text-xs truncate mt-0.5" style={{ color: DIM }}>
+                          {existing.url}
+                        </p>
+                      </>
+                    ) : (
+                      <p className="text-xs" style={{ color: "rgba(245,245,244,0.3)" }}>
+                        Not set — e.g. {platform.defaultLabel}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="shrink-0">
+                    {existing ? (
+                      <span
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
+                        style={{ background: "rgba(198,255,61,0.1)", color: ACCENT }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: ACCENT }} />
+                        Active
+                      </span>
+                    ) : (
+                      <span
+                        className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
+                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(245,245,244,0.35)" }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "rgba(245,245,244,0.2)" }} />
+                        Not set
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex items-center gap-1 shrink-0">
+                    <button
+                      onClick={() => (isEditing ? setEditing(null) : startEdit(platform.key, existing))}
+                      className="p-2 rounded-lg"
+                      style={{ color: isEditing ? "#FF453A" : "rgba(245,245,244,0.4)" }}
+                    >
+                      {isEditing ? <X size={14} /> : <Pencil size={14} />}
+                    </button>
+                    {existing && !isEditing && (
+                      <button onClick={() => handleDelete(existing.id)} className="p-2 rounded-lg" style={{ color: "rgba(255,67,58,0.6)" }}>
+                        <X size={14} />
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                {isEditing && editing && (
+                  <div
+                    className="px-5 py-4 flex flex-col gap-3"
+                    style={{
+                      background: "rgba(198,255,61,0.03)",
+                      borderTop: `1px solid ${ACCENT}20`,
+                      borderBottom: isLast ? "none" : `1px solid ${BORDER}`,
+                    }}
+                  >
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-xs font-medium" style={{ color: "rgba(245,245,244,0.55)" }}>
+                        Label
+                      </label>
+                      <input
+                        type="text"
+                        value={editing.label}
+                        onChange={(e) => setEditing({ ...editing, label: e.target.value })}
+                        placeholder={`e.g. ${platform.defaultLabel}`}
+                        maxLength={50}
+                        className="w-full px-3 py-2.5 rounded-xl text-sm outline-none"
+                        style={{ background: "#050505", border: `1px solid ${BORDER}`, color: TEXT }}
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-1.5">
+                      <label className="text-xs font-medium" style={{ color: "rgba(245,245,244,0.55)" }}>
+                        Link (https://…)
+                      </label>
+                      <input
+                        type="text"
+                        value={editing.url}
+                        onChange={(e) => setEditing({ ...editing, url: e.target.value })}
+                        placeholder="https://t.me/yourgroup"
                         className="w-full px-3 py-2.5 rounded-xl text-sm outline-none font-mono"
                         style={{ background: "#050505", border: `1px solid ${BORDER}`, color: TEXT }}
                       />

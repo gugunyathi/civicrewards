@@ -8,7 +8,7 @@ export interface CouncillorProfile {
   approved: boolean;
 }
 
-async function requireCouncillorProfile(accessToken: string): Promise<{
+export async function requireCouncillorProfile(accessToken: string): Promise<{
   userId: string;
   profile: CouncillorProfile | null;
 }> {
@@ -41,7 +41,7 @@ async function requireCouncillorProfile(accessToken: string): Promise<{
   };
 }
 
-function validateAccessToken(data: unknown): { accessToken: string } {
+export function validateAccessToken(data: unknown): { accessToken: string } {
   if (
     typeof data !== "object" ||
     data === null ||

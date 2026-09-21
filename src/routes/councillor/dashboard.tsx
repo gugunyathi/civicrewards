@@ -17,7 +17,13 @@ import {
 } from "@/lib/councillorAuth";
 import CouncillorDashboardV2 from "@/components/councillor/CouncillorDashboardV2";
 
-export const Route = createFileRoute("/councillor")({
+function validateSearch(search: Record<string, unknown>): { ward?: string } {
+  const ward = search["ward"];
+  return typeof ward === "string" && ward.trim() ? { ward: ward.trim() } : {};
+}
+
+export const Route = createFileRoute("/councillor/dashboard")({
+  validateSearch,
   head: () => ({
     meta: [
       {
@@ -56,13 +62,23 @@ async function loadCouncillorState(): Promise<ViewState> {
 }
 
 export default function CouncillorPage() {
+  const { ward: wardFromClaim } = Route.useSearch();
   const [view, setView] = useState<ViewState>({ kind: "checking" });
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
 
   const refresh = () => {
     loadCouncillorState()
-      .then(setView)
+      .then((next) => {
+        // Arriving via a "Claim This Profile" link (?ward=115) means the
+        // visitor wants to sign up for that ward, not sign in — default
+        // straight to the sign-up form instead of making them click twice.
+        if (next.kind === "signedOut" && wardFromClaim) {
+          setView({ kind: "signedOut", mode: "signup" });
+        } else {
+          setView(next);
+        }
+      })
       .catch((err) => {
         setError(err instanceof Error ? err.message : "Something went wrong");
         setView({ kind: "signedOut", mode: "login" });
@@ -142,6 +158,7 @@ export default function CouncillorPage() {
             setError={setError}
             setMode={(mode) => setView({ kind: "signedOut", mode })}
             onAuthed={refresh}
+            defaultWard={wardFromClaim}
           />
         )}
 
@@ -177,6 +194,7 @@ function AuthForms({
   setError,
   setMode,
   onAuthed,
+  defaultWard,
 }: {
   mode: "login" | "signup";
   error: string | null;
@@ -185,11 +203,12 @@ function AuthForms({
   setError: (e: string | null) => void;
   setMode: (m: "login" | "signup") => void;
   onAuthed: () => void;
+  defaultWard: string | undefined;
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
-  const [wardNumber, setWardNumber] = useState("115");
+  const [wardNumber, setWardNumber] = useState(defaultWard ?? "115");
   const [signupSent, setSignupSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {

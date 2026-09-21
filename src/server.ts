@@ -2,6 +2,16 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { handleTelegramWebhook } from "./lib/telegramWebhookHandler";
+
+// Intercepted before TanStack Start's own router sees it: this version of
+// @tanstack/react-start (1.168.32) has no file-based server-route/API-route
+// mechanism (no createServerFileRoute, no route.methods()), and
+// createServerFn is an RPC channel for this app's own client code, not a
+// generic HTTP endpoint an external service like Telegram can POST to.
+// src/server.ts's fetch() is the one place confirmed to see every raw
+// request, so a raw external webhook is handled directly here instead.
+const TELEGRAM_WEBHOOK_PATH = "/api/telegram-webhook";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -46,6 +56,11 @@ function isH3SwallowedErrorBody(body: string): boolean {
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    const url = new URL(request.url);
+    if (url.pathname === TELEGRAM_WEBHOOK_PATH) {
+      return handleTelegramWebhook(request);
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
