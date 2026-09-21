@@ -36,6 +36,7 @@ import {
   X,
   Zap,
 } from "lucide-react";
+import { submitWardReport, type WardReportCategory } from "@/lib/submitWardReport";
 
 export const Route = createFileRoute("/ReportApp")({
   head: () => ({
@@ -53,19 +54,66 @@ export const Route = createFileRoute("/ReportApp")({
   component: ReportAppPage,
 });
 
-const DEPARTMENTS = [
-  { id: "water", name: "Water & Sanitation", icon: "💧", example: "JWAPP-40128554" },
-  { id: "electricity", name: "Electricity & Power Outages", icon: "⚡", example: "CPWEB5012172" },
-  { id: "roads", name: "Roads & Stormwater / Potholes", icon: "🛣️", example: "JRA-778219" },
-  { id: "streetlights", name: "Streetlights & Traffic Signals", icon: "💡", example: "CP-SL99321" },
-  { id: "waste", name: "Waste Management & Illegal Dumping", icon: "🗑️", example: "PIKIT-10294" },
-  { id: "parks", name: "Parks, Fallen Trees & Verges", icon: "🌳", example: "CPARK-4491" },
-  { id: "safety", name: "Metro Police & Public Safety Hazard", icon: "🛡️", example: "JMPD-88210" },
-  { id: "health", name: "Environmental Health & Pollution", icon: "🏥", example: "EHD-33019" },
+const DEPARTMENTS: Array<{
+  id: string;
+  name: string;
+  icon: string;
+  example: string;
+  category: WardReportCategory;
+}> = [
+  { id: "water", name: "Water & Sanitation", icon: "💧", example: "JWAPP-40128554", category: "water" },
+  {
+    id: "electricity",
+    name: "Electricity & Power Outages",
+    icon: "⚡",
+    example: "CPWEB5012172",
+    category: "electricity",
+  },
+  {
+    id: "roads",
+    name: "Roads & Stormwater / Potholes",
+    icon: "🛣️",
+    example: "JRA-778219",
+    category: "roads",
+  },
+  {
+    id: "streetlights",
+    name: "Streetlights & Traffic Signals",
+    icon: "💡",
+    example: "CP-SL99321",
+    category: "other",
+  },
+  {
+    id: "waste",
+    name: "Waste Management & Illegal Dumping",
+    icon: "🗑️",
+    example: "PIKIT-10294",
+    category: "refuse",
+  },
+  { id: "parks", name: "Parks, Fallen Trees & Verges", icon: "🌳", example: "CPARK-4491", category: "other" },
+  {
+    id: "safety",
+    name: "Metro Police & Public Safety Hazard",
+    icon: "🛡️",
+    example: "JMPD-88210",
+    category: "safety",
+  },
+  {
+    id: "health",
+    name: "Environmental Health & Pollution",
+    icon: "🏥",
+    example: "EHD-33019",
+    category: "other",
+  },
 ];
 
-const WARDS = [
-  "Ward 115 (Fourways / Witkoppen / Douglasdale)",
+// The real intake only accepts reports for Ward 115 today (the endpoint
+// hardcodes wardNumber: '115' regardless of what's sent) — offering other
+// wards here would silently misfile them. Kept as a visible, disabled list
+// rather than removed outright so it's clear more wards are coming, not
+// forgotten.
+const WARDS = ["Ward 115 (Fourways / Witkoppen / Douglasdale)"];
+const COMING_SOON_WARDS = [
   "Ward 102 (Bryanston / Randburg)",
   "Ward 90 (Sandton / Hyde Park / Craighall)",
   "Ward 117 (Rosebank / Parkhurst)",
@@ -83,17 +131,20 @@ export default function ReportAppPage() {
 
   // Form State
   const [department, setDepartment] = useState("");
+  const [reporterName, setReporterName] = useState("");
+  const [reporterSuburb, setReporterSuburb] = useState("");
   const [refNumber, setRefNumber] = useState("");
   const [isEmergency, setIsEmergency] = useState(false);
   const [locationText, setLocationText] = useState("");
   const [description, setDescription] = useState("");
   const [hasPhoto, setHasPhoto] = useState(false);
+  const [consentGiven, setConsentGiven] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [submittedReport, setSubmittedReport] = useState<{
-    id: string;
-    department: string;
-    credits: number;
-    timestamp: string;
+    reference: string | null;
+    escalated: boolean;
+    noReferenceExpected: boolean;
   } | null>(null);
 
   // User Balances & Stats
@@ -140,31 +191,57 @@ export default function ReportAppPage() {
     },
   ]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!department && !isEmergency) {
-      alert("Please select a municipal department or check emergency report.");
+    setSubmitError(null);
+
+    if (isEmergency) {
+      setSubmitError(
+        "Emergency reports need a photo, and photo upload isn't connected yet — for an emergency right now, please contact your ward channel directly.",
+      );
       return;
     }
+    const dept = DEPARTMENTS.find((d) => d.name === department);
+    if (!dept) {
+      alert("Please select a municipal department.");
+      return;
+    }
+    if (!reporterName.trim() || !reporterSuburb.trim() || !locationText.trim() || !description.trim()) {
+      alert("Please fill in your name, suburb, address, and description.");
+      return;
+    }
+    if (!consentGiven) {
+      alert("Please confirm you agree to share your details before submitting.");
+      return;
+    }
+
     setIsSubmitting(true);
-    setTimeout(() => {
-      const newCredits = 120;
-      setCredits((prev) => prev + newCredits);
-      setSubmittedReport({
-        id: `CR-2026-${Math.floor(10000 + Math.random() * 90000)}`,
-        department: department || "Emergency Public Safety",
-        credits: newCredits,
-        timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+    try {
+      const result = await submitWardReport({
+        data: {
+          name: reporterName.trim(),
+          address: locationText.trim(),
+          suburb: reporterSuburb.trim(),
+          category: dept.category,
+          description: description.trim(),
+          ...(refNumber.trim() ? { reference: refNumber.trim() } : {}),
+        },
       });
-      setIsSubmitting(false);
+      setSubmittedReport(result);
       // reset form
       setDepartment("");
+      setReporterName("");
+      setReporterSuburb("");
       setRefNumber("");
       setLocationText("");
       setDescription("");
       setHasPhoto(false);
-      setIsEmergency(false);
-    }, 1200);
+      setConsentGiven(false);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : "Report submission failed");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const isDark = theme === "dark";
@@ -259,6 +336,18 @@ export default function ReportAppPage() {
                     >
                       {w}
                     </button>
+                  ))}
+                  <p className="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+                    Coming soon (not yet connected)
+                  </p>
+                  {COMING_SOON_WARDS.map((w) => (
+                    <div
+                      key={w}
+                      title="Reports can only be submitted for Ward 115 right now"
+                      className="w-full cursor-not-allowed rounded-lg px-2.5 py-1.5 text-left text-xs font-medium text-zinc-500"
+                    >
+                      {w}
+                    </div>
                   ))}
                 </div>
               )}
@@ -445,9 +534,7 @@ export default function ReportAppPage() {
                   <CheckCircle2 className="size-6 text-lime-400 shrink-0 mt-0.5" />
                   <div className="flex-1">
                     <div className="flex items-center justify-between">
-                      <h4 className="text-sm font-extrabold text-lime-400">
-                        Fault Logged & Verified!
-                      </h4>
+                      <h4 className="text-sm font-extrabold text-lime-400">Report Logged</h4>
                       <button
                         onClick={() => setSubmittedReport(null)}
                         className="text-xs opacity-60 hover:opacity-100"
@@ -456,20 +543,28 @@ export default function ReportAppPage() {
                       </button>
                     </div>
                     <p className="mt-1 text-xs leading-relaxed">
-                      Reference{" "}
-                      <strong className="font-mono text-white">{submittedReport.id}</strong> has
-                      been dispatched to municipal contractors and the Ward 115 councillor.
+                      {submittedReport.reference ? (
+                        <>
+                          Reference{" "}
+                          <strong className="font-mono text-white">
+                            {submittedReport.reference}
+                          </strong>{" "}
+                          has been logged with the Ward 115 councillor.
+                        </>
+                      ) : submittedReport.noReferenceExpected ? (
+                        "Logged and sent directly to the Ward 115 councillor — this category doesn't get a municipal reference number."
+                      ) : (
+                        "Logged, but not yet escalated — this department issues its own reference number once you've reported it with them directly. Add that reference here to escalate to the councillor."
+                      )}
                     </p>
-                    <div className="mt-2.5 flex items-center gap-2">
-                      <span className="inline-flex items-center gap-1 rounded-full bg-lime-400 px-3 py-1 text-xs font-black text-black">
-                        +{submittedReport.credits} CivicCredits Earned!
-                      </span>
-                      <span className="text-[11px] text-zinc-400">
-                        New Balance: {credits} credits
-                      </span>
-                    </div>
                   </div>
                 </div>
+              </div>
+            )}
+
+            {submitError && (
+              <div className="rounded-2xl border border-red-500/40 bg-red-950/30 p-4 text-xs font-semibold text-red-300">
+                {submitError}
               </div>
             )}
 
@@ -499,6 +594,44 @@ export default function ReportAppPage() {
                     ))}
                   </select>
                   <ChevronDown className="pointer-events-none absolute right-4 top-3.5 size-4 text-zinc-400" />
+                </div>
+              </div>
+
+              {/* Reporter Name + Suburb */}
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div>
+                  <label className="block text-xs sm:text-sm font-bold text-zinc-300 mb-1.5">
+                    Your Name <span className="text-lime-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required={!isEmergency}
+                    value={reporterName}
+                    onChange={(e) => setReporterName(e.target.value)}
+                    placeholder="e.g. Sipho Ndlovu"
+                    className={`w-full rounded-xl border px-4 py-3 text-sm transition focus:outline-none focus:ring-2 ${
+                      isDark
+                        ? "border-zinc-800 bg-zinc-900 text-zinc-100 placeholder:text-zinc-600 focus:ring-lime-400"
+                        : "border-zinc-300 bg-white text-zinc-900 placeholder:text-zinc-400 focus:ring-emerald-500"
+                    }`}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs sm:text-sm font-bold text-zinc-300 mb-1.5">
+                    Suburb <span className="text-lime-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required={!isEmergency}
+                    value={reporterSuburb}
+                    onChange={(e) => setReporterSuburb(e.target.value)}
+                    placeholder="e.g. Douglasdale"
+                    className={`w-full rounded-xl border px-4 py-3 text-sm transition focus:outline-none focus:ring-2 ${
+                      isDark
+                        ? "border-zinc-800 bg-zinc-900 text-zinc-100 placeholder:text-zinc-600 focus:ring-lime-400"
+                        : "border-zinc-300 bg-white text-zinc-900 placeholder:text-zinc-400 focus:ring-emerald-500"
+                    }`}
+                  />
                 </div>
               </div>
 
@@ -616,21 +749,45 @@ export default function ReportAppPage() {
                 </div>
               </div>
 
+              {/* POPIA consent — required before this personal information
+                  (name, address, suburb, description) can be sent on to the
+                  ward councillor and municipal department via the real
+                  submit-report endpoint. */}
+              <label
+                className={`flex items-start gap-2.5 rounded-xl border px-3.5 py-3 text-xs cursor-pointer ${
+                  isDark
+                    ? "border-zinc-800 bg-zinc-900/40 text-zinc-300"
+                    : "border-zinc-300 bg-zinc-50 text-zinc-700"
+                }`}
+              >
+                <input
+                  type="checkbox"
+                  checked={consentGiven}
+                  onChange={(e) => setConsentGiven(e.target.checked)}
+                  className="mt-0.5 size-4 shrink-0 accent-lime-400"
+                />
+                <span>
+                  I agree that my name, address, suburb and this report's details will be shared with my ward
+                  councillor and the relevant municipal department, so the issue can be followed up. CivicRewards
+                  does not sell or use this information for anything else.
+                </span>
+              </label>
+
               {/* Submit CTA */}
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !consentGiven}
                 className="w-full rounded-2xl bg-[#c4f224] py-3.5 sm:py-4 font-display text-base font-extrabold text-black shadow-md transition hover:bg-lime-400 active:scale-[0.99] disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
                     <RefreshCw className="size-5 animate-spin" />
-                    <span>Verifying & Logging Report...</span>
+                    <span>Logging Report...</span>
                   </>
                 ) : (
                   <>
                     <Send className="size-5" />
-                    <span>Submit Report & Earn CivicCredits</span>
+                    <span>Submit Report to Ward 115</span>
                   </>
                 )}
               </button>
