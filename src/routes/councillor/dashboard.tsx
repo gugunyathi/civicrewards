@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense, lazy } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowLeft,
@@ -15,7 +15,10 @@ import {
   type CouncillorProfile,
   type WardReportSummary,
 } from "@/lib/councillorAuth";
-import CouncillorDashboardV2 from "@/components/councillor/CouncillorDashboardV2";
+// Lazy-loaded: this pulls in recharts and react-map-gl/mapbox-gl transitively,
+// which have no reason to be in the homepage's or any other public page's
+// bundle — only the dashboard route (behind sign-in) actually needs them.
+const CouncillorDashboardV2 = lazy(() => import("@/components/councillor/CouncillorDashboardV2"));
 
 function validateSearch(search: Record<string, unknown>): { ward?: string } {
   const ward = search["ward"];
@@ -175,11 +178,13 @@ export default function CouncillorPage() {
         )}
 
         {view.kind === "dashboard" && (
-          <CouncillorDashboardV2
-            profile={view.profile}
-            reports={view.reports}
-            accessToken={view.accessToken}
-          />
+          <Suspense fallback={<p className="text-sm text-slate-400">Loading dashboard…</p>}>
+            <CouncillorDashboardV2
+              profile={view.profile}
+              reports={view.reports}
+              accessToken={view.accessToken}
+            />
+          </Suspense>
         )}
       </main>
     </div>

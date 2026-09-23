@@ -31,7 +31,7 @@ import { Ban, Info, Pencil, X, CheckCircle, AlertCircle, Facebook, MessageCircle
 const ACCENT = "#C6FF3D";
 const CARD = "#0e0e0f";
 const TEXT = "#f5f5f4";
-const DIM = "rgba(245,245,244,0.45)";
+const DIM = "rgba(245,245,244,0.5)";
 const BORDER = "rgba(255,255,255,0.08)";
 
 type Tab = "overview" | "reports" | "analytics" | "escalation" | "channels" | "broadcast";
@@ -119,7 +119,7 @@ export default function CouncillorDashboardV2({
                   borderLeft: active ? `3px solid ${ACCENT}` : "3px solid transparent",
                   borderRadius: 9,
                   marginBottom: 2,
-                  color: active ? ACCENT : "rgba(245,245,244,0.45)",
+                  color: active ? ACCENT : "rgba(245,245,244,0.5)",
                   background: active ? "rgba(198,255,61,0.04)" : "transparent",
                   fontSize: 13,
                   fontWeight: active ? 500 : 400,
@@ -134,7 +134,7 @@ export default function CouncillorDashboardV2({
 
         <div className="pt-3 flex items-center gap-2" style={{ borderTop: `1px solid ${BORDER}` }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#30D158", display: "inline-block", flexShrink: 0 }} />
-          <p className="text-xs" style={{ color: "rgba(245,245,244,0.25)" }}>
+          <p className="text-xs" style={{ color: "rgba(245,245,244,0.5)" }}>
             Signal Desk · Live
           </p>
         </div>
@@ -147,7 +147,7 @@ export default function CouncillorDashboardV2({
             key={item.key}
             onClick={() => setTab(item.key)}
             className="flex-1 flex flex-col items-center gap-1 py-2.5 text-xs font-medium"
-            style={{ color: tab === item.key ? ACCENT : "rgba(245,245,244,0.4)" }}
+            style={{ color: tab === item.key ? ACCENT : "rgba(245,245,244,0.5)" }}
           >
             <span style={{ fontSize: 16 }}>{item.emoji}</span>
             <span className="text-[10px]">{item.label.split(" ")[0]}</span>
@@ -586,7 +586,7 @@ function EscalationTab({ accessToken }: { accessToken: string }) {
                     ) : (
                       <span
                         className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
-                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(245,245,244,0.35)" }}
+                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(245,245,244,0.5)" }}
                       >
                         <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "rgba(245,245,244,0.2)" }} />
                         Not set
@@ -598,7 +598,7 @@ function EscalationTab({ accessToken }: { accessToken: string }) {
                     <button
                       onClick={() => (isEditing ? setEditing(null) : startEdit(cat.key, existing))}
                       className="p-2 rounded-lg"
-                      style={{ color: isEditing ? "#FF453A" : "rgba(245,245,244,0.4)" }}
+                      style={{ color: isEditing ? "#FF453A" : "rgba(245,245,244,0.5)" }}
                     >
                       {isEditing ? <X size={14} /> : <Pencil size={14} />}
                     </button>
@@ -658,7 +658,7 @@ function EscalationTab({ accessToken }: { accessToken: string }) {
                       <button
                         onClick={() => setEditing(null)}
                         className="px-4 py-2 rounded-xl text-xs font-medium"
-                        style={{ color: "rgba(245,245,244,0.45)", border: `1px solid ${BORDER}` }}
+                        style={{ color: "rgba(245,245,244,0.5)", border: `1px solid ${BORDER}` }}
                       >
                         Cancel
                       </button>
@@ -793,7 +793,7 @@ function TelegramLinkSection({ accessToken }: { accessToken: string }) {
               <p className="text-xs font-semibold mb-1" style={{ color: "rgba(245,245,244,0.55)" }}>
                 Community Feed
               </p>
-              <p className="text-xs mb-2" style={{ color: "rgba(245,245,244,0.4)" }}>
+              <p className="text-xs mb-2" style={{ color: "rgba(245,245,244,0.5)" }}>
                 Raw messages from your linked Telegram group. These are not official municipal reports.
               </p>
               {messages.length === 0 ? (
@@ -1004,7 +1004,7 @@ function ChannelsTab({ accessToken }: { accessToken: string }) {
                     ) : (
                       <span
                         className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium"
-                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(245,245,244,0.35)" }}
+                        style={{ background: "rgba(255,255,255,0.05)", color: "rgba(245,245,244,0.5)" }}
                       >
                         <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: "rgba(245,245,244,0.2)" }} />
                         Not set
@@ -1016,7 +1016,7 @@ function ChannelsTab({ accessToken }: { accessToken: string }) {
                     <button
                       onClick={() => (isEditing ? setEditing(null) : startEdit(platform.key, existing))}
                       className="p-2 rounded-lg"
-                      style={{ color: isEditing ? "#FF453A" : "rgba(245,245,244,0.4)" }}
+                      style={{ color: isEditing ? "#FF453A" : "rgba(245,245,244,0.5)" }}
                     >
                       {isEditing ? <X size={14} /> : <Pencil size={14} />}
                     </button>
@@ -1076,7 +1076,7 @@ function ChannelsTab({ accessToken }: { accessToken: string }) {
                       <button
                         onClick={() => setEditing(null)}
                         className="px-4 py-2 rounded-xl text-xs font-medium"
-                        style={{ color: "rgba(245,245,244,0.45)", border: `1px solid ${BORDER}` }}
+                        style={{ color: "rgba(245,245,244,0.5)", border: `1px solid ${BORDER}` }}
                       >
                         Cancel
                       </button>

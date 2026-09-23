@@ -28,7 +28,7 @@ export default function MetricTile({ label, value, accent = "white", sublabel }:
         {value}
       </p>
       {sublabel && (
-        <p className="text-xs" style={{ color: "rgba(245,245,244,0.35)" }}>
+        <p className="text-xs" style={{ color: "rgba(245,245,244,0.5)" }}>
           {sublabel}
         </p>
       )}

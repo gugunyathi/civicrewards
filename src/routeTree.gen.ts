@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ReportAppRouteImport } from './routes/ReportApp'
+import { Route as AdminRouteImport } from './routes/admin'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CouncillorIndexRouteImport } from './routes/councillor/index'
@@ -25,6 +26,11 @@ const IndexRoute = IndexRouteImport.update({
 const ReportAppRoute = ReportAppRouteImport.update({
   id: '/ReportApp',
   path: '/ReportApp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -56,6 +62,7 @@ const CouncillorDashboardRoute = CouncillorDashboardRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/ReportApp': typeof ReportAppRoute
+  '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
@@ -65,6 +72,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/ReportApp': typeof ReportAppRoute
+  '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
@@ -75,6 +83,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/ReportApp': typeof ReportAppRoute
+  '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
   '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
@@ -86,6 +95,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/ReportApp'
+    | '/admin'
     | '/privacy'
     | '/terms'
     | '/councillor/$wardNumber'
@@ -95,6 +105,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/ReportApp'
+    | '/admin'
     | '/privacy'
     | '/terms'
     | '/councillor/$wardNumber'
@@ -104,6 +115,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/ReportApp'
+    | '/admin'
     | '/privacy'
     | '/terms'
     | '/councillor/$wardNumber'
@@ -114,6 +126,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ReportAppRoute: typeof ReportAppRoute
+  AdminRoute: typeof AdminRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
   CouncillorWardNumberRoute: typeof CouncillorWardNumberRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/ReportApp'
       fullPath: '/ReportApp'
       preLoaderRoute: typeof ReportAppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -178,6 +198,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ReportAppRoute: ReportAppRoute,
+  AdminRoute: AdminRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
   CouncillorWardNumberRoute: CouncillorWardNumberRoute,

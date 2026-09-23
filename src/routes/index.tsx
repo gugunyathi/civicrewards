@@ -629,6 +629,10 @@ function Index() {
     company: "",
     metro: "City of Johannesburg",
     notes: "",
+    // Honeypot: real users never see or fill this field (visually hidden,
+    // not just display:none, since some bots skip display:none fields).
+    // A bot that fills every input it finds will fill it; a real human won't.
+    website: "",
   });
 
   // Card Payment Modal State
@@ -674,6 +678,7 @@ function Index() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.email) return;
+    if (formData.website) return; // honeypot tripped, silently reject
     setModalSubmitted(true);
   };
 
@@ -697,7 +702,7 @@ function Index() {
       <header className="sticky top-3 z-50 mx-auto max-w-6xl px-4 sm:px-6 space-y-2">
         {/* Top Banner: Logo & Primary Action */}
         <div className="flex items-center justify-between rounded-2xl sm:rounded-3xl bg-white/90 backdrop-blur-md px-4 sm:px-6 py-2.5 sm:py-3 shadow-[0_10px_25px_-10px_rgba(42,50,56,0.25)] border border-white/60">
-          <a href="#" className="flex items-center gap-2.5 sm:gap-3 group">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group">
             <div className="grid size-10 sm:size-11 place-items-center rounded-xl sm:rounded-2xl bg-brand font-display text-xl sm:text-2xl font-extrabold text-white shadow-[0_5px_0_oklch(0.475_0.094_162.9)] transition group-hover:scale-105">
               C
             </div>
@@ -708,11 +713,11 @@ function Index() {
                 </p>
                 <AnimatedSAFlag />
               </div>
-              <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/50">
+              <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/75">
                 South Africa
               </p>
             </div>
-          </a>
+          </Link>
 
           <div className="flex items-center gap-2 sm:gap-2.5">
             {/* Reporting App Button requested by user */}
@@ -923,7 +928,7 @@ function Index() {
           </div>
 
           <div className="mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs">
-            <span className="text-ink/60 font-semibold">Live Applications:</span>
+            <span className="text-ink/75 font-semibold">Live Applications:</span>
             <Link
               to="/ReportApp"
               className="inline-flex items-center gap-1.5 rounded-xl bg-white px-3.5 py-1.5 font-bold text-brand-deep hover:bg-mint transition border border-brand/20 shadow-2xs"
@@ -945,7 +950,7 @@ function Index() {
               <p className="font-display text-2xl sm:text-3xl font-extrabold text-brand-deep">
                 48,200+
               </p>
-              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/75">
                 Faults resolved
               </p>
             </div>
@@ -954,7 +959,7 @@ function Index() {
               <p className="font-display text-2xl sm:text-3xl font-extrabold text-accent-warm">
                 584 Wards
               </p>
-              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/75">
                 Across 7 Metros
               </p>
             </div>
@@ -963,7 +968,7 @@ function Index() {
               <p className="font-display text-2xl sm:text-3xl font-extrabold text-brand">
                 9 Provinces
               </p>
-              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/55">
+              <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-wide text-ink/75">
                 Nationwide Impact
               </p>
             </div>
@@ -987,7 +992,7 @@ function Index() {
               <p className="font-display text-base sm:text-xl font-extrabold text-accent-warm">
                 +120 pts
               </p>
-              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/60">
+              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/75">
                 Pothole fixed · Ward 12
               </p>
             </div>
@@ -997,7 +1002,7 @@ function Index() {
               <p className="font-display text-xs sm:text-sm font-extrabold text-ink">
                 Community Champion
               </p>
-              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/70">
+              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/75">
                 Soweto · Bronze Tier
               </p>
             </div>
@@ -1026,7 +1031,7 @@ function Index() {
       >
         <div className="grid items-center gap-8 lg:gap-12 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <span className="inline-block rounded-full bg-sky px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide text-ink/70">
+            <span className="inline-block rounded-full bg-sky px-3.5 py-1.5 text-xs font-bold uppercase tracking-wide text-ink/75">
               The Loop
             </span>
             <h2 className="mt-3 font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink">
@@ -1045,7 +1050,7 @@ function Index() {
                     <p className="font-display text-base sm:text-lg font-bold text-ink">
                       {s.title}
                     </p>
-                    <p className="mt-0.5 text-xs sm:text-sm leading-relaxed text-ink/70">
+                    <p className="mt-0.5 text-xs sm:text-sm leading-relaxed text-ink/75">
                       {s.text}
                     </p>
                   </div>
@@ -1100,7 +1105,7 @@ function Index() {
                     >
                       <IconComponent className="size-6" />
                     </div>
-                    <span className="rounded-full bg-white/80 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10">
+                    <span className="rounded-full bg-white/80 px-3 py-1 text-[10px] font-extrabold uppercase tracking-wider text-ink/75 border border-ink/10">
                       Stakeholder
                     </span>
                   </div>
@@ -1110,7 +1115,7 @@ function Index() {
                   </h3>
 
                   <div className="mt-3 space-y-1.5">
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-ink/50">
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-ink/75">
                       Value Received
                     </p>
                     <p className="text-sm font-semibold text-ink leading-snug">
@@ -1289,7 +1294,7 @@ function Index() {
                           Coming Soon
                         </span>
                       )}
-                      <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-ink/70 border border-ink/10 shadow-xs">
+                      <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-ink/75 border border-ink/10 shadow-xs">
                         Min {card.minPoints}
                       </span>
                     </div>
@@ -1345,7 +1350,7 @@ function Index() {
                   ) : (
                     <div className="flex items-center justify-between gap-2">
                       <div>
-                        <span className="block text-[10px] font-bold uppercase tracking-wider text-ink/50">
+                        <span className="block text-[10px] font-bold uppercase tracking-wider text-ink/75">
                           Est. Annual Yield
                         </span>
                         <span
@@ -1440,7 +1445,7 @@ function Index() {
         <h2 className="text-center font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink">
           Partner in the way that fits you
         </h2>
-        <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-center text-xs sm:text-sm text-ink/65">
+        <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-center text-xs sm:text-sm text-ink/75">
           Three tracks, one shared mission: a cleaner, safer, more connected country.
         </p>
 
@@ -1449,7 +1454,7 @@ function Index() {
           <button
             onClick={() => setActiveTrackTab("all")}
             className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition ${
-              activeTrackTab === "all" ? "bg-brand text-white shadow-sm" : "bg-white text-ink/70"
+              activeTrackTab === "all" ? "bg-brand text-white shadow-sm" : "bg-white text-ink/75"
             }`}
           >
             All Tracks
@@ -1459,7 +1464,7 @@ function Index() {
             className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition ${
               activeTrackTab === "suppliers"
                 ? "bg-brand text-white shadow-sm"
-                : "bg-white text-ink/70"
+                : "bg-white text-ink/75"
             }`}
           >
             Municipal Suppliers
@@ -1469,7 +1474,7 @@ function Index() {
             className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition ${
               activeTrackTab === "businesses"
                 ? "bg-accent-warm text-white shadow-sm"
-                : "bg-white text-ink/70"
+                : "bg-white text-ink/75"
             }`}
           >
             Ward Businesses
@@ -1477,7 +1482,7 @@ function Index() {
           <button
             onClick={() => setActiveTrackTab("corporate")}
             className={`rounded-xl px-3.5 py-1.5 text-xs font-bold transition ${
-              activeTrackTab === "corporate" ? "bg-gold text-ink shadow-sm" : "bg-white text-ink/70"
+              activeTrackTab === "corporate" ? "bg-gold text-ink shadow-sm" : "bg-white text-ink/75"
             }`}
           >
             Corporate
@@ -1548,7 +1553,7 @@ function Index() {
         <h2 className="text-center font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink">
           Secure your spot
         </h2>
-        <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-center text-xs sm:text-sm text-ink/65">
+        <p className="mx-auto mt-2 sm:mt-3 max-w-xl text-center text-xs sm:text-sm text-ink/75">
           Pick a tier, upload your branding assets and settle your partnership via our secure
           gateway.
         </p>
@@ -1558,7 +1563,7 @@ function Index() {
           <div className="flex items-center gap-3">
             <span
               className={`text-xs sm:text-sm font-bold cursor-pointer ${
-                billingCycle === "monthly" ? "text-ink" : "text-ink/50"
+                billingCycle === "monthly" ? "text-ink" : "text-ink/75"
               }`}
               onClick={() => setBillingCycle("monthly")}
             >
@@ -1578,7 +1583,7 @@ function Index() {
             <div className="flex items-center gap-1.5">
               <span
                 className={`text-xs sm:text-sm font-bold cursor-pointer ${
-                  billingCycle === "annual" ? "text-ink" : "text-ink/50"
+                  billingCycle === "annual" ? "text-ink" : "text-ink/75"
                 }`}
                 onClick={() => setBillingCycle("annual")}
               >
@@ -1619,7 +1624,7 @@ function Index() {
                       Most popular
                     </span>
                   )}
-                  <p className="text-xs font-bold uppercase tracking-wide text-ink/60">{t.name}</p>
+                  <p className="text-xs font-bold uppercase tracking-wide text-ink/75">{t.name}</p>
                   <div className="mt-2 flex items-baseline gap-1">
                     <p
                       className={`font-display font-extrabold text-ink ${t.smallPrice ? "text-xl sm:text-2xl" : "text-2xl sm:text-3xl"}`}
@@ -1627,7 +1632,7 @@ function Index() {
                       {displayedPrice}
                     </p>
                     {t.suffix && (
-                      <span className="text-xs sm:text-sm font-bold text-ink/50">
+                      <span className="text-xs sm:text-sm font-bold text-ink/75">
                         {billingCycle === "annual" ? "/mo (billed annually)" : t.suffix}
                       </span>
                     )}
@@ -1651,7 +1656,7 @@ function Index() {
                   </button>
                   <button
                     onClick={() => handleOpenModal(`Tier: ${t.name}`, t.name)}
-                    className="w-full text-center text-[11px] font-bold text-ink/50 hover:text-ink hover:underline py-0.5"
+                    className="w-full text-center text-[11px] font-bold text-ink/75 hover:text-ink hover:underline py-0.5"
                   >
                     Or submit inquiry
                   </button>
@@ -1703,7 +1708,7 @@ function Index() {
             <h2 className="mt-3 font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-ink">
               Live across South African Metros
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-ink/70 leading-relaxed">
+            <p className="mt-2 text-xs sm:text-sm text-ink/75 leading-relaxed">
               Sponsorship, banners and rewards are locked to real municipal ward boundaries — pick
               the suburbs your business actually trades in.
             </p>
@@ -1711,13 +1716,13 @@ function Index() {
             {/* Real-time Search and Filter Bar */}
             <div className="mt-5 space-y-3">
               <div className="relative">
-                <Search className="absolute left-3.5 top-3 size-4 text-ink/40" />
+                <Search className="absolute left-3.5 top-3 size-4 text-ink/75" />
                 <input
                   type="text"
                   placeholder="Search municipality or province..."
                   value={searchWard}
                   onChange={(e) => setSearchWard(e.target.value)}
-                  className="w-full rounded-xl bg-cream pl-10 pr-4 py-2.5 text-xs sm:text-sm font-semibold text-ink placeholder:text-ink/40 focus:outline-none focus:ring-2 focus:ring-brand/50 border border-ink/10"
+                  className="w-full rounded-xl bg-cream pl-10 pr-4 py-2.5 text-xs sm:text-sm font-semibold text-ink placeholder:text-ink/75 focus:outline-none focus:ring-2 focus:ring-brand/50 border border-ink/10"
                 />
               </div>
 
@@ -1737,7 +1742,7 @@ function Index() {
                     className={`rounded-lg px-2.5 py-1 font-bold transition ${
                       selectedMetro === m
                         ? "bg-brand text-white"
-                        : "bg-cream text-ink/65 hover:bg-mint"
+                        : "bg-cream text-ink/75 hover:bg-mint"
                     }`}
                   >
                     {m}
@@ -1749,7 +1754,7 @@ function Index() {
             {/* Filtered Regions List */}
             <div className="mt-5 max-h-60 overflow-y-auto pr-1 space-y-2">
               {filteredRegions.length === 0 ? (
-                <p className="py-4 text-center text-xs text-ink/50 italic">
+                <p className="py-4 text-center text-xs text-ink/75 italic">
                   No municipalities match your search query.
                 </p>
               ) : (
@@ -1760,7 +1765,7 @@ function Index() {
                   >
                     <div className="min-w-0">
                       <p className="font-display font-bold text-ink">{r.name}</p>
-                      <p className="truncate text-[11px] text-ink/55">{r.area}</p>
+                      <p className="truncate text-[11px] text-ink/75">{r.area}</p>
                     </div>
                     <span
                       className={`shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide ${
@@ -1789,7 +1794,7 @@ function Index() {
               <p className="font-display text-base sm:text-lg font-extrabold text-brand-deep">
                 {filteredRegions.reduce((sum, r) => sum + r.wards, 0)} Wards
               </p>
-              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/60">
+              <p className="text-[10px] sm:text-[11px] font-semibold text-ink/75">
                 Mapped &amp; Active Nationwide
               </p>
             </div>
@@ -1855,7 +1860,7 @@ function Index() {
               </div>
               <figcaption className="mt-5 border-t border-ink/10 pt-3">
                 <p className="font-display font-bold text-sm sm:text-base text-ink">{v.name}</p>
-                <p className="text-[11px] sm:text-xs text-ink/60">{v.role}</p>
+                <p className="text-[11px] sm:text-xs text-ink/75">{v.role}</p>
               </figcaption>
             </figure>
           ))}
@@ -1889,7 +1894,7 @@ function Index() {
                   </div>
                 </button>
                 {isOpen && (
-                  <p className="mt-3 text-xs sm:text-sm leading-relaxed text-ink/70 border-t border-ink/5 pt-3 animate-in fade-in duration-150">
+                  <p className="mt-3 text-xs sm:text-sm leading-relaxed text-ink/75 border-t border-ink/5 pt-3 animate-in fade-in duration-150">
                     {f.a}
                   </p>
                 )}
@@ -1912,7 +1917,7 @@ function Index() {
           <p className="mx-auto mt-2 sm:mt-3 max-w-2xl text-sm sm:text-base font-semibold text-brand-deep leading-relaxed">
             Help build the trust layer between active citizens and responsive cities.
           </p>
-          <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm text-ink/70 leading-relaxed">
+          <p className="mx-auto mt-2 max-w-xl text-xs sm:text-sm text-ink/75 leading-relaxed">
             Tell us which municipal wards matter to your business and we'll deliver a tailored
             partnership pack, ward analytics, and verifiable SLA reporting.
           </p>
@@ -1957,7 +1962,7 @@ function Index() {
             Become a Partner Today
           </button>
         </div>
-        <div className="mt-4 flex items-center justify-center md:justify-start gap-4 text-xs text-ink/50">
+        <div className="mt-4 flex items-center justify-center md:justify-start gap-4 text-xs text-ink/75">
           <Link to="/privacy" className="hover:text-brand-deep hover:underline">
             Privacy Policy
           </Link>
@@ -1986,7 +1991,7 @@ function Index() {
                 <h3 className="font-display text-2xl font-extrabold text-ink">
                   Application Received!
                 </h3>
-                <p className="text-sm text-ink/70 max-w-sm mx-auto">
+                <p className="text-sm text-ink/75 max-w-sm mx-auto">
                   Thank you, <span className="font-bold text-brand-deep">{formData.fullName}</span>.
                   Our partnership director for{" "}
                   <span className="font-bold text-brand-deep">{formData.metro}</span> will send your
@@ -2001,6 +2006,16 @@ function Index() {
               </div>
             ) : (
               <form onSubmit={handleFormSubmit} className="space-y-4">
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                  autoComplete="off"
+                  tabIndex={-1}
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+                />
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-brand-deep bg-mint px-2.5 py-1 rounded-full">
                     {modalTrack}
@@ -2008,7 +2023,7 @@ function Index() {
                   <h3 className="mt-2 font-display text-2xl font-extrabold text-ink">
                     {modalTitle}
                   </h3>
-                  <p className="text-xs text-ink/60">
+                  <p className="text-xs text-ink/75">
                     Fill in your details to get custom ward metrics and tier pricing.
                   </p>
                 </div>
@@ -2087,7 +2102,7 @@ function Index() {
                   <button
                     type="button"
                     onClick={() => setPartnerModalOpen(false)}
-                    className="rounded-xl px-4 py-2.5 text-xs font-bold text-ink/60 hover:bg-cream"
+                    className="rounded-xl px-4 py-2.5 text-xs font-bold text-ink/75 hover:bg-cream"
                   >
                     Cancel
                   </button>
@@ -2177,7 +2192,7 @@ function Index() {
                   onChange={(e) => setSimulatedPoints(Number(e.target.value))}
                   className="w-full accent-brand cursor-pointer"
                 />
-                <div className="flex justify-between text-[10px] font-extrabold text-ink/50 uppercase">
+                <div className="flex justify-between text-[10px] font-extrabold text-ink/75 uppercase">
                   <span>250 Points</span>
                   <span>5,000 Points</span>
                   <span>10,000 Points</span>
@@ -2193,7 +2208,7 @@ function Index() {
                   <span className="font-display text-xl font-extrabold text-brand-deep">
                     R{(simulatedPoints * 1.8).toFixed(0)}
                   </span>
-                  <span className="block text-[10px] text-ink/60 mt-0.5">
+                  <span className="block text-[10px] text-ink/75 mt-0.5">
                     Micro-token allocation
                   </span>
                 </div>
@@ -2205,7 +2220,7 @@ function Index() {
                   <span className="font-display text-xl font-extrabold text-accent-deep">
                     R{(simulatedPoints * 0.014).toFixed(1)}/mo
                   </span>
-                  <span className="block text-[10px] text-ink/60 mt-0.5">
+                  <span className="block text-[10px] text-ink/75 mt-0.5">
                     {selectedRedemptionCard.estYield} return
                   </span>
                 </div>
@@ -2273,7 +2288,7 @@ function Index() {
               <div className="rounded-2xl bg-cream px-4 py-2 border border-ink/10 flex items-center gap-2">
                 <Coins className="size-4 text-accent-warm" />
                 <div>
-                  <span className="block text-[9px] font-extrabold uppercase text-ink/50">
+                  <span className="block text-[9px] font-extrabold uppercase text-ink/75">
                     Your Civic Balance
                   </span>
                   <span className="font-mono text-sm font-extrabold text-brand-deep">
@@ -2325,7 +2340,7 @@ function Index() {
                     className={`inline-flex items-center gap-2 rounded-xl px-4 py-2 text-xs font-bold transition ${
                       isActive
                         ? "bg-rose-600 text-white shadow-sm"
-                        : "bg-cream text-ink/70 hover:bg-rose-50 hover:text-rose-700 border border-ink/5"
+                        : "bg-cream text-ink/75 hover:bg-rose-50 hover:text-rose-700 border border-ink/5"
                     }`}
                   >
                     <IconC className="size-3.5" />
@@ -2334,7 +2349,7 @@ function Index() {
                       className={`rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
                         isActive
                           ? "bg-white/20 text-white"
-                          : "bg-white text-ink/60 border border-ink/10"
+                          : "bg-white text-ink/75 border border-ink/10"
                       }`}
                     >
                       {tab.count}
@@ -2366,7 +2381,7 @@ function Index() {
                           <div className="flex items-center gap-2.5">
                             <span className="text-2xl">{deal.imageIcon}</span>
                             <div>
-                              <span className="text-[10px] font-bold text-ink/50 block">
+                              <span className="text-[10px] font-bold text-ink/75 block">
                                 {deal.merchant}
                               </span>
                               <span className="text-[10px] text-brand-deep font-semibold flex items-center gap-1">
@@ -2436,7 +2451,7 @@ function Index() {
                             className={`inline-flex items-center gap-1.5 rounded-xl px-4 py-2 text-xs font-extrabold shadow-xs transition ${
                               canAfford
                                 ? "bg-rose-600 text-white hover:bg-rose-700 active:scale-95"
-                                : "bg-ink/10 text-ink/40 cursor-not-allowed"
+                                : "bg-ink/10 text-ink/75 cursor-not-allowed"
                             }`}
                           >
                             <Ticket className="size-3.5" />
@@ -2450,7 +2465,7 @@ function Index() {
             </div>
 
             {/* Modal Footer */}
-            <div className="mt-6 pt-4 border-t border-ink/10 flex flex-wrap items-center justify-between gap-3 text-xs text-ink/60">
+            <div className="mt-6 pt-4 border-t border-ink/10 flex flex-wrap items-center justify-between gap-3 text-xs text-ink/75">
               <span className="flex items-center gap-1.5 font-medium">
                 <ShieldCheck className="size-4 text-brand" />
                 Vouchers verified instantly at point-of-sale or local ward distribution centers.

@@ -67,7 +67,7 @@ function TermsPage() {
         <h1 className="font-display text-2xl sm:text-3xl font-extrabold text-ink mt-1.5">
           The terms for using CivicRewards
         </h1>
-        <p className="mt-3 text-sm text-ink/60">
+        <p className="mt-3 text-sm text-ink/75">
           Last updated: 21 September 2026. By using civicrewards.co.za, you agree to these terms.
         </p>
 
@@ -81,7 +81,7 @@ function TermsPage() {
         </div>
 
         <nav className="mt-8 rounded-2xl border border-ink/10 bg-white p-4 sm:p-5">
-          <p className="text-[11px] font-bold uppercase tracking-wider text-ink/40 mb-2">On this page</p>
+          <p className="text-[11px] font-bold uppercase tracking-wider text-ink/75 mb-2">On this page</p>
           <ul className="grid sm:grid-cols-2 gap-1.5 text-xs">
             {SECTIONS.map((s) => (
               <li key={s.id}>
@@ -300,7 +300,7 @@ function TermsPage() {
           </Section>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-ink/10 text-xs text-ink/50">
+        <div className="mt-12 pt-6 border-t border-ink/10 text-xs text-ink/75">
           See also our{" "}
           <Link to="/privacy" className="text-brand-deep hover:underline font-semibold">
             Privacy Policy

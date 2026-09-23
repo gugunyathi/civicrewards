@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   AlertTriangle,
@@ -37,6 +37,184 @@ import {
   Zap,
 } from "lucide-react";
 import { submitWardReport, type WardReportCategory } from "@/lib/submitWardReport";
+import { createOtpSession, getOtpSessionStatus, verifyOtpCode } from "@/lib/reportOtp";
+
+// Only set once Thami creates the bot via @BotFather and adds this env var
+// (see TELEGRAM_BOT_TOKEN/TELEGRAM_WEBHOOK_SECRET from the community-
+// channels feature) — until then this whole step stays invisible and
+// submission works exactly as it did before, gated on consent alone. The
+// moment it's configured, Telegram verification becomes a real, required
+// gate automatically. WhatsApp OTP is parked pending a separate decision
+// on which production number to send from and confirming real per-message
+// cost — not built here at all.
+const TELEGRAM_BOT_USERNAME = import.meta.env["VITE_TELEGRAM_BOT_USERNAME"] as string | undefined;
+
+type OtpStepState =
+  | { kind: "idle" }
+  | { kind: "waitingForStart"; sessionToken: string }
+  | { kind: "codeEntry"; sessionToken: string }
+  | { kind: "verified"; sessionToken: string };
+
+function TelegramOtpStep({
+  isDark,
+  onVerifiedChange,
+}: {
+  isDark: boolean;
+  onVerifiedChange: (verified: boolean) => void;
+}) {
+  const [state, setState] = useState<OtpStepState>({ kind: "idle" });
+  const [code, setCode] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    onVerifiedChange(state.kind === "verified");
+  }, [state.kind, onVerifiedChange]);
+
+  useEffect(() => {
+    return () => {
+      if (pollRef.current) clearInterval(pollRef.current);
+    };
+  }, []);
+
+  const startVerification = async () => {
+    setError(null);
+    setBusy(true);
+    try {
+      const { sessionToken } = await createOtpSession();
+      setState({ kind: "waitingForStart", sessionToken });
+
+      pollRef.current = setInterval(async () => {
+        try {
+          const status = await getOtpSessionStatus({ data: { sessionToken } });
+          if (status.otpSent) {
+            if (pollRef.current) clearInterval(pollRef.current);
+            setState({ kind: "codeEntry", sessionToken });
+          }
+        } catch {
+          // Transient poll failure — just try again next tick.
+        }
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not start verification");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitCode = async () => {
+    if (state.kind !== "codeEntry") return;
+    setError(null);
+    setBusy(true);
+    try {
+      await verifyOtpCode({ data: { sessionToken: state.sessionToken, code } });
+      setState({ kind: "verified", sessionToken: state.sessionToken });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not verify code");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const startOver = () => {
+    if (pollRef.current) clearInterval(pollRef.current);
+    setState({ kind: "idle" });
+    setCode("");
+    setError(null);
+  };
+
+  const boxClass = `rounded-xl border px-3.5 py-3 text-xs ${
+    isDark ? "border-zinc-800 bg-zinc-900/40 text-zinc-300" : "border-zinc-300 bg-zinc-50 text-zinc-700"
+  }`;
+
+  if (state.kind === "verified") {
+    return (
+      <div className={`${boxClass} flex items-center gap-2 text-emerald-400`}>
+        <ShieldCheck className="size-4 shrink-0" />
+        <span>Verified via Telegram — you can submit this report.</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={boxClass}>
+      <div className="flex items-center gap-2 font-semibold mb-1.5">
+        <ShieldAlert className="size-4 shrink-0" />
+        <span>Verify it's really you before submitting</span>
+      </div>
+
+      {state.kind === "idle" && (
+        <>
+          <p className="mb-2">
+            We'll send a one-time code to your Telegram to confirm a real person is submitting this,
+            not a bot.
+          </p>
+          <button
+            type="button"
+            onClick={startVerification}
+            disabled={busy}
+            className="rounded-lg bg-[#c4f224] px-3 py-1.5 text-xs font-bold text-black disabled:opacity-50"
+          >
+            {busy ? "Starting…" : "Verify via Telegram"}
+          </button>
+        </>
+      )}
+
+      {state.kind === "waitingForStart" && (
+        <>
+          <p className="mb-2">
+            Open Telegram and tap Start to receive your code, then come back here.
+          </p>
+          <a
+            href={`https://t.me/${TELEGRAM_BOT_USERNAME}?start=${state.sessionToken}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-lg bg-[#c4f224] px-3 py-1.5 text-xs font-bold text-black"
+          >
+            Open Telegram
+          </a>
+          <p className="mt-2 text-[11px] opacity-70">Waiting for your code to arrive…</p>
+        </>
+      )}
+
+      {state.kind === "codeEntry" && (
+        <>
+          <p className="mb-2">Enter the 6-digit code Telegram sent you.</p>
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              inputMode="numeric"
+              maxLength={6}
+              value={code}
+              onChange={(e) => setCode(e.target.value.replace(/\D/g, ""))}
+              placeholder="123456"
+              className={`w-28 rounded-lg border px-2.5 py-1.5 text-sm font-mono tracking-widest ${
+                isDark ? "border-zinc-700 bg-zinc-900 text-zinc-100" : "border-zinc-300 bg-white text-zinc-900"
+              }`}
+            />
+            <button
+              type="button"
+              onClick={submitCode}
+              disabled={busy || code.length !== 6}
+              className="rounded-lg bg-[#c4f224] px-3 py-1.5 text-xs font-bold text-black disabled:opacity-50"
+            >
+              {busy ? "Checking…" : "Verify"}
+            </button>
+          </div>
+        </>
+      )}
+
+      {(state.kind === "waitingForStart" || state.kind === "codeEntry") && (
+        <button type="button" onClick={startOver} className="mt-2 text-[11px] underline opacity-70">
+          Start over
+        </button>
+      )}
+
+      {error && <p className="mt-2 text-[11px] font-semibold text-red-400">{error}</p>}
+    </div>
+  );
+}
 
 export const Route = createFileRoute("/ReportApp")({
   head: () => ({
@@ -139,6 +317,8 @@ export default function ReportAppPage() {
   const [description, setDescription] = useState("");
   const [hasPhoto, setHasPhoto] = useState(false);
   const [consentGiven, setConsentGiven] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(false);
+  const [otpStepKey, setOtpStepKey] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [submittedReport, setSubmittedReport] = useState<{
@@ -214,6 +394,10 @@ export default function ReportAppPage() {
       alert("Please confirm you agree to share your details before submitting.");
       return;
     }
+    if (TELEGRAM_BOT_USERNAME && !otpVerified) {
+      alert("Please verify via Telegram before submitting.");
+      return;
+    }
 
     setIsSubmitting(true);
     try {
@@ -237,6 +421,8 @@ export default function ReportAppPage() {
       setDescription("");
       setHasPhoto(false);
       setConsentGiven(false);
+      setOtpVerified(false);
+      setOtpStepKey((k) => k + 1);
     } catch (err) {
       setSubmitError(err instanceof Error ? err.message : "Report submission failed");
     } finally {
@@ -773,10 +959,19 @@ export default function ReportAppPage() {
                 </span>
               </label>
 
+              {/* Telegram OTP — invisible and non-blocking until Thami sets
+                  VITE_TELEGRAM_BOT_USERNAME (bot not created yet as of this
+                  pass), so this can never accidentally break the live
+                  report flow. Becomes a real required gate the moment
+                  that's configured. */}
+              {TELEGRAM_BOT_USERNAME && (
+                <TelegramOtpStep key={otpStepKey} isDark={isDark} onVerifiedChange={setOtpVerified} />
+              )}
+
               {/* Submit CTA */}
               <button
                 type="submit"
-                disabled={isSubmitting || !consentGiven}
+                disabled={isSubmitting || !consentGiven || (!!TELEGRAM_BOT_USERNAME && !otpVerified)}
                 className="w-full rounded-2xl bg-[#c4f224] py-3.5 sm:py-4 font-display text-base font-extrabold text-black shadow-md transition hover:bg-lime-400 active:scale-[0.99] disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (

@@ -30,6 +30,71 @@ interface TelegramUpdate {
 }
 
 const LINK_COMMAND = /^\s*\/link\s+([A-Za-z0-9]+)\s*$/i;
+const START_COMMAND = /^\s*\/start\s+(\S+)\s*$/i;
+
+function generateOtpCode(): string {
+  return String(Math.floor(100000 + Math.random() * 900000));
+}
+
+// Telegram's sendMessage — a plain, free Bot API call. TELEGRAM_BOT_TOKEN
+// is read server-side only and never logged; a failure here (e.g. token
+// not configured yet) is caught by the caller and just means the OTP
+// never arrives, not a crash.
+async function sendTelegramMessage(chatId: number, text: string): Promise<void> {
+  const token = process.env["TELEGRAM_BOT_TOKEN"];
+  if (!token) throw new Error("TELEGRAM_BOT_TOKEN is not configured");
+
+  const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ chat_id: chatId, text }),
+  });
+  if (!response.ok) {
+    throw new Error(`Telegram sendMessage failed: ${response.status}`);
+  }
+}
+
+// Private-chat /start <session_token> — the OTP verification flow for
+// anonymous resident report submission (src/lib/reportOtp.ts,
+// ReportApp.tsx). Distinct from handleLinkCommand's /link <CODE>, which
+// only ever runs in group/supergroup chats for the councillor
+// ward-linking feature.
+async function handleStartCommand(sessionToken: string, chatId: number): Promise<void> {
+  const admin = getSupabaseAdmin();
+  const { data: row } = await admin
+    .from("report_otp_sessions")
+    .select("id, verified, locked, expires_at")
+    .eq("session_token", sessionToken)
+    .maybeSingle();
+
+  // Unknown/expired/already-resolved session — say nothing back, same
+  // "don't leak which case it was" posture as handleLinkCommand.
+  if (!row || row.verified || row.locked) return;
+  if (new Date(row.expires_at).getTime() < Date.now()) return;
+
+  const otpCode = generateOtpCode();
+  const { error } = await admin
+    .from("report_otp_sessions")
+    .update({ telegram_chat_id: chatId, otp_code: otpCode, otp_sent_at: new Date().toISOString() })
+    .eq("id", row.id);
+  if (error) {
+    console.error("Failed to store OTP:", error.message);
+    return;
+  }
+
+  try {
+    await sendTelegramMessage(
+      chatId,
+      `Your CivicRewards verification code is ${otpCode}. It expires in 15 minutes. Never share this code with anyone.`,
+    );
+  } catch (error) {
+    // The row is already updated with this code even though the send
+    // failed (e.g. bot token not configured yet) — a repeat /start just
+    // generates and stores a fresh code and tries again, that's fine and
+    // shouldn't crash the webhook either way.
+    console.error("Failed to send OTP via Telegram:", error);
+  }
+}
 
 async function handleLinkCommand(code: string, chatId: number, chatTitle: string | null): Promise<void> {
   const admin = getSupabaseAdmin();
@@ -98,6 +163,12 @@ export async function handleTelegramWebhook(request: Request): Promise<Response>
         await handleLinkCommand(code, message.chat.id, message.chat.title ?? null);
       } else {
         await storeGroupMessage(message);
+      }
+    } else if (message && message.chat.type === "private") {
+      const startMatch = message.text?.match(START_COMMAND);
+      const sessionToken = startMatch?.[1];
+      if (sessionToken) {
+        await handleStartCommand(sessionToken, message.chat.id);
       }
     }
   } catch (error) {

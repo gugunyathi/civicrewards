@@ -94,7 +94,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Leveraging verified civic action into efficient public service delivery, infrastructure intelligence, and local economic value.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://civicrewards.co.za/og-image.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://civicrewards.co.za/og-image.png" },
     ],
     links: [
       {

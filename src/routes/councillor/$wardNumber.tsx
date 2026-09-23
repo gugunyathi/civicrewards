@@ -5,7 +5,13 @@ import { getPublicWardSummary, getWardCommunityChannels, type PublicWardSummary,
 
 export const Route = createFileRoute("/councillor/$wardNumber")({
   head: () => ({
-    meta: [{ title: "Ward Councillor — CivicRewards" }],
+    meta: [
+      { title: "Ward Councillor — CivicRewards" },
+      {
+        name: "description",
+        content: "Find your ward's councillor, live report activity, and community channels on CivicRewards.",
+      },
+    ],
   }),
   component: WardProfilePage,
 });

@@ -123,7 +123,7 @@ export default function WardMap({ reports }: { reports: WardReportSummary[] }) {
           background: "#0e0e0f",
         }}
       >
-        <p style={{ fontSize: 12, color: "rgba(245,245,244,0.35)" }}>
+        <p style={{ fontSize: 12, color: "rgba(245,245,244,0.5)" }}>
           Map needs a Mapbox token (VITE_MAPBOX_TOKEN) — not yet configured on this deployment.
         </p>
       </div>
