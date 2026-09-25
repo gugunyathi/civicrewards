@@ -1,0 +1,1016 @@
+{
+  "municipality": "Ekurhuleni Metropolitan Municipality",
+  "municipalityId": "ekurhuleni",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 112,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Derek Edwin Thomson",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Mashiane Thato S.G",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Machete Kedibone Yvonne",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Mbathane Daniel",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Kgafela Malesela Francis",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Tleane Patric Abisang",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Jiyane Thabang Asaph",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Ntshingila Nhlanhla Lucky",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Malinga Nomvula",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Petlele Pusetso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Thoabala Legala Oriel",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Ndinisa Gloria M.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Ngqwangi Bulelwa P.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Mnguni Adelaide Lindiwe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Davison Amanda",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Terblanche Hendrik Jacobus",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Lapping Simon James",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Hart Heather Dawn",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "R.",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Humphreys Jill Ada",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Mudau Martha Mashudu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Muller Madelaine Elizabeth",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Goslin Gerald",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Da Silva Nicola Brigitte",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Beukes Marinda",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Mathole Thamaga Wa Ga-Mathole",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Joseph Lornette Jayne",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Goby Mary Elizabeth",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Loonat Imitiaz Ahmed",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Ranyawo Kenny Daniel",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Sabe Simangele Evelyn",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "De Vos Marius Nico",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Hoods Ashley Ronald",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Klassen Kathrine Edith",
+      "party": "Patriotic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Mpambani Ntuthuzelo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Morgan Wendy Bridgette",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Naidoo Ivan",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Maifala Malcom Tau",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Ingram Maureen Jean",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Tshabalala Nqabayethu L.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Hlongwane Sanele",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Motloung Tsotang Princece",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Marais Carolana",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Shongwe Nkosinathi B.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Sidu Nkululeko",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Quntana Thunyiswa Kwame",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Nkosi Reginah Thandi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Dube Mfana",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Ramafikeng Frans Lekgotla",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Ngwenya Vuyani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Poki Tinstwalo Lumka",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Dlamini Sibusiso Promise",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Mketsu Mziyanda",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Thupa Thabo Xerxes",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Zikode Lucky Simon",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Radebe Fanifani Moses",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "Peterson Dino",
+      "party": "Patriotic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Fodo Mfundiso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Msimango Khumbuzile P.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Qwema Princess Phindiwe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "61",
+      "councillorName": "Ngubane Sanele Cromwell",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "62",
+      "councillorName": "Letsoela Thabiso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "63",
+      "councillorName": "Kiyane Nomonde Cynthia",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "64",
+      "councillorName": "Motsopi Thekiso Amos",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "65",
+      "councillorName": "Moloi Siyabonga Matthews",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "66",
+      "councillorName": "Khumalo Samuel Mzwakhe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "67",
+      "councillorName": "Moimana Jerry Leshalabe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "68",
+      "councillorName": "Mbeki Vuyani Welcome",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "69",
+      "councillorName": "Radebe Mpho Gift",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "70",
+      "councillorName": "Ndlovu Sibongiseni R.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "71",
+      "councillorName": "Lubisi Thembinkosi C.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "72",
+      "councillorName": "Stone Dean Desmond",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "73",
+      "councillorName": "Ngobese Samuel Sipho",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "74",
+      "councillorName": "Simelane David Thulani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "75",
+      "councillorName": "Kock Charmaine Patricia",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "76",
+      "councillorName": "Du Toit Michael Duncan",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "77",
+      "councillorName": "Dunjana Thulani Xolani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "78",
+      "councillorName": "Nhleko Sizwe Enock",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "79",
+      "councillorName": "Mbonani Njabulo Ronald",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "80",
+      "councillorName": "Nkosi-Ramothebe Sarah C.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "81",
+      "councillorName": "Bulala Standley Jeremia",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "82",
+      "councillorName": "Buitendacht Henry C.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "83",
+      "councillorName": "Pike Slindokuhle",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "84",
+      "councillorName": "Mthiyane Phikisile E.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "85",
+      "councillorName": "Sibiya Moses Sipho",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "86",
+      "councillorName": "Mekgwe Nkgopotse Nsizwa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "87",
+      "councillorName": "Hlophe Simon Bongani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "88",
+      "councillorName": "Labuschagne Wollaston",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "89",
+      "councillorName": "Pudi Tshoarelo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "90",
+      "councillorName": "Selwana Hendrick Ntate",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "91",
+      "councillorName": "Mckenzie Desmond A.",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "92",
+      "councillorName": "Guerreiro Kade Ricci",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "93",
+      "councillorName": "Mthembu Geoffrey Isaac",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "94",
+      "councillorName": "Nair Samantha",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "95",
+      "councillorName": "Madlala Khehla Phillip",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "96",
+      "councillorName": "Mashala Stenias Ranias",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "97",
+      "councillorName": "Pretorius Brandon",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "98",
+      "councillorName": "Motaung Tefo Patrick",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "99",
+      "councillorName": "Daemane Petrus Andile",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "100",
+      "councillorName": "Khotha Bennet Mluleki",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "101",
+      "councillorName": "Ngwenya Mzayifani R.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "102",
+      "councillorName": "Mabye Madimetja Solomon",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "103",
+      "councillorName": "Madi Lillian Ntombikayise",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "104",
+      "councillorName": "Lourenco Tracey",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "105",
+      "councillorName": "Verster Antoinette E.",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "106",
+      "councillorName": "Denny Timothy Mark",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "107",
+      "councillorName": "Goje Thabani Moses",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "108",
+      "councillorName": "Thobejane Phatudi Alex M.",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "109",
+      "councillorName": "Shabalala Mzomuhle Lucas",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "110",
+      "councillorName": "Mnisi Sarah Lebogang",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "111",
+      "councillorName": "Mabhe Zingisile",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    },
+    {
+      "wardNumber": "112",
+      "councillorName": "Mnguni Nomalanga Annah",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "ekurhuleni.gov.za Ward Councillors page (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.ekurhuleni.gov.za/my-council/political-leadership/ward-councillors/"
+    }
+  ]
+}
