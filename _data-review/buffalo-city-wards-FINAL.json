@@ -1,0 +1,849 @@
+{
+  "municipality": "Buffalo City Metropolitan Municipality",
+  "municipalityId": "buffalo-city",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 50,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Kuhle Ciliza",
+      "party": "African National Congress",
+      "suburbs": [
+        "Braelyn Hills and Heights",
+        "Milner Estate",
+        "Stoneydrift",
+        "Milner Lennock and Panmure",
+        "Chiselhurst",
+        "Braelynn Ext 10",
+        "Bashe",
+        "Florence",
+        "Sandile",
+        "Tappa",
+        "Mahlangeni",
+        "Sofute",
+        "Gxabanisa",
+        "Bokwe",
+        "Lujiza",
+        "Petswa",
+        "Ntsenyero",
+        "Mathuntutha",
+        "Ventshu",
+        "Gavi",
+        "Gwijana",
+        "Keswa",
+        "Dunga",
+        "Mzonyana",
+        "Ndee",
+        "Majombosi",
+        "Mekeni",
+        "Mazwi",
+        "Jongilanga",
+        "Mdaka",
+        "Ngqibisa and Xabanisa",
+        "Newsane",
+        "Lanaark",
+        "Serlkirk",
+        "Hewitt",
+        "Canning",
+        "CApston",
+        "Bromley",
+        "Piston"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Akhona Dywili",
+      "party": "African National Congress",
+      "suburbs": [
+        "C Section 13",
+        "Endlovini Area",
+        "Hostel B",
+        "Dunga",
+        "Bhebhelele",
+        "Holomisa Squatter Camp",
+        "Barbaton",
+        "Meki Kwinana",
+        "Godla",
+        "Meki",
+        "Zakhele Squatter Camp",
+        "Jiba",
+        "Toyana",
+        "C Section Ext C Section Extension"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Lorna Hali",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Southernwood",
+        "North End",
+        "Belgravia",
+        "Garmur Palace",
+        "Oxford till end after Grens School"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Allister Lemarc Stewart",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Selborne",
+        "Highgate",
+        "Cambridge West",
+        "Cambridge Town",
+        "Chiselhurst",
+        "Garcia",
+        "Berea"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Monica Goci",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mzonyana Water Works",
+        "Ndancama",
+        "Ekuthuleni Squatter Camp",
+        "Haven Hills S-Road area",
+        "Scenery Park"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Lukhanyiso Mzekeli",
+      "party": "African National Congress",
+      "suburbs": [
+        "Parkridge",
+        "CC Lloyd Duncan Village",
+        "Moscow",
+        "Ford 6A & Up & Msimango Jiba Limba",
+        "Gxasheka Qomisa",
+        "Hans",
+        "Mcilongo",
+        "Skeyi",
+        "Xhewu"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Mkakutta Clara Yekiso-morolong",
+      "party": "African National Congress",
+      "suburbs": [
+        "Duncan Village",
+        "C Section",
+        "D Section",
+        "Dangazele",
+        "Dizamahlebo",
+        "Jabavu",
+        "Bhono",
+        "Bhebhelele Gompo town area Gompo area",
+        "Somthunzi",
+        "Makhathali",
+        "Mambu",
+        "Nomtshongwana",
+        "Galela",
+        "Biyana",
+        "Adonis",
+        "Silly Crescent",
+        "Duze"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Kwanele Majeke",
+      "party": "African National Congress",
+      "suburbs": [
+        "Fynbos All Areas",
+        "Gompo",
+        "Duncan Village",
+        "Momoti",
+        "Mpuntsha",
+        "Daka",
+        "Pitoyi",
+        "Nomvete",
+        "Dipini area",
+        "Gesini area",
+        "Nonkwelo",
+        "Dotwana",
+        "Nkanyuza",
+        "Mgqwashu",
+        "Bengu Gompo Town",
+        "Vuyani Biyana",
+        "Makatala",
+        "Douglas Smith Highway"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Mendi Wetsetse",
+      "party": "African National Congress",
+      "suburbs": [
+        "Amalinda",
+        "Braelyn",
+        "Extensions 8 & 10",
+        "Thornbush Amalinda",
+        "Sohco Flats",
+        "Shoprite area",
+        "CTM area",
+        "Rosedale",
+        "Stoney Drift",
+        "Etipini"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Pearl Hanse",
+      "party": "African National Congress",
+      "suburbs": [
+        "Vergenoeg",
+        "Egoli",
+        "East Bank",
+        "Haven Hills South",
+        "Muvhango",
+        "Rosedale",
+        "Haven Hills behind BP Garage",
+        "Haven Hills"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Nozuko Claudia Stemela",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane NU-3A",
+        "Thembalethu East Industrial"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Andile Phethani",
+      "party": "African National Congress",
+      "suburbs": [
+        "Smiling Valley",
+        "Nahoon Dam",
+        "Eureka"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Oscar Mhlauli",
+      "party": "African National Congress",
+      "suburbs": [
+        "Reeston",
+        "Biko Village",
+        "Thembalethu",
+        "Dice",
+        "Moses Mabida Squatter Camp",
+        "Allison Wilsonia",
+        "Picerking and"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Zininzi Mtyingizane",
+      "party": "African National Congress",
+      "suburbs": [
+        "Nokwe"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Nwabisa Mcwabeni",
+      "party": "African National Congress",
+      "suburbs": [
+        "Ducats",
+        "Nompumelelo",
+        "Abbortsford",
+        "Dorchester"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Ntsika Qali",
+      "party": "African National Congress",
+      "suburbs": [
+        "Winchester Gardens",
+        "Highway Gardens",
+        "Morningside",
+        "Cambridge location",
+        "Summerpride and Dawn"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Veliswa Angelina Mrwebi",
+      "party": "African National Congress",
+      "suburbs": [
+        "Sandisiwe eluxolweni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Jason Scott Mcdowell",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Vincent",
+        "Bunkers Hill",
+        "Nahoon Beach",
+        "Bonnie Doon",
+        "Woodleigh"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Shandre Marilyn Hoffman",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Green Fields",
+        "West Bank",
+        "Buffalo Flats",
+        "Woodrook",
+        "West Bank Village",
+        "Harbor",
+        "Fort Glamorgan"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Aphiwe Gcwabe",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane",
+        "zone 7"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Nkosinathi Mndi",
+      "party": "African National Congress",
+      "suburbs": [
+        "Riverine"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Sabelo Booi",
+      "party": "African National Congress",
+      "suburbs": [
+        "KwaNdayi",
+        "Luxhomo",
+        "Mabeleni",
+        "Zone 17 Postdam",
+        "KuLogaxa",
+        "Mdantsane South",
+        "Mntlabathi",
+        "Nxamnkwana",
+        "Mbholompeni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Sibongile Gulwa",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane",
+        "Zone 14"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Melisizwe Tutu",
+      "party": "African National Congress",
+      "suburbs": [
+        "Potsdam East",
+        "Potsdam South",
+        "Potsdam North Mdantsane NU 15",
+        "Thambo Park",
+        "Fort Jackson Industrial Msintsi",
+        "Nkomeni",
+        "Mbekweni",
+        "Kingston"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Cynthia Mxabanisi-gakrishe",
+      "party": "African National Congress",
+      "suburbs": [
+        "Phakamisa Township Zwelitsha Zone 8",
+        "Cliff Location"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Monde Mfene",
+      "party": "African National Congress",
+      "suburbs": [
+        "Newlands",
+        "Mcleant Town",
+        "Thormpark",
+        "Postdam East",
+        "Zikwaba",
+        "St Marys KwaNzonketsh",
+        "Ncakuleni",
+        "Kwetyana",
+        "KwaMpundu",
+        "Nqonqweni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Boy-Boy Kalani",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mzamomhle",
+        "Gonubie North & West",
+        "Gonubie North",
+        "Quenera",
+        "Quenera North"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Frederick Carel Pohl",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Beacon Bay North",
+        "Beaconhurst",
+        "Blue Bend",
+        "Bonza Bay"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Valerie Dawn Knoetze",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Gonubie Broads",
+        "Gonubie East",
+        "Eastwood HO",
+        "Gonubie North"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Nontyilelo Whittington",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane NU9",
+        "Cuba",
+        "Manyano",
+        "Thembelihle",
+        "Hani Park"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Bonisile Bangani Kidds",
+      "party": "African National Congress",
+      "suburbs": [
+        "Silverdale",
+        "Boxwood",
+        "Rocklands C",
+        "Kidds Beach and Hillandale",
+        "Goodhope",
+        "Lincott Manor",
+        "Ncera Village",
+        "Oceanview",
+        "Gulu Lincott Manor",
+        "Goedehoop",
+        "Richmond A",
+        "Mount Pleasant",
+        "Greydell",
+        "Palm Springs"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Ntombekhaya Sabana",
+      "party": "African National Congress",
+      "suburbs": [
+        "Tsholomnqa Village",
+        "Kaysers Beach",
+        "Ncerha Village 4-7",
+        "Christmas Rock",
+        "Lillyvale",
+        "Driefontein"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Mluleki David Thomas",
+      "party": "African National Congress",
+      "suburbs": [
+        "Needs Camp",
+        "Kini 1&2",
+        "Cwecweni",
+        "Quru Hill",
+        "Tembisa",
+        "Gwili-Gwili",
+        "Altile",
+        "Moni",
+        "Twecu",
+        "Twecana",
+        "Welcomewood",
+        "Gxetu Newrest",
+        "Satini",
+        "Carlifonia",
+        "Bongilizwe",
+        "Good Hope Village 8&9",
+        "EziGosweni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Mayihlome Mcako",
+      "party": "African National Congress",
+      "suburbs": [
+        "Dimbaza Township Central",
+        "Polar Park",
+        "Tembisa"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Simbongile Phandliwe",
+      "party": "African National Congress",
+      "suburbs": [
+        "Balasi Location",
+        "Balasi Valley",
+        "Zinyoka",
+        "Mortel Park",
+        "Mzontsundu",
+        "Kuwait Settlement",
+        "Tyutyu",
+        "Ramnyiba Luphondweni",
+        "Silositsha",
+        "Cwengcwe",
+        "Emagqobokeni",
+        "Quzini",
+        "Lyteville"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Bongiwe Sauli",
+      "party": "African National Congress",
+      "suburbs": [
+        "Dimbaza",
+        "Pirie Trust",
+        "Pirie Mission",
+        "Khayelitsha",
+        "Nomgwadla",
+        "Upper Mngqesha",
+        "Nakani",
+        "Newrest",
+        "Mzitshane",
+        "Xhwithinja",
+        "Nkosiyane",
+        "Madakeni",
+        "Zabalaza",
+        "Myeni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Ntombekhaya M. Ntshebe",
+      "party": "African National Congress",
+      "suburbs": [
+        "Westbank",
+        "Clubview",
+        "Mxaxo B",
+        "Tolofiyeni",
+        "Mdingi",
+        "Maseyingathe"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Ntombomzi L. Kese-ndotyi",
+      "party": "African National Congress",
+      "suburbs": [
+        "Lower Mngqesha",
+        "Handsmission",
+        "Noncampa",
+        "Mzantsi",
+        "Tyusha",
+        "Mamata",
+        "eMantlaneni",
+        "Zikhalini",
+        "Lenge",
+        "Gwaba",
+        "Mxaxo A",
+        "Kwelerana",
+        "Bulembu",
+        "Lievfeltd",
+        "Didikana",
+        "Mxalanga"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Lunga Gqola",
+      "party": "African National Congress",
+      "suburbs": [
+        "Schornville",
+        "Rhayi",
+        "Ginsberg",
+        "Bonke",
+        "Kwalini",
+        "Ngxwalane"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Kholiwe Thelma Faku",
+      "party": "African National Congress",
+      "suburbs": [
+        "Fort Murray",
+        "Qongotha",
+        "Godidi",
+        "Dubu",
+        "Mlakalaka",
+        "Ndileka",
+        "Mimosa",
+        "Dongwe",
+        "Tshabo 2&3",
+        "Masele",
+        "Qaga",
+        "Shushu",
+        "Jubisa",
+        "Tamara"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Sindiswa Skepe",
+      "party": "African National Congress",
+      "suburbs": [
+        "Zwelitsha Zone"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Phakamile Bamla",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane NU-1 & 2",
+        "Slovo Park"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Dumisani Mahanjana",
+      "party": "African National Congress",
+      "suburbs": [
+        "Tyutyu",
+        "Bisho",
+        "Peelton",
+        "Clubview"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Daniso Mwezi",
+      "party": "African National Congress",
+      "suburbs": [
+        "Breidbach",
+        "Tshatshu",
+        "Sweetwaters Golf Course",
+        "Qalashe",
+        "Siyathemba"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Thulani Tempi",
+      "party": "African National Congress",
+      "suburbs": [
+        "Litha",
+        "Skobeni",
+        "Berlin Tshabo 1",
+        "Nkqonkqweni",
+        "Hanover"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Nceba Wiseman Kilimani",
+      "party": "African National Congress",
+      "suburbs": [
+        "Coveridge",
+        "Orange Grove",
+        "Rosemount",
+        "Sunnyride",
+        "Sunset Bay",
+        "Willow Park",
+        "Leaches Bay",
+        "Santa",
+        "Hickmans River",
+        "Brookville Military Base",
+        "Graceland",
+        "Siyakha"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Funeka Wolose",
+      "party": "Democratic Alliance",
+      "suburbs": [
+        "Quigney",
+        "Central",
+        "North End",
+        "East Bank Squatter Kamp",
+        "Baysville"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Phumezo Jaxa",
+      "party": "African National Congress",
+      "suburbs": [
+        "Mdantsane NU-8 Lilian Ngoyi",
+        "Francis Nell",
+        "Sihlangene Park",
+        "Gomomo",
+        "Stofile",
+        "Polar Park",
+        "Joe Slovo",
+        "Stofile Formal Settlement"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Ayanda Nkala",
+      "party": "African National Congress",
+      "suburbs": [
+        "Thubalethu",
+        "Ekuphumleni",
+        "Gesini",
+        "Masijongane",
+        "Ndevana",
+        "Izeleni",
+        "Velwano",
+        "Highway",
+        "Ezintenteni",
+        "Mtombo",
+        "Guguglethu",
+        "New Brighton",
+        "Ntakazilali",
+        "Bongeni",
+        "Mpolweni"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Anele Gunyazile",
+      "party": "African National Congress",
+      "suburbs": [
+        "Kwelerha",
+        "Zozo",
+        "Tuba",
+        "Jongilanga",
+        "Gwaba",
+        "Sunrise on Sea"
+      ],
+      "source": "buffalocity.gov.za/wardcouncillors.php (live name/area) + IEC 2021 (party), fetched/cross-checked 2026-09-25",
+      "sourceUrl": "https://www.buffalocity.gov.za/wardcouncillors.php"
+    }
+  ]
+}
