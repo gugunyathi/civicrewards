@@ -23,7 +23,7 @@ export const TOP_MUNICIPALITIES: Municipality[] = [
   { id: "ekurhuleni", name: "Ekurhuleni Metropolitan Municipality (East Rand)", abbreviation: "EMM", connected: true },
   { id: "nelson-mandela-bay", name: "Nelson Mandela Bay Metropolitan Municipality (Gqeberha)", abbreviation: "NMBM", connected: true },
   { id: "buffalo-city", name: "Buffalo City Metropolitan Municipality (East London)", abbreviation: "BCMM", connected: true },
-  { id: "mangaung", name: "Mangaung Metropolitan Municipality (Bloemfontein)", abbreviation: "MMM", connected: false },
+  { id: "mangaung", name: "Mangaung Metropolitan Municipality (Bloemfontein)", abbreviation: "MMM", connected: true },
   { id: "msunduzi", name: "Msunduzi Local Municipality (Pietermaritzburg)", abbreviation: "Msunduzi", connected: false },
 ];
 
@@ -35,6 +35,60 @@ export interface WardListing {
   approved: boolean;
   residentEstimate: string | null;
 }
+
+const MANGAUNG_WARDS: WardListing[] = [
+    { wardNumber: "1", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Samuel Sefaki", approved: false, residentEstimate: null },
+    { wardNumber: "2", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Tona Kenosi Wilfred Mokgothu", approved: false, residentEstimate: null },
+    { wardNumber: "3", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Tshepiso Oudisious Machachamise", approved: false, residentEstimate: null },
+    { wardNumber: "4", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mahoko Harold Supi", approved: false, residentEstimate: null },
+    { wardNumber: "5", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Lehlohonolo Nathaniel Lecoko", approved: false, residentEstimate: null },
+    { wardNumber: "6", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Tshidiso Petrus Moiloa", approved: false, residentEstimate: null },
+    { wardNumber: "7", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Siza Clement Sehloho", approved: false, residentEstimate: null },
+    { wardNumber: "8", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Likeleli Julia Nyaphudi", approved: false, residentEstimate: null },
+    { wardNumber: "9", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Betty Masethlabi Tlhakung", approved: false, residentEstimate: null },
+    { wardNumber: "10", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Teboho Lesley Setlai", approved: false, residentEstimate: null },
+    { wardNumber: "11", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Motlhokung Theodorah Mosala", approved: false, residentEstimate: null },
+    { wardNumber: "12", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Rafedile Hashatsi", approved: false, residentEstimate: null },
+    { wardNumber: "13", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Nombulelo Dorcas Sitoe", approved: false, residentEstimate: null },
+    { wardNumber: "14", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Lebogang Winston Lekgetho", approved: false, residentEstimate: null },
+    { wardNumber: "15", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Pulane Martha Mohibidu", approved: false, residentEstimate: null },
+    { wardNumber: "16", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Caprice Logan Kruger", approved: false, residentEstimate: null },
+    { wardNumber: "17", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mampone Sally Mohatle", approved: false, residentEstimate: null },
+    { wardNumber: "18", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "David Mark Campbell Mckay", approved: false, residentEstimate: null },
+    { wardNumber: "19", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Seth Qondile Peter", approved: false, residentEstimate: null },
+    { wardNumber: "20", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Werner Pretorius", approved: false, residentEstimate: null },
+    { wardNumber: "21", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Pieter Adam Lotriet", approved: false, residentEstimate: null },
+    { wardNumber: "22", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Dulandi Leech", approved: false, residentEstimate: null },
+    { wardNumber: "23", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Tjaart Botha Van Der Walt", approved: false, residentEstimate: null },
+    { wardNumber: "24", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Gerhardus Dirk Petrus Kotzé", approved: false, residentEstimate: null },
+    { wardNumber: "25", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Francois Rossouw Botes", approved: false, residentEstimate: null },
+    { wardNumber: "26", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Hendrik Johannes Christiaan Van Niekerk", approved: false, residentEstimate: null },
+    { wardNumber: "27", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Zachous Nechodemus Banyane", approved: false, residentEstimate: null },
+    { wardNumber: "28", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Vumile Edwin Nikelo", approved: false, residentEstimate: null },
+    { wardNumber: "29", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Dikololo Elias Matsephe", approved: false, residentEstimate: null },
+    { wardNumber: "30", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Teboho Daniel Tukule", approved: false, residentEstimate: null },
+    { wardNumber: "31", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mere Joel Mabena", approved: false, residentEstimate: null },
+    { wardNumber: "32", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Thabang Victor Menyatso", approved: false, residentEstimate: null },
+    { wardNumber: "33", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Tshidiso Augustine Mohono", approved: false, residentEstimate: null },
+    { wardNumber: "34", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Kabi Daniel Tshwane", approved: false, residentEstimate: null },
+    { wardNumber: "35", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Teboho Samuel Fantisi", approved: false, residentEstimate: null },
+    { wardNumber: "36", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Itumeleng Justice Makoloane", approved: false, residentEstimate: null },
+    { wardNumber: "37", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mmota Simon Ramolelle", approved: false, residentEstimate: null },
+    { wardNumber: "38", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Molahlone Florenciah Matsoso", approved: false, residentEstimate: null },
+    { wardNumber: "39", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Thabo Joel Mogotloane", approved: false, residentEstimate: null },
+    { wardNumber: "40", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Ntebaleng Pertunia Pholoholo", approved: false, residentEstimate: null },
+    { wardNumber: "41", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mantja Agnes Dintlhwane", approved: false, residentEstimate: null },
+    { wardNumber: "42", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Maqoma Lazarus Mothupi", approved: false, residentEstimate: null },
+    { wardNumber: "43", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mpho Elizabeth Nkiane", approved: false, residentEstimate: null },
+    { wardNumber: "44", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Selmé Pretorius", approved: false, residentEstimate: null },
+    { wardNumber: "45", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Lisiwe Jeanette Mathe", approved: false, residentEstimate: null },
+    { wardNumber: "46", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mpho Samuel Majoro", approved: false, residentEstimate: null },
+    { wardNumber: "47", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mokgadi Kganakga", approved: false, residentEstimate: null },
+    { wardNumber: "48", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Johannes Christiaan Pretorius", approved: false, residentEstimate: null },
+    { wardNumber: "49", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Julia Mohanuwa Lekhwele", approved: false, residentEstimate: null },
+    { wardNumber: "50", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Thabo Nicholus Monare", approved: false, residentEstimate: null },
+    { wardNumber: "51", municipalityId: "mangaung", regionName: "Area not yet listed", councillorName: "Mamoorosi Margaret Mohulatsi", approved: false, residentEstimate: null },
+];
 
 const COCT_WARDS: WardListing[] = [
     { wardNumber: "1", municipalityId: "coct", regionName: "Baronetcy Estate / De Duin / De Grendel Farm / Kaapzicht (+10 more)", councillorName: "Cheryl Visser", approved: false, residentEstimate: null },
@@ -633,7 +687,7 @@ export const WARDS_BY_MUNICIPALITY: Record<string, WardListing[]> = {
     { wardNumber: "49", municipalityId: "buffalo-city", regionName: "Thubalethu / Ekuphumleni / Gesini / Masijongane (+11 more)", councillorName: "Ayanda Nkala", approved: false, residentEstimate: null },
     { wardNumber: "50", municipalityId: "buffalo-city", regionName: "Kwelerha / Zozo / Tuba / Jongilanga (+2 more)", councillorName: "Anele Gunyazile", approved: false, residentEstimate: null },
   ],
-  mangaung: [],
+  mangaung: MANGAUNG_WARDS,
   msunduzi: [],
 };
 

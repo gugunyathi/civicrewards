@@ -1,0 +1,416 @@
+{
+  "municipality": "Mangaung Metropolitan Municipality",
+  "municipalityId": "mangaung",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 51,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Samuel Sefaki",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Tona Kenosi Wilfred Mokgothu",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Tshepiso Oudisious Machachamise",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Mahoko Harold Supi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Lehlohonolo Nathaniel Lecoko",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Tshidiso Petrus Moiloa",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Siza Clement Sehloho",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "Mangaung Metro by-election replacement, effective 20 Jul 2023 (official council report + IEC confirmation letter), supersedes the 2021 IEC result for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Likeleli Julia Nyaphudi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Betty Masethlabi Tlhakung",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Teboho Lesley Setlai",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Motlhokung Theodorah Mosala",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Rafedile Hashatsi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Nombulelo Dorcas Sitoe",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Lebogang Winston Lekgetho",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Pulane Martha Mohibidu",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Caprice Logan Kruger",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Mampone Sally Mohatle",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "David Mark Campbell Mckay",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Seth Qondile Peter",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Werner Pretorius",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Pieter Adam Lotriet",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Dulandi Leech",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Tjaart Botha Van Der Walt",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Gerhardus Dirk Petrus Kotz\u00e9",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Francois Rossouw Botes",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Hendrik Johannes Christiaan Van Niekerk",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Zachous Nechodemus Banyane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Vumile Edwin Nikelo",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Dikololo Elias Matsephe",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "Mangaung Metro by-election replacement, effective 20 Jul 2023 (official council report + IEC confirmation letter), supersedes the 2021 IEC result for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Teboho Daniel Tukule",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Mere Joel Mabena",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Thabang Victor Menyatso",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Tshidiso Augustine Mohono",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Kabi Daniel Tshwane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Teboho Samuel Fantisi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Itumeleng Justice Makoloane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Mmota Simon Ramolelle",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Molahlone Florenciah Matsoso",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Thabo Joel Mogotloane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Ntebaleng Pertunia Pholoholo",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Mantja Agnes Dintlhwane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Maqoma Lazarus Mothupi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Mpho Elizabeth Nkiane",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Selm\u00e9 Pretorius",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Lisiwe Jeanette Mathe",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Mpho Samuel Majoro",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Mokgadi Kganakga",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Johannes Christiaan Pretorius",
+      "party": "Democratic Alliance",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Julia Mohanuwa Lekhwele",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "Mangaung Metro by-election replacement, effective 20 Jul 2023 (official council report + IEC confirmation letter), supersedes the 2021 IEC result for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Thabo Nicholus Monare",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "Mangaung Metro by-election replacement, effective 20 Jul 2023 (official council report + IEC confirmation letter), supersedes the 2021 IEC result for this ward",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Mamoorosi Margaret Mohulatsi",
+      "party": "African National Congress",
+      "suburbs": [],
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no live Mangaung councillor tool found; no by-election record found for this ward",
+      "staleWarning": true
+    }
+  ]
+}
