@@ -1,0 +1,971 @@
+{
+  "municipality": "City of Tshwane",
+  "municipalityId": "tshwane",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 107,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Leon Pieter Kruyshaar",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Quentin Meyer",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Malesela Phohlo John Rakabe",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Petrus Malope",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Albertus Martinus Van Niekerk",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Mashiba Isaac Madonsela",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Molatelo Samuel Mashola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Alfred Boas Matjeke",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Patricia Lerato Machava",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Thabang Mabitse Masemola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Fiki Zophonia Mashigo",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Donald Khotso Tsela",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Nomfutshane Sonia Mabolawa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Lesibana Hans Mothoa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Joel Kgomotso Masilela",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Mmina-Tau Seabelo Marishane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Sylvia Paulina Lelaka",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Vusi Isaac Masemola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Macalene Stanley Mazibuko",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Neo Tiragalo Mocumi",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Ellen Phumzile Mbokane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Mamma Cathrine Mabaswa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Diamond Hendrick Mashao",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Christopher Sikhumbuzo Masia",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Phindile Phinah Chiota",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Thulang Joseph Shume",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Bongani Mcdonald Masina",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Nomvula Joyce Seelane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Moses Thabo Mathibedi",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Violet Phalwane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Tshepo Floyd Kgatle",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Floyd Makete Thema",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Lerato Marcia Aphane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Rose Sisi Sethole",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Tebogo Patrick Kholofelo Mashapa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Veronica Palesa Modise",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Zacharia Sekete Ntohla",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Saul Mokube Ratau",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Jan Japane Baloyi",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Maloke Joseph Makola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Barend William Chapman",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Shane Maas",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Benjamin William Lawrence",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": null,
+      "party": null,
+      "vacant": true,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Elizabeth Maria Basson",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Pieter Willem Van Heerden",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Anna Alida Erasmus",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Thembamandla Elijah Fosi",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Matome Adam Mashapa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Aletta Susanna Breytenbach",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Sarah Salamina Moabelo",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Frans Johannes Smith",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Wayne Peter Helfrich",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Elma Johanna Nel",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Kwena Yvonne Dzumba",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Dippenaar Tiaan",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "David James Farquharson",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Conride Ngoveni",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Shaun Wilkinson",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Mpati Isaac Ramphile",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "61",
+      "councillorName": "Naeem Patel",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "62",
+      "councillorName": "Esther Nonzingo Masuku",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "63",
+      "councillorName": "Duduzile Elsa Majola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "64",
+      "councillorName": "Issabel Alta De Kock",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "65",
+      "councillorName": "Gert Petrus Visser",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "66",
+      "councillorName": "Catharina Elizabeth Strydom",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "67",
+      "councillorName": "Sizwe Paulos Clifton Tsiane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "68",
+      "councillorName": "Tshililo Victor Rambau",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "69",
+      "councillorName": "Cindy Billson",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "70",
+      "councillorName": "Marika Elizabeth Kruger Muller",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "71",
+      "councillorName": "Mmakgoko Veron Phasha",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "72",
+      "councillorName": "Abbiot Masopo Sebola",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "73",
+      "councillorName": "Michael Ndlovu",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "74",
+      "councillorName": "Zacharea Setimo",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "75",
+      "councillorName": "Nthabiseng Mahlangu",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "76",
+      "councillorName": "Mavis Elizabeth Kekana",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "77",
+      "councillorName": "Tembeni Innocent Thabatha",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "78",
+      "councillorName": "Peter Sutton",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "79",
+      "councillorName": "Johan Gerhard Van Buuren",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "80",
+      "councillorName": "Sekokobale Fortune Mampuru",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "81",
+      "councillorName": "Mpho Hans Lewele",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "82",
+      "councillorName": "Siobhan Muller",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "83",
+      "councillorName": "Andrew Lesch",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "84",
+      "councillorName": "Christopher Anru Meyer",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "85",
+      "councillorName": "Jacqueline Uys",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "86",
+      "councillorName": "Kholofelo Patience Kgopotso",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "87",
+      "councillorName": "Christiaan Frederick Pienaar",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "88",
+      "councillorName": "Tshepang Sagious Boikanyo",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "89",
+      "councillorName": "Tshepo Patrick Malefane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "90",
+      "councillorName": "Enos Papiki Chiloane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "91",
+      "councillorName": "Henning Johannes Viljoen",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "92",
+      "councillorName": "Shimmy Nathaniel Mashamaite",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "93",
+      "councillorName": "Nathaniel Rabasotho Masupha",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "94",
+      "councillorName": "Manakedi Elisa Mlotshwa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "95",
+      "councillorName": "William Nkholo Kgopa",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "96",
+      "councillorName": "G\u00e9 Andries Breytenbach",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "97",
+      "councillorName": "Nkoata Ananias Mokgalotsi",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "98",
+      "councillorName": null,
+      "party": null,
+      "vacant": true,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "99",
+      "councillorName": "Silias Mothupi Makena",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "100",
+      "councillorName": "Johannes Christoffel Bekker",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "101",
+      "councillorName": "Malcolm Ian De Klerk",
+      "party": "Democratic Alliance",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "102",
+      "councillorName": "Vusi Ephraim Mabena",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "103",
+      "councillorName": "Eunice Dineo Moloi",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "104",
+      "councillorName": "Oupa Patrick Matshiane",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "105",
+      "councillorName": "Kgaugelo Stephans Phiri",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "106",
+      "councillorName": "Mogauwane Kenneth Masha",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    },
+    {
+      "wardNumber": "107",
+      "councillorName": "Phasudi Jeffrey Mashego",
+      "party": "African National Congress",
+      "vacant": false,
+      "suburbs": [],
+      "source": "tshwane.gov.za Office of the Chief Whip - Ward Councillors (live), fetched 2026-09-25",
+      "sourceUrl": "https://www.tshwane.gov.za/?page_id=17228"
+    }
+  ]
+}
