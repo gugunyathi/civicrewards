@@ -1,0 +1,608 @@
+{
+  "municipality": "Nelson Mandela Bay Metropolitan Municipality",
+  "municipalityId": "nelson-mandela-bay",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 60,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Andr\u00e9 Van Der Westhuizen",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021 result, confirmed still current via Jan 2026 news coverage (iol.co.za)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": false
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": null,
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021 result is confirmed WRONG (Renaldo Gouws left this seat in 2024) \u2014 successor unknown, not guessed",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "David Alan Hayselden",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Nozuko Mavis Mbambo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Terri Stander",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Gerhardus Johannes Scheepers Engelbrecht",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Brendon Stephen Pegram",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Gustav Rautenbach",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Heinrich M\u00fcller",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Gnanasagaran Moodley",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Graham Hilton Gelderbloem",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Verwon Nolan Boggenpoel",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Ingrid Leslie Van Wyk",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Mbulelo Braveman Qupe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Mpumelelo Julius Majola",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Ruth Kuselwa Ngxenge",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Ludwe Brian Mnyandu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Nkululeko Makhwenkwe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Gamalihleli Develop Maqula",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Wellington Zwelandile Booi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Siyamcela Nicholus Mlangazi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Monwabisi Richard Jakuja",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Nosithembiso Mayekiso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Xolile Mike Vinqi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Anele Henderson Bell",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Patrick Buyisile Vani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Sicelo Mleve",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Luzuko Peter",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Benjamin Nomnqa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Xolani Lennox Notshe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Leetesline Alphonso Booysen",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Pieter Hermaans",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Bidwell Mzwandile Sidina",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Johnny Alridge Arends",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Noline Rose Moodley",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Khanyisa Arthur Mani",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Tyrone Peter Adams",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Mphumzi Patrick Momo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Magrieta Johanna Du Toit",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Jason Grobbelaar",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Luyanda Niebeck Lawu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Lulama Ngwane",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Andile Austin Andries",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Luzuko Ndamse",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Sabelo Mcdonald Mabuda",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Ntobeko Ebem Nqakula",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Lungile Zacharia Longbooi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Franay Anne Van De Linde",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Georgen Gastuv Miggels",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Nomxolisi Phezisa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Roelof David Basson",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Ernest Francois Swanepoel",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Zwelandile Patrick Tsotso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Lunga Minyayo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Patrick Tanduxolo Doda",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Lubabalo Rydwell Ludwabe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "Thembinkosi Maswana",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Mendiswa Lucia Makunga",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Bulelani Matenjwa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Thembinkosi Bethwell Mafana",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (no usable live NMBM councillor tool found)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    }
+  ]
+}
