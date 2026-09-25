@@ -1,0 +1,2279 @@
+{
+  "municipality": "City of Cape Town",
+  "municipalityId": "coct",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 116,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Cheryl Visser",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Baronetcy Estate",
+        "De Duin",
+        "De Grendel Farm",
+        "Kaapzicht",
+        "Kleinbosch",
+        "Monte Vista",
+        "Northgate",
+        "Panorama",
+        "Plattekloof 1",
+        "Plattekloof 2",
+        "Plattekloof 3",
+        "Plattekloof Glen",
+        "Sonnendal",
+        "Welgelegen"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Roger Cannon",
+      "party": "Democratic Alliance",
+      "subcouncil": "6",
+      "suburbs": [
+        "Belvedere Tygerberg",
+        "Bosbell",
+        "Boston",
+        "Churchill Estate",
+        "Clamhall",
+        "De Tijger",
+        "Fairfield Estate",
+        "Glenlily",
+        "Oakdale",
+        "Parow Golf Course",
+        "Parow North",
+        "Vredelust Bellville"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Annelize Van Zyl",
+      "party": "Democratic Alliance",
+      "subcouncil": "6",
+      "suburbs": [
+        "Bellair",
+        "Blommendal",
+        "Blomtuin",
+        "Chrismar",
+        "De La Haye",
+        "Groenvallei",
+        "Heemstede",
+        "Joubert Park",
+        "La Rochelle",
+        "Loumar",
+        "Meyerhof",
+        "Oakglen",
+        "Shirley Park",
+        "Stikland Hospitaal",
+        "Stikland Industria",
+        "Vredenberg"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Anthony Benadie",
+      "party": "Democratic Alliance",
+      "subcouncil": "3",
+      "suburbs": [
+        "Joe Slovo Park",
+        "Milnerton Ridge",
+        "Montague Gardens",
+        "Phoenix",
+        "Royal Ascot",
+        "Summer Greens",
+        "Sunset Beach"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Miquette Temlett",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Annandale Farm",
+        "Atlas Gardens Business Park",
+        "Bothasig",
+        "Burgundy Estate",
+        "Cape Farms",
+        "District C",
+        "Edgemead",
+        "Montague",
+        "Petrosa Tank Farm",
+        "Richmond Park",
+        "Richwood"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Siviwe Nodliwa",
+      "party": "African National Congress",
+      "subcouncil": "2",
+      "suburbs": [
+        "Belmont Park",
+        "Botfontein Smallholdings",
+        "Wallacedene",
+        "Thakudi Street",
+        "Manuel Street"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Gabriel Twigg",
+      "party": "Democratic Alliance",
+      "subcouncil": "2",
+      "suburbs": [
+        "Botfontein Smallholdings",
+        "Bottelary Smallholdings",
+        "Brackenfell South",
+        "Stonewood Street",
+        "Everite Industria",
+        "Normandie Estate",
+        "Northpine",
+        "Protea Village",
+        "Ruwari",
+        "Scottsdene",
+        "Summerville"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Johann Loots",
+      "party": "Democratic Alliance",
+      "subcouncil": "2",
+      "suburbs": [
+        "Annandale",
+        "Brackenfell Central",
+        "Brackenfell Common",
+        "Brackenfell South",
+        "Stonewood Street",
+        "Brandwag",
+        "Burgundy",
+        "Ferndale",
+        "Haasendal",
+        "Kaapsig",
+        "Kuilsriver Golf Course",
+        "Morgan Industria",
+        "Protea Heights",
+        "Soneike I",
+        "Skool Street And Bottelary River",
+        "Du Toit S",
+        "Soneike II",
+        "Sonkring",
+        "Sonnekuil",
+        "Springbokpark"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Mercia Kleinsmith",
+      "party": "Democratic Alliance",
+      "subcouncil": "6",
+      "suburbs": [
+        "Bellville Landfill",
+        "Bellville South",
+        "Bellville South Industrial",
+        "CPUT",
+        "Glenhaven",
+        "Greenlands",
+        "Labiance",
+        "Sack's Circle Industria",
+        "Saxon Industrial",
+        "Sirrocco's",
+        "Triangle Farm",
+        "UWC",
+        "Vogelvlei"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Jacoline Visser",
+      "party": "Democratic Alliance",
+      "subcouncil": "6",
+      "suburbs": [
+        "Avondale",
+        "Beaconvale",
+        "Belgravia",
+        "Bellrail",
+        "Bellville CBD",
+        "Bellville",
+        "Chrismar",
+        "Dunrobin",
+        "Kempenville",
+        "Kingston",
+        "Klipkop",
+        "Oakdale",
+        "Oosterzee",
+        "Parow East",
+        "Parow Industria",
+        "Parow",
+        "Ravensmead",
+        "Concordia Crescent",
+        "Aliwal Road",
+        "Stroebel Street",
+        "Industria Ring Road",
+        "Mc Beukes Street",
+        "Aandblom Street And Denton Terrace",
+        "Sanlamhof",
+        "Stikland",
+        "Transnet Marshalling Yard",
+        "Tygerberg Hospital"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Pieter  de Vos",
+      "party": "Democratic Alliance",
+      "subcouncil": "14",
+      "suburbs": [
+        "Amandelrug",
+        "Amandelsig",
+        "Bellville Teachers College",
+        "Benno Park",
+        "Bosonia",
+        "Brandtwood",
+        "Danarand",
+        "De Kuilen",
+        "Des Hamden",
+        "Haasendal",
+        "Highbury",
+        "Jan Kriel",
+        "Klipdam",
+        "Kloofzicht",
+        "Kuilsrivier Industria",
+        "Letru",
+        "Loucharmante",
+        "Mabille Park",
+        "Mikro Park",
+        "Oakdene",
+        "Rouxville",
+        "SAREPTA",
+        "Silveroaks",
+        "Soneike I",
+        "St.Dumas",
+        "Turtle Creek",
+        "Voelvlei",
+        "Vredelust Kuils River",
+        "Zevenwacht Mall"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Willie  Jaftha",
+      "party": "Democratic Alliance",
+      "subcouncil": "5",
+      "suburbs": [
+        "Belhar Ext 10",
+        "Belhar Ext 11",
+        "Belhar Ext 12",
+        "Belhar Ext 13",
+        "Belhar Ext 14",
+        "Belhar Ext 15",
+        "Belhar Ext 16",
+        "Belhar Ext 18",
+        "Belhar Ext 19",
+        "Belhar Ext 20",
+        "Belhar Ext 21",
+        "Belhar Ext 22",
+        "Belhar Ext 23",
+        "Belhar Ext 7",
+        "Belhar Ext 8",
+        "Belhar Ext 9",
+        "Vredelust Kuils River",
+        "Zevenwacht Mall"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Michelle Adonis",
+      "party": "Democratic Alliance",
+      "subcouncil": "5",
+      "suburbs": [
+        "Delft 1 & 2",
+        "Delft 3",
+        "Delft 4",
+        "Delft 5",
+        "Delft 6",
+        "Roosendal",
+        "The Hague"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Kariena Mare",
+      "party": "Democratic Alliance",
+      "subcouncil": "14",
+      "suburbs": [
+        "Aan De Wijmlanden Estate",
+        "Austinville",
+        "Blackheath Industria",
+        "Blue Owns Cbd",
+        "De Wijnlanden Estate",
+        "Dennemere",
+        "Eensgevonden",
+        "Happy Valley",
+        "Hunters Creek",
+        "Jacarandas",
+        "Jacobsdal Smallholdings",
+        "Klein Zevenwacht",
+        "Kleinvlei Town",
+        "The Kwagga Greenbelt",
+        "Feyenoord Way And Ribbok Street",
+        "Lillydale",
+        "Penhill",
+        "Rustdal",
+        "Saxenburg Park 1",
+        "Saxenburg Park 2",
+        "Stellenbosch Farms",
+        "Welgemoed Estate",
+        "Welmoed Cemetery",
+        "Wimbledon Estate",
+        "Zevendal",
+        "Zevenwacht Country Estate",
+        "Zevenwacht Farm Village",
+        "Zevenwacht Retirement Village",
+        "Zevenzicht"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Gregory Peck",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "Bel'Aire",
+        "Braeview",
+        "Briza",
+        "Die Wingerd",
+        "Dorhill",
+        "Koejawelboord Park",
+        "Firgrove Rural",
+        "Fraaigelegen",
+        "Goede Hoop",
+        "Golden Acre",
+        "Golden Hill Ext 1",
+        "Helderberg Estate",
+        "Helderberg Village",
+        "The La Montagne",
+        "Helderrant",
+        "Heldervue",
+        "Helena Heights",
+        "Highveld",
+        "Illaire",
+        "Jonkers Hoogte",
+        "La Concorde",
+        "Langeberghoogte"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Ursula Barends",
+      "party": "Democratic Alliance",
+      "subcouncil": "14",
+      "suburbs": [
+        "Dreamworld",
+        "Driftsands",
+        "Eersterivier South",
+        "Eersterivier",
+        "Electric City",
+        "Forest Village"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Frans Sauls",
+      "party": "Democratic Alliance",
+      "subcouncil": "14",
+      "suburbs": [
+        "Dennemere",
+        "Forest Heights",
+        "Hillcrest Heights",
+        "Kleinvlei Town",
+        "Malibu Village",
+        "Rosedale",
+        "The Conifers",
+        "Tuscany Glen",
+        "Welmoed Cemtery"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Ntomboxolo Kopman",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Mxolisi Phetani",
+        "Thembokwezi"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Ebrahim Sawant",
+      "party": "Democratic Alliance",
+      "subcouncil": "14",
+      "suburbs": [
+        "Camelot",
+        "Hagley",
+        "Highbury",
+        "Highbury Park",
+        "Amethyst Pos",
+        "Kalkfontein",
+        "Kuils River Common",
+        "Kuilsriver South Smallholdings",
+        "Rotterdam",
+        "Stellendale",
+        "Wembley Park",
+        "Wesbank"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Dineo Masiu",
+      "party": "Democratic Alliance",
+      "subcouncil": "5",
+      "suburbs": [
+        "Leiden",
+        "Usutu Pos And Homtini Street",
+        "Voorbrug"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Hendri Terblanche",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Amanda Glen",
+        "Bethanie",
+        "Bloemhof",
+        "Bo Oakdale",
+        "Chantecler",
+        "Durbanville",
+        "Durbanville Hills",
+        "Fairmont High School",
+        "Durbell",
+        "Everglen",
+        "Eversdal",
+        "Eversdal Heights",
+        "O'Kennedyville",
+        "Ridgeworth",
+        "Rosendal",
+        "Sonstraal",
+        "Sonstraal Heights",
+        "Including All Property In Sondal Singel",
+        "Villa Malinda",
+        "Stellenberg",
+        "Stellenridge",
+        "Stellenryk",
+        "Valmary Park",
+        "Vygeboom"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Johanna Martlow",
+      "party": "Democratic Alliance",
+      "subcouncil": "5",
+      "suburbs": [
+        "Belhar Ext 1",
+        "Belhar Ext 17",
+        "Belhar Ext 2",
+        "Belhar Ext 3",
+        "Belhar Ext 4",
+        "Belhar Ext 5",
+        "Belhar Ext 6",
+        "Belhar Ext 7",
+        "Modderdam",
+        "Parow Industria",
+        "Appeldoorn Road",
+        "Carnation Avenue",
+        "Heuningtee Avenue",
+        "Uitsig Avenue",
+        "Myrtle Road",
+        "Gladiolus Avenue"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Paul Swart",
+      "party": "Democratic Alliance",
+      "subcouncil": "1",
+      "suburbs": [
+        "Big Bay",
+        "Blaauwbergstrand",
+        "Cape Farms",
+        "District B",
+        "Rochester Pos And Bermuda Cresecent",
+        "Excluding All Bermuda Crescent Property",
+        "Excluding Parklands",
+        "Melkbosstrand",
+        "Parklands",
+        "Tinchley Crescent",
+        "Sandown",
+        "Sunningdale"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Phumla  Tause",
+      "party": "African National Congress",
+      "subcouncil": "5",
+      "suburbs": [
+        "Cape Town Airport",
+        "Delft South",
+        "Basboom Road",
+        "Welwitschia Crescent",
+        "Delft Main Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Beverley van Reenen",
+      "party": "Democratic Alliance",
+      "subcouncil": "4",
+      "suburbs": [
+        "Connaught",
+        "Cravenby",
+        "Eureka Estate",
+        "Florida",
+        "Ravensmead",
+        "Uitsig"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Franchesca Walker",
+      "party": "Democratic Alliance",
+      "subcouncil": "4",
+      "suburbs": [
+        "Avon",
+        "Beaconvale",
+        "Elsies River Industria",
+        "Leonsdale",
+        "Parow",
+        "Parow East",
+        "Parow Road And Scharmberg Street",
+        "Parow Valley",
+        "Richmond",
+        "Richmond Estate",
+        "Riverton Elsies River",
+        "Vasco Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Cecile Janse van Rensburg",
+      "party": "Democratic Alliance",
+      "subcouncil": "4",
+      "suburbs": [
+        "Glenwood",
+        "Goodwood Estate",
+        "Goodwood Ext 1",
+        "Montague",
+        "N1 Stad/City",
+        "Richmond Estate",
+        "Townsend Estate",
+        "Tygerdal",
+        "Vasco Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Christopher Jordaan",
+      "party": "DEMOCRATIC ALLIANCE",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "NOT on City of Cape Town's current live councillor listing (seat may be vacant/pending by-election) \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Allister Lightburn",
+      "party": "Democratic Alliance",
+      "subcouncil": "1",
+      "suburbs": [
+        "Atlantis Industrial",
+        "Avondale",
+        "Westfleur",
+        "Cape Farms",
+        "District B",
+        "Malmesbury Farms",
+        "Mamre",
+        "Pella",
+        "Saxonsea",
+        "Grosvenor Avenue",
+        "Hermes Avenue",
+        "Including Mexican Street Pos",
+        "Wesfleur"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Deidree De Vos",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Manenberg",
+        "Hex Crescent",
+        "Tousberg Road",
+        "Duinefontein Road",
+        "Ruimte Weg",
+        "Kasouga Road",
+        "Turfhall Road",
+        "Boyne Street",
+        "Sand Industria"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Theresa Thompson",
+      "party": "Democratic Alliance",
+      "subcouncil": "15",
+      "suburbs": [
+        "Bishop Lavis",
+        "Bonteheuwel",
+        "Sandalwood Street And Smalblaar Road",
+        "Boquinar Industrial Area",
+        "Charlesville",
+        "Kalksteenfontein",
+        "King David Country Club",
+        "Montana",
+        "Montevideo",
+        "Valhalla Park"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Moosa Raise",
+      "party": "Democratic Alliance",
+      "subcouncil": "1",
+      "suburbs": [
+        "Atlantis Industrial",
+        "Avondale",
+        "Beacon Hill",
+        "Protea Park",
+        "Wesfleur",
+        "Robinvale",
+        "Saxonsea",
+        "Kent Crescent And Hermes Avenue",
+        "Saxonwood",
+        "Sherwood",
+        "Witsand"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Lungisa Somdaka",
+      "party": "African National Congress",
+      "subcouncil": "17",
+      "suburbs": [
+        "Aan De Wijmlanden Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Melikhaya Gadeni",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Philippi",
+        "Ngcisininde Crescent",
+        "Govan Mbeki Road",
+        "Mildred Holo Street",
+        "Singolamt"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Mboniswa Chitha",
+      "party": "African National Congress",
+      "subcouncil": "12",
+      "suburbs": [
+        "Philippi",
+        "Kabodi Street",
+        "Ngcisininde Crescent",
+        "Bristol Road",
+        "New Eisleben Road",
+        "Mbhashe Road",
+        "Matlabas Crescent",
+        "The Phola Park Area"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Nceba Ntshweza",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Crossroads",
+        "Philippi"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Lionel Martin",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Crossroads",
+        "Nyanga",
+        "Ntlangano Crescent And Terminus Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Suzanne Zumana",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Crossroads"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Thembinkosi Mathew Mjuza",
+      "party": "AFRICAN NATIONAL CONGRESS",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "NOT on City of Cape Town's current live councillor listing (seat may be vacant/pending by-election) \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Bongani Ngcombolo",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Crossroads",
+        "Guguletu",
+        "Hlungulu Walk And Steve Biko Drive"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Lindile Partmos Sonyoka",
+      "party": "AFRICAN NATIONAL CONGRESS",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "NOT on City of Cape Town's current live councillor listing (seat may be vacant/pending by-election) \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Charles Esau",
+      "party": "Democratic Alliance",
+      "subcouncil": "15",
+      "suburbs": [
+        "Adriaanse",
+        "Bishop Lavis",
+        "Myrtle Road And Tafelberg Road",
+        "Clarkes Estate",
+        "Matroosfontein"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Elton-Enrique Jansen",
+      "party": "Democratic Alliance",
+      "subcouncil": "17",
+      "suburbs": [
+        "Philippi",
+        "Strandfontein",
+        "Pavillion Road And Tidal Road",
+        "Weltevreden Road",
+        "Jq Rocklands Sports Ground",
+        "Weltevreden Valley"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Anthony Moses",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Bridgetown",
+        "Appledene Road And Petunia Road",
+        "Guguletu",
+        "Heideveld",
+        "Silvertown",
+        "Welcome Estate",
+        "Second Street And Fourth Avnue"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Mandy Marr",
+      "party": "Democratic Alliance",
+      "subcouncil": "19",
+      "suburbs": [
+        "Coastal Park Landfill Site",
+        "Lavender Hill",
+        "Muizenberg",
+        "Seawinds",
+        "Vrygrond"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Mogamat Cassiem",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Belgravia",
+        "Elwyn Road And Hood Road",
+        "Gatesville",
+        "Hatton",
+        "Manenberg",
+        "Ruimte Weg",
+        "Duinefontein Road",
+        "Tousberg Road",
+        "Ruimte Weg And Lyne Road",
+        "New Fields",
+        "Newlands",
+        "Ebrahim Road And Delware Avenue",
+        "Boyne Street And Lyne Road",
+        "Penlyn Estate",
+        "Rylands",
+        "Surrey",
+        "Surrey Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Antonio van der Rheede",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Hanover Park",
+        "Mountview",
+        "Newfields"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Zahid Badroodien",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Athlone",
+        "Thornton Road",
+        "St. Athans Road",
+        "St. Gothas Road And St. Mauri Road",
+        "Jan Smuts Drive",
+        "Newton Avenue",
+        "Belgravia",
+        "Belthorn Estate",
+        "William Road",
+        "Innisfree Road And Elwyn Road",
+        "Belgravia Road",
+        "Honeyside Road",
+        "Crawford",
+        "Lansdowne",
+        "Mountview",
+        "Penlyn Estate",
+        "Innisfree Road",
+        "William Road And Blomvlei River",
+        "Pinati Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Rashid Adams",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Athlone",
+        "Bangor Street And Newton Avenue",
+        "Bridgetown",
+        "Bosduif Road",
+        "Hazendal",
+        "Kewtown",
+        "Silvertown",
+        "Lilac Street",
+        "Appledene Road And Springbok Street"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Angus McKenzie",
+      "party": "Democratic Alliance",
+      "subcouncil": "15",
+      "suburbs": [
+        "Bonteheuwel",
+        "Sandalwood Street And Smalblaar Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Lwazi Phakade",
+      "party": "African National Congress",
+      "subcouncil": "15",
+      "suburbs": [
+        "Langa",
+        "Unomusa Road",
+        "Ndlwana Way",
+        "Nkomo Way And Njoli Avenue",
+        "Washington Drive",
+        "Zone 16 Road",
+        "Old Athlone Power Station Site"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Thembelani Nyamakazi",
+      "party": "African National Congress",
+      "subcouncil": "15",
+      "suburbs": [
+        "Langa",
+        "Zone 15 Road",
+        "Zone 16 Road",
+        "Washington Drive",
+        "Johnson Ngwevela Street",
+        "Njoli Avenue",
+        "Nkomo Way",
+        "Nolwana Way And Unomusa Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Riad Davids",
+      "party": "Democratic Alliance",
+      "subcouncil": "16",
+      "suburbs": [
+        "Epping Industria 1",
+        "Maitland Garden Village",
+        "Maitland",
+        "The M5 Park",
+        "Haven Park Drive",
+        "Annex Road And Alexandra Road",
+        "The Cape Flats Railway Line",
+        "Old Mill Road",
+        "Mowbray",
+        "Pinelands",
+        "Thornton"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Nicola Jowell",
+      "party": "Democratic Alliance",
+      "subcouncil": "16",
+      "suburbs": [
+        "Bantry Bay",
+        "Camps Bay - Bakoven",
+        "Clifton",
+        "Fresnaye",
+        "Green Point",
+        "Mouille Point",
+        "Oudekraal",
+        "Robben Island",
+        "Sea Point",
+        "Signal Hill",
+        "Signal Hill / Lions Head",
+        "Camberwell Road",
+        "Three Anchor Bay",
+        "Mutley Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Fabian Ah-Sing",
+      "party": "Democratic Alliance",
+      "subcouncil": "3",
+      "suburbs": [
+        "Acacia Park",
+        "Brooklyn",
+        "Century City",
+        "Lagoon Beach",
+        "Marconi Beam",
+        "Takealot",
+        "Platinum Crescent",
+        "Metro",
+        "Milnerton",
+        "Graaff Avenue",
+        "Paarden Eiland",
+        "Rugby",
+        "Sanddrift",
+        "Tijgerhof",
+        "Tygerhof",
+        "Woodstock",
+        "Ysterplaat"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Cheslyn Daniels",
+      "party": "Patriotic Alliance",
+      "subcouncil": "3",
+      "suburbs": [
+        "Acacia Park",
+        "Kensington",
+        "Maitland",
+        "Windermere",
+        "Wingfield"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "Yusuf Mohamed",
+      "party": "Democratic Alliance",
+      "subcouncil": "16",
+      "suburbs": [
+        "District Six",
+        "Forest View",
+        "Mowbray",
+        "Cecil Road",
+        "Wolmunster Road",
+        "Main Road",
+        "Rose Street",
+        "Church Street",
+        "Bridge Street",
+        "Rye Road",
+        "Vredenberg Avenue",
+        "De Villiers Avenue",
+        "Park Road",
+        "Observatory",
+        "Liesbeek Way",
+        "Victoria Road",
+        "Browning Road",
+        "Rosebank",
+        "Main Road And Hope Road",
+        "Salt River",
+        "Woodstock",
+        "Selbourne Road",
+        "Nelson Mandella Boulevard",
+        "Bideford Road",
+        "Palmerston Road",
+        "The Avenue",
+        "Balfour Street",
+        "Vine Road",
+        "Mountain Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Richard Hill",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Claremont",
+        "Kenilworth",
+        "Rondebosch"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Mikhail Manuel",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Claremont",
+        "Kenilworth",
+        "Newlands",
+        "Rondebosch",
+        "Sandown Road",
+        "Tullyallen Road",
+        "Oakhurst Avenue And The Black River",
+        "Rosebank"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Mark Kleinschmidt",
+      "party": "Democratic Alliance",
+      "subcouncil": "11",
+      "suburbs": [
+        "Athlone",
+        "Lansdowne",
+        "Mowbray Golf Course",
+        "Black River And Settlers Drive",
+        "Rondebosch East",
+        "Sybrand Park"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "61",
+      "councillorName": "Simon Liell-Cock",
+      "party": "Democratic Alliance",
+      "subcouncil": "19",
+      "suburbs": [
+        "Cape Point",
+        "Castle Rock",
+        "Glencairn",
+        "Kommetjie",
+        "Misty Cliffs",
+        "Ocean View",
+        "Scarborough",
+        "Simon's Town",
+        "Smitswinkelbaai"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "62",
+      "councillorName": "Emile Langenhoven",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Bishopscourt",
+        "Constantia",
+        "Newlands",
+        "Plumstead",
+        "Culm Road And Southfield Road",
+        "Wynberg Nu"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "63",
+      "councillorName": "Carmen Siebritz",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Diepriver",
+        "Ottery",
+        "Plumstead",
+        "Southfield",
+        "Wetton",
+        "Wynberg"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "64",
+      "councillorName": "Izabel Sherry",
+      "party": "Democratic Alliance",
+      "subcouncil": "19",
+      "suburbs": [
+        "Clovelly",
+        "Fish Hoek",
+        "Glencairn",
+        "Kalk Bay",
+        "Lakeside",
+        "Muizenberg",
+        "St. James"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "65",
+      "councillorName": "Donovan Nelson",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Grassy Park",
+        "Lotus River",
+        "Raymond Circle",
+        "Monica Way",
+        "Parkwood"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "66",
+      "councillorName": "William Akim",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Lotus River",
+        "Stephen Road",
+        "Raymond Circle",
+        "Monica Way",
+        "Joanne Street And Falcon Way",
+        "Ottery",
+        "Wetton"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "67",
+      "councillorName": "Geraldine Gordon",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Eagle Park",
+        "False Bay Coastal Park",
+        "Grassy Park",
+        "Victoria Road",
+        "Eighth Avenue",
+        "Geelhout Street",
+        "Seventh Avenue",
+        "First Road",
+        "Rooikrans Avenue",
+        "Italian Road And Eighth Avenue",
+        "Lotus River",
+        "Peacock Close",
+        "Pelican Heights",
+        "Pelican Park",
+        "Zeekoeivlei"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "68",
+      "councillorName": "Marita Petersen",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Lavender Hill",
+        "Retreat",
+        "Steenberg"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "69",
+      "councillorName": "Patricia Francke",
+      "party": "Democratic Alliance",
+      "subcouncil": "19",
+      "suburbs": [
+        "Chapmans Peak Drive And Noordhoek Beach",
+        "Fish Hoek",
+        "Kommetjie",
+        "Imhoff Waldorf Primary School",
+        "Masiphumelele",
+        "Sunnydale",
+        "Sunvalley"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "70",
+      "councillorName": "Ronel Viljoen",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Blomvlei",
+        "Bo Oakdale",
+        "Door De Kraal Farm",
+        "Hoheizen",
+        "Kanonberg",
+        "Loevenstein",
+        "Nieuw Maastrecht 1",
+        "Nieuw Maastrecht 2",
+        "Oude West Hof",
+        "Protea Valley",
+        "Selborne",
+        "Springfield",
+        "Stellenbosch Farms",
+        "Tygervalley",
+        "Tygervalley Waterfront",
+        "Van Riebeecks Hof",
+        "Waterkloof De Bron Ext 44",
+        "Welgedacht",
+        "Welgemoed"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "71",
+      "councillorName": "Carolynne Franklin",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Constantia Hills",
+        "Kirstenhof",
+        "Norfolk Park",
+        "Orchard Village",
+        "Tokai",
+        "Westlake",
+        "Nova Constantia",
+        "Retreat Industrial"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "72",
+      "councillorName": "Kevin Southgate",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Elfindale",
+        "Heathfield",
+        "Retreat",
+        "Southfield"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "73",
+      "councillorName": "Edwin (Eddie) Andrews",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Bergvliet",
+        "Zwaanswyk Village",
+        "Constantia",
+        "Diep River",
+        "Heathfield",
+        "Meadowridge",
+        "Plumstead",
+        "Southfield Road",
+        "Culm Road",
+        "Main Road And Gabriel Road",
+        "Tokai",
+        "Excluding"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "74",
+      "councillorName": "Roberto Quintas",
+      "party": "Democratic Alliance",
+      "subcouncil": "20",
+      "suburbs": [
+        "Hout Bay",
+        "Llandudno"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "75",
+      "councillorName": "Joan Woodman",
+      "party": "Democratic Alliance",
+      "subcouncil": "17",
+      "suburbs": [
+        "Colorado Park",
+        "Highlands Village",
+        "Hyde Park",
+        "Morgans Village",
+        "Weltevreden Valley",
+        "Westgate",
+        "Wildwood",
+        "Woodlands"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "76",
+      "councillorName": "Avron Plaatjies",
+      "party": "Democratic Alliance",
+      "subcouncil": "12",
+      "suburbs": [
+        "Ikwezi Park",
+        "Mandalay - Lentegeur"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "77",
+      "councillorName": "Francine Higham",
+      "party": "Democratic Alliance",
+      "subcouncil": "16",
+      "suburbs": [
+        "Bo-Kaap",
+        "Cape Town City Centre",
+        "District Six",
+        "Keizergracht Road",
+        "Chapl Street",
+        "Tennant Street And De Villiers Street",
+        "Gardens",
+        "Upper Mill Street",
+        "Clive Street And Jutland Road",
+        "Maynard Street",
+        "Wesley Street And Buitenkant Street",
+        "Green Point",
+        "Lions Head And Signal Hill",
+        "Oranjezicht",
+        "Table Mountain including Back Table",
+        "Tamboerskloof",
+        "Vredehoek"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "78",
+      "councillorName": "Goawa Timm",
+      "party": "Democratic Alliance",
+      "subcouncil": "17",
+      "suburbs": [
+        "Lentegeur",
+        "Mitchells Plain",
+        "Portland",
+        "Westridge"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "79",
+      "councillorName": "Daniel Christians",
+      "party": "Democratic Alliance",
+      "subcouncil": "17",
+      "suburbs": [
+        "Portland",
+        "Rocklands",
+        "Strandfontein"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "80",
+      "councillorName": "Bennet Payiya",
+      "party": "African National Congress",
+      "subcouncil": "13",
+      "suburbs": [
+        "Philippi",
+        "Ntukwane Street",
+        "Nkunzane Street",
+        "Singolamthi Street",
+        "Mildred Holo Street"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "81",
+      "councillorName": "Ashley Potts",
+      "party": "Democratic Alliance",
+      "subcouncil": "17",
+      "suburbs": [
+        "Rocklands",
+        "Westgate",
+        "Westridge Mitchells Plain"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "82",
+      "councillorName": "Washiela Harris",
+      "party": "Democratic Alliance",
+      "subcouncil": "12",
+      "suburbs": [
+        "Tafelsig"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "83",
+      "councillorName": "Carl Punt",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "De Velde",
+        "Firgrove Rural",
+        "Gants Park",
+        "Goedehoop",
+        "Heartland Beach Road Precinct",
+        "Heartland Historic Precinct",
+        "Helderzicht",
+        "Lourensia Park",
+        "Mall Motor City",
+        "Mall Triangle",
+        "Paarde Vlai",
+        "Silvertas",
+        "Somerset West Country Club",
+        "Somerset West",
+        "Strand Golf Club",
+        "Strand Industrial Area",
+        "Strand",
+        "Gordon'S Bay Road And George Street",
+        "Strandvale"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "84",
+      "councillorName": "Norman McFarlane",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "Audas Estate",
+        "Bene Township",
+        "Berbago",
+        "Bizweni",
+        "Boskloof",
+        "Bridgebank",
+        "Bridgewater",
+        "Carey Park",
+        "Carwick",
+        "Chris Nissan Park",
+        "Dennegeur",
+        "Dorhill",
+        "Erinvale Estate",
+        "Fernwood",
+        "Garden Village",
+        "Golden Acre",
+        "Helderberg Rural",
+        "Heritage Park",
+        "High Riding",
+        "Humanshof",
+        "Jacques Hill",
+        "Land en Zeezicht",
+        "Longdown Estate",
+        "Martinville",
+        "Mission Grounds",
+        "Morningside",
+        "Nature's Valley",
+        "Olive Grove",
+        "Onverwacht Village",
+        "Oosterzee",
+        "Rome Glen",
+        "Roundhay",
+        "Sir Lowry's Pass",
+        "Sir Lowry's Pass Village Centre",
+        "Somerset Forest",
+        "Somerset West Business Park",
+        "Somerset West Country Club",
+        "Somerset West Nature Reserve",
+        "Somerset West",
+        "Strand",
+        "Stuart's Hill",
+        "Sun City",
+        "Tre Donne",
+        "Van Der Stel",
+        "Wedderwill Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "85",
+      "councillorName": "Chantal Cerfontein",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "Asanda Village",
+        "Asla Park",
+        "George Park",
+        "Greenways",
+        "Nomzamo",
+        "Selven Street",
+        "Lonja Street",
+        "Michael Street",
+        "Nomzamo Road",
+        "Richmond Street And Hamilton Road",
+        "Onverwacht",
+        "Strand",
+        "The Strand"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "86",
+      "councillorName": "Xolani Diniso",
+      "party": "African National Congress",
+      "subcouncil": "8",
+      "suburbs": [
+        "Lwandle",
+        "Nomzamo",
+        "Simon Street",
+        "Selven Street",
+        "Richmond Street And Hamilton Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "87",
+      "councillorName": "Khayalethu Kama",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Mxolisi Phetani",
+        "Solomon Tshuku Avenue",
+        "Njongo Avenue",
+        "Limpopo Street"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "88",
+      "councillorName": "Zukisani Sophazi",
+      "party": "African National Congress",
+      "subcouncil": "17",
+      "suburbs": [
+        "Philippi Area Of Informality",
+        "Municipal Offices",
+        "Philippi Park",
+        "Philippi Pond Area",
+        "Philippi",
+        "Including Phola Park",
+        "Rochester"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "89",
+      "councillorName": "Kayalethu Gxasheka",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Driftsands",
+        "Nonqubela",
+        "Nondzaba Crescent",
+        "Gxashela Street"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "90",
+      "councillorName": "Lukhanyo Simangweni",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Bongani",
+        "Bangiso Drive",
+        "Sigwele Avenue",
+        "Tandazo Drive",
+        "including Ikhusi Primary School"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "91",
+      "councillorName": "Thando Mpengezi",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Nonqubela",
+        "Mthathi Street",
+        "Sulani Drive",
+        "Victoria Mxenge",
+        "Excluding Ikhusi Primary School",
+        "Sigwele Avenue",
+        "Bangiso Drive And Aliam Drive"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "92",
+      "councillorName": "Norman Adonis",
+      "party": "Democratic Alliance",
+      "subcouncil": "12",
+      "suburbs": [
+        "Beacon Valley",
+        "Eastridge",
+        "Tafelsig"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "93",
+      "councillorName": "Thando Pimpi",
+      "party": "African National Congress",
+      "subcouncil": "9",
+      "suburbs": [
+        "Barnet Molokwana Corner",
+        "Driftsands",
+        "Nonqubela",
+        "Gxashela Street",
+        "Nondzaba Crescent and Buyani Crescent",
+        "Qq Section",
+        "Sabata Dalindyebo Square",
+        "Silvertown",
+        "Khayelitsha"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "94",
+      "councillorName": "Xolisa Peter",
+      "party": "African National Congress",
+      "subcouncil": "10",
+      "suburbs": [
+        "Eyethu",
+        "Khaya"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "95",
+      "councillorName": "Ayanda Tetani",
+      "party": "African National Congress",
+      "subcouncil": "10",
+      "suburbs": [
+        "Kuyasa",
+        "Monwabisi",
+        "Fukutha Road",
+        "Lwesine Street",
+        "Khululu Street",
+        "Khulula Street",
+        "Folokhwe Crescent",
+        "Kodwa Street",
+        "Makhulu Crescent",
+        "Lawula Street",
+        "Dibana Road",
+        "Hempe Street",
+        "Khalima Street And"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "96",
+      "councillorName": "Lucky Mbiza",
+      "party": "African National Congress",
+      "subcouncil": "10",
+      "suburbs": [
+        "Driftsands",
+        "Umrhabulo Triangle",
+        "Lindela Street",
+        "Dibana Road",
+        "Makhulu Crescent",
+        "Lawula Street",
+        "Kodwa Street",
+        "Fukutha Road and Jeff Masemola Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "97",
+      "councillorName": "Mthwalo Alfred Mkutswana",
+      "party": "AFRICAN NATIONAL CONGRESS",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "NOT on City of Cape Town's current live councillor listing (seat may be vacant/pending by-election) \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "98",
+      "councillorName": "Anele Gabuza",
+      "party": "African National Congress",
+      "subcouncil": "10",
+      "suburbs": [
+        "Harare",
+        "Ilitha Park"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "99",
+      "councillorName": "Lonwabo Mqina",
+      "party": "African National Congress",
+      "subcouncil": "10",
+      "suburbs": [
+        "Endlovini Informal Settlement",
+        "Enkanini",
+        "Good Hope",
+        "Khayelitsha",
+        "Monwabisi",
+        "Monwabisi Resort"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "100",
+      "councillorName": "Sean Stacey",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "Admirals Park",
+        "Anchorage Park",
+        "Antilles/Cayman Beach",
+        "Broadlands",
+        "Broadlands Park",
+        "Dobson",
+        "Fairview Golf Estate",
+        "Firlands",
+        "Gordons Bay",
+        "Gordons Bay Village",
+        "Gordons Strand Estate",
+        "Helderberg Industrial Park",
+        "Mountainside",
+        "Mountainside Estate",
+        "Protea Park",
+        "Sea Breez Park",
+        "Sercor Park",
+        "Southfork",
+        "Steenbras",
+        "Strand",
+        "Gordon'S Bay Road",
+        "Broadlands Road",
+        "Eleventh Street On Onverwacht Road",
+        "Temperance Town",
+        "Winslow",
+        "World's View"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "101",
+      "councillorName": "Siyabonga  Duka",
+      "party": "African National Congress",
+      "subcouncil": "2",
+      "suburbs": [
+        "Belmont Park",
+        "Bloekombos",
+        "Kleinbegin",
+        "Kraaifontein East",
+        "Paarl Farms",
+        "Wallacedene",
+        "Wynland Industrial Park"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "102",
+      "councillorName": "Rhynhardt Bresler",
+      "party": "Democratic Alliance",
+      "subcouncil": "2",
+      "suburbs": [
+        "Bonnie Brae",
+        "Bonnie Brook",
+        "Buh-Rein Estate",
+        "Cape Gate",
+        "Goliath Estate",
+        "Joostenbergvlakte Smallholdings",
+        "Kraaifontein",
+        "Langeberg Ridge",
+        "Paarl Farms",
+        "Peerless Park North",
+        "Pinehurst",
+        "Viking Village",
+        "Vredekloof East",
+        "Vredekloof",
+        "Windsor Estate",
+        "Windsor Park",
+        "Windsor Park Estate",
+        "Zoo Park"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "103",
+      "councillorName": "Gerhard Fourie",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Amanda Glen",
+        "Avalon Estate",
+        "Cape Gate",
+        "Durbanville",
+        "Goedemoed",
+        "Kleinbron",
+        "Langeberg Hoogte",
+        "Langeberg Ridge",
+        "Pinehurst",
+        "Sonstraal Heights",
+        "Stellenryk",
+        "Uitzicht",
+        "Vredekloof East",
+        "Vredekloof Heights",
+        "Vredekloof"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "104",
+      "councillorName": "Bulelwa Mayende",
+      "party": "African National Congress",
+      "subcouncil": "3",
+      "suburbs": [
+        "Brentwood Park",
+        "Cape Farms",
+        "District B",
+        "Du Noon",
+        "Killarney Gardens",
+        "Racing Park",
+        "The Stables"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "105",
+      "councillorName": "Francois Berry",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Cape Farms",
+        "Clara Anna Fontein",
+        "Durbanville",
+        "Durmonte",
+        "Fisantekraal",
+        "Fisantekraal Industrial",
+        "Graanendal",
+        "Greenville Garden City",
+        "Joostenbergvlakte Smallholdings",
+        "Klipheuwel Housing Scheme",
+        "Mikpunt",
+        "Paarl Farms",
+        "Philadelphia",
+        "Proteaville",
+        "Ruitershoogte",
+        "Schoongezicht",
+        "The Crest",
+        "Vierlanden",
+        "Welgevonden",
+        "Wellway Park",
+        "Westerdale"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "106",
+      "councillorName": "Nobanathi Matutu (Luthango)",
+      "party": "African National Congress",
+      "subcouncil": "5",
+      "suburbs": [
+        "Delft 6",
+        "Delft 7",
+        "The Delft Cemetery - Delft South",
+        "Delft Main Road",
+        "Welwitschia Crescent",
+        "Basboom Road And Cheesewood Roa",
+        "Delft 8",
+        "Delft 9",
+        "Delft South",
+        "Basboom Road",
+        "Eindhoven",
+        "Leiden",
+        "Including Delft Cleansing Depot"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "107",
+      "councillorName": "Jonathan Mills",
+      "party": "Democratic Alliance",
+      "subcouncil": "1",
+      "suburbs": [
+        "Blouberg Sands"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "108",
+      "councillorName": "Nkosiphendule Lombi",
+      "party": "AFRICAN NATIONAL CONGRESS",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "NOT on City of Cape Town's current live councillor listing (seat may be vacant/pending by-election) \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "109",
+      "councillorName": "Peter Helfrich",
+      "party": "Democratic Alliance",
+      "subcouncil": "8",
+      "suburbs": [
+        "Bell Glen",
+        "Brandwacht",
+        "Chris Hani Park",
+        "Croydon",
+        "Deaconville",
+        "Deepfreeze",
+        "Eersterivier South",
+        "Faure",
+        "Firgrove",
+        "Firgrove Rural",
+        "Kelderhof",
+        "Macassar",
+        "Macassar Village",
+        "Marvin Park",
+        "Olive Estate",
+        "Riverside",
+        "Sandvlei",
+        "Sitari Country Estate",
+        "Smartie Town",
+        "Vineyard Estate"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "110",
+      "councillorName": "Shanen Rossouw",
+      "party": "Democratic Alliance",
+      "subcouncil": "18",
+      "suburbs": [
+        "Grassy Park",
+        "Eighth Avenue",
+        "Geelhout Street",
+        "Italian Road And Eighth Avenue",
+        "Lavender Hill",
+        "Retreat"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "111",
+      "councillorName": "Brenda Hansen",
+      "party": "Democratic Alliance",
+      "subcouncil": "2",
+      "suburbs": [
+        "Belmont Park",
+        "Bracken Heights",
+        "Brackenfell Central",
+        "Brackenfell Industria",
+        "Edenpark",
+        "Eikendal",
+        "Kraaifontein Industria",
+        "Morgenster",
+        "Morgenster Heights",
+        "Okavango Park",
+        "Peerless Park East",
+        "Peerless Park West",
+        "Scottsville",
+        "Springbokpark",
+        "St Michaels"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "112",
+      "councillorName": "Theresa Uys",
+      "party": "Democratic Alliance",
+      "subcouncil": "7",
+      "suburbs": [
+        "Arauna",
+        "Aurora",
+        "Durbanvale",
+        "Durbanville CBD",
+        "Durbanville Hills",
+        "Durbanville Meadows",
+        "Durbanville",
+        "Goedemoed",
+        "Langeberg Village",
+        "Morningstar",
+        "Natures Valley",
+        "Nerina",
+        "Pinehurst",
+        "Rosedale",
+        "Sonstraal",
+        "Vergesig",
+        "Wairoa",
+        "Wellway Park East"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "113",
+      "councillorName": "Susan van der Linde",
+      "party": "Democratic Alliance",
+      "subcouncil": "3",
+      "suburbs": [
+        "District B",
+        "Flamingo Vlei",
+        "Killarney Gardens",
+        "Milnerton",
+        "The Diep River",
+        "Koeberg Road And Plattekloof Road",
+        "Parklands",
+        "Sunridge",
+        "Table View",
+        "Westriding"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "114",
+      "councillorName": "Ernest Madikane",
+      "party": "African National Congress",
+      "subcouncil": "14",
+      "suburbs": [
+        "Blue Downs",
+        "Brentwood Park",
+        "Driftsands",
+        "Mfuleni",
+        "O. Nqubelani Street",
+        "Main Road And Mfuleni Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "115",
+      "councillorName": "Ian McMahon",
+      "party": "Democratic Alliance",
+      "subcouncil": "16",
+      "suburbs": [
+        "Cape Town City Centre",
+        "Chiappini Street",
+        "Caste Street",
+        "Rose Street And Buitengracht Street",
+        "District Six",
+        "Tennant Street",
+        "Keizergracht Road",
+        "Foreshore",
+        "Gardens",
+        "Green Point",
+        "Northen Slope Of Lions Rump",
+        "Salt River",
+        "Three Anchor Bay",
+        "Woodstock",
+        "Mountain Road",
+        "Victoria Road And Salt River Road"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    },
+    {
+      "wardNumber": "116",
+      "councillorName": "Solomon Philander",
+      "party": "Democratic Alliance",
+      "subcouncil": "12",
+      "suburbs": [
+        "Beacon Valley",
+        "The Imperial Primary School - Eastridge",
+        "Eastridge"
+      ],
+      "source": "capetown.gov.za Council Hub Online (live), fetched 2026-09-25",
+      "sourceUrl": "https://web1.capetown.gov.za/web1/councilhubonline/"
+    }
+  ]
+}

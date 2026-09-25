@@ -1,0 +1,821 @@
+{
+  "source": "IEC official councillor list, LGE2021_Councillors_9_Nov_2021.pdf, https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+  "asOf": "2021-11-09",
+  "caveat": "As-declared at the 2021 Local Government Election. Does NOT reflect any subsequent by-election, resignation, or death over the last ~5 years. Cross-checked against City of Johannesburg Ward 115 (Mark Van Der Merwe, DA) as a known-correct control row \u2014 matched exactly.",
+  "municipality": "City of Cape Town",
+  "wardCount": 116,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "municipalityId": "coct",
+      "councillorSurname": "VISSER",
+      "councillorFirstNames": "CHERYL LINSEY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "2",
+      "municipalityId": "coct",
+      "councillorSurname": "CANNON",
+      "councillorFirstNames": "ROGER WILLIAM",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "3",
+      "municipalityId": "coct",
+      "councillorSurname": "VAN ZYL",
+      "councillorFirstNames": "ANNELIZE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "4",
+      "municipalityId": "coct",
+      "councillorSurname": "BENADIE",
+      "councillorFirstNames": "ANTHONY MAXIMILIAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "5",
+      "municipalityId": "coct",
+      "councillorSurname": "CARSTENS",
+      "councillorFirstNames": "HELEN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "6",
+      "municipalityId": "coct",
+      "councillorSurname": "NODLIWA",
+      "councillorFirstNames": "SIVIWE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "7",
+      "municipalityId": "coct",
+      "councillorSurname": "TWIGG",
+      "councillorFirstNames": "GABRIEL GRANT",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "8",
+      "municipalityId": "coct",
+      "councillorSurname": "NIEUWOUDT",
+      "councillorFirstNames": "MARIAN JULLIAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "9",
+      "municipalityId": "coct",
+      "councillorSurname": "KLEINSMITH",
+      "councillorFirstNames": "MERCIA ELMARIE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "10",
+      "municipalityId": "coct",
+      "councillorSurname": "VISSER",
+      "councillorFirstNames": "JACOLINE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "11",
+      "municipalityId": "coct",
+      "councillorSurname": "DE VOS",
+      "councillorFirstNames": "PIETER WOUTER",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "12",
+      "municipalityId": "coct",
+      "councillorSurname": "JAFTHA",
+      "councillorFirstNames": "WILLIE DESMOND",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "13",
+      "municipalityId": "coct",
+      "councillorSurname": "ADONIS",
+      "councillorFirstNames": "MICHELLE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "14",
+      "municipalityId": "coct",
+      "councillorSurname": "MAR\u00c9",
+      "councillorFirstNames": "KARIENA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "15",
+      "municipalityId": "coct",
+      "councillorSurname": "PECK",
+      "councillorFirstNames": "GREGORY CHARLES",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "16",
+      "municipalityId": "coct",
+      "councillorSurname": "BARENDS",
+      "councillorFirstNames": "URSULA MARY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "17",
+      "municipalityId": "coct",
+      "councillorSurname": "SAULS",
+      "councillorFirstNames": "FRANS ANTHONY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "18",
+      "municipalityId": "coct",
+      "councillorSurname": "KOPMAN",
+      "councillorFirstNames": "NTOMBOXOLO FLORENCE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "19",
+      "municipalityId": "coct",
+      "councillorSurname": "SAWANT",
+      "councillorFirstNames": "EBRAHIM",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "20",
+      "municipalityId": "coct",
+      "councillorSurname": "MASIU",
+      "councillorFirstNames": "DINEO ZANDILE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "21",
+      "municipalityId": "coct",
+      "councillorSurname": "TERBLANCHE",
+      "councillorFirstNames": "HENDRI PETRUS",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "22",
+      "municipalityId": "coct",
+      "councillorSurname": "MARTLOW",
+      "councillorFirstNames": "JOHANNA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "23",
+      "municipalityId": "coct",
+      "councillorSurname": "SWART",
+      "councillorFirstNames": "PAUL STEPHANUS",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "24",
+      "municipalityId": "coct",
+      "councillorSurname": "TAUSE",
+      "councillorFirstNames": "PHUMLA PATRICIA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "25",
+      "municipalityId": "coct",
+      "councillorSurname": "VAN REENEN",
+      "councillorFirstNames": "BEVERLEY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "26",
+      "municipalityId": "coct",
+      "councillorSurname": "WALKER",
+      "councillorFirstNames": "FRANCHESCA CRECENCIA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "27",
+      "municipalityId": "coct",
+      "councillorSurname": "JANSE VAN RENSBURG",
+      "councillorFirstNames": "CECILE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "28",
+      "municipalityId": "coct",
+      "councillorSurname": "JORDAAN",
+      "councillorFirstNames": "CHRISTOPHER",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "29",
+      "municipalityId": "coct",
+      "councillorSurname": "LIGHTBURN",
+      "councillorFirstNames": "ALLISTER GEROME",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "30",
+      "municipalityId": "coct",
+      "councillorSurname": "JACOBS",
+      "councillorFirstNames": "BONITA MARGARET",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "31",
+      "municipalityId": "coct",
+      "councillorSurname": "THOMPSON",
+      "councillorFirstNames": "THERESA BERENIECE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "32",
+      "municipalityId": "coct",
+      "councillorSurname": "RAISE",
+      "councillorFirstNames": "MOOSA HENDRIK",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "33",
+      "municipalityId": "coct",
+      "councillorSurname": "SOMDAKA",
+      "councillorFirstNames": "LUNGISA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "34",
+      "municipalityId": "coct",
+      "councillorSurname": "GADENI",
+      "councillorFirstNames": "MELIKHAYA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "35",
+      "municipalityId": "coct",
+      "councillorSurname": "CHITHA",
+      "councillorFirstNames": "MBONISWA NELSON",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "36",
+      "municipalityId": "coct",
+      "councillorSurname": "NTSHWEZA",
+      "councillorFirstNames": "NCEBA AUGUSTINE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "37",
+      "municipalityId": "coct",
+      "councillorSurname": "MARTIN",
+      "councillorFirstNames": "LIONEL",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "38",
+      "municipalityId": "coct",
+      "councillorSurname": "NTAMO",
+      "councillorFirstNames": "GLADSTONE TEMBISILE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "39",
+      "municipalityId": "coct",
+      "councillorSurname": "MJUZA",
+      "councillorFirstNames": "THEMBINKOSI MATHEW",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "40",
+      "municipalityId": "coct",
+      "councillorSurname": "NGCOMBOLO",
+      "councillorFirstNames": "BONGANI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "41",
+      "municipalityId": "coct",
+      "councillorSurname": "SONYOKA",
+      "councillorFirstNames": "LINDILE PARTMOS",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "42",
+      "municipalityId": "coct",
+      "councillorSurname": "ESAU",
+      "councillorFirstNames": "CHARLES JOHANNES",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "43",
+      "municipalityId": "coct",
+      "councillorSurname": "JANSEN",
+      "councillorFirstNames": "ELTON-ENRIQUE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "44",
+      "municipalityId": "coct",
+      "councillorSurname": "MOSES",
+      "councillorFirstNames": "ANTHONY CHARLES",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "45",
+      "municipalityId": "coct",
+      "councillorSurname": "MARR",
+      "councillorFirstNames": "MANDY JOYCE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "46",
+      "municipalityId": "coct",
+      "councillorSurname": "CASSIEM",
+      "councillorFirstNames": "MOGAMAT ASLAM",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "47",
+      "municipalityId": "coct",
+      "councillorSurname": "VAN DER RHEEDE",
+      "councillorFirstNames": "ANTONIO ALFRED",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "48",
+      "municipalityId": "coct",
+      "councillorSurname": "BADROODIEN",
+      "councillorFirstNames": "ZAHID AHMED",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "49",
+      "municipalityId": "coct",
+      "councillorSurname": "ADAMS",
+      "councillorFirstNames": "RASHID",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "50",
+      "municipalityId": "coct",
+      "councillorSurname": "MCKENZIE",
+      "councillorFirstNames": "ANGUS PATRICK",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "51",
+      "municipalityId": "coct",
+      "councillorSurname": "PHAKADE",
+      "councillorFirstNames": "LWAZI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "52",
+      "municipalityId": "coct",
+      "councillorSurname": "NYAMAKAZI",
+      "councillorFirstNames": "THEMBELANI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "53",
+      "municipalityId": "coct",
+      "councillorSurname": "DAVIDS",
+      "councillorFirstNames": "RIAD",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "54",
+      "municipalityId": "coct",
+      "councillorSurname": "JOWELL",
+      "councillorFirstNames": "NICOLA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "55",
+      "municipalityId": "coct",
+      "councillorSurname": "AH-SING",
+      "councillorFirstNames": "FABIAN KEVIN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "56",
+      "municipalityId": "coct",
+      "councillorSurname": "JACOBS",
+      "councillorFirstNames": "HELEN WINIFRED",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "57",
+      "municipalityId": "coct",
+      "councillorSurname": "MOHAMED",
+      "councillorFirstNames": "YUSUF",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "58",
+      "municipalityId": "coct",
+      "councillorSurname": "CHRISTIE",
+      "councillorFirstNames": "KATHERINE ALEXANDRA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "59",
+      "municipalityId": "coct",
+      "councillorSurname": "MANUEL",
+      "councillorFirstNames": "MIKHAIL",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "60",
+      "municipalityId": "coct",
+      "councillorSurname": "KLEINSCHMIDT",
+      "councillorFirstNames": "MARK REGINALD HERMAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "61",
+      "municipalityId": "coct",
+      "councillorSurname": "LIELL COCK",
+      "councillorFirstNames": "SIMON PATRICK",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "62",
+      "municipalityId": "coct",
+      "councillorSurname": "LANGENHOVEN",
+      "councillorFirstNames": "EMILE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "63",
+      "municipalityId": "coct",
+      "councillorSurname": "SIEBRITZ",
+      "councillorFirstNames": "CARMEN CECILIA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "64",
+      "municipalityId": "coct",
+      "councillorSurname": "K\u00dcHL",
+      "councillorFirstNames": "AIMEE ELISABETH",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "65",
+      "municipalityId": "coct",
+      "councillorSurname": "NELSON",
+      "councillorFirstNames": "DONOVAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "66",
+      "municipalityId": "coct",
+      "councillorSurname": "AKIM",
+      "councillorFirstNames": "WILLIAM JOHN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "67",
+      "municipalityId": "coct",
+      "councillorSurname": "GORDON",
+      "councillorFirstNames": "GERALDINE ETHEL",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "68",
+      "municipalityId": "coct",
+      "councillorSurname": "PETERSEN",
+      "councillorFirstNames": "MARITA JOHANNA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "69",
+      "municipalityId": "coct",
+      "councillorSurname": "FRANCKE",
+      "councillorFirstNames": "PATRICIA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "70",
+      "municipalityId": "coct",
+      "councillorSurname": "VILJOEN",
+      "councillorFirstNames": "RONEL",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "71",
+      "municipalityId": "coct",
+      "councillorSurname": "FRANKLIN",
+      "councillorFirstNames": "CAROLYNNE VICTORIA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "72",
+      "municipalityId": "coct",
+      "councillorSurname": "SOUTHGATE",
+      "councillorFirstNames": "KEVIN GRAHAM",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "73",
+      "municipalityId": "coct",
+      "councillorSurname": "ANDREWS",
+      "councillorFirstNames": "EDWIN PETER",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "74",
+      "municipalityId": "coct",
+      "councillorSurname": "QUINTAS",
+      "councillorFirstNames": "ROBERTO MIGUEL",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "75",
+      "municipalityId": "coct",
+      "councillorSurname": "WOODMAN",
+      "councillorFirstNames": "JOAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "76",
+      "municipalityId": "coct",
+      "councillorSurname": "PLAATJIES",
+      "councillorFirstNames": "AVRON",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "77",
+      "municipalityId": "coct",
+      "councillorSurname": "HIGHAM",
+      "councillorFirstNames": "FRANCINE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "78",
+      "municipalityId": "coct",
+      "councillorSurname": "TIMM",
+      "councillorFirstNames": "GOAWA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "79",
+      "municipalityId": "coct",
+      "councillorSurname": "CHRISTIANS",
+      "councillorFirstNames": "DANIEL JOHN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "80",
+      "municipalityId": "coct",
+      "councillorSurname": "PAYIYA",
+      "councillorFirstNames": "BENNET LINDIKAYA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "81",
+      "municipalityId": "coct",
+      "councillorSurname": "POTTS",
+      "councillorFirstNames": "ASHLEY JOHN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "82",
+      "municipalityId": "coct",
+      "councillorSurname": "HARRIS",
+      "councillorFirstNames": "WASHIELA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "83",
+      "municipalityId": "coct",
+      "councillorSurname": "PUNT",
+      "councillorFirstNames": "CARL BERNARD",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "84",
+      "municipalityId": "coct",
+      "councillorSurname": "MCFARLANE",
+      "councillorFirstNames": "NORMAN WILFRED",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "85",
+      "municipalityId": "coct",
+      "councillorSurname": "CERFONTEIN",
+      "councillorFirstNames": "CHANTAL SHIREEN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "86",
+      "municipalityId": "coct",
+      "councillorSurname": "DINISO",
+      "councillorFirstNames": "XOLANI DIVINE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "87",
+      "municipalityId": "coct",
+      "councillorSurname": "KAMA",
+      "councillorFirstNames": "KHAYALETHU",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "88",
+      "municipalityId": "coct",
+      "councillorSurname": "SOPHAZI",
+      "councillorFirstNames": "ZUKISANI WELCOME",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "89",
+      "municipalityId": "coct",
+      "councillorSurname": "GXASHEKA",
+      "councillorFirstNames": "KAYALETHU WISEMAN",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "90",
+      "municipalityId": "coct",
+      "councillorSurname": "SIMANGWENI",
+      "councillorFirstNames": "LUKHANYO",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "91",
+      "municipalityId": "coct",
+      "councillorSurname": "MPENGEZI",
+      "councillorFirstNames": "THANDO",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "92",
+      "municipalityId": "coct",
+      "councillorSurname": "ADONIS",
+      "councillorFirstNames": "NORMAN ROBERT",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "93",
+      "municipalityId": "coct",
+      "councillorSurname": "PIMPI",
+      "councillorFirstNames": "THANDO INNOCENT",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "94",
+      "municipalityId": "coct",
+      "councillorSurname": "PETER",
+      "councillorFirstNames": "XOLISA GLORIA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "95",
+      "municipalityId": "coct",
+      "councillorSurname": "TETANI",
+      "councillorFirstNames": "AYANDA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "96",
+      "municipalityId": "coct",
+      "councillorSurname": "MBIZA",
+      "councillorFirstNames": "LUCKY NHLANHLA",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "97",
+      "municipalityId": "coct",
+      "councillorSurname": "MKUTSWANA",
+      "councillorFirstNames": "MTHWALO ALFRED",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "98",
+      "municipalityId": "coct",
+      "councillorSurname": "GABUZA",
+      "councillorFirstNames": "ANELE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "99",
+      "municipalityId": "coct",
+      "councillorSurname": "MQINA",
+      "councillorFirstNames": "LONWABO MLULEKI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "100",
+      "municipalityId": "coct",
+      "councillorSurname": "STACEY",
+      "councillorFirstNames": "SEAN LENNON",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "101",
+      "municipalityId": "coct",
+      "councillorSurname": "DUKA",
+      "councillorFirstNames": "SIYABONGA SOLLY",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "102",
+      "municipalityId": "coct",
+      "councillorSurname": "BRESLER",
+      "councillorFirstNames": "RHYNHARDT",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "103",
+      "municipalityId": "coct",
+      "councillorSurname": "FOURIE",
+      "councillorFirstNames": "GERHARD DAWID",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "104",
+      "municipalityId": "coct",
+      "councillorSurname": "MAKUWA",
+      "councillorFirstNames": "MEISIE SARAH",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "105",
+      "municipalityId": "coct",
+      "councillorSurname": "BENEKE",
+      "councillorFirstNames": "RUAN",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "106",
+      "municipalityId": "coct",
+      "councillorSurname": "LUTHANGO",
+      "councillorFirstNames": "NOBANATHI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "107",
+      "municipalityId": "coct",
+      "councillorSurname": "RHEEDER",
+      "councillorFirstNames": "NICOLETTE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "108",
+      "municipalityId": "coct",
+      "councillorSurname": "LOMBI",
+      "councillorFirstNames": "NKOSIPHENDULE",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "109",
+      "municipalityId": "coct",
+      "councillorSurname": "HELFRICH",
+      "councillorFirstNames": "PETER GEORGE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "110",
+      "municipalityId": "coct",
+      "councillorSurname": "ROSSOUW",
+      "councillorFirstNames": "SHANEN JOYCE",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "111",
+      "municipalityId": "coct",
+      "councillorSurname": "HANSEN",
+      "councillorFirstNames": "BRENDA",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "112",
+      "municipalityId": "coct",
+      "councillorSurname": "UYS",
+      "councillorFirstNames": "THERESA AUDRY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "113",
+      "municipalityId": "coct",
+      "councillorSurname": "SOLOMON",
+      "councillorFirstNames": "JOY",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "114",
+      "municipalityId": "coct",
+      "councillorSurname": "MADIKANE",
+      "councillorFirstNames": "ERNEST MONGEZI",
+      "party": "AFRICAN NATIONAL CONGRESS"
+    },
+    {
+      "wardNumber": "115",
+      "municipalityId": "coct",
+      "councillorSurname": "MC MAHON",
+      "councillorFirstNames": "IAN PATRICK",
+      "party": "DEMOCRATIC ALLIANCE"
+    },
+    {
+      "wardNumber": "116",
+      "municipalityId": "coct",
+      "councillorSurname": "PHILANDER",
+      "councillorFirstNames": "SOLOMON",
+      "party": "DEMOCRATIC ALLIANCE"
+    }
+  ]
+}
