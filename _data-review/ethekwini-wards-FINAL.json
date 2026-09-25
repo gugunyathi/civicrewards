@@ -1,0 +1,1118 @@
+{
+  "municipality": "eThekwini Metropolitan Municipality (Durban)",
+  "municipalityId": "ethekwini",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 111,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Braveman Thembubuhle Ntuli",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Wilfred Makhosini Luthuli",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Mpilenhle Eldridge Mkhize",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Petros Hella Nxumalo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Sbusiso Blessing Ngcongo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Freedom Nkosinathi Majola",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Luthando Bulelani Sonwabile Jali",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Marco Mbambo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Nonsikelelo Pearl Msomi",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Terence Peter Collins",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Graeme Derek Clarivette",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Dumsane Maxwell Nsundwane",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Reginald Cloete",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Gabriel Mthokozisi Gasa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Thembelani Ephraime Shezi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "David Bongani Ngubane",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Sibusiso Nonoza Cedrick Khwela",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Melanie Brauteseth",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Sikhanyiso Desmond Hlongwa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Khulekani Terrence Mbhele",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Nelisiwe Nesta Nyanisa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Mirriam Vumile Nzimande-Madlala",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Alicia Kissoon",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Hugh Sikhumbuzo Makhathini",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Themba Jetro Mkhize",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Sbusiso Welcome Lushaba",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Ernest Grenville Smith",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Ntandoyenkosi Lucky Khuzwayo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Bhekisisa Richard Mngadi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Warren Jerome De Marigny Burne",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Remona Letisha Mckenzie",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Mzokuthoba Rotas Mngonyama",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Sakhile Mngadi",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Ashok Maharajh",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Nicole Jane Bollman",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Shontel Veronica De Boer",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Ntombizodwa Jephrina Maphumulo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Muzikayise Thusi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Mzwethu Sandile Gwala",
+      "party": "Inkatha Freedom Party",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Sithembiso Kenneth Mzimela",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Jacob Nhlanhla Sibisi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Derrick Fisokuhle Mngadi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Gloria Nelisiwe Mhlongo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Bhekokwakhe Welcome Phewa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Mafi Zondi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Sihle Herman Mazibuko",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Phiwayinkosi Cedric Ntshangase",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Michelle Lutchmen",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Danovan Pillay",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Eurika Lyndal Singh",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Managi Johnson",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Samier Singh",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Nonceba Thelma Tyelinzima",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Themba Joseph Mnguni",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Siyabonga Patrick Mfeka",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Siyabonga Hopewell Ntombela",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "Vincent Kunju",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Geoffrey Douglas Ayrton Pullan",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Nkosiyezwe Moyawezwi Mhlongo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Witness Fakazi Mdletshe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "61",
+      "councillorName": "Nagammah Munien",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "62",
+      "councillorName": "Thobekani Hudson Nene",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "63",
+      "councillorName": "Jan Christoffel Van Den Berg",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "64",
+      "councillorName": "Gavin James Hegter",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "65",
+      "councillorName": "Samantha Magdalene Windvogel",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "66",
+      "councillorName": "Zo\u00eb Adele Solomon",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "67",
+      "councillorName": "Sipepelo Mnyandu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "68",
+      "councillorName": "Aubrey Desmond Snyman",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "69",
+      "councillorName": "Ganas Govender",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "70",
+      "councillorName": "Sathasivan Govender",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "71",
+      "councillorName": "Fatima Ismail",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "72",
+      "councillorName": "Sibusiso Bhekisisa Mpanza",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "73",
+      "councillorName": "Devaraj Rama Pillay",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "74",
+      "councillorName": "Octavia Nolubabalo Zondi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "75",
+      "councillorName": "Blessed Sibusiso Sivetye",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "76",
+      "councillorName": "Jabulani Bhekisisa Maphumulo",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "77",
+      "councillorName": "Anoop Rampersad",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "78",
+      "councillorName": "Zakhele Ozias Mnomiya",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "79",
+      "councillorName": "Khumbulani Professor Michael Cele",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "80",
+      "councillorName": "Lindiwe Isabel Msomi",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "81",
+      "councillorName": "Thamisanqa Desmond Mthethwa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "82",
+      "councillorName": "Sibusiso Blessing Cele",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "83",
+      "councillorName": "Bhekizazi Vincent Mngwengwe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "84",
+      "councillorName": "Msizi Enerst Mabaso",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "85",
+      "councillorName": "Sphelele Gabriel Nene",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "86",
+      "councillorName": "Sizwe Stanley Sandisele Mthethwa",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "87",
+      "councillorName": "Brian Sizwe Bonginkosi Sindane",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "88",
+      "councillorName": "Thembinkosi Ziphozonke Mathe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "89",
+      "councillorName": "Mbangeni Bhekisisa Mjadu",
+      "party": "Inkatha Freedom Party",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "90",
+      "councillorName": "Dharmanand Rugbeer Nowbuth",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "91",
+      "councillorName": "Lungisani Conrad Sikakane",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "92",
+      "councillorName": "Wonderboy Masoka Mazibuko",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "93",
+      "councillorName": "Thabisile Gloria Zungu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "94",
+      "councillorName": "Nomvula Prudence Hlomuka",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "95",
+      "councillorName": "Thokozani Vivian Xulu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "96",
+      "councillorName": "Thembelihle Goodhope Makhanya",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "97",
+      "councillorName": "Andr\u00e9 Beetge",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "98",
+      "councillorName": "Mfanafuthi Arthur Jokweni",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "99",
+      "councillorName": "Mnqobi Victor Molife",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "100",
+      "councillorName": "Mbuyiseni Percival Mkhize",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "101",
+      "councillorName": "Simon Siyabonga Mkhize",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "102",
+      "councillorName": "Rory Dean Macpherson",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "103",
+      "councillorName": "Minenhle Calvin Mkhize",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "104",
+      "councillorName": "Nkululeko Sizwe Ndlovu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "105",
+      "councillorName": "Ayanda Brightman Ndlovu",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "106",
+      "councillorName": "Johnson Chetty",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "107",
+      "councillorName": "Njabulo Ntuli",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "108",
+      "councillorName": "Falakhe Obrien Gcabashe",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "109",
+      "councillorName": "Menzi Wilfred Manqele",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "110",
+      "councillorName": "Aamir Abdul",
+      "party": "Democratic Alliance",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "111",
+      "councillorName": "Innocent Mhlengi Shinga",
+      "party": "African National Congress",
+      "subcouncil": null,
+      "suburbs": [],
+      "source": "IEC 2021-as-elected result (LGE2021_Councillors_9_Nov_2021.pdf) \u2014 no equivalent live eThekwini councillor-lookup tool with structured per-ward data was found; the municipality's own 2025 'Know Your Councillors' poster (durban.gov.za) was used only as an informal cross-check, not a structured source, and confirmed an exact name+party match on 5 sampled wards (1, 24, 46, 68, 90), suggesting no by-election changes since 2021 for those wards.",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    }
+  ]
+}
