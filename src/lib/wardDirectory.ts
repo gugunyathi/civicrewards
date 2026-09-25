@@ -24,7 +24,7 @@ export const TOP_MUNICIPALITIES: Municipality[] = [
   { id: "nelson-mandela-bay", name: "Nelson Mandela Bay Metropolitan Municipality (Gqeberha)", abbreviation: "NMBM", connected: true },
   { id: "buffalo-city", name: "Buffalo City Metropolitan Municipality (East London)", abbreviation: "BCMM", connected: true },
   { id: "mangaung", name: "Mangaung Metropolitan Municipality (Bloemfontein)", abbreviation: "MMM", connected: true },
-  { id: "msunduzi", name: "Msunduzi Local Municipality (Pietermaritzburg)", abbreviation: "Msunduzi", connected: false },
+  { id: "msunduzi", name: "Msunduzi Local Municipality (Pietermaritzburg)", abbreviation: "Msunduzi", connected: true },
 ];
 
 export interface WardListing {
@@ -321,6 +321,50 @@ const ETHEKWINI_WARDS: WardListing[] = [
     { wardNumber: "109", municipalityId: "ethekwini", regionName: "Area not yet listed", councillorName: "Menzi Wilfred Manqele", approved: false, residentEstimate: null },
     { wardNumber: "110", municipalityId: "ethekwini", regionName: "Area not yet listed", councillorName: "Aamir Abdul", approved: false, residentEstimate: null },
     { wardNumber: "111", municipalityId: "ethekwini", regionName: "Area not yet listed", councillorName: "Innocent Mhlengi Shinga", approved: false, residentEstimate: null },
+];
+
+const MSUNDUZI_WARDS: WardListing[] = [
+    { wardNumber: "1", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Khulekani Msomi", approved: false, residentEstimate: null },
+    { wardNumber: "2", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Mbongeni Zuma", approved: false, residentEstimate: null },
+    { wardNumber: "3", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Skhanyiso Cyril Makhaye", approved: false, residentEstimate: null },
+    { wardNumber: "4", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Hamilton Mlungisi Zondi", approved: false, residentEstimate: null },
+    { wardNumber: "5", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Nkosinathi Maxwell Mbanjwa", approved: false, residentEstimate: null },
+    { wardNumber: "6", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Kwazikwakhe Emmanuel Madonda", approved: false, residentEstimate: null },
+    { wardNumber: "7", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Bukelani Ephram Zuma", approved: false, residentEstimate: null },
+    { wardNumber: "8", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Mshushisi Aubrey Ngubane", approved: false, residentEstimate: null },
+    { wardNumber: "9", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Nduduzi Caswell Mshengu", approved: false, residentEstimate: null },
+    { wardNumber: "10", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Themba Cyril Ngubane", approved: false, residentEstimate: null },
+    { wardNumber: "11", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sanele Russel Zuma", approved: false, residentEstimate: null },
+    { wardNumber: "12", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Nkosinathi Patrick Masoeu", approved: false, residentEstimate: null },
+    { wardNumber: "13", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Gladness Sibongile Mncwango", approved: false, residentEstimate: null },
+    { wardNumber: "14", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sibusiso Alfred Mkhize", approved: false, residentEstimate: null },
+    { wardNumber: "15", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Msawenkosi Bhengu", approved: false, residentEstimate: null },
+    { wardNumber: "16", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Micheal Bhekabantu Zuma", approved: false, residentEstimate: null },
+    { wardNumber: "17", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Mphilisi Instance Ndlovu", approved: false, residentEstimate: null },
+    { wardNumber: "18", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Simphiwe Samuel Buthelezi", approved: false, residentEstimate: null },
+    { wardNumber: "19", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Percival Vusi Ngwenya", approved: false, residentEstimate: null },
+    { wardNumber: "20", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Siphiwe Phungula", approved: false, residentEstimate: null },
+    { wardNumber: "21", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sbongumusa Zuma", approved: false, residentEstimate: null },
+    { wardNumber: "22", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Thembinkosi Zondi", approved: false, residentEstimate: null },
+    { wardNumber: "23", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Dumisani Bernard Phungula", approved: false, residentEstimate: null },
+    { wardNumber: "24", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sinothi Jerome Nkabini", approved: false, residentEstimate: null },
+    { wardNumber: "25", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Xolani Khanyile", approved: false, residentEstimate: null },
+    { wardNumber: "26", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Ross Bryan Strachan", approved: false, residentEstimate: null },
+    { wardNumber: "27", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Haroon Daniel Kemp", approved: false, residentEstimate: null },
+    { wardNumber: "28", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Renisha Singh", approved: false, residentEstimate: null },
+    { wardNumber: "29", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sphamandla Sydney Madlala", approved: false, residentEstimate: null },
+    { wardNumber: "30", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Rachel Soobiah", approved: false, residentEstimate: null },
+    { wardNumber: "31", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Rooksana Ahmed", approved: false, residentEstimate: null },
+    { wardNumber: "32", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Garth Frederick Wesley Middleton", approved: false, residentEstimate: null },
+    { wardNumber: "33", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Suraya Reddy", approved: false, residentEstimate: null },
+    { wardNumber: "34", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Roy Ram", approved: false, residentEstimate: null },
+    { wardNumber: "35", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Sandile Wellington Dlamini", approved: false, residentEstimate: null },
+    { wardNumber: "36", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Douglas Leslie Roberts", approved: false, residentEstimate: null },
+    { wardNumber: "37", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Edith Elliott", approved: false, residentEstimate: null },
+    { wardNumber: "38", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Godman Nkosivelile Dlamini", approved: false, residentEstimate: null },
+    { wardNumber: "39", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Mbusiswa Hencefort Mkhize", approved: false, residentEstimate: null },
+    { wardNumber: "40", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Jabulisile Joyce Ngubo", approved: false, residentEstimate: null },
+    { wardNumber: "41", municipalityId: "msunduzi", regionName: "Area not yet listed", councillorName: "Mabhungu Moses Mkhize", approved: false, residentEstimate: null },
 ];
 
 // Real data for coj (Ward 115 only) and coct (all 116 wards, added 25 Sep
@@ -688,7 +732,7 @@ export const WARDS_BY_MUNICIPALITY: Record<string, WardListing[]> = {
     { wardNumber: "50", municipalityId: "buffalo-city", regionName: "Kwelerha / Zozo / Tuba / Jongilanga (+2 more)", councillorName: "Anele Gunyazile", approved: false, residentEstimate: null },
   ],
   mangaung: MANGAUNG_WARDS,
-  msunduzi: [],
+  msunduzi: MSUNDUZI_WARDS,
 };
 
 function findWard(wardNumber: string): WardListing | null {

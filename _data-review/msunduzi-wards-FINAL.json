@@ -1,0 +1,296 @@
+{
+  "municipality": "Msunduzi Local Municipality",
+  "municipalityId": "msunduzi",
+  "fetchedAt": "2026-09-25",
+  "wardCount": 41,
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Khulekani Msomi",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Mbongeni Zuma",
+      "party": null,
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Skhanyiso Cyril Makhaye",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Hamilton Mlungisi Zondi",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Nkosinathi Maxwell Mbanjwa",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Kwazikwakhe Emmanuel Madonda",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Bukelani Ephram Zuma",
+      "party": "Independent",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Mshushisi Aubrey Ngubane",
+      "party": "Inkatha Freedom Party",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Nduduzi Caswell Mshengu",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Themba Cyril Ngubane",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Sanele Russel Zuma",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Nkosinathi Patrick Masoeu",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Gladness Sibongile Mncwango",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Sibusiso Alfred Mkhize",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Msawenkosi Bhengu",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Micheal Bhekabantu Zuma",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Mphilisi Instance Ndlovu",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Simphiwe Samuel Buthelezi",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Percival Vusi Ngwenya",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Siphiwe Phungula",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Sbongumusa Zuma",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Thembinkosi Zondi",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Dumisani Bernard Phungula",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Sinothi Jerome Nkabini",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Xolani Khanyile",
+      "party": null,
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Ross Bryan Strachan",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Haroon Daniel Kemp",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Renisha Singh",
+      "party": null,
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Sphamandla Sydney Madlala",
+      "party": null,
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Rachel Soobiah",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Rooksana Ahmed",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Garth Frederick Wesley Middleton",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Suraya Reddy",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Roy Ram",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Sandile Wellington Dlamini",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Douglas Leslie Roberts",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Edith Elliott",
+      "party": "Democratic Alliance",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Godman Nkosivelile Dlamini",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Mbusiswa Hencefort Mkhize",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Jabulisile Joyce Ngubo",
+      "party": "African National Congress",
+      "source": "msunduzi.gov.za live Ward Councillors page, fetched 2026-09-25",
+      "sourceUrl": "http://www.msunduzi.gov.za/site/ward-councillors/index.html"
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Mabhungu Moses Mkhize",
+      "party": "African National Congress",
+      "source": "NOT on Msunduzi's live Ward Councillors page \u2014 falling back to IEC 2021-as-elected result",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    }
+  ]
+}
