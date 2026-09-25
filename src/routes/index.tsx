@@ -44,6 +44,7 @@ import repairCrew from "@/assets/repair-crew.jpg";
 import multilingualCivicUnity from "@/assets/images/multilingual_civic_unity_1789144566953.jpg";
 import { CardPaymentModal, TierInfo, ReceiptData } from "@/components/CardPaymentModal";
 import { ReceiptHistoryModal } from "@/components/ReceiptHistoryModal";
+import { submitPartnerInquiry } from "@/lib/partnerInquiry";
 
 const steps = [
   {
@@ -623,6 +624,8 @@ function Index() {
   const [modalTitle, setModalTitle] = useState("Become a CivicRewards Partner");
   const [modalTrack, setModalTrack] = useState("Regional Supplier");
   const [modalSubmitted, setModalSubmitted] = useState(false);
+  const [modalSubmitting, setModalSubmitting] = useState(false);
+  const [modalError, setModalError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -672,14 +675,33 @@ function Index() {
     setModalTitle(title);
     setModalTrack(track);
     setModalSubmitted(false);
+    setModalError(null);
     setPartnerModalOpen(true);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.fullName || !formData.email) return;
-    if (formData.website) return; // honeypot tripped, silently reject
-    setModalSubmitted(true);
+    setModalSubmitting(true);
+    setModalError(null);
+    try {
+      await submitPartnerInquiry({
+        data: {
+          fullName: formData.fullName,
+          email: formData.email,
+          company: formData.company,
+          metro: formData.metro,
+          track: modalTrack,
+          notes: formData.notes,
+          website: formData.website,
+        },
+      });
+      setModalSubmitted(true);
+    } catch (err) {
+      setModalError(err instanceof Error ? err.message : "Something went wrong, please try again.");
+    } finally {
+      setModalSubmitting(false);
+    }
   };
 
   const filteredRegions = regions.filter((r) => {
@@ -2108,11 +2130,15 @@ function Index() {
                   </button>
                   <button
                     type="submit"
-                    className="rounded-xl bg-brand px-6 py-2.5 text-xs font-bold text-white shadow-md hover:bg-brand-deep transition"
+                    disabled={modalSubmitting}
+                    className="rounded-xl bg-brand px-6 py-2.5 text-xs font-bold text-white shadow-md hover:bg-brand-deep transition disabled:opacity-60"
                   >
-                    Submit Application
+                    {modalSubmitting ? "Submitting..." : "Submit Application"}
                   </button>
                 </div>
+                {modalError && (
+                  <p className="text-xs font-semibold text-rose-600 text-right">{modalError}</p>
+                )}
               </form>
             )}
           </div>
