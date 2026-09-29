@@ -1,9 +1,21 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ExternalLink, Facebook, MessageCircle, Send, ShieldCheck, Twitter } from "lucide-react";
+import {
+  ArrowLeft,
+  ExternalLink,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  MessageCircle,
+  Phone,
+  Send,
+  ShieldCheck,
+  Twitter,
+} from "lucide-react";
 import { getPublicWardSummary, getWardCommunityChannels, type PublicWardSummary, type WardCommunityChannel } from "@/lib/wardDirectory";
 
-export const Route = createFileRoute("/councillor/$wardNumber")({
+export const Route = createFileRoute("/councillor/$municipalityId/$wardNumber")({
   head: () => ({
     meta: [
       { title: "Ward Councillor — CivicRewards" },
@@ -35,19 +47,19 @@ const PLATFORM_LABEL: Record<WardCommunityChannel["platform"], string> = {
 };
 
 function WardProfilePage() {
-  const { wardNumber } = Route.useParams();
+  const { municipalityId, wardNumber } = Route.useParams();
   const [summary, setSummary] = useState<PublicWardSummary | null | "loading">("loading");
   const [channels, setChannels] = useState<WardCommunityChannel[]>([]);
 
   useEffect(() => {
     setSummary("loading");
-    getPublicWardSummary({ data: { wardNumber } })
+    getPublicWardSummary({ data: { municipalityId, wardNumber } })
       .then(setSummary)
       .catch(() => setSummary(null));
     getWardCommunityChannels({ data: { wardNumber } })
       .then(setChannels)
       .catch(() => setChannels([]));
-  }, [wardNumber]);
+  }, [municipalityId, wardNumber]);
 
   return (
     <div className="min-h-screen bg-[#0d1117] text-slate-100 font-sans">
@@ -71,7 +83,7 @@ function WardProfilePage() {
           <div className="rounded-2xl p-8 text-center" style={{ background: CARD, border: `1px solid ${BORDER}` }}>
             <p className="text-sm font-semibold text-slate-200">We don't have this ward yet</p>
             <p className="text-xs text-slate-500 mt-1.5">
-              Ward {wardNumber} isn't in our directory. Only City of Johannesburg's Ward 115 is connected today.
+              Ward {wardNumber} isn't in our directory for that municipality.
             </p>
             <Link
               to="/councillor"
@@ -85,15 +97,44 @@ function WardProfilePage() {
         {summary && summary !== "loading" && (
           <>
             <div className="rounded-2xl p-6" style={{ background: CARD, border: `1px solid ${BORDER}` }}>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
-                {summary.municipalityName}
-              </p>
-              <h1 className="font-extrabold text-xl sm:text-2xl text-white mt-1">
-                Ward {summary.wardNumber} — {summary.regionName}
-              </h1>
-              <p className="text-sm mt-2" style={{ color: summary.councillorName ? ACCENT : "rgba(226,232,240,0.4)" }}>
-                {summary.councillorName ? `Cllr ${summary.councillorName}` : "Unclaimed profile"}
-              </p>
+              <div className="flex items-start gap-4">
+                {summary.photoUrl ? (
+                  <img
+                    src={summary.photoUrl}
+                    alt={summary.councillorName ?? "Councillor"}
+                    className="size-16 sm:size-20 rounded-2xl object-cover shrink-0"
+                    style={{ border: `1px solid ${BORDER}` }}
+                  />
+                ) : (
+                  <div
+                    className="size-16 sm:size-20 rounded-2xl shrink-0 flex items-center justify-center text-lg font-extrabold"
+                    style={{ background: "rgba(198,255,61,0.08)", border: `1px solid ${ACCENT}30`, color: ACCENT }}
+                  >
+                    W{summary.wardNumber}
+                  </div>
+                )}
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <p className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                      {summary.municipalityName}
+                    </p>
+                    {summary.party && (
+                      <span
+                        className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide"
+                        style={{ background: "rgba(255,255,255,0.06)", color: "rgba(226,232,240,0.75)", border: `1px solid ${BORDER}` }}
+                      >
+                        {summary.party}
+                      </span>
+                    )}
+                  </div>
+                  <h1 className="font-extrabold text-xl sm:text-2xl text-white mt-1">
+                    Ward {summary.wardNumber} — {summary.regionName}
+                  </h1>
+                  <p className="text-sm mt-1" style={{ color: summary.councillorName ? ACCENT : "rgba(226,232,240,0.4)" }}>
+                    {summary.councillorName ? `Cllr ${summary.councillorName}` : "Unclaimed profile"}
+                  </p>
+                </div>
+              </div>
 
               <div className="flex flex-wrap gap-2 mt-4">
                 {summary.residentEstimate && (
@@ -108,6 +149,69 @@ function WardProfilePage() {
                 )}
               </div>
 
+              {(summary.email || summary.whatsappNumber || summary.twitterHandle || summary.facebookUrl || summary.instagramHandle || summary.linkedinUrl) && (
+                <div className="flex flex-wrap gap-2 mt-4 pt-4" style={{ borderTop: `1px solid ${BORDER}` }}>
+                  {summary.email && (
+                    <a
+                      href={`mailto:${summary.email}`}
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Mail className="size-3.5" /> Email
+                    </a>
+                  )}
+                  {summary.whatsappNumber && (
+                    <a
+                      href={`https://wa.me/${summary.whatsappNumber.replace(/[^\d]/g, "")}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Phone className="size-3.5" /> WhatsApp
+                    </a>
+                  )}
+                  {summary.twitterHandle && (
+                    <a
+                      href={`https://x.com/${summary.twitterHandle}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Twitter className="size-3.5" /> X
+                    </a>
+                  )}
+                  {summary.facebookUrl && (
+                    <a
+                      href={summary.facebookUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Facebook className="size-3.5" /> Facebook
+                    </a>
+                  )}
+                  {summary.instagramHandle && (
+                    <a
+                      href={`https://instagram.com/${summary.instagramHandle}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Instagram className="size-3.5" /> Instagram
+                    </a>
+                  )}
+                  {summary.linkedinUrl && (
+                    <a
+                      href={summary.linkedinUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-2.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white transition"
+                    >
+                      <Linkedin className="size-3.5" /> LinkedIn
+                    </a>
+                  )}
+                </div>
+              )}
+
               <div className="mt-6">
                 {summary.approved ? (
                   <Link
@@ -120,7 +224,7 @@ function WardProfilePage() {
                 ) : (
                   <Link
                     to="/councillor/dashboard"
-                    search={{ ward: summary.wardNumber }}
+                    search={{ ward: summary.wardNumber, municipality: summary.municipalityId }}
                     className="inline-flex items-center gap-1.5 rounded-xl px-5 py-2.5 text-sm font-bold transition"
                     style={{ background: ACCENT, color: "#0a0a0a" }}
                   >

@@ -15,8 +15,8 @@ import { Route as AdminRouteImport } from './routes/admin'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CouncillorIndexRouteImport } from './routes/councillor/index'
-import { Route as CouncillorWardNumberRouteImport } from './routes/councillor/$wardNumber'
 import { Route as CouncillorDashboardRouteImport } from './routes/councillor/dashboard'
+import { Route as CouncillorMunicipalityIdWardNumberRouteImport } from './routes/councillor/$municipalityId.$wardNumber'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -48,16 +48,17 @@ const CouncillorIndexRoute = CouncillorIndexRouteImport.update({
   path: '/councillor/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CouncillorWardNumberRoute = CouncillorWardNumberRouteImport.update({
-  id: '/councillor/$wardNumber',
-  path: '/councillor/$wardNumber',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const CouncillorDashboardRoute = CouncillorDashboardRouteImport.update({
   id: '/councillor/dashboard',
   path: '/councillor/dashboard',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CouncillorMunicipalityIdWardNumberRoute =
+  CouncillorMunicipalityIdWardNumberRouteImport.update({
+    id: '/councillor/$municipalityId/$wardNumber',
+    path: '/councillor/$municipalityId/$wardNumber',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -65,9 +66,9 @@ export interface FileRoutesByFullPath {
   '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
   '/councillor/dashboard': typeof CouncillorDashboardRoute
   '/councillor/': typeof CouncillorIndexRoute
+  '/councillor/$municipalityId/$wardNumber': typeof CouncillorMunicipalityIdWardNumberRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -75,9 +76,9 @@ export interface FileRoutesByTo {
   '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
   '/councillor/dashboard': typeof CouncillorDashboardRoute
   '/councillor': typeof CouncillorIndexRoute
+  '/councillor/$municipalityId/$wardNumber': typeof CouncillorMunicipalityIdWardNumberRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -86,9 +87,9 @@ export interface FileRoutesById {
   '/admin': typeof AdminRoute
   '/privacy': typeof PrivacyRoute
   '/terms': typeof TermsRoute
-  '/councillor/$wardNumber': typeof CouncillorWardNumberRoute
   '/councillor/dashboard': typeof CouncillorDashboardRoute
   '/councillor/': typeof CouncillorIndexRoute
+  '/councillor/$municipalityId/$wardNumber': typeof CouncillorMunicipalityIdWardNumberRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -98,9 +99,9 @@ export interface FileRouteTypes {
     | '/admin'
     | '/privacy'
     | '/terms'
-    | '/councillor/$wardNumber'
     | '/councillor/dashboard'
     | '/councillor/'
+    | '/councillor/$municipalityId/$wardNumber'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -108,9 +109,9 @@ export interface FileRouteTypes {
     | '/admin'
     | '/privacy'
     | '/terms'
-    | '/councillor/$wardNumber'
     | '/councillor/dashboard'
     | '/councillor'
+    | '/councillor/$municipalityId/$wardNumber'
   id:
     | '__root__'
     | '/'
@@ -118,9 +119,9 @@ export interface FileRouteTypes {
     | '/admin'
     | '/privacy'
     | '/terms'
-    | '/councillor/$wardNumber'
     | '/councillor/dashboard'
     | '/councillor/'
+    | '/councillor/$municipalityId/$wardNumber'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -129,9 +130,9 @@ export interface RootRouteChildren {
   AdminRoute: typeof AdminRoute
   PrivacyRoute: typeof PrivacyRoute
   TermsRoute: typeof TermsRoute
-  CouncillorWardNumberRoute: typeof CouncillorWardNumberRoute
   CouncillorDashboardRoute: typeof CouncillorDashboardRoute
   CouncillorIndexRoute: typeof CouncillorIndexRoute
+  CouncillorMunicipalityIdWardNumberRoute: typeof CouncillorMunicipalityIdWardNumberRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -178,18 +179,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CouncillorIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/councillor/$wardNumber': {
-      id: '/councillor/$wardNumber'
-      path: '/councillor/$wardNumber'
-      fullPath: '/councillor/$wardNumber'
-      preLoaderRoute: typeof CouncillorWardNumberRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/councillor/dashboard': {
       id: '/councillor/dashboard'
       path: '/councillor/dashboard'
       fullPath: '/councillor/dashboard'
       preLoaderRoute: typeof CouncillorDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/councillor/$municipalityId/$wardNumber': {
+      id: '/councillor/$municipalityId/$wardNumber'
+      path: '/councillor/$municipalityId/$wardNumber'
+      fullPath: '/councillor/$municipalityId/$wardNumber'
+      preLoaderRoute: typeof CouncillorMunicipalityIdWardNumberRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -201,9 +202,10 @@ const rootRouteChildren: RootRouteChildren = {
   AdminRoute: AdminRoute,
   PrivacyRoute: PrivacyRoute,
   TermsRoute: TermsRoute,
-  CouncillorWardNumberRoute: CouncillorWardNumberRoute,
   CouncillorDashboardRoute: CouncillorDashboardRoute,
   CouncillorIndexRoute: CouncillorIndexRoute,
+  CouncillorMunicipalityIdWardNumberRoute:
+    CouncillorMunicipalityIdWardNumberRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

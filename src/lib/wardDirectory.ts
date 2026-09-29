@@ -870,12 +870,11 @@ export const WARDS_BY_MUNICIPALITY: Record<string, WardListing[]> = {
   msunduzi: MSUNDUZI_WARDS,
 };
 
-function findWard(wardNumber: string): WardListing | null {
-  for (const municipalityId of Object.keys(WARDS_BY_MUNICIPALITY)) {
-    const match = WARDS_BY_MUNICIPALITY[municipalityId]?.find((w) => w.wardNumber === wardNumber);
-    if (match) return match;
-  }
-  return null;
+// Ward numbers restart at 1 in every municipality — with 783 real wards
+// across 10 metros now (was only Ward 115/coj when this was written),
+// wardNumber alone is not a unique key. municipalityId is required.
+function findWard(municipalityId: string, wardNumber: string): WardListing | null {
+  return WARDS_BY_MUNICIPALITY[municipalityId]?.find((w) => w.wardNumber === wardNumber) ?? null;
 }
 
 function municipalityName(municipalityId: string): string {
@@ -884,35 +883,54 @@ function municipalityName(municipalityId: string): string {
 
 export interface PublicWardSummary {
   wardNumber: string;
+  municipalityId: string;
   regionName: string;
   municipalityName: string;
+  party: string | null;
   councillorName: string | null;
   approved: boolean;
   residentEstimate: string | null;
   openReportCount: number | null;
+  // Populated only when a real councillor has claimed and been approved
+  // for this ward — self-fill data, see civicrewards_councillors and
+  // sql/2026-09-29-councillor-profile-fields.sql.
+  photoUrl: string | null;
+  email: string | null;
+  whatsappNumber: string | null;
+  telegramUsername: string | null;
+  twitterHandle: string | null;
+  facebookUrl: string | null;
+  instagramHandle: string | null;
+  linkedinUrl: string | null;
 }
 
-function validateWardNumber(data: unknown): { wardNumber: string } {
-  const wardNumber = (data as { wardNumber?: unknown })?.wardNumber;
-  if (typeof wardNumber !== "string" || !wardNumber.trim()) {
+function validateWardLookup(data: unknown): { municipalityId: string; wardNumber: string } {
+  const d = data as { municipalityId?: unknown; wardNumber?: unknown };
+  if (typeof d?.wardNumber !== "string" || !d.wardNumber.trim()) {
     throw new Error("Ward number is required");
   }
-  return { wardNumber: wardNumber.trim() };
+  if (typeof d?.municipalityId !== "string" || !d.municipalityId.trim()) {
+    throw new Error("Municipality is required");
+  }
+  return { municipalityId: d.municipalityId.trim(), wardNumber: d.wardNumber.trim() };
 }
 
 // Public, no auth required — this is the directory/profile page's data
 // source. Aggregate-only: never returns a raw ward_reports row or any
 // reporter personal information, only a count, so it's safe to expose to
-// unauthenticated visitors.
+// unauthenticated visitors. Merges in the claimed councillor's own
+// self-fill profile fields (photo/contact/socials) when one exists and is
+// approved — that data lives in civicrewards_councillors, not here, since
+// it's personal and self-reported rather than directory-sourced.
 export const getPublicWardSummary = createServerFn({ method: "POST" })
-  .validator(validateWardNumber)
+  .validator(validateWardLookup)
   .handler(async ({ data }): Promise<PublicWardSummary | null> => {
-    const ward = findWard(data.wardNumber);
+    const ward = findWard(data.municipalityId, data.wardNumber);
     if (!ward) return null;
 
     let openReportCount: number | null = null;
+    const admin = getSupabaseAdmin();
     if (ward.approved) {
-      const admin = getSupabaseAdmin();
       const { data: rows, error } = await admin
         .from("ward_reports")
         .select("status, dismissed_at")
@@ -924,14 +942,47 @@ export const getPublicWardSummary = createServerFn({ method: "POST" })
       }
     }
 
+    let claimed: {
+      photo_url: string | null;
+      email: string | null;
+      whatsapp_number: string | null;
+      telegram_username: string | null;
+      twitter_handle: string | null;
+      facebook_url: string | null;
+      instagram_handle: string | null;
+      linkedin_url: string | null;
+    } | null = null;
+    if (ward.approved) {
+      const { data: row } = await admin
+        .from("civicrewards_councillors")
+        .select(
+          "photo_url, email, whatsapp_number, telegram_username, twitter_handle, facebook_url, instagram_handle, linkedin_url",
+        )
+        .eq("ward_number", ward.wardNumber)
+        .eq("municipality", ward.municipalityId)
+        .eq("approved", true)
+        .maybeSingle();
+      claimed = row ?? null;
+    }
+
     return {
       wardNumber: ward.wardNumber,
+      municipalityId: ward.municipalityId,
       regionName: ward.regionName,
       municipalityName: municipalityName(ward.municipalityId),
+      party: ward.party,
       councillorName: ward.councillorName,
       approved: ward.approved,
       residentEstimate: ward.residentEstimate,
       openReportCount,
+      photoUrl: claimed?.photo_url ?? null,
+      email: claimed?.email ?? null,
+      whatsappNumber: claimed?.whatsapp_number ?? null,
+      telegramUsername: claimed?.telegram_username ?? null,
+      twitterHandle: claimed?.twitter_handle ?? null,
+      facebookUrl: claimed?.facebook_url ?? null,
+      instagramHandle: claimed?.instagram_handle ?? null,
+      linkedinUrl: claimed?.linkedin_url ?? null,
     };
   });
 
@@ -955,13 +1006,29 @@ async function fetchWardCommunityChannels(wardNumber: string): Promise<WardCommu
   return (rows ?? []) as WardCommunityChannel[];
 }
 
+function validateWardNumberOnly(data: unknown): { wardNumber: string } {
+  const wardNumber = (data as { wardNumber?: unknown })?.wardNumber;
+  if (typeof wardNumber !== "string" || !wardNumber.trim()) {
+    throw new Error("Ward number is required");
+  }
+  return { wardNumber: wardNumber.trim() };
+}
+
 // Public, no auth required — residents see these links on the ward profile
 // page. Link storage only, see sql/2026-09-21-ward-community-channels.sql.
 // Swallows errors (returns []) since an unauthenticated visitor shouldn't
 // see a raw "table not found" message — the dashboard-side read below
 // surfaces that to the councillor instead, where it's actionable.
+//
+// KNOWN GAP: ward_telegram_links/ward_community_channels are keyed by
+// ward_number alone, same collision risk findWard() had before 29 Sep
+// 2026 — a claimed channel for e.g. Cape Town ward 1 would currently also
+// show on Johannesburg ward 1's profile page. Not fixed here (would need
+// a municipality_id column + migration on those tables); only Ward 115 has
+// any claimed channels today so it's not live-broken yet, but fix before
+// a second municipality's councillor claims a channel.
 export const getWardCommunityChannels = createServerFn({ method: "POST" })
-  .validator(validateWardNumber)
+  .validator(validateWardNumberOnly)
   .handler(async ({ data }): Promise<WardCommunityChannel[]> => {
     try {
       return await fetchWardCommunityChannels(data.wardNumber);

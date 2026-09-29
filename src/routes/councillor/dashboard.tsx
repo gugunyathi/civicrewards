@@ -15,14 +15,19 @@ import {
   type CouncillorProfile,
   type WardReportSummary,
 } from "@/lib/councillorAuth";
+import { TOP_MUNICIPALITIES } from "@/lib/wardDirectory";
 // Lazy-loaded: this pulls in recharts and react-map-gl/mapbox-gl transitively,
 // which have no reason to be in the homepage's or any other public page's
 // bundle — only the dashboard route (behind sign-in) actually needs them.
 const CouncillorDashboardV2 = lazy(() => import("@/components/councillor/CouncillorDashboardV2"));
 
-function validateSearch(search: Record<string, unknown>): { ward?: string } {
+function validateSearch(search: Record<string, unknown>): { ward?: string; municipality?: string } {
   const ward = search["ward"];
-  return typeof ward === "string" && ward.trim() ? { ward: ward.trim() } : {};
+  const municipality = search["municipality"];
+  return {
+    ...(typeof ward === "string" && ward.trim() ? { ward: ward.trim() } : {}),
+    ...(typeof municipality === "string" && municipality.trim() ? { municipality: municipality.trim() } : {}),
+  };
 }
 
 export const Route = createFileRoute("/councillor/dashboard")({
@@ -65,7 +70,7 @@ async function loadCouncillorState(): Promise<ViewState> {
 }
 
 export default function CouncillorPage() {
-  const { ward: wardFromClaim } = Route.useSearch();
+  const { ward: wardFromClaim, municipality: municipalityFromClaim } = Route.useSearch();
   const [view, setView] = useState<ViewState>({ kind: "checking" });
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -162,6 +167,7 @@ export default function CouncillorPage() {
             setMode={(mode) => setView({ kind: "signedOut", mode })}
             onAuthed={refresh}
             defaultWard={wardFromClaim}
+            defaultMunicipality={municipalityFromClaim}
           />
         )}
 
@@ -200,6 +206,7 @@ function AuthForms({
   setMode,
   onAuthed,
   defaultWard,
+  defaultMunicipality,
 }: {
   mode: "login" | "signup";
   error: string | null;
@@ -209,11 +216,13 @@ function AuthForms({
   setMode: (m: "login" | "signup") => void;
   onAuthed: () => void;
   defaultWard: string | undefined;
+  defaultMunicipality: string | undefined;
 }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
   const [wardNumber, setWardNumber] = useState(defaultWard ?? "115");
+  const [municipalityId, setMunicipalityId] = useState(defaultMunicipality ?? "coj");
   const [signupSent, setSignupSent] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -236,7 +245,7 @@ function AuthForms({
         const { data, error: signUpError } = await supabaseBrowser.auth.signUp({
           email,
           password,
-          options: { data: { full_name: fullName, ward_number: wardNumber } },
+          options: { data: { full_name: fullName, ward_number: wardNumber, municipality_id: municipalityId } },
         });
         if (signUpError) throw new Error(signUpError.message);
         if (data.session) {
@@ -294,6 +303,20 @@ function AuthForms({
               />
             </div>
             <div>
+              <label className="block text-xs font-bold text-slate-300 mb-1">Municipality</label>
+              <select
+                value={municipalityId}
+                onChange={(e) => setMunicipalityId(e.target.value)}
+                className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3.5 py-2.5 text-sm text-slate-100 focus:outline-none focus:ring-1 focus:ring-emerald-400"
+              >
+                {TOP_MUNICIPALITIES.map((m) => (
+                  <option key={m.id} value={m.id}>
+                    {m.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div>
               <label className="block text-xs font-bold text-slate-300 mb-1">Ward Number</label>
               <input
                 type="text"
@@ -304,8 +327,9 @@ function AuthForms({
                 className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3.5 py-2.5 text-sm text-slate-100 focus:outline-none focus:ring-1 focus:ring-emerald-400"
               />
               <p className="mt-1 text-[11px] text-slate-500">
-                Only Ward 115 has real report data connected today. Other wards can sign up but
-                won't see report data yet.
+                Ward numbers repeat across municipalities, so pick your municipality above too — only
+                City of Johannesburg Ward 115 has real report data connected today. Other wards can
+                sign up but won't see report data yet.
               </p>
             </div>
           </>

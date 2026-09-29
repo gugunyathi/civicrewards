@@ -32,14 +32,19 @@ function CouncillorDirectoryPage() {
   const selected = TOP_MUNICIPALITIES.find((m) => m.id === selectedId)!;
 
   useEffect(() => {
+    // Keyed by municipalityId+wardNumber, not wardNumber alone — ward
+    // numbers restart at 1 in every municipality, so "ward 1" in Cape Town
+    // and "ward 1" in Johannesburg would otherwise silently share one
+    // cached count.
     wards.forEach((w) => {
-      if (openCounts[w.wardNumber] !== undefined) return;
-      getPublicWardSummary({ data: { wardNumber: w.wardNumber } })
+      const key = `${w.municipalityId}-${w.wardNumber}`;
+      if (openCounts[key] !== undefined) return;
+      getPublicWardSummary({ data: { municipalityId: w.municipalityId, wardNumber: w.wardNumber } })
         .then((summary) => {
-          setOpenCounts((prev) => ({ ...prev, [w.wardNumber]: summary?.openReportCount ?? null }));
+          setOpenCounts((prev) => ({ ...prev, [key]: summary?.openReportCount ?? null }));
         })
         .catch(() => {
-          setOpenCounts((prev) => ({ ...prev, [w.wardNumber]: null }));
+          setOpenCounts((prev) => ({ ...prev, [key]: null }));
         });
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -195,13 +200,21 @@ function CouncillorDirectoryPage() {
           ) : tab === "wards" ? (
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
               {filteredWards.map((w) => (
-                <WardCard key={w.wardNumber} ward={w} openCount={openCounts[w.wardNumber]} />
+                <WardCard
+                  key={`${w.municipalityId}-${w.wardNumber}`}
+                  ward={w}
+                  openCount={openCounts[`${w.municipalityId}-${w.wardNumber}`]}
+                />
               ))}
             </div>
           ) : (
             <div className="mt-5 flex flex-col gap-2.5">
               {filteredWards.map((w) => (
-                <CouncillorRow key={w.wardNumber} ward={w} openCount={openCounts[w.wardNumber]} />
+                <CouncillorRow
+                  key={`${w.municipalityId}-${w.wardNumber}`}
+                  ward={w}
+                  openCount={openCounts[`${w.municipalityId}-${w.wardNumber}`]}
+                />
               ))}
             </div>
           )}
@@ -211,21 +224,74 @@ function CouncillorDirectoryPage() {
   );
 }
 
+// Split "Baronetcy Estate / De Duin (+10 more)" into the individual named
+// suburbs plus the trailing count, so the card can render them as real
+// chips instead of one truncated line.
+function splitNeighbourhoods(regionName: string): { names: string[]; more: number } {
+  const match = regionName.match(/^(.*?)\s*\(\+(\d+)\s*more\)$/);
+  const base = match?.[1] ?? regionName;
+  const more = match?.[2] ? parseInt(match[2], 10) : 0;
+  const names = base
+    .split("/")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  return { names, more };
+}
+
+function PartyBadge({ party }: { party: string | null }) {
+  if (!party) return null;
+  return (
+    <span
+      className="rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide"
+      style={{ background: "rgba(255,255,255,0.06)", color: "rgba(226,232,240,0.75)", border: `1px solid ${BORDER}` }}
+    >
+      {party}
+    </span>
+  );
+}
+
 function WardCard({ ward: w, openCount }: { ward: WardListing; openCount: number | null | undefined }) {
+  const { names, more } = splitNeighbourhoods(w.regionName);
   return (
     <Link
-      to="/councillor/$wardNumber"
-      params={{ wardNumber: w.wardNumber }}
-      className="block rounded-2xl p-4 transition hover:border-emerald-400/40"
+      to="/councillor/$municipalityId/$wardNumber"
+      params={{ municipalityId: w.municipalityId, wardNumber: w.wardNumber }}
+      className="group block rounded-2xl p-4 transition hover:border-emerald-400/40 hover:shadow-[0_0_0_1px_rgba(198,255,61,0.15),0_8px_24px_-8px_rgba(0,0,0,0.5)]"
       style={{ background: CARD, border: `1px solid ${BORDER}` }}
     >
-      <p className="text-sm font-bold text-white">
-        Ward {w.wardNumber} — {w.regionName}
+      <div className="flex items-center justify-between gap-2">
+        <span
+          className="inline-flex items-center justify-center rounded-lg text-[11px] font-extrabold shrink-0"
+          style={{ width: 30, height: 30, background: "rgba(198,255,61,0.1)", border: `1px solid ${ACCENT}40`, color: ACCENT }}
+        >
+          {w.wardNumber}
+        </span>
+        <PartyBadge party={w.party} />
+      </div>
+
+      <p className="text-sm font-bold text-white mt-3">
+        {w.councillorName ? `Cllr ${w.councillorName}` : "Unclaimed profile"}
       </p>
-      <p className="text-xs mt-1" style={{ color: w.councillorName ? ACCENT : "rgba(226,232,240,0.4)" }}>
-        {w.councillorName ? `Cllr ${w.councillorName}` : "Unclaimed"}
+      <p className="text-[11px] mt-0.5" style={{ color: w.councillorName ? ACCENT : "rgba(226,232,240,0.4)" }}>
+        {w.councillorName ? "Ward councillor" : "Not yet claimed"}
       </p>
-      <div className="flex flex-wrap gap-1.5 mt-3">
+
+      {names.length > 0 && (
+        <div className="flex flex-wrap gap-1 mt-3">
+          {names.slice(0, 4).map((n) => (
+            <span key={n} className="rounded-md bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-slate-400">
+              {n}
+            </span>
+          ))}
+          {(more > 0 || names.length > 4) && (
+            <span className="rounded-md bg-white/[0.04] px-1.5 py-0.5 text-[10px] text-slate-500">
+              +{more || names.length - 4} more
+            </span>
+          )}
+        </div>
+      )}
+
+      <div className="flex flex-wrap gap-1.5 mt-3 pt-3" style={{ borderTop: `1px solid ${BORDER}` }}>
         {w.residentEstimate && (
           <span className="rounded-full bg-slate-800 px-2 py-0.5 text-[10px] font-semibold text-slate-300">
             {w.residentEstimate}
@@ -243,21 +309,30 @@ function CouncillorRow({ ward: w, openCount }: { ward: WardListing; openCount: n
   const unclaimed = !w.councillorName;
   return (
     <Link
-      to="/councillor/$wardNumber"
-      params={{ wardNumber: w.wardNumber }}
+      to="/councillor/$municipalityId/$wardNumber"
+      params={{ municipalityId: w.municipalityId, wardNumber: w.wardNumber }}
       className="flex items-center justify-between gap-4 rounded-2xl p-4 transition hover:border-emerald-400/40"
       style={{ background: CARD, border: `1px solid ${BORDER}` }}
     >
-      <div className="min-w-0">
-        <p
-          className="text-sm font-bold truncate"
-          style={{ color: unclaimed ? "rgba(226,232,240,0.45)" : "white", fontStyle: unclaimed ? "italic" : "normal" }}
+      <div className="min-w-0 flex items-center gap-3">
+        <span
+          className="inline-flex items-center justify-center rounded-lg text-[11px] font-extrabold shrink-0"
+          style={{ width: 30, height: 30, background: "rgba(198,255,61,0.1)", border: `1px solid ${ACCENT}40`, color: ACCENT }}
         >
-          {unclaimed ? "Unclaimed profile" : `Cllr ${w.councillorName}`}
-        </p>
-        <p className="text-xs mt-1 text-slate-400 truncate">
-          Ward {w.wardNumber} — {w.regionName}
-        </p>
+          {w.wardNumber}
+        </span>
+        <div className="min-w-0">
+          <div className="flex items-center gap-2">
+            <p
+              className="text-sm font-bold truncate"
+              style={{ color: unclaimed ? "rgba(226,232,240,0.45)" : "white", fontStyle: unclaimed ? "italic" : "normal" }}
+            >
+              {unclaimed ? "Unclaimed profile" : `Cllr ${w.councillorName}`}
+            </p>
+            <PartyBadge party={w.party} />
+          </div>
+          <p className="text-xs mt-1 text-slate-400 truncate">{w.regionName}</p>
+        </div>
       </div>
       <div className="flex flex-col items-end gap-1.5 shrink-0">
         {w.residentEstimate && (

@@ -104,13 +104,22 @@ export const syncCouncillorProfile = createServerFn({ method: "POST" })
     const { profile } = await requireCouncillorProfile(data.accessToken);
     if (profile) return profile;
 
-    const meta = userData.user.user_metadata as { full_name?: string; ward_number?: string };
+    const meta = userData.user.user_metadata as {
+      full_name?: string;
+      ward_number?: string;
+      municipality_id?: string;
+    };
     if (!meta.full_name || !meta.ward_number) return null;
+    // municipality_id defaults to "coj" for any account created before this
+    // field existed (or via a client that omits it) — matches the pre-
+    // existing behaviour where every ward number implicitly meant CoJ.
+    const municipalityId = meta.municipality_id ?? "coj";
 
     const { error: insertError } = await admin.from("civicrewards_councillors").insert({
       user_id: userData.user.id,
       full_name: meta.full_name,
       ward_number: meta.ward_number,
+      municipality: municipalityId,
       approved: false,
     });
     if (insertError) {
@@ -120,7 +129,7 @@ export const syncCouncillorProfile = createServerFn({ method: "POST" })
     return {
       fullName: meta.full_name,
       wardNumber: meta.ward_number,
-      municipality: null,
+      municipality: municipalityId,
       approved: false,
       photoUrl: null,
       email: null,
