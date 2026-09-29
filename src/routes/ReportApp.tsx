@@ -322,6 +322,66 @@ function wardLabel(w: WardOption): string {
 const DEFAULT_WARD =
   ALL_WARDS.find((w) => w.isLive) ?? ALL_WARDS[0]!;
 
+interface AdvertSlide {
+  id: string;
+  scope: "global" | "hyperlocal";
+  wardNumber?: string;
+  municipalityId?: string;
+  title: string;
+  subtitle: string;
+  ctaLabel: string;
+  href?: string; // internal link — used for every global ad
+  onClaimId?: string; // hyperlocal merchant-credit claim, keyed into claimedSpecials/credits state
+}
+
+// Same content everywhere, every ward — real CivicRewards self-promotion,
+// not third-party deals, so there's nothing to fabricate here.
+const GLOBAL_ADVERTS: AdvertSlide[] = [
+  {
+    id: "global-directory",
+    scope: "global",
+    title: "Find your councillor",
+    subtitle: "599 real wards across 9 metros — search the nationwide directory",
+    ctaLabel: "Open Directory",
+    href: "/councillor",
+  },
+  {
+    id: "global-claim-profile",
+    scope: "global",
+    title: "Are you a ward councillor?",
+    subtitle: "Claim your profile and connect your community channels",
+    ctaLabel: "Claim Profile",
+    href: "/councillor",
+  },
+  {
+    id: "global-partner",
+    scope: "global",
+    title: "Partner with CivicRewards",
+    subtitle: "Sponsor real civic engagement in your ward",
+    ctaLabel: "Become a Partner",
+    href: "/",
+  },
+];
+
+// Hyperlocal: no real signed local-merchant partnerships exist outside this
+// one pre-existing demo entry (kept as-is, not newly invented here) — see
+// the Ward115 CivicRewards banner precedent (21 Sep 2026): no fake
+// advertiser ever ships alongside a real one. Add real entries per ward
+// only once a real merchant actually signs on; until then every other
+// ward correctly shows global ads only.
+const HYPERLOCAL_ADVERTS: AdvertSlide[] = [
+  {
+    id: "hyperlocal-115-tuesdays",
+    scope: "hyperlocal",
+    wardNumber: "115",
+    municipalityId: "coj",
+    title: "15% off on Tuesdays",
+    subtitle: "120 credits · Fourways Mall Cafe",
+    ctaLabel: "Claim offer",
+    onClaimId: "tuesdays",
+  },
+];
+
 // Best-effort browser geolocation -> free OpenStreetMap Nominatim reverse
 // geocode (no API key, no cost — deliberately not Mapbox, since
 // VITE_MAPBOX_TOKEN isn't configured on this deployment) -> match the
@@ -389,6 +449,7 @@ export default function ReportAppPage() {
     "idle" | "detecting" | "detected" | "unavailable"
   >("idle");
   const [locationAutoDetected, setLocationAutoDetected] = useState(false);
+  const [adIndex, setAdIndex] = useState(0);
 
   // Form State
   const [department, setDepartment] = useState("");
@@ -484,6 +545,35 @@ export default function ReportAppPage() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Global ads show for every ward; hyperlocal ads only show for the ward
+  // they're actually tied to. Combined list drives the carousel below.
+  const activeAdverts: AdvertSlide[] = [
+    ...GLOBAL_ADVERTS,
+    ...HYPERLOCAL_ADVERTS.filter(
+      (a) => a.wardNumber === selectedWard.wardNumber && a.municipalityId === selectedWard.municipalityId,
+    ),
+  ];
+
+  // Reset to the first slide whenever the ward changes (a different ward
+  // may have fewer/more hyperlocal slides, so the old index could point
+  // past the end of the new list).
+  useEffect(() => {
+    setAdIndex(0);
+  }, [selectedWard.wardNumber, selectedWard.municipalityId]);
+
+  // Auto-advance every 6s, looping back to the start. Paused implicitly by
+  // nothing — it's a passive banner, not something that needs to respect
+  // user interaction to keep running.
+  useEffect(() => {
+    if (activeAdverts.length <= 1) return;
+    const interval = setInterval(() => {
+      setAdIndex((i) => (i + 1) % activeAdverts.length);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [activeAdverts.length]);
+
+  const currentAd = activeAdverts[adIndex % activeAdverts.length] ?? activeAdverts[0]!;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -804,56 +894,83 @@ export default function ReportAppPage() {
         {/* Tab 1: REPORT (Screenshot Form) */}
         {activeTab === "report" && (
           <div className="mt-5 space-y-4">
-            {/* SPONSORED BY Banner matching screenshot */}
+            {/* Advert carousel — global (every ward) + hyperlocal (this ward only), looping */}
             <div>
-              <p
-                className={`text-[10px] font-extrabold uppercase tracking-widest ${
-                  isDark ? "text-zinc-400" : "text-zinc-500"
-                }`}
-              >
-                SPONSORED BY
-              </p>
+              <div className="flex items-center justify-between">
+                <p
+                  className={`text-[10px] font-extrabold uppercase tracking-widest ${
+                    isDark ? "text-zinc-400" : "text-zinc-500"
+                  }`}
+                >
+                  {currentAd.scope === "hyperlocal" ? "SPONSORED BY" : "CIVICREWARDS"}
+                </p>
+                {activeAdverts.length > 1 && (
+                  <div className="flex items-center gap-1">
+                    {activeAdverts.map((ad, i) => (
+                      <button
+                        key={ad.id}
+                        onClick={() => setAdIndex(i)}
+                        aria-label={`Show ad ${i + 1} of ${activeAdverts.length}`}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === adIndex % activeAdverts.length
+                            ? "w-4 bg-lime-400"
+                            : `w-1.5 ${isDark ? "bg-zinc-700" : "bg-zinc-300"}`
+                        }`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
               <div
+                key={currentAd.id}
                 className={`mt-1.5 flex items-center justify-between rounded-2xl border p-4 sm:p-5 shadow-sm transition ${
                   isDark ? "border-zinc-800/90 bg-zinc-900/60" : "border-zinc-200 bg-white"
                 }`}
               >
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold tracking-tight">
-                    15% off on Tuesdays
-                  </h3>
+                  <h3 className="text-base sm:text-lg font-bold tracking-tight">{currentAd.title}</h3>
                   <p
                     className={`mt-0.5 text-xs font-semibold ${
                       isDark ? "text-zinc-400" : "text-zinc-500"
                     }`}
                   >
-                    120 credits · Fourways Mall Cafe
+                    {currentAd.subtitle}
                   </p>
                 </div>
-                <button
-                  onClick={() => {
-                    if (claimedSpecials.includes("tuesdays")) {
-                      alert("You have already claimed this coupon! Check Rewards tab.");
-                      return;
-                    }
-                    if (credits < 120) {
-                      alert(
-                        "You need 120 CivicCredits. Report an outage below to earn +120 points!",
-                      );
-                      return;
-                    }
-                    setCredits((c) => c - 120);
-                    setClaimedSpecials((prev) => [...prev, "tuesdays"]);
-                    alert("🎉 Offer Claimed! 15% discount code CR-TUES-15 saved to your Rewards.");
-                  }}
-                  className={`rounded-full px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold transition active:scale-95 shadow-sm ${
-                    claimedSpecials.includes("tuesdays")
-                      ? "bg-zinc-700 text-zinc-300"
-                      : "bg-[#c4f224] text-black hover:bg-lime-400"
-                  }`}
-                >
-                  {claimedSpecials.includes("tuesdays") ? "Claimed ✓" : "Claim offer"}
-                </button>
+                {currentAd.onClaimId ? (
+                  <button
+                    onClick={() => {
+                      const claimId = currentAd.onClaimId!;
+                      if (claimedSpecials.includes(claimId)) {
+                        alert("You have already claimed this coupon! Check Rewards tab.");
+                        return;
+                      }
+                      if (credits < 120) {
+                        alert(
+                          "You need 120 CivicCredits. Report an outage below to earn +120 points!",
+                        );
+                        return;
+                      }
+                      setCredits((c) => c - 120);
+                      setClaimedSpecials((prev) => [...prev, claimId]);
+                      alert("🎉 Offer Claimed! 15% discount code CR-TUES-15 saved to your Rewards.");
+                    }}
+                    className={`rounded-full px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold transition active:scale-95 shadow-sm ${
+                      claimedSpecials.includes(currentAd.onClaimId)
+                        ? "bg-zinc-700 text-zinc-300"
+                        : "bg-[#c4f224] text-black hover:bg-lime-400"
+                    }`}
+                  >
+                    {claimedSpecials.includes(currentAd.onClaimId) ? "Claimed ✓" : currentAd.ctaLabel}
+                  </button>
+                ) : (
+                  <Link
+                    to={currentAd.href ?? "/"}
+                    className="rounded-full bg-[#c4f224] px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold text-black transition active:scale-95 shadow-sm hover:bg-lime-400 whitespace-nowrap"
+                  >
+                    {currentAd.ctaLabel}
+                  </Link>
+                )}
               </div>
             </div>
 
