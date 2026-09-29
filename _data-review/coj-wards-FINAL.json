@@ -1,0 +1,1081 @@
+{
+  "municipality": "City of Johannesburg",
+  "municipalityId": "coj",
+  "fetchedAt": "2026-09-29",
+  "wardCount": 134,
+  "note": "Ward 115 intentionally excluded from this file \u2014 it already has real, independently-verified live data in wardDirectory.ts (Mark Van Der Merwe) and was left untouched. A joburg.org.za regional PDF (mislabeled 'Region F' page linking a file named 'Region E Councillors.pdf') claimed ward 115 = Matome Mafokwane, contradicting extensively-verified ground truth; that same PDF's other ~15 rows were roughly half-right/half-wrong against the IEC baseline on spot-check, so it was not trusted for any ward and is not used here.",
+  "wards": [
+    {
+      "wardNumber": "1",
+      "councillorName": "Msingathi Mazibukwana",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "2",
+      "councillorName": "Dimakatso Jeannette Ramafikeng",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "3",
+      "councillorName": "Zacharia Mokoari",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "4",
+      "councillorName": "Simon Butana Molefe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "5",
+      "councillorName": "Claud Mxolisi Ndzondo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "6",
+      "councillorName": "Peto Solly Phometsi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "7",
+      "councillorName": "Amelia Augusta Deborah Zama",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "8",
+      "councillorName": "Molate Godfrey Lebea",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "9",
+      "councillorName": "Imraan Ismail-Moosa",
+      "party": "Al Jama-ah",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "10",
+      "councillorName": "Nokuthula Nofemela",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "11",
+      "councillorName": "Masha Mulelu",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "12",
+      "councillorName": "Olivia Teboho Moeti",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "13",
+      "councillorName": "Bawinile Landiwe Pamella Magwaza",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "14",
+      "councillorName": "Thomas Makapane Mokwena",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "15",
+      "councillorName": "Shadrack Vusumuzi Ngema",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "16",
+      "councillorName": "Gift Mathe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "17",
+      "councillorName": "Dwain Adin Ponsonby",
+      "party": "Patriotic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "18",
+      "councillorName": "Juwairiya Kaldine",
+      "party": "Patriotic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "19",
+      "councillorName": "Siphiwe Oscar Simelane",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "20",
+      "councillorName": "Lazarus Mmota",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "21",
+      "councillorName": "Mpho Isaac Sesedinyane",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "22",
+      "councillorName": "Sebenzile Kentina Laura Mabuza",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "23",
+      "councillorName": "Tyrell Meyers",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "24",
+      "councillorName": "Zakhele Ephraim Mathe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "25",
+      "councillorName": "Cambridge Kwapeng",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "26",
+      "councillorName": "Sithembiso Mashinini",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "27",
+      "councillorName": "Godfrey Jerry Tshehlo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "28",
+      "councillorName": "Peter Ndou",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "29",
+      "councillorName": "Brenda Happy Dammie",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "30",
+      "councillorName": "Mohau Molefe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "31",
+      "councillorName": "Bongani Dlamini",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "32",
+      "councillorName": "Dimakatso Moloisane",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "33",
+      "councillorName": "Nompumelelo Mazibuko",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "34",
+      "councillorName": "Lucas Lefutso",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "35",
+      "councillorName": "Lineo Yvette Margaret Tsotetsi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "36",
+      "councillorName": "Johannes Mofokeng",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "37",
+      "councillorName": "Hamilton Chetsanga",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "38",
+      "councillorName": "Phindile Simelane",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "39",
+      "councillorName": "Lefa Daniel Molise",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "40",
+      "councillorName": "Tumelo Joseph Madiba",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "41",
+      "councillorName": "Lunga Xuma",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "42",
+      "councillorName": "Luyolo Nkubungu",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "43",
+      "councillorName": "Philemon Shumani Tambani",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "44",
+      "councillorName": "Phineas Velaphi Tefu",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "45",
+      "councillorName": "Agnes Zazini",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "46",
+      "councillorName": "Dumisani Steven Modladlaba",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "47",
+      "councillorName": "Tebogo Marcia Mhlari",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "48",
+      "councillorName": "Galebotse Salamina Mpotulo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "49",
+      "councillorName": "Mthuthuzeli Goodman Bolani",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "50",
+      "councillorName": "Bheki Mgaga",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "51",
+      "councillorName": "Wilson Bhekukwenza Mngadi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "52",
+      "councillorName": "Thapelo Thabani Radebe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "53",
+      "councillorName": "Ntaoleng Mpho Mofokeng",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "54",
+      "councillorName": "Stuart Iain Marais",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "55",
+      "councillorName": "Rashieda Landis",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "56",
+      "councillorName": "Michael Ian Crichton",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "57",
+      "councillorName": "Faeeza Chame",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "58",
+      "councillorName": "Rickey Kashore Nair",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "59",
+      "councillorName": "Ian Mzoxolo Nonkumbi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "60",
+      "councillorName": "Sihle Nguse",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "61",
+      "councillorName": "Themba Mkhize",
+      "party": "Inkatha Freedom Party",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "62",
+      "councillorName": "Zanele Philipine Nyembe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "63",
+      "councillorName": "Xolani Innocent Khumalo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "64",
+      "councillorName": "Boyboi Jack Sekwaila",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "65",
+      "councillorName": "Nkosikhona Maxwell Khanyile",
+      "party": "Inkatha Freedom Party",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "66",
+      "councillorName": "Carlos Manuel Dias Da Rocha",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "67",
+      "councillorName": "David Nthako Modupi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "68",
+      "councillorName": "Msimelelo Lobi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "69",
+      "councillorName": "Genevieve Joeline Sherman",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "70",
+      "councillorName": "Caleb Edward Finn",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "71",
+      "councillorName": "Ren\u00e9 Fiona Benjamin",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "72",
+      "councillorName": "Daniel Schay",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "73",
+      "councillorName": "Eleanor Anne Huggett",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "74",
+      "councillorName": "Belinda Cynthia Echeozonjoku",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "75",
+      "councillorName": "Livhuwani Sannie Mavhona",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "76",
+      "councillorName": "Olga Zandile Mothopi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "77",
+      "councillorName": "Yoliswa Agnes Twala",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "78",
+      "councillorName": "Spiwe Stephen Makamo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "79",
+      "councillorName": "Thompson Maluleka",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "80",
+      "councillorName": "Sebenzile Melody Hlatshwayo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "81",
+      "councillorName": "Joanne Horwitz",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "82",
+      "councillorName": "Beverley Marilyne Smouse",
+      "party": "Patriotic Alliance",
+      "source": "IEC 2021 baseline superseded by a confirmed by-election (2 Apr 2025 by-election (previous councillor deceased) \u2014 confirmed via IEC's own results page)",
+      "sourceUrl": "https://www.elections.org.za/content/About-Us/News/Results-of-the-Municipal-Ward-By-elections-held-on-02-April-2025/",
+      "staleWarning": false
+    },
+    {
+      "wardNumber": "83",
+      "councillorName": "Florence Cheryl Roberts",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "84",
+      "councillorName": "Johannes Wilhelmus Goosen",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "85",
+      "councillorName": "Zon\u00e9 Niemand",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "86",
+      "councillorName": "Chantelle Fourie-Shawe",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "87",
+      "councillorName": "Bridget Steer",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "88",
+      "councillorName": "Nicolene Jonker",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "89",
+      "councillorName": "Leah Ruth Potgieter",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "90",
+      "councillorName": "Martin Charles Williams",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "91",
+      "councillorName": "Andrew John Stewart",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "92",
+      "councillorName": "Charmaine S'Bongile Ngoepe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "93",
+      "councillorName": "Vinotharan Mogambaram Reddy",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "94",
+      "councillorName": "David Terence Foley",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "95",
+      "councillorName": "Matome Julius Maake",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "96",
+      "councillorName": "Rufas Maswazi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "97",
+      "councillorName": "Jacques Stephen Ho\u00e9n",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "98",
+      "councillorName": "Beverley Weweje",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "99",
+      "councillorName": "Hendrik Bodenstein",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 baseline superseded by a confirmed by-election (2 Apr 2025 by-election (previous councillor resigned) \u2014 confirmed via IEC's own results page)",
+      "sourceUrl": "https://www.elections.org.za/content/About-Us/News/Results-of-the-Municipal-Ward-By-elections-held-on-02-April-2025/",
+      "staleWarning": false
+    },
+    {
+      "wardNumber": "100",
+      "councillorName": "Nkhumeleni Lyborn Ndou",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "101",
+      "councillorName": "Ralf Bittkau",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "102",
+      "councillorName": "David Douglas Wittmann-Potter",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "103",
+      "councillorName": "Lynda Margaret Shackleford",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "104",
+      "councillorName": "Marialett Koekemoer",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "105",
+      "councillorName": "Albert Tefo Raphadu",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "106",
+      "councillorName": "Christopher Glen Santana",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "107",
+      "councillorName": "Floyd Nhlakanipho Ngwenya",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "108",
+      "councillorName": "Deborah Busisiwe Francisco",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "109",
+      "councillorName": "Lori Cynthia Coogan",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "110",
+      "councillorName": "Maredi Angelinah Mphaho",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "111",
+      "councillorName": "Nontutuzela Prescilla Supe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "112",
+      "councillorName": "Lerato Magdeline Philiya Mphefo",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "113",
+      "councillorName": "Thambulo Abraham Mabuke",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "114",
+      "councillorName": "Tebogo David Mangena",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "116",
+      "councillorName": "Vhonani Adolphus Marema",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "117",
+      "councillorName": "Timothy Francis Truluck",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "118",
+      "councillorName": "Neuren Pietersen",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "119",
+      "councillorName": "Lindani Thobile Zondo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "120",
+      "councillorName": "Celstina Nzimande",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "121",
+      "councillorName": "Khazamula Love Chauke",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "122",
+      "councillorName": "Nkosephayo God-Slove Zungu",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "123",
+      "councillorName": "Maanda Norman Mmbengwa",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "124",
+      "councillorName": "Mongameli Mnyameni",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "125",
+      "councillorName": "Matsobane Victor Sekhu",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "126",
+      "councillorName": "David Gerald Brand",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "127",
+      "councillorName": "Mboneni Clerence Tabane",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "128",
+      "councillorName": "Thebeyatumelo Macdonald Galeshewe",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "129",
+      "councillorName": "Phumlile Alvina Shange",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "130",
+      "councillorName": "Thulani Colson Buthelezi",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "131",
+      "councillorName": "Makhosazana Cynthia Ndlela",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "132",
+      "councillorName": "Annette Janine Deppe",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "133",
+      "councillorName": "Teboho Marumo",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "134",
+      "councillorName": "Devon Steenkamp",
+      "party": "Democratic Alliance",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    },
+    {
+      "wardNumber": "135",
+      "councillorName": "Fuyakomo Phelelani Sindani",
+      "party": "African National Congress",
+      "source": "IEC 2021 as-elected result (LGE2021_Councillors_9_Nov_2021.pdf)",
+      "sourceUrl": "https://www.elections.org.za/pw/Documents/LGE2021_Councillors_9_Nov_2021.pdf",
+      "staleWarning": true
+    }
+  ]
+}
