@@ -38,6 +38,7 @@ import {
 } from "lucide-react";
 import { submitWardReport, type WardReportCategory } from "@/lib/submitWardReport";
 import { createOtpSession, getOtpSessionStatus, verifyOtpCode } from "@/lib/reportOtp";
+import { TOP_MUNICIPALITIES, WARDS_BY_MUNICIPALITY } from "@/lib/wardDirectory";
 
 // Only set once Thami creates the bot via @BotFather and adds this env var
 // (see TELEGRAM_BOT_TOKEN/TELEGRAM_WEBHOOK_SECRET from the community-
@@ -285,27 +286,109 @@ const DEPARTMENTS: Array<{
   },
 ];
 
-// The real intake only accepts reports for Ward 115 today (the endpoint
-// hardcodes wardNumber: '115' regardless of what's sent) — offering other
-// wards here would silently misfile them. Kept as a visible, disabled list
-// rather than removed outright so it's clear more wards are coming, not
-// forgotten.
-const WARDS = ["Ward 115 (Fourways / Witkoppen / Douglasdale)"];
-const COMING_SOON_WARDS = [
-  "Ward 102 (Bryanston / Randburg)",
-  "Ward 90 (Sandton / Hyde Park / Craighall)",
-  "Ward 117 (Rosebank / Parkhurst)",
-  "Ward 58 (Johannesburg Central / Fordsburg)",
-  "Ward 32 (Modderfontein / Greenstone)",
-];
+// The real intake only accepts reports for Ward 115 (City of Johannesburg)
+// today — the endpoint hardcodes wardNumber: '115' regardless of what's
+// sent, since the councillor-notification/reply-to-resolve pipeline behind
+// it only exists for Mark Van Der Merwe's live service. Every other real
+// ward from the directory (WARDS_BY_MUNICIPALITY, 599 wards across 9 top
+// municipalities) is shown so location detection/selection is meaningful
+// everywhere, but flagged "coming soon" for submission — offering a real
+// ward without real backend routing would silently misfile the report.
+const LIVE_MUNICIPALITY_ID = "coj";
+const LIVE_WARD_NUMBER = "115";
+
+interface WardOption {
+  wardNumber: string;
+  municipalityId: string;
+  municipalityName: string;
+  regionName: string;
+  isLive: boolean;
+}
+
+const ALL_WARDS: WardOption[] = TOP_MUNICIPALITIES.flatMap((m) =>
+  (WARDS_BY_MUNICIPALITY[m.id] ?? []).map((w) => ({
+    wardNumber: w.wardNumber,
+    municipalityId: m.id,
+    municipalityName: m.abbreviation,
+    regionName: w.regionName,
+    isLive: m.id === LIVE_MUNICIPALITY_ID && w.wardNumber === LIVE_WARD_NUMBER,
+  })),
+);
+
+function wardLabel(w: WardOption): string {
+  return `Ward ${w.wardNumber} (${w.regionName}) — ${w.municipalityName}`;
+}
+
+const DEFAULT_WARD =
+  ALL_WARDS.find((w) => w.isLive) ?? ALL_WARDS[0]!;
+
+// Best-effort browser geolocation -> free OpenStreetMap Nominatim reverse
+// geocode (no API key, no cost — deliberately not Mapbox, since
+// VITE_MAPBOX_TOKEN isn't configured on this deployment) -> match the
+// returned suburb/city text against each ward's stored regionName. This is
+// a text-match approximation, not real ward-boundary geometry (no ward
+// boundary polygons exist in this app), so it's a starting guess for the
+// dropdown, never silently trusted — the user can always override it.
+async function detectWardFromLocation(): Promise<{ ward: WardOption | null; suburb: string } | null> {
+  if (!("geolocation" in navigator)) return null;
+
+  const position = await new Promise<GeolocationPosition | null>((resolve) => {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve(pos),
+      () => resolve(null),
+      { timeout: 8000, maximumAge: 5 * 60 * 1000 },
+    );
+  });
+  if (!position) return null;
+
+  try {
+    const { latitude, longitude } = position.coords;
+    const res = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}&zoom=16&addressdetails=1`,
+      { headers: { Accept: "application/json" } },
+    );
+    if (!res.ok) return null;
+    const json = (await res.json()) as {
+      address?: Record<string, string>;
+    };
+    const addr = json.address ?? {};
+    const candidates = [
+      addr["suburb"],
+      addr["neighbourhood"],
+      addr["quarter"],
+      addr["city_district"],
+      addr["town"],
+      addr["city"],
+    ].filter((v): v is string => !!v);
+
+    for (const candidate of candidates) {
+      const needle = candidate.toLowerCase();
+      const match = ALL_WARDS.find((w) => w.regionName.toLowerCase().includes(needle));
+      if (match) return { ward: match, suburb: candidate };
+    }
+    // No ward text-matched (regionName has nothing recognisable, or the
+    // suburb genuinely isn't covered yet) — still surface the detected
+    // suburb name so the free-text suburb field can be pre-filled, but
+    // never force-select a ward the user isn't actually shown to be near.
+    if (candidates[0]) return { ward: null, suburb: candidates[0] };
+    return null;
+  } catch {
+    return null;
+  }
+}
 
 export default function ReportAppPage() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [activeTab, setActiveTab] = useState<
     "report" | "resolved" | "rewards" | "specials" | "profile"
   >("report");
-  const [selectedWard, setSelectedWard] = useState("Ward 115 (Fourways / Witkoppen / Douglasdale)");
+  const [selectedWard, setSelectedWard] = useState<WardOption>(DEFAULT_WARD);
   const [showWardSelect, setShowWardSelect] = useState(false);
+  const [wardSearch, setWardSearch] = useState("");
+  const [locationStatus, setLocationStatus] = useState<
+    "idle" | "detecting" | "detected" | "unavailable"
+  >("idle");
+  const [locationAutoDetected, setLocationAutoDetected] = useState(false);
 
   // Form State
   const [department, setDepartment] = useState("");
@@ -371,9 +454,47 @@ export default function ReportAppPage() {
     },
   ]);
 
+  // Runs once on mount, only on the report tab where it matters. Never
+  // blocks the form — a denied/unavailable/failed lookup just leaves the
+  // manual ward dropdown and suburb field exactly as they were.
+  useEffect(() => {
+    let cancelled = false;
+    setLocationStatus("detecting");
+    detectWardFromLocation()
+      .then((result) => {
+        if (cancelled) return;
+        if (!result) {
+          setLocationStatus("unavailable");
+          return;
+        }
+        if (result.ward) {
+          setSelectedWard(result.ward);
+          setLocationAutoDetected(true);
+        }
+        if (result.suburb && !reporterSuburb) {
+          setReporterSuburb(result.suburb);
+        }
+        setLocationStatus("detected");
+      })
+      .catch(() => {
+        if (!cancelled) setLocationStatus("unavailable");
+      });
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitError(null);
+
+    if (!selectedWard.isLive) {
+      setSubmitError(
+        `Reporting for Ward ${selectedWard.wardNumber} (${selectedWard.regionName}) isn't connected yet — right now only Ward 115 in the City of Johannesburg reaches a real councillor. Switch wards above, or check back soon.`,
+      );
+      return;
+    }
 
     if (isEmergency) {
       setSubmitError(
@@ -488,53 +609,110 @@ export default function ReportAppPage() {
                   isDark ? "text-zinc-400 hover:text-zinc-200" : "text-zinc-500 hover:text-zinc-800"
                 }`}
               >
-                <span>WARD 115</span>
+                <span>
+                  WARD {selectedWard.wardNumber} · {selectedWard.municipalityName}
+                </span>
                 <ChevronDown className="size-3.5" />
               </button>
+              {locationStatus === "detecting" && (
+                <p className="mt-0.5 text-[10px] text-zinc-500">Detecting your location…</p>
+              )}
+              {locationAutoDetected && locationStatus === "detected" && (
+                <p className="mt-0.5 text-[10px] text-lime-500">📍 Auto-detected from your location</p>
+              )}
 
               {showWardSelect && (
                 <div
-                  className={`absolute left-0 top-6 z-30 w-64 rounded-xl border p-2 shadow-2xl ${
+                  className={`absolute left-0 top-6 z-30 w-80 rounded-xl border p-2 shadow-2xl ${
                     isDark
                       ? "border-zinc-800 bg-zinc-900 text-zinc-200"
                       : "border-zinc-200 bg-white text-zinc-800"
                   }`}
                 >
                   <p className="px-2 py-1 text-[10px] font-bold uppercase tracking-wider text-zinc-400">
-                    Switch Municipal Ward
+                    Switch Municipal Ward ({ALL_WARDS.length} available nationwide)
                   </p>
-                  {WARDS.map((w) => (
-                    <button
-                      key={w}
-                      onClick={() => {
-                        setSelectedWard(w);
-                        setShowWardSelect(false);
-                      }}
-                      className={`w-full rounded-lg px-2.5 py-1.5 text-left text-xs font-medium transition ${
-                        selectedWard === w
-                          ? isDark
-                            ? "bg-lime-400/20 text-lime-400 font-bold"
-                            : "bg-emerald-50 text-emerald-800 font-bold"
-                          : isDark
-                            ? "hover:bg-zinc-800"
-                            : "hover:bg-zinc-100"
-                      }`}
-                    >
-                      {w}
-                    </button>
-                  ))}
-                  <p className="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
-                    Coming soon (not yet connected)
-                  </p>
-                  {COMING_SOON_WARDS.map((w) => (
-                    <div
-                      key={w}
-                      title="Reports can only be submitted for Ward 115 right now"
-                      className="w-full cursor-not-allowed rounded-lg px-2.5 py-1.5 text-left text-xs font-medium text-zinc-500"
-                    >
-                      {w}
-                    </div>
-                  ))}
+                  <input
+                    autoFocus
+                    value={wardSearch}
+                    onChange={(e) => setWardSearch(e.target.value)}
+                    placeholder="Search ward number, suburb, or metro…"
+                    className={`mb-1.5 w-full rounded-lg border px-2.5 py-1.5 text-xs outline-none ${
+                      isDark
+                        ? "border-zinc-700 bg-zinc-950 text-zinc-100 placeholder:text-zinc-500"
+                        : "border-zinc-300 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400"
+                    }`}
+                  />
+                  <div className="max-h-72 overflow-y-auto">
+                    {(() => {
+                      const q = wardSearch.trim().toLowerCase();
+                      const filtered = q
+                        ? ALL_WARDS.filter(
+                            (w) =>
+                              w.wardNumber.includes(q) ||
+                              w.regionName.toLowerCase().includes(q) ||
+                              w.municipalityName.toLowerCase().includes(q),
+                          )
+                        : ALL_WARDS;
+                      const live = filtered.filter((w) => w.isLive);
+                      const rest = filtered.filter((w) => !w.isLive).slice(0, 40);
+                      return (
+                        <>
+                          {live.map((w) => (
+                            <button
+                              key={`${w.municipalityId}-${w.wardNumber}`}
+                              onClick={() => {
+                                setSelectedWard(w);
+                                setLocationAutoDetected(false);
+                                setShowWardSelect(false);
+                              }}
+                              className={`w-full rounded-lg px-2.5 py-1.5 text-left text-xs font-medium transition ${
+                                selectedWard.wardNumber === w.wardNumber &&
+                                selectedWard.municipalityId === w.municipalityId
+                                  ? isDark
+                                    ? "bg-lime-400/20 text-lime-400 font-bold"
+                                    : "bg-emerald-50 text-emerald-800 font-bold"
+                                  : isDark
+                                    ? "hover:bg-zinc-800"
+                                    : "hover:bg-zinc-100"
+                              }`}
+                            >
+                              {wardLabel(w)}
+                            </button>
+                          ))}
+                          {rest.length > 0 && (
+                            <p className="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-wider text-zinc-500">
+                              Coming soon (not yet connected)
+                            </p>
+                          )}
+                          {rest.map((w) => (
+                            <button
+                              key={`${w.municipalityId}-${w.wardNumber}`}
+                              onClick={() => {
+                                setSelectedWard(w);
+                                setLocationAutoDetected(false);
+                                setShowWardSelect(false);
+                              }}
+                              title="You can select this ward, but real-time report submission only reaches a councillor for Ward 115 right now"
+                              className={`w-full rounded-lg px-2.5 py-1.5 text-left text-xs font-medium transition ${
+                                selectedWard.wardNumber === w.wardNumber &&
+                                selectedWard.municipalityId === w.municipalityId
+                                  ? isDark
+                                    ? "bg-zinc-800 text-zinc-100 font-bold"
+                                    : "bg-zinc-200 text-zinc-900 font-bold"
+                                  : "text-zinc-500 hover:bg-zinc-800/40"
+                              }`}
+                            >
+                              {wardLabel(w)}
+                            </button>
+                          ))}
+                          {filtered.length === 0 && (
+                            <p className="px-2 py-3 text-center text-xs text-zinc-500">No wards match "{wardSearch}"</p>
+                          )}
+                        </>
+                      );
+                    })()}
+                  </div>
                 </div>
               )}
             </div>
@@ -995,7 +1173,7 @@ export default function ReportAppPage() {
           <div className="mt-5 space-y-4">
             <div className="flex items-center justify-between">
               <h2 className="text-base font-bold">
-                Recently Resolved in {selectedWard.split(" ")[0]} {selectedWard.split(" ")[1]}
+                Recently Resolved in Ward {selectedWard.wardNumber}
               </h2>
               <span className="text-xs text-lime-400 font-semibold">48 repairs this week</span>
             </div>
