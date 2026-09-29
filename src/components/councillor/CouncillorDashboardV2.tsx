@@ -12,6 +12,7 @@ import {
   CartesianGrid,
 } from "recharts";
 import type { CouncillorProfile, WardGroupLink, WardReportSummary } from "@/lib/councillorAuth";
+import { updateCouncillorProfileFields } from "@/lib/councillorAuth";
 import {
   hasRealReference,
   getWardGroupLinks,
@@ -34,7 +35,7 @@ const TEXT = "#f5f5f4";
 const DIM = "rgba(245,245,244,0.5)";
 const BORDER = "rgba(255,255,255,0.08)";
 
-type Tab = "overview" | "reports" | "analytics" | "escalation" | "channels" | "broadcast";
+type Tab = "overview" | "reports" | "analytics" | "escalation" | "channels" | "profile" | "broadcast";
 
 const NAV: Array<{ key: Tab; label: string; emoji: string }> = [
   { key: "overview", label: "Overview", emoji: "📊" },
@@ -42,6 +43,7 @@ const NAV: Array<{ key: Tab; label: string; emoji: string }> = [
   { key: "analytics", label: "Analytics", emoji: "📈" },
   { key: "escalation", label: "Escalation Contacts", emoji: "📞" },
   { key: "channels", label: "Community Channels", emoji: "📡" },
+  { key: "profile", label: "Profile Card", emoji: "🪪" },
   { key: "broadcast", label: "Broadcast", emoji: "📢" },
 ];
 
@@ -161,6 +163,7 @@ export default function CouncillorDashboardV2({
         {tab === "analytics" && <AnalyticsTab reports={reports} />}
         {tab === "escalation" && <EscalationTab accessToken={accessToken} />}
         {tab === "channels" && <ChannelsTab accessToken={accessToken} />}
+        {tab === "profile" && <ProfileTab accessToken={accessToken} profile={profile} />}
         {tab === "broadcast" && <BroadcastTab />}
       </div>
     </div>
@@ -1095,6 +1098,129 @@ function ChannelsTab({ accessToken }: { accessToken: string }) {
             );
           })
         )}
+      </div>
+    </div>
+  );
+}
+
+const PROFILE_FIELDS: Array<{
+  key: keyof ProfileFormState;
+  label: string;
+  placeholder: string;
+  type?: string;
+}> = [
+  { key: "photoUrl", label: "Photo URL", placeholder: "https://…/your-photo.jpg" },
+  { key: "email", label: "Email", placeholder: "you@example.co.za", type: "email" },
+  { key: "whatsappNumber", label: "WhatsApp number", placeholder: "+27 82 123 4567" },
+  { key: "telegramUsername", label: "Telegram username", placeholder: "yourusername" },
+  { key: "twitterHandle", label: "X / Twitter handle", placeholder: "yourhandle" },
+  { key: "facebookUrl", label: "Facebook URL", placeholder: "https://facebook.com/…" },
+  { key: "instagramHandle", label: "Instagram handle", placeholder: "yourhandle" },
+  { key: "linkedinUrl", label: "LinkedIn URL", placeholder: "https://linkedin.com/in/…" },
+];
+
+type ProfileFormState = {
+  photoUrl: string;
+  email: string;
+  whatsappNumber: string;
+  telegramUsername: string;
+  twitterHandle: string;
+  facebookUrl: string;
+  instagramHandle: string;
+  linkedinUrl: string;
+};
+
+function ProfileTab({ accessToken, profile }: { accessToken: string; profile: CouncillorProfile }) {
+  const [form, setForm] = useState<ProfileFormState>({
+    photoUrl: profile.photoUrl ?? "",
+    email: profile.email ?? "",
+    whatsappNumber: profile.whatsappNumber ?? "",
+    telegramUsername: profile.telegramUsername ?? "",
+    twitterHandle: profile.twitterHandle ?? "",
+    facebookUrl: profile.facebookUrl ?? "",
+    instagramHandle: profile.instagramHandle ?? "",
+    linkedinUrl: profile.linkedinUrl ?? "",
+  });
+  const [saving, setSaving] = useState(false);
+  const [toast, setToast] = useState<Toast | null>(null);
+
+  useEffect(() => {
+    if (!toast) return;
+    const t = setTimeout(() => setToast(null), 3500);
+    return () => clearTimeout(t);
+  }, [toast]);
+
+  async function handleSave() {
+    setSaving(true);
+    try {
+      await updateCouncillorProfileFields({ data: { accessToken, ...form } });
+      setToast({ type: "success", message: "Profile card updated" });
+    } catch (err) {
+      setToast({ type: "error", message: err instanceof Error ? err.message : "Could not save profile" });
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  return (
+    <div className="flex flex-col gap-5 max-w-xl">
+      <div>
+        <h1 className="text-xl font-bold" style={{ color: TEXT, letterSpacing: "-0.02em" }}>
+          Profile Card
+        </h1>
+        <p className="text-sm mt-1" style={{ color: DIM }}>
+          This is what residents see on your public ward page — your photo, contact details, and social
+          accounts. Only you can set these; CivicRewards never guesses or fills this in for you.
+        </p>
+      </div>
+
+      {toast && (
+        <div
+          className="flex items-center gap-2 px-4 py-3 rounded-xl text-sm font-medium"
+          style={{
+            background: toast.type === "success" ? "rgba(198,255,61,0.12)" : "rgba(255,67,58,0.12)",
+            border: `1px solid ${toast.type === "success" ? "rgba(198,255,61,0.25)" : "rgba(255,67,58,0.25)"}`,
+            color: toast.type === "success" ? ACCENT : "#FF453A",
+          }}
+        >
+          {toast.type === "success" ? <CheckCircle size={15} /> : <AlertCircle size={15} />}
+          {toast.message}
+        </div>
+      )}
+
+      {form.photoUrl && (
+        <img
+          src={form.photoUrl}
+          alt="Profile preview"
+          className="w-20 h-20 rounded-2xl object-cover"
+          style={{ border: `1px solid ${BORDER}` }}
+        />
+      )}
+
+      <div className="rounded-xl p-5 flex flex-col gap-4" style={{ background: CARD, border: `1px solid ${BORDER}` }}>
+        {PROFILE_FIELDS.map((f) => (
+          <div key={f.key}>
+            <label className="text-xs font-medium block mb-1.5" style={{ color: DIM }}>
+              {f.label}
+            </label>
+            <input
+              type={f.type ?? "text"}
+              value={form[f.key]}
+              placeholder={f.placeholder}
+              onChange={(e) => setForm((prev) => ({ ...prev, [f.key]: e.target.value }))}
+              className="w-full rounded-lg px-3 py-2 text-sm outline-none"
+              style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${BORDER}`, color: TEXT }}
+            />
+          </div>
+        ))}
+        <button
+          onClick={handleSave}
+          disabled={saving}
+          className="self-start rounded-lg px-4 py-2 text-sm font-bold transition disabled:opacity-50"
+          style={{ background: ACCENT, color: "#0a0a0b" }}
+        >
+          {saving ? "Saving…" : "Save Profile Card"}
+        </button>
       </div>
     </div>
   );

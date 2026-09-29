@@ -6,6 +6,14 @@ export interface CouncillorProfile {
   wardNumber: string;
   municipality: string | null;
   approved: boolean;
+  photoUrl: string | null;
+  email: string | null;
+  whatsappNumber: string | null;
+  telegramUsername: string | null;
+  twitterHandle: string | null;
+  facebookUrl: string | null;
+  instagramHandle: string | null;
+  linkedinUrl: string | null;
 }
 
 export async function requireCouncillorProfile(accessToken: string): Promise<{
@@ -20,7 +28,9 @@ export async function requireCouncillorProfile(accessToken: string): Promise<{
 
   const { data: row, error: profileError } = await admin
     .from("civicrewards_councillors")
-    .select("full_name, ward_number, municipality, approved")
+    .select(
+      "full_name, ward_number, municipality, approved, photo_url, email, whatsapp_number, telegram_username, twitter_handle, facebook_url, instagram_handle, linkedin_url",
+    )
     .eq("user_id", userData.user.id)
     .maybeSingle();
 
@@ -30,14 +40,37 @@ export async function requireCouncillorProfile(accessToken: string): Promise<{
 
   return {
     userId: userData.user.id,
-    profile: row
-      ? {
-          fullName: row.full_name,
-          wardNumber: row.ward_number,
-          municipality: row.municipality,
-          approved: row.approved,
-        }
-      : null,
+    profile: row ? rowToProfile(row) : null,
+  };
+}
+
+function rowToProfile(row: {
+  full_name: string;
+  ward_number: string;
+  municipality: string | null;
+  approved: boolean;
+  photo_url: string | null;
+  email: string | null;
+  whatsapp_number: string | null;
+  telegram_username: string | null;
+  twitter_handle: string | null;
+  facebook_url: string | null;
+  instagram_handle: string | null;
+  linkedin_url: string | null;
+}): CouncillorProfile {
+  return {
+    fullName: row.full_name,
+    wardNumber: row.ward_number,
+    municipality: row.municipality,
+    approved: row.approved,
+    photoUrl: row.photo_url,
+    email: row.email,
+    whatsappNumber: row.whatsapp_number,
+    telegramUsername: row.telegram_username,
+    twitterHandle: row.twitter_handle,
+    facebookUrl: row.facebook_url,
+    instagramHandle: row.instagram_handle,
+    linkedinUrl: row.linkedin_url,
   };
 }
 
@@ -89,6 +122,14 @@ export const syncCouncillorProfile = createServerFn({ method: "POST" })
       wardNumber: meta.ward_number,
       municipality: null,
       approved: false,
+      photoUrl: null,
+      email: null,
+      whatsappNumber: null,
+      telegramUsername: null,
+      twitterHandle: null,
+      facebookUrl: null,
+      instagramHandle: null,
+      linkedinUrl: null,
     };
   });
 
@@ -336,6 +377,72 @@ export const deactivateWardGroupLink = createServerFn({ method: "POST" })
 
     if (error) {
       throw new Error(`Could not remove contact: ${error.message}`);
+    }
+    return { ok: true };
+  });
+
+function validateProfileFields(data: unknown): {
+  accessToken: string;
+  photoUrl: string | null;
+  email: string | null;
+  whatsappNumber: string | null;
+  telegramUsername: string | null;
+  twitterHandle: string | null;
+  facebookUrl: string | null;
+  instagramHandle: string | null;
+  linkedinUrl: string | null;
+} {
+  const { accessToken } = validateAccessToken(data);
+  const d = data as Record<string, unknown>;
+  const str = (v: unknown): string | null => {
+    if (typeof v !== "string") return null;
+    const trimmed = v.trim();
+    return trimmed ? trimmed : null;
+  };
+  return {
+    accessToken,
+    photoUrl: str(d["photoUrl"]),
+    email: str(d["email"]),
+    whatsappNumber: str(d["whatsappNumber"]),
+    telegramUsername: str(d["telegramUsername"])?.replace(/^@/, "") ?? null,
+    twitterHandle: str(d["twitterHandle"])?.replace(/^@/, "") ?? null,
+    facebookUrl: str(d["facebookUrl"]),
+    instagramHandle: str(d["instagramHandle"])?.replace(/^@/, "") ?? null,
+    linkedinUrl: str(d["linkedinUrl"]),
+  };
+}
+
+// Self-fill only — a councillor edits their own photo/contact/socials on
+// their own dashboard. This is deliberately the one source of truth for
+// this kind of personal data (see sql/2026-09-29-councillor-profile-
+// fields.sql): trying to research/scrape a real person's photo or social
+// handles from the open web carries real misattribution risk at this
+// scale (599+ named officials), self-entry doesn't.
+export const updateCouncillorProfileFields = createServerFn({ method: "POST" })
+  .validator(validateProfileFields)
+  .handler(async ({ data }): Promise<{ ok: true }> => {
+    const { userId, profile } = await requireCouncillorProfile(data.accessToken);
+    if (!profile) {
+      throw new Error("No councillor profile found for this account");
+    }
+
+    const admin = getSupabaseAdmin();
+    const { error } = await admin
+      .from("civicrewards_councillors")
+      .update({
+        photo_url: data.photoUrl,
+        email: data.email,
+        whatsapp_number: data.whatsappNumber,
+        telegram_username: data.telegramUsername,
+        twitter_handle: data.twitterHandle,
+        facebook_url: data.facebookUrl,
+        instagram_handle: data.instagramHandle,
+        linkedin_url: data.linkedinUrl,
+      })
+      .eq("user_id", userId);
+
+    if (error) {
+      throw new Error(`Could not save profile: ${error.message}`);
     }
     return { ok: true };
   });
