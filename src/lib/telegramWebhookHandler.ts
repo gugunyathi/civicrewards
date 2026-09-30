@@ -25,7 +25,7 @@ interface TelegramUpdate {
     message_id: number;
     text?: string;
     chat: { id: number; type: string; title?: string };
-    from?: { first_name?: string; username?: string };
+    from?: { id?: number; first_name?: string; username?: string };
   };
 }
 
@@ -93,6 +93,59 @@ async function handleStartCommand(sessionToken: string, chatId: number): Promise
     // generates and stores a fresh code and tries again, that's fine and
     // shouldn't crash the webhook either way.
     console.error("Failed to send OTP via Telegram:", error);
+  }
+}
+
+// Sign-in tokens carry this prefix (see residentAuth.ts) so a single
+// Telegram /start payload can be routed to the right OTP table without a
+// second round trip — report_otp_sessions (anonymous, per-report) and
+// civicrewards_signin_otp_sessions (persistent account) are deliberately
+// separate tables, not a shared one with a "purpose" column, since they
+// have different lifecycles and one is never supposed to create a user.
+const SIGNIN_TOKEN_PREFIX = "signin_";
+
+// Private-chat /start signin_<session_token> — the resident sign-in OTP
+// flow (src/lib/residentAuth.ts). Captures the real Telegram user id (not
+// just the chat id) since this has to resolve to a stable civicrewards_
+// users row across sessions, unlike handleStartCommand's one-off report
+// verification.
+async function handleSignInStartCommand(
+  sessionToken: string,
+  chatId: number,
+  telegramUserId: number | undefined,
+): Promise<void> {
+  const admin = getSupabaseAdmin();
+  const { data: row } = await admin
+    .from("civicrewards_signin_otp_sessions")
+    .select("id, verified, locked, expires_at")
+    .eq("session_token", sessionToken)
+    .maybeSingle();
+
+  if (!row || row.verified || row.locked) return;
+  if (new Date(row.expires_at).getTime() < Date.now()) return;
+  if (!telegramUserId) return; // can't resolve to a stable account without this
+
+  const otpCode = generateOtpCode();
+  const { error } = await admin
+    .from("civicrewards_signin_otp_sessions")
+    .update({
+      telegram_chat_id: telegramUserId,
+      otp_code: otpCode,
+      otp_sent_at: new Date().toISOString(),
+    })
+    .eq("id", row.id);
+  if (error) {
+    console.error("Failed to store sign-in OTP:", error.message);
+    return;
+  }
+
+  try {
+    await sendTelegramMessage(
+      chatId,
+      `Your CivicRewards sign-in code is ${otpCode}. It expires in 15 minutes. Never share this code with anyone.`,
+    );
+  } catch (error) {
+    console.error("Failed to send sign-in OTP via Telegram:", error);
   }
 }
 
@@ -166,9 +219,15 @@ export async function handleTelegramWebhook(request: Request): Promise<Response>
       }
     } else if (message && message.chat.type === "private") {
       const startMatch = message.text?.match(START_COMMAND);
-      const sessionToken = startMatch?.[1];
-      if (sessionToken) {
-        await handleStartCommand(sessionToken, message.chat.id);
+      const token = startMatch?.[1];
+      if (token?.startsWith(SIGNIN_TOKEN_PREFIX)) {
+        await handleSignInStartCommand(
+          token.slice(SIGNIN_TOKEN_PREFIX.length),
+          message.chat.id,
+          message.from?.id,
+        );
+      } else if (token) {
+        await handleStartCommand(token, message.chat.id);
       }
     }
   } catch (error) {

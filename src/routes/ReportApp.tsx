@@ -39,6 +39,17 @@ import {
 import { submitWardReport, type WardReportCategory } from "@/lib/submitWardReport";
 import { createOtpSession, getOtpSessionStatus, verifyOtpCode } from "@/lib/reportOtp";
 import { TOP_MUNICIPALITIES, WARDS_BY_MUNICIPALITY } from "@/lib/wardDirectory";
+import {
+  requestTelegramSignIn,
+  requestWhatsAppSignIn,
+  getSignInStatus,
+  verifySignInCode,
+  getResidentProfile,
+  signOutResident,
+  recordResidentActivity,
+  getResidentActivity,
+  type ResidentProfile,
+} from "@/lib/residentAuth";
 
 // Only set once Thami creates the bot via @BotFather and adds this env var
 // (see TELEGRAM_BOT_TOKEN/TELEGRAM_WEBHOOK_SECRET from the community-
@@ -213,6 +224,234 @@ function TelegramOtpStep({
       )}
 
       {error && <p className="mt-2 text-[11px] font-semibold text-red-400">{error}</p>}
+    </div>
+  );
+}
+
+type SignInState =
+  | { kind: "choose" }
+  | { kind: "whatsappPhone" }
+  | { kind: "waitingForTelegramStart"; sessionToken: string }
+  | { kind: "codeEntry"; sessionToken: string; channel: "whatsapp" | "telegram" };
+
+// Self-contained WhatsApp/Telegram OTP sign-in — same two-channel pattern
+// as the anonymous report-verification OTP above, but resolves to a real,
+// persistent civicrewards_users row + session instead of a one-off flag.
+function ResidentSignIn({
+  isDark,
+  onSignedIn,
+}: {
+  isDark: boolean;
+  onSignedIn: (bearerToken: string) => void;
+}) {
+  const [state, setState] = useState<SignInState>({ kind: "choose" });
+  const [phone, setPhone] = useState("");
+  const [code, setCode] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (pollRef.current) clearInterval(pollRef.current);
+    };
+  }, []);
+
+  const startTelegram = async () => {
+    setError(null);
+    setBusy(true);
+    try {
+      const { sessionToken } = await requestTelegramSignIn();
+      setState({ kind: "waitingForTelegramStart", sessionToken });
+      pollRef.current = setInterval(async () => {
+        try {
+          const status = await getSignInStatus({ data: { sessionToken } });
+          if (status.otpSent) {
+            if (pollRef.current) clearInterval(pollRef.current);
+            setState({ kind: "codeEntry", sessionToken, channel: "telegram" });
+          }
+        } catch {
+          // Transient poll failure — try again next tick.
+        }
+      }, 3000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not start Telegram sign-in");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitWhatsAppPhone = async () => {
+    if (!phone.trim()) {
+      setError("Enter your WhatsApp number");
+      return;
+    }
+    setError(null);
+    setBusy(true);
+    try {
+      const { sessionToken } = await requestWhatsAppSignIn({ data: { phoneNumber: phone.trim() } });
+      setState({ kind: "codeEntry", sessionToken, channel: "whatsapp" });
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not send WhatsApp code");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const submitCode = async () => {
+    if (state.kind !== "codeEntry") return;
+    setError(null);
+    setBusy(true);
+    try {
+      const result = await verifySignInCode({ data: { sessionToken: state.sessionToken, code } });
+      onSignedIn(result.bearerToken);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Could not verify code");
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const inputClass = `w-full rounded-xl px-3.5 py-2.5 text-sm font-semibold outline-none ${
+    isDark
+      ? "bg-zinc-950 text-zinc-100 border border-zinc-700 placeholder:text-zinc-500"
+      : "bg-zinc-50 text-zinc-900 border border-zinc-300 placeholder:text-zinc-400"
+  }`;
+  const buttonClass = "w-full rounded-xl bg-[#c4f224] px-4 py-2.5 text-sm font-extrabold text-black transition active:scale-95 disabled:opacity-50";
+
+  return (
+    <div
+      className={`rounded-2xl border p-5 space-y-3 ${isDark ? "border-zinc-800 bg-zinc-900" : "border-zinc-200 bg-white"}`}
+    >
+      <div>
+        <h3 className="text-sm font-bold" style={{ color: isDark ? "#f5f5f5" : "#18181b" }}>
+          Sign in to CivicRewards
+        </h3>
+        <p className="text-xs text-zinc-500 mt-0.5">
+          Real points, saved to your account — sign in with WhatsApp or Telegram.
+        </p>
+      </div>
+
+      {state.kind === "choose" && (
+        <div className="flex flex-col gap-2">
+          <button
+            onClick={() => setState({ kind: "whatsappPhone" })}
+            className="w-full rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-extrabold text-black transition active:scale-95"
+          >
+            Continue with WhatsApp
+          </button>
+          <button onClick={startTelegram} disabled={busy} className={buttonClass}>
+            {busy ? "Starting…" : "Continue with Telegram"}
+          </button>
+        </div>
+      )}
+
+      {state.kind === "whatsappPhone" && (
+        <div className="flex flex-col gap-2">
+          <input
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            placeholder="e.g. 082 123 4567"
+            className={inputClass}
+          />
+          <button onClick={submitWhatsAppPhone} disabled={busy} className={buttonClass}>
+            {busy ? "Sending…" : "Send WhatsApp code"}
+          </button>
+          <button onClick={() => setState({ kind: "choose" })} className="text-[11px] underline opacity-70 self-start">
+            Back
+          </button>
+        </div>
+      )}
+
+      {state.kind === "waitingForTelegramStart" && (
+        <div className="flex flex-col gap-2">
+          <p className="text-xs text-zinc-500">
+            Open Telegram and message our bot to get your code:
+          </p>
+          <a
+            href={
+              TELEGRAM_BOT_USERNAME
+                ? `https://t.me/${TELEGRAM_BOT_USERNAME}?start=signin_${state.sessionToken}`
+                : "#"
+            }
+            target="_blank"
+            rel="noreferrer"
+            className={buttonClass + " text-center inline-block no-underline"}
+          >
+            Open Telegram
+          </a>
+          <p className="text-[11px] text-zinc-500">Waiting for your code…</p>
+        </div>
+      )}
+
+      {state.kind === "codeEntry" && (
+        <div className="flex flex-col gap-2">
+          <input
+            value={code}
+            onChange={(e) => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+            placeholder="6-digit code"
+            className={inputClass}
+          />
+          <button onClick={submitCode} disabled={busy || code.length !== 6} className={buttonClass}>
+            {busy ? "Verifying…" : "Verify & Sign In"}
+          </button>
+        </div>
+      )}
+
+      {error && <p className="text-[11px] font-semibold text-red-400">{error}</p>}
+    </div>
+  );
+}
+
+const ACTIVITY_LABEL: Record<string, string> = {
+  sign_in: "Signed in",
+  advert_claim: "Claimed an offer",
+  reward_redeemed: "Redeemed a reward",
+};
+
+// Real activity, not a fabricated "Reports Logged / Repairs Fixed / Ward
+// Rank" stat block — those numbers had nothing backing them. This shows
+// exactly what's in civicrewards_activity_log for this resident, nothing
+// more, nothing invented.
+function ResidentActivityFeed({ isDark, bearerToken }: { isDark: boolean; bearerToken: string }) {
+  const [activity, setActivity] = useState<
+    Array<{ id: string; activityType: string; pointsDelta: number; createdAt: string }> | null
+  >(null);
+
+  useEffect(() => {
+    getResidentActivity({ data: { bearerToken } })
+      .then(setActivity)
+      .catch(() => setActivity([]));
+  }, [bearerToken]);
+
+  return (
+    <div>
+      <h3 className="text-sm font-bold uppercase tracking-wider text-zinc-400 mb-3">
+        Recent Activity
+      </h3>
+      {activity === null && <p className="text-xs text-zinc-500">Loading…</p>}
+      {activity?.length === 0 && (
+        <p className="text-xs text-zinc-500">No activity yet — claim an offer or redeem a reward to see it here.</p>
+      )}
+      <div className="space-y-2">
+        {activity?.map((a) => (
+          <div
+            key={a.id}
+            className={`rounded-xl border p-3 flex items-center justify-between ${
+              isDark ? "border-zinc-800 bg-zinc-900/60" : "border-zinc-200 bg-white"
+            }`}
+          >
+            <div>
+              <p className="text-xs font-bold text-zinc-200">{ACTIVITY_LABEL[a.activityType] ?? a.activityType}</p>
+              <p className="text-[10px] text-zinc-500 mt-0.5">{new Date(a.createdAt).toLocaleString()}</p>
+            </div>
+            <span className={`text-sm font-extrabold ${a.pointsDelta >= 0 ? "text-lime-400" : "text-zinc-400"}`}>
+              {a.pointsDelta >= 0 ? "+" : ""}
+              {a.pointsDelta}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -451,6 +690,18 @@ export default function ReportAppPage() {
   const [locationAutoDetected, setLocationAutoDetected] = useState(false);
   const [adIndex, setAdIndex] = useState(0);
 
+  // Resident sign-in (WhatsApp or Telegram OTP) — replaces the old
+  // client-only mock credits balance with a real, persisted one.
+  const [residentToken, setResidentToken] = useState<string | null>(null);
+  const [residentProfile, setResidentProfile] = useState<ResidentProfile | null>(null);
+  const [signInChannel, setSignInChannel] = useState<"whatsapp" | "telegram" | null>(null);
+  const [signInPhone, setSignInPhone] = useState("");
+  const [signInSessionToken, setSignInSessionToken] = useState<string | null>(null);
+  const [signInCode, setSignInCode] = useState("");
+  const [signInBusy, setSignInBusy] = useState(false);
+  const [signInError, setSignInError] = useState<string | null>(null);
+  const [telegramOtpSent, setTelegramOtpSent] = useState(false);
+
   // Form State
   const [department, setDepartment] = useState("");
   const [reporterName, setReporterName] = useState("");
@@ -472,7 +723,9 @@ export default function ReportAppPage() {
   } | null>(null);
 
   // User Balances & Stats
-  const [credits, setCredits] = useState(340);
+  // Real balance once signed in (synced from residentProfile.pointsBalance
+  // below); 0 for a signed-out guest — no mock starting balance anymore.
+  const [credits, setCredits] = useState(0);
   const [claimedSpecials, setClaimedSpecials] = useState<string[]>([]);
 
   // Simulated Resolved list
@@ -545,6 +798,46 @@ export default function ReportAppPage() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Restore a saved sign-in session on load. An expired/invalid token is
+  // cleared rather than left around to fail silently on every later call.
+  useEffect(() => {
+    const saved = localStorage.getItem("civicrewards_resident_token");
+    if (!saved) return;
+    getResidentProfile({ data: { bearerToken: saved } })
+      .then((profile) => {
+        setResidentToken(saved);
+        setResidentProfile(profile);
+        setCredits(profile.pointsBalance);
+      })
+      .catch(() => {
+        localStorage.removeItem("civicrewards_resident_token");
+      });
+  }, []);
+
+  const handleSignedIn = (bearerToken: string) => {
+    localStorage.setItem("civicrewards_resident_token", bearerToken);
+    setResidentToken(bearerToken);
+    getResidentProfile({ data: { bearerToken } })
+      .then((profile) => {
+        setResidentProfile(profile);
+        setCredits(profile.pointsBalance);
+      })
+      .catch(() => {});
+  };
+
+  const handleSignOut = async () => {
+    if (residentToken) {
+      try {
+        await signOutResident({ data: { bearerToken: residentToken } });
+      } catch {
+        // Session is being abandoned client-side either way.
+      }
+    }
+    localStorage.removeItem("civicrewards_resident_token");
+    setResidentToken(null);
+    setResidentProfile(null);
+  };
 
   // Global ads show for every ward; hyperlocal ads only show for the ward
   // they're actually tied to. Combined list drives the carousel below.
@@ -939,8 +1232,12 @@ export default function ReportAppPage() {
                 </div>
                 {currentAd.onClaimId ? (
                   <button
-                    onClick={() => {
+                    onClick={async () => {
                       const claimId = currentAd.onClaimId!;
+                      if (!residentToken) {
+                        alert("Sign in with WhatsApp or Telegram on the Profile tab to claim real rewards.");
+                        return;
+                      }
                       if (claimedSpecials.includes(claimId)) {
                         alert("You have already claimed this coupon! Check Rewards tab.");
                         return;
@@ -951,9 +1248,16 @@ export default function ReportAppPage() {
                         );
                         return;
                       }
-                      setCredits((c) => c - 120);
-                      setClaimedSpecials((prev) => [...prev, claimId]);
-                      alert("🎉 Offer Claimed! 15% discount code CR-TUES-15 saved to your Rewards.");
+                      try {
+                        const { pointsBalance } = await recordResidentActivity({
+                          data: { bearerToken: residentToken, activityType: "advert_claim", pointsDelta: -120, metadata: { claimId } },
+                        });
+                        setCredits(pointsBalance);
+                        setClaimedSpecials((prev) => [...prev, claimId]);
+                        alert("🎉 Offer Claimed! 15% discount code CR-TUES-15 saved to your Rewards.");
+                      } catch (err) {
+                        alert(err instanceof Error ? err.message : "Could not claim this offer");
+                      }
                     }}
                     className={`rounded-full px-5 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-extrabold transition active:scale-95 shadow-sm ${
                       claimedSpecials.includes(currentAd.onClaimId)
@@ -1398,9 +1702,20 @@ export default function ReportAppPage() {
                         </span>
                         <button
                           disabled={!canAfford}
-                          onClick={() => {
-                            setCredits((c) => c - rew.cost);
-                            alert(`🎉 Redeemed ${rew.name}! Token code sent via SMS.`);
+                          onClick={async () => {
+                            if (!residentToken) {
+                              alert("Sign in with WhatsApp or Telegram on the Profile tab to redeem real rewards.");
+                              return;
+                            }
+                            try {
+                              const { pointsBalance } = await recordResidentActivity({
+                                data: { bearerToken: residentToken, activityType: "reward_redeemed", pointsDelta: -rew.cost, metadata: { reward: rew.name } },
+                              });
+                              setCredits(pointsBalance);
+                              alert(`🎉 Redeemed ${rew.name}! Token code sent via SMS.`);
+                            } catch (err) {
+                              alert(err instanceof Error ? err.message : "Could not redeem this reward");
+                            }
                           }}
                           className={`rounded-lg px-3 py-1.5 text-xs font-bold transition ${
                             canAfford
@@ -1470,53 +1785,50 @@ export default function ReportAppPage() {
         {/* Tab 5: PROFILE (Citizen Badge & Stats) */}
         {activeTab === "profile" && (
           <div className="mt-5 space-y-5">
-            <div
-              className={`rounded-2xl border p-5 flex items-center gap-4 ${
-                isDark ? "border-zinc-800 bg-zinc-900" : "border-zinc-200 bg-white"
-              }`}
-            >
-              <div className="grid size-14 place-items-center rounded-full bg-lime-400 font-extrabold text-xl text-black">
-                SN
-              </div>
-              <div>
-                <h3 className="text-lg font-extrabold text-white">Sipho Ndlovu</h3>
-                <p className="text-xs text-zinc-400">Ward 115 Resident · Douglasdale</p>
-                <span className="mt-1 inline-block rounded-full bg-lime-400/20 px-2.5 py-0.5 text-[10px] font-bold text-lime-400">
-                  Active Citizen · Silver Tier
-                </span>
-              </div>
-            </div>
+            {!residentToken || !residentProfile ? (
+              <ResidentSignIn isDark={isDark} onSignedIn={handleSignedIn} />
+            ) : (
+              <>
+                <div
+                  className={`rounded-2xl border p-5 flex items-center gap-4 ${
+                    isDark ? "border-zinc-800 bg-zinc-900" : "border-zinc-200 bg-white"
+                  }`}
+                >
+                  <div className="grid size-14 place-items-center rounded-full bg-lime-400 font-extrabold text-xl text-black">
+                    {(residentProfile.displayName ?? "Resident").slice(0, 2).toUpperCase()}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-extrabold text-white">
+                      {residentProfile.displayName ?? "Resident"}
+                    </h3>
+                    <p className="text-xs text-zinc-400">
+                      {residentProfile.wardNumber
+                        ? `Ward ${residentProfile.wardNumber}${residentProfile.municipalityId ? ` · ${residentProfile.municipalityId.toUpperCase()}` : ""}`
+                        : "Signed in resident"}
+                    </p>
+                  </div>
+                  <button
+                    onClick={handleSignOut}
+                    className="text-[11px] font-bold underline opacity-70 hover:opacity-100 shrink-0"
+                  >
+                    Sign Out
+                  </button>
+                </div>
 
-            <div className="grid grid-cols-3 gap-3 text-center">
-              <div
-                className={`rounded-xl border p-3 ${
-                  isDark ? "border-zinc-800 bg-zinc-900/60" : "border-zinc-200 bg-white"
-                }`}
-              >
-                <p className="text-xl font-black text-lime-400">14</p>
-                <p className="text-[10px] uppercase font-bold text-zinc-400 mt-0.5">
-                  Reports Logged
-                </p>
-              </div>
-              <div
-                className={`rounded-xl border p-3 ${
-                  isDark ? "border-zinc-800 bg-zinc-900/60" : "border-zinc-200 bg-white"
-                }`}
-              >
-                <p className="text-xl font-black text-emerald-400">12</p>
-                <p className="text-[10px] uppercase font-bold text-zinc-400 mt-0.5">
-                  Repairs Fixed
-                </p>
-              </div>
-              <div
-                className={`rounded-xl border p-3 ${
-                  isDark ? "border-zinc-800 bg-zinc-900/60" : "border-zinc-200 bg-white"
-                }`}
-              >
-                <p className="text-xl font-black text-amber-400">#3</p>
-                <p className="text-[10px] uppercase font-bold text-zinc-400 mt-0.5">Ward Rank</p>
-              </div>
-            </div>
+                <div
+                  className={`rounded-2xl border p-5 ${
+                    isDark ? "border-zinc-800 bg-zinc-900/60" : "border-zinc-200 bg-white"
+                  }`}
+                >
+                  <p className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+                    CivicCredits Balance
+                  </p>
+                  <p className="text-3xl font-black text-lime-400 mt-1">{credits}</p>
+                </div>
+
+                <ResidentActivityFeed isDark={isDark} bearerToken={residentToken} />
+              </>
+            )}
           </div>
         )}
       </main>
