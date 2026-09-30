@@ -3,6 +3,7 @@ import "./lib/error-capture";
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
 import { handleTelegramWebhook } from "./lib/telegramWebhookHandler";
+import { handleMojaMagicLinkRequest } from "./lib/mojaMagicLinkHandler";
 
 // Intercepted before TanStack Start's own router sees it: this version of
 // @tanstack/react-start (1.168.32) has no file-based server-route/API-route
@@ -12,6 +13,7 @@ import { handleTelegramWebhook } from "./lib/telegramWebhookHandler";
 // src/server.ts's fetch() is the one place confirmed to see every raw
 // request, so a raw external webhook is handled directly here instead.
 const TELEGRAM_WEBHOOK_PATH = "/api/telegram-webhook";
+const MOJA_MAGIC_LINK_PATH = "/api/moja-magic-link";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -59,6 +61,9 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === TELEGRAM_WEBHOOK_PATH) {
       return handleTelegramWebhook(request);
+    }
+    if (url.pathname === MOJA_MAGIC_LINK_PATH) {
+      return handleMojaMagicLinkRequest(request);
     }
 
     try {

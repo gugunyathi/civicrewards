@@ -48,6 +48,7 @@ import {
   signOutResident,
   recordResidentActivity,
   getResidentActivity,
+  redeemMagicLink,
   type ResidentProfile,
 } from "@/lib/residentAuth";
 
@@ -694,13 +695,6 @@ export default function ReportAppPage() {
   // client-only mock credits balance with a real, persisted one.
   const [residentToken, setResidentToken] = useState<string | null>(null);
   const [residentProfile, setResidentProfile] = useState<ResidentProfile | null>(null);
-  const [signInChannel, setSignInChannel] = useState<"whatsapp" | "telegram" | null>(null);
-  const [signInPhone, setSignInPhone] = useState("");
-  const [signInSessionToken, setSignInSessionToken] = useState<string | null>(null);
-  const [signInCode, setSignInCode] = useState("");
-  const [signInBusy, setSignInBusy] = useState(false);
-  const [signInError, setSignInError] = useState<string | null>(null);
-  const [telegramOtpSent, setTelegramOtpSent] = useState(false);
 
   // Form State
   const [department, setDepartment] = useState("");
@@ -825,6 +819,31 @@ export default function ReportAppPage() {
       })
       .catch(() => {});
   };
+
+  // Seamless sign-in from Moja's WhatsApp "CivicRewards" menu tap — see
+  // src/lib/mojaMagicLinkHandler.ts for how the link is minted server-to-
+  // server. Strips the token from the URL immediately after attempting
+  // redemption (success or failure) so refreshing or re-sharing the same
+  // URL never re-submits an already-used/dead code.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    const magicToken = url.searchParams.get("magicToken");
+    if (!magicToken) return;
+
+    url.searchParams.delete("magicToken");
+    window.history.replaceState({}, "", url.toString());
+
+    redeemMagicLink({ data: { magicToken } })
+      .then((result) => {
+        handleSignedIn(result.bearerToken);
+        setActiveTab("profile");
+      })
+      .catch((err) => {
+        alert(err instanceof Error ? err.message : "Could not sign you in from that link");
+        setActiveTab("profile");
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSignOut = async () => {
     if (residentToken) {

@@ -66,7 +66,7 @@ async function sendWhatsAppMessage(to: string, text: string): Promise<void> {
   }
 }
 
-function normalizePhone(raw: string): string {
+export function normalizePhone(raw: string): string {
   // Accept whatever a human types (spaces, dashes, a leading 0 or +27) —
   // Postel's Law, per this project's own UX standard — and normalise to
   // the digits-only, country-code-prefixed form 360dialog/WhatsApp expects.
@@ -76,7 +76,7 @@ function normalizePhone(raw: string): string {
   return digits;
 }
 
-interface SignInUserRow {
+export interface SignInUserRow {
   id: string;
   points_balance: number;
   display_name: string | null;
@@ -84,7 +84,7 @@ interface SignInUserRow {
   municipality_id: string | null;
 }
 
-async function findOrCreateUser(
+export async function findOrCreateUser(
   admin: ReturnType<typeof getSupabaseAdmin>,
   identity: { phoneNumber?: string; telegramUserId?: number },
 ): Promise<SignInUserRow> {
@@ -107,7 +107,7 @@ async function findOrCreateUser(
   return created;
 }
 
-async function createSession(
+export async function createSession(
   admin: ReturnType<typeof getSupabaseAdmin>,
   userId: string,
 ): Promise<string> {
@@ -332,6 +332,62 @@ async function requireSession(
     .eq("session_token", bearerToken);
   return { userId: row.user_id };
 }
+
+function validateMagicToken(data: unknown): { magicToken: string } {
+  const magicToken = (data as { magicToken?: unknown })?.magicToken;
+  if (typeof magicToken !== "string" || !magicToken) throw new Error("Missing sign-in link");
+  return { magicToken };
+}
+
+// Redeems a one-time code minted by /api/moja-magic-link (server-to-server,
+// called from signal-desk-v4's Moja webhook when a resident taps
+// "CivicRewards" in their WhatsApp menu — see that route for why this is a
+// short-lived code and not the real session token embedded in the URL).
+// Single-use: marks the row used immediately, so a forwarded/reopened link
+// fails cleanly on the second attempt.
+export const redeemMagicLink = createServerFn({ method: "POST" })
+  .validator(validateMagicToken)
+  .handler(async ({ data }): Promise<VerifiedSession> => {
+    const admin = getSupabaseAdmin();
+    const { data: row, error } = await admin
+      .from("civicrewards_magic_links")
+      .select("id, user_id, used, expires_at")
+      .eq("code", data.magicToken)
+      .maybeSingle();
+
+    if (error) throw new Error(error.message);
+    if (!row) throw new Error("This sign-in link isn't valid — it may have already been used.");
+    if (row.used) throw new Error("This sign-in link has already been used — go back to Moja on WhatsApp for a new one.");
+    if (new Date(row.expires_at).getTime() < Date.now()) {
+      throw new Error("This sign-in link has expired — go back to Moja on WhatsApp for a new one.");
+    }
+
+    await admin
+      .from("civicrewards_magic_links")
+      .update({ used: true, used_at: new Date().toISOString() })
+      .eq("id", row.id);
+
+    const { data: user, error: userError } = await admin
+      .from("civicrewards_users")
+      .select("id, points_balance, display_name")
+      .eq("id", row.user_id)
+      .single();
+    if (userError || !user) throw new Error("Could not load your account");
+
+    await admin.from("civicrewards_activity_log").insert({
+      user_id: user.id,
+      activity_type: "sign_in",
+      metadata: { channel: "moja_magic_link" },
+    });
+
+    const bearerToken = await createSession(admin, user.id);
+    return {
+      bearerToken,
+      userId: user.id,
+      pointsBalance: user.points_balance,
+      displayName: user.display_name,
+    };
+  });
 
 export interface ResidentProfile {
   userId: string;
