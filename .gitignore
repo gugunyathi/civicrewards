@@ -32,4 +32,9 @@ dist-ssr
 *.sw?
 .gstack/
 .vercel
-.env*.local
+
+# Secrets — never commit any real env file. .env.example is the only
+# intentional exception (template only, no real values).
+.env
+.env.*
+!.env.example
